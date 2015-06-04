@@ -29,6 +29,8 @@ namespace SeverinoApp.iOS
 		public static UIViewController Home = Storyboard.InstantiateViewController ("HomeViewController");
 		public static UIViewController Login = Storyboard.InstantiateViewController ("LoginViewController");
 		public static UIViewController Perfil = Storyboard.InstantiateViewController ("PerfilViewController");
+		public static UIViewController Chamados = Storyboard.InstantiateViewController ("ChamadoViewController");
+
 
 		public UINavigationController Navigation{ get; set;}
 		
@@ -88,6 +90,7 @@ namespace SeverinoApp.iOS
 		public static UIViewController Home = AppDelegate.Storyboard.InstantiateViewController ("HomeViewController");
 		public static UIViewController Login = AppDelegate.Storyboard.InstantiateViewController ("LoginViewController");
 		public static UIViewController Perfil = AppDelegate.Storyboard.InstantiateViewController ("PerfilViewController");
+		public static UIViewController Chamado = AppDelegate.Storyboard.InstantiateViewController ("ChamadoViewController");
 
 		public DummyControllerLeft () 
 			: base(UITableViewStyle.Plain,new RootElement(""))
@@ -102,6 +105,8 @@ namespace SeverinoApp.iOS
 			Root.Add (new Section () {
 				new StyledStringElement("Inicio", () => NavigationController.PushViewController(Home, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
 				new StyledStringElement("Perfil", () => NavigationController.PushViewController(Perfil, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
+				new StyledStringElement("Chamado", () => NavigationController.PushViewController(Chamado, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
+				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
 				//new StyledStringElement("Stuff", () => NavigationController.PushViewController(new StuffViewController(), true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear },
 			});
 

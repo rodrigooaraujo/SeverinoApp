@@ -35,7 +35,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnLoga_Click:" destination="vXZ-lx-hvc" eventType="touchDown" id="16"/>
-                                    <segue id="134" destination="29" kind="modal"/>
+                                    <segue destination="29" kind="modal" id="134"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8">
@@ -47,7 +47,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnFacebook_Ckick:" destination="vXZ-lx-hvc" eventType="touchDown" id="20"/>
-                                    <segue id="377" destination="306" kind="modal"/>
+                                    <segue destination="306" kind="modal" id="377"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoSeverino.png" translatesAutoresizingMaskIntoConstraints="NO" id="rfn-7P-DjA">
@@ -69,9 +69,10 @@
             </objects>
             <point key="canvasLocation" x="-109" y="0.0"/>
         </scene>
+        <!--Principal Navigation Controller-->
         <scene sceneID="28">
             <objects>
-                <navigationController definesPresentationContext="YES" id="29" sceneMemberID="viewController" customClass="PrincipalNavigationController" storyboardIdentifier="PrincipalNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                <navigationController storyboardIdentifier="PrincipalNavigationController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="29" customClass="PrincipalNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="32">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     </navigationBar>
@@ -83,19 +84,18 @@
             </objects>
             <point key="canvasLocation" x="316" y="-19"/>
         </scene>
+        <!--Home-->
         <scene sceneID="34">
             <objects>
-                <viewController id="31" sceneMemberID="viewController" customClass="HomeViewController" storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Home">
+                <viewController storyboardIdentifier="HomeViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="31" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="26"/>
                         <viewControllerLayoutGuide type="bottom" id="27"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="36" customClass="HomeView" restorationIdentifier="HomeView">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeView" id="36" customClass="HomeView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <subviews>
-                        </subviews>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="35"/>
                     <connections>
@@ -106,17 +106,18 @@
             </objects>
             <point key="canvasLocation" x="689" y="-20"/>
         </scene>
+        <!--Facebook View Controller-->
         <scene sceneID="305">
             <objects>
-                <viewController id="306" sceneMemberID="viewController" customClass="FacebookViewController" storyboardIdentifier="FacebookViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                <viewController storyboardIdentifier="FacebookViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="306" customClass="FacebookViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="303"/>
                         <viewControllerLayoutGuide type="bottom" id="304"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="307" customClass="FacebookView" restorationIdentifier="FacebookView">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="FacebookView" id="307" customClass="FacebookView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="FacebookView" destination="307" id="name-outlet-307"/>
@@ -126,78 +127,112 @@
             </objects>
             <point key="canvasLocation" x="316" y="692"/>
         </scene>
+        <!--Perfil-->
         <scene sceneID="386">
             <objects>
-                <viewController id="387" sceneMemberID="viewController" customClass="PerfilViewController" storyboardIdentifier="PerfilViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Perfil">
+                <viewController storyboardIdentifier="PerfilViewController" title="Perfil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="387" customClass="PerfilViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="384"/>
                         <viewControllerLayoutGuide type="bottom" id="385"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="388" customClass="PerfilView" restorationIdentifier="PerfilView">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PerfilView" id="388" customClass="PerfilView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.74117647058823533" green="1" blue="0.39215686274509803" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="391" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="391">
                                 <rect key="frame" x="98" y="40" width="124" height="98"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="392" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Nome">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="392">
                                 <rect key="frame" x="20" y="163" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="393" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Sobrenome">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="393">
                                 <rect key="frame" x="20" y="201" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="394" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Email">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="394">
                                 <rect key="frame" x="20" y="239" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="395" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="395">
                                 <rect key="frame" x="20" y="277" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="396" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="396">
                                 <rect key="frame" x="20" y="511" width="280" height="37"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.26666666666666666" green="0.58823529411764708" blue="1" alpha="1"/>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Gravar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGravar_Click:" destination="387" id="397" eventType="touchUpInside"/>
+                                    <action selector="btnGravar_Click:" destination="387" eventType="touchUpInside" id="397"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="swtPrestador" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="420">
+                                <rect key="frame" x="20" y="315" width="51" height="31"/>
+                                <connections>
+                                    <action selector="swtPrestador_Changed:" destination="387" eventType="valueChanged" id="421"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Prestador de Serviço" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="428">
+                                <rect key="frame" x="79" y="320" width="164" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Raio de Atendimento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="429">
+                                <rect key="frame" x="20" y="361" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="R$ Custo de Visita" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="430">
+                                <rect key="frame" x="20" y="399" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
+                        <color key="backgroundColor" red="0.74117647058823533" green="1" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="PerfilView" destination="388" id="name-outlet-388"/>
+                        <outlet property="btnGravar" destination="396" id="wvn-Gb-KzM"/>
+                        <outlet property="imgFoto" destination="391" id="Ae3-Ht-Zxz"/>
+                        <outlet property="swtPrestador" destination="420" id="name-outlet-420"/>
+                        <outlet property="txtCustoVisita" destination="430" id="f8I-Ke-WDU"/>
+                        <outlet property="txtEmail" destination="394" id="hIm-7m-Gcl"/>
+                        <outlet property="txtEndereco" destination="395" id="vjb-cU-R80"/>
+                        <outlet property="txtNome" destination="392" id="Gqd-Ra-bPn"/>
+                        <outlet property="txtRaioAtendimento" destination="429" id="qlw-7H-43o"/>
+                        <outlet property="txtSobrenome" destination="393" id="42B-E4-eWp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="389" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072" y="-14"/>
         </scene>
+        <!--Chamados-->
         <scene sceneID="400">
             <objects>
-                <viewController id="401" sceneMemberID="viewController" customClass="ChamadoViewController" storyboardIdentifier="ChamadoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Chamados">
+                <viewController storyboardIdentifier="ChamadoViewController" title="Chamados" useStoryboardIdentifierAsRestorationIdentifier="YES" id="401" customClass="ChamadoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="398"/>
                         <viewControllerLayoutGuide type="bottom" id="399"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="402" customClass="ChamadoView" restorationIdentifier="ChamadoView">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ChamadoView" id="402" customClass="ChamadoView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.5607843137254902" green="0.81176470588235294" blue="1" alpha="1"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" id="405" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="405">
                                 <rect key="frame" x="0.0" y="39" width="320" height="162"/>
                             </pickerView>
                         </subviews>
+                        <color key="backgroundColor" red="0.5607843137254902" green="0.81176470588235294" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="403" userLabel="First Responder" sceneMemberID="firstResponder"/>

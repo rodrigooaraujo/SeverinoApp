@@ -9,11 +9,23 @@ namespace SeverinoApp.iOS
 	{
 		public PerfilViewController (IntPtr handle) : base (handle)
 		{
+			
 		}
 
 		partial void btnGravar_Click (UIButton sender)
 		{
 			
+		}
+
+		partial void swtPrestador_Changed (UISwitch sender)
+		{
+			txtRaioAtendimento.Hidden = !swtPrestador.On;
+			txtCustoVisita.Hidden = !swtPrestador.On;
+		}
+
+		public override void ViewDidLoad ()
+		{
+			swtPrestador_Changed (swtPrestador);
 		}
 	}
 }

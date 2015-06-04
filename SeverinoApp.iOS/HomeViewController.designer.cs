@@ -15,15 +15,10 @@ namespace SeverinoApp.iOS
 	partial class HomeViewController
 	{
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		HomeView HomeView { get; set; }
+		SeverinoApp.iOS.HomeView HomeView { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (HomeView != null) {
-				HomeView.Dispose ();
-				HomeView = null;
-			}
 		}
 	}
 }
