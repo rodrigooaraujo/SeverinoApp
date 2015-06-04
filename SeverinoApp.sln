@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SeverinoApp", "SeverinoApp\SeverinoApp.shproj", "{9E4FAF3D-89D2-446E-B497-0ED6F3A165E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeverinoApp.iOS", "SeverinoApp.iOS\SeverinoApp.iOS.csproj", "{1867A2B3-7646-4DED-AB47-D1E63C8067A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Debug|iPhone.Build.0 = Debug|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Release|iPhone.ActiveCfg = Release|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Release|iPhone.Build.0 = Release|iPhone
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{1867A2B3-7646-4DED-AB47-D1E63C8067A1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+EndGlobal

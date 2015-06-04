@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                                <rect key="frame" x="20" y="372" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                                <rect key="frame" x="20" y="410" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                                <rect key="frame" x="20" y="448" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.0013860020519999999" green="0.69317670090000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Logar-se">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoga_Click:" destination="vXZ-lx-hvc" eventType="touchDown" id="16"/>
+                                    <segue id="134" destination="29" kind="modal"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                                <rect key="frame" x="20" y="486" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.079934938220000001" green="0.27017858659999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFacebook_Ckick:" destination="vXZ-lx-hvc" eventType="touchDown" id="20"/>
+                                    <segue id="377" destination="306" kind="modal"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoSeverino.png" translatesAutoresizingMaskIntoConstraints="NO" id="rfn-7P-DjA">
+                                <rect key="frame" x="20" y="58" width="280" height="301"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803926" green="0.90980392156862744" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnFacebook" destination="8" id="Qzk-Tz-MKQ"/>
+                        <outlet property="btnFacebook_Click" destination="8" id="0lh-YM-iUR"/>
+                        <outlet property="btnLoga" destination="7" id="x8r-Pp-L0s"/>
+                        <outlet property="imgLogotigo" destination="rfn-7P-DjA" id="HV7-QF-Ver"/>
+                        <outlet property="txtLogin" destination="5" id="dTL-bj-m3k"/>
+                        <outlet property="txtSenha" destination="6" id="hJb-v4-qGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="0.0"/>
+        </scene>
+        <scene sceneID="28">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="29" sceneMemberID="viewController" customClass="PrincipalNavigationController" storyboardIdentifier="PrincipalNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="32">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="31" kind="relationship" relationship="rootViewController" id="30"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="-19"/>
+        </scene>
+        <scene sceneID="34">
+            <objects>
+                <viewController id="31" sceneMemberID="viewController" customClass="HomeViewController" storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Home">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="26"/>
+                        <viewControllerLayoutGuide type="bottom" id="27"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="36" customClass="HomeView" restorationIdentifier="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="35"/>
+                    <connections>
+                        <outlet property="HomeView" destination="36" id="name-outlet-36"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="-20"/>
+        </scene>
+        <scene sceneID="305">
+            <objects>
+                <viewController id="306" sceneMemberID="viewController" customClass="FacebookViewController" storyboardIdentifier="FacebookViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="303"/>
+                        <viewControllerLayoutGuide type="bottom" id="304"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="307" customClass="FacebookView" restorationIdentifier="FacebookView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                    </view>
+                    <connections>
+                        <outlet property="FacebookView" destination="307" id="name-outlet-307"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="308" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="692"/>
+        </scene>
+        <scene sceneID="386">
+            <objects>
+                <viewController id="387" sceneMemberID="viewController" customClass="PerfilViewController" storyboardIdentifier="PerfilViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Perfil">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="384"/>
+                        <viewControllerLayoutGuide type="bottom" id="385"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="388" customClass="PerfilView" restorationIdentifier="PerfilView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.74117647058823533" green="1" blue="0.39215686274509803" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="391" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="98" y="40" width="124" height="98"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="392" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Nome">
+                                <rect key="frame" x="20" y="163" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="393" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Sobrenome">
+                                <rect key="frame" x="20" y="201" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="394" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Email">
+                                <rect key="frame" x="20" y="239" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="395" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="277" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="396" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="511" width="280" height="37"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.26666666666666666" green="0.58823529411764708" blue="1" alpha="1"/>
+                                <state key="normal" title="Gravar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGravar_Click:" destination="387" id="397" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="PerfilView" destination="388" id="name-outlet-388"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="389" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="-14"/>
+        </scene>
+        <scene sceneID="400">
+            <objects>
+                <viewController id="401" sceneMemberID="viewController" customClass="ChamadoViewController" storyboardIdentifier="ChamadoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Chamados">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="398"/>
+                        <viewControllerLayoutGuide type="bottom" id="399"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="402" customClass="ChamadoView" restorationIdentifier="ChamadoView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.5607843137254902" green="0.81176470588235294" blue="1" alpha="1"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="405" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="39" width="320" height="162"/>
+                            </pickerView>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="403" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442" y="-12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LogoSeverino.png" width="526" height="463"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

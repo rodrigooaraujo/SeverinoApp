@@ -1,0 +1,39 @@
+# Version: 8.8.2.4 (981acb3)
+# [first argument, ignore] # /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.2.4/bin/mtouch-64 \
+	--cache \
+	/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SeverinoApp.iOS.app \
+	--executable \
+	SeverinoApp.iOS \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.2 \
+	--targetver \
+	8.0 \
+	--abi=i386 \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	../packages/MonoTouch.SlideoutNavigation.0.1.1/lib/Xamarin.iOS10/MonoTouch.Slideout.dll \
+	-r \
+	../Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/MonoTouch.Dialog-1.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	../packages/MonoTouch.SlideoutNavigation.0.1.1/lib/Xamarin.iOS10/MonoTouch.Slideout.dll \
+	-r \
+	../Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
+	/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug//SeverinoApp.iOS.exe \

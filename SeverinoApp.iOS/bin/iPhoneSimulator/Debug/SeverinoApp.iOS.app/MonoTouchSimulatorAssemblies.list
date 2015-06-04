@@ -1,0 +1,9 @@
+mscorlib.dll
+System.dll
+System.Xml.dll
+System.Core.dll
+Mono.Dynamic.Interpreter.dll
+MonoTouch.Slideout.dll
+MonoTouch.Dialog-1.dll
+System.Json.dll
+Xamarin.Auth.iOS.dll
