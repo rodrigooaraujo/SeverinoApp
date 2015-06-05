@@ -53,7 +53,7 @@ namespace SeverinoApp.iOS
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
 			//new UIAlertView("Serviço Selecionado: ", TableItems[indexPath.Row].Descricao, null, "OK", null).Show();
-			tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
+			//tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
 			var cell = tableView.CellAt(indexPath);
 			if (cell.Accessory == UITableViewCellAccessory.Checkmark)
 				cell.Accessory = UITableViewCellAccessory.None;

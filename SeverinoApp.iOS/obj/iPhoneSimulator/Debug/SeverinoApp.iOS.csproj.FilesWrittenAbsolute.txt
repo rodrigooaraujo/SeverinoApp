@@ -47,3 +47,5 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/wheelbarrow.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/woman.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/water hose.png
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/465-view-466.nib
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/MapaViewController.nib

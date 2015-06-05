@@ -31,6 +31,7 @@ namespace SeverinoApp.iOS
 		public static UIViewController Perfil = Storyboard.InstantiateViewController ("PerfilViewController");
 		public static UIViewController Chamados = Storyboard.InstantiateViewController ("ChamadoViewController");
 		public static UIViewController Servicos = Storyboard.InstantiateViewController ("ServicosViewController");
+		public static UIViewController Mapa = Storyboard.InstantiateViewController ("MapaViewController");
 
 
 		public UINavigationController Navigation{ get; set;}
@@ -84,7 +85,7 @@ namespace SeverinoApp.iOS
 		public static UIViewController Perfil = AppDelegate.Perfil;
 		public static UIViewController Chamado = AppDelegate.Chamados;
 		public static UIViewController Servicos = AppDelegate.Servicos;
-
+		public static UIViewController Mapa = AppDelegate.Mapa;
 
 		public DummyControllerLeft () 
 			: base(UITableViewStyle.Plain,new RootElement(""))
@@ -99,6 +100,7 @@ namespace SeverinoApp.iOS
 			Root.Add (new Section () {
 				new StyledStringElement("Inicio", () => NavigationController.PushViewController(Home, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"home.png")},
 				new StyledStringElement("Perfil", () => NavigationController.PushViewController(Perfil, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"id-card.png") },
+				new StyledStringElement("Mapa", () => NavigationController.PushViewController(Mapa, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"map-pin.png") },
 				new StyledStringElement("Chamado", () => NavigationController.PushViewController(Chamado, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"message.png") },
 				new StyledStringElement("Serviços", () => NavigationController.PushViewController(Servicos, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear , Image =  UIImage.FromFile ("Icons/"+"tick.png")},
 				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"lock.png") },

@@ -164,6 +164,12 @@
     </Compile>
     <Compile Include="Render\TableServicosPerfil.cs" />
     <Compile Include="Render\TableHome.cs" />
+    <Compile Include="MapaViewController.cs" />
+    <Compile Include="MapaViewController.designer.cs">
+      <DependentUpon>MapaViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\SearchDelegate.cs" />
+    <Compile Include="Render\ShearchSource.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

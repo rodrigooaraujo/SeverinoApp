@@ -248,10 +248,10 @@
         <scene sceneID="441">
             <objects>
                 <viewController storyboardIdentifier="ServicosViewController" title="Serviços" useStoryboardIdentifierAsRestorationIdentifier="YES" id="442" customClass="ServicosViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="443" customClass="ServicosView" restorationIdentifier="ServicosView">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ServicosView" id="443" customClass="ServicosView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.54117647058823526" green="0.63137254901960782" blue="1" alpha="1"/>
+                        <color key="backgroundColor" red="0.54117647058823526" green="0.63137254901960782" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -261,11 +261,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="444" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="651"/>
+            <point key="canvasLocation" x="702" y="689"/>
+        </scene>
+        <!--Mapa Serviços-->
+        <scene sceneID="464">
+            <objects>
+                <viewController storyboardIdentifier="MapaViewController" title="Mapa Serviços" useStoryboardIdentifierAsRestorationIdentifier="YES" id="465" customClass="MapaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MapaView" id="466">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" id="478">
+                                <rect key="frame" x="8" y="129" width="304" height="429"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" id="513" restorationIdentifier="shPesquisa">
+                                <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="MapaView" destination="466" id="name-outlet-466"/>
+                        <outlet property="mkmMapa" destination="478" id="vet-o8-78c"/>
+                        <outlet property="searchDisplayController" destination="482" id="481"/>
+                        <outlet property="shPesquisa" destination="513" id="name-outlet-513"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="467" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="482">
+                    <connections>
+                        <outlet property="delegate" destination="465" id="483"/>
+                        <outlet property="searchBar" destination="479" id="484"/>
+                        <outlet property="searchContentsController" destination="465" id="485"/>
+                        <outlet property="searchResultsDataSource" destination="465" id="486"/>
+                        <outlet property="searchResultsDelegate" destination="465" id="487"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1053" y="692"/>
         </scene>
     </scenes>
     <resources>
         <image name="LogoSeverino.png" width="526" height="463"/>
+        <image name="Icons/hammer.png" width="30" height="30"/>
+        <image name="Icons/home.png" width="30" height="30"/>
+        <image name="Icons/id-card.png" width="30" height="30"/>
+        <image name="Icons/key.png" width="30" height="30"/>
+        <image name="Icons/lock.png" width="30" height="30"/>
+        <image name="Icons/man.png" width="30" height="30"/>
+        <image name="Icons/map-pin.png" width="30" height="30"/>
+        <image name="Icons/message.png" width="30" height="30"/>
+        <image name="Icons/no-cash.png" width="30" height="30"/>
+        <image name="Icons/paint-roller.png" width="30" height="30"/>
+        <image name="Icons/paint.png" width="30" height="30"/>
+        <image name="Icons/plier.png" width="30" height="30"/>
+        <image name="Icons/screwdriver.png" width="30" height="30"/>
+        <image name="Icons/spanner.png" width="30" height="30"/>
+        <image name="Icons/star.png" width="30" height="30"/>
+        <image name="Icons/tick.png" width="30" height="30"/>
+        <image name="Icons/wheelbarrow.png" width="30" height="30"/>
+        <image name="Icons/woman.png" width="30" height="30"/>
+        <image name="Icons/water hose.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
