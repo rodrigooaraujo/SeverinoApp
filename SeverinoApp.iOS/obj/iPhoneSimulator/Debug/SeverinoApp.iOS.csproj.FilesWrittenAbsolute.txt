@@ -46,3 +46,4 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/tick.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/wheelbarrow.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/woman.png
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/water hose.png

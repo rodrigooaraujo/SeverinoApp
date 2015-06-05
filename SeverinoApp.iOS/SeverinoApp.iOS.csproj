@@ -163,6 +163,7 @@
       <DependentUpon>ServicosView.cs</DependentUpon>
     </Compile>
     <Compile Include="Render\TableServicosPerfil.cs" />
+    <Compile Include="Render\TableHome.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -186,6 +187,7 @@
     <BundleResource Include="Resources\Icons\tick.png" />
     <BundleResource Include="Resources\Icons\wheelbarrow.png" />
     <BundleResource Include="Resources\Icons\woman.png" />
+    <BundleResource Include="Resources\Icons\water hose.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">

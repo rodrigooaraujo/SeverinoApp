@@ -1,11 +1,10 @@
 ﻿using System;
 using UIKit;
 using Foundation;
-using System.Collections.Generic;
 
 namespace SeverinoApp.iOS
 {
-	public class TableServicosPerfil : UITableViewSource
+	public class TableHome : UITableViewSource
 	{
 		Servico[] TableItems;
 
@@ -21,8 +20,8 @@ namespace SeverinoApp.iOS
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
 			//UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
-			UITableViewCell cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier);
-			cell.Accessory = UITableViewCellAccessory.None;
+			UITableViewCell cell = new UITableViewCell (UITableViewCellStyle.Value1, CellIdentifier);
+			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
 			Servico item = TableItems[indexPath.Row];
 
 			//---- if there are no cells to reuse, create a new one
@@ -31,10 +30,11 @@ namespace SeverinoApp.iOS
 
 			cell.TextLabel.Text = item.Descricao;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Imagem);
+			cell.DetailTextLabel.Text = "Qtd: " + item.Total.ToString ().PadLeft(4);
 			return cell;
 		}
 
-		public TableServicosPerfil (Servico[] items)
+		public TableHome (Servico[] items)
 		{
 			TableItems = items;
 
@@ -55,10 +55,6 @@ namespace SeverinoApp.iOS
 			//new UIAlertView("Serviço Selecionado: ", TableItems[indexPath.Row].Descricao, null, "OK", null).Show();
 			tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
 			var cell = tableView.CellAt(indexPath);
-			if (cell.Accessory == UITableViewCellAccessory.Checkmark)
-				cell.Accessory = UITableViewCellAccessory.None;
-			else
-				cell.Accessory = UITableViewCellAccessory.Checkmark;
 		}
 		/*
 		public override nint NumberOfSections (UITableView tableView)

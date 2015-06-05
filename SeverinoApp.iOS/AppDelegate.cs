@@ -97,16 +97,16 @@ namespace SeverinoApp.iOS
 
 			//SobreViewController
 			Root.Add (new Section () {
-				new StyledStringElement("Inicio", () => NavigationController.PushViewController(Home, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
-				new StyledStringElement("Perfil", () => NavigationController.PushViewController(Perfil, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
-				new StyledStringElement("Chamado", () => NavigationController.PushViewController(Chamado, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
-				new StyledStringElement("Serviços", () => NavigationController.PushViewController(Servicos, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
-				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
+				new StyledStringElement("Inicio", () => NavigationController.PushViewController(Home, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"home.png")},
+				new StyledStringElement("Perfil", () => NavigationController.PushViewController(Perfil, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"id-card.png") },
+				new StyledStringElement("Chamado", () => NavigationController.PushViewController(Chamado, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"message.png") },
+				new StyledStringElement("Serviços", () => NavigationController.PushViewController(Servicos, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear , Image =  UIImage.FromFile ("Icons/"+"tick.png")},
+				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"lock.png") },
 				//new StyledStringElement("Stuff", () => NavigationController.PushViewController(new StuffViewController(), true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear },
 			});
 
-			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-
+			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.SingleLine;
+			TableView.BackgroundColor = UIColor.FromRGB (4,188,249);
 			//var img = new UIImageView(UIImage.FromFile("galaxy.png"));
 			//TableView.BackgroundView = img;
 
