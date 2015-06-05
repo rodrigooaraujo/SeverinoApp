@@ -154,15 +154,47 @@
     <Compile Include="HomeView.designer.cs">
       <DependentUpon>HomeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServicosViewController.cs" />
+    <Compile Include="ServicosViewController.designer.cs">
+      <DependentUpon>ServicosViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicosView.cs" />
+    <Compile Include="ServicosView.designer.cs">
+      <DependentUpon>ServicosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\TableServicosPerfil.cs" />
   </ItemGroup>
+  <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\LogoSeverino.png" />
+    <BundleResource Include="Resources\Icons\hammer.png" />
+    <BundleResource Include="Resources\Icons\home.png" />
+    <BundleResource Include="Resources\Icons\id-card.png" />
+    <BundleResource Include="Resources\Icons\key.png" />
+    <BundleResource Include="Resources\Icons\lock.png" />
+    <BundleResource Include="Resources\Icons\man.png" />
+    <BundleResource Include="Resources\Icons\map-pin.png" />
+    <BundleResource Include="Resources\Icons\message.png" />
+    <BundleResource Include="Resources\Icons\no-cash.png" />
+    <BundleResource Include="Resources\Icons\paint-roller.png" />
+    <BundleResource Include="Resources\Icons\paint.png" />
+    <BundleResource Include="Resources\Icons\plier.png" />
+    <BundleResource Include="Resources\Icons\screwdriver.png" />
+    <BundleResource Include="Resources\Icons\spanner.png" />
+    <BundleResource Include="Resources\Icons\star.png" />
+    <BundleResource Include="Resources\Icons\tick.png" />
+    <BundleResource Include="Resources\Icons\wheelbarrow.png" />
+    <BundleResource Include="Resources\Icons\woman.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
       <Version>1.2.3.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Render\" />
+    <Folder Include="Resources\Icons\" />
   </ItemGroup>
 </Project>

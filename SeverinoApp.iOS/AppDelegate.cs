@@ -30,6 +30,7 @@ namespace SeverinoApp.iOS
 		public static UIViewController Login = Storyboard.InstantiateViewController ("LoginViewController");
 		public static UIViewController Perfil = Storyboard.InstantiateViewController ("PerfilViewController");
 		public static UIViewController Chamados = Storyboard.InstantiateViewController ("ChamadoViewController");
+		public static UIViewController Servicos = Storyboard.InstantiateViewController ("ServicosViewController");
 
 
 		public UINavigationController Navigation{ get; set;}
@@ -72,25 +73,18 @@ namespace SeverinoApp.iOS
 			Window.MakeKeyAndVisible ();
 
 			return true;
-		}
-
-		public void PreparaHome()
-		{
-			Menu = new SlideoutNavigationController ();
-			Menu.MainViewController = Home;
-			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft(), Menu){ NavigationBarHidden = true};
-			Window.RootViewController = Menu;
-			Window.MakeKeyAndVisible ();
-		}
+		}	
 	}
 
 	public class DummyControllerLeft : DialogViewController
 	{
 		//public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard_iPhone", null);
-		public static UIViewController Home = AppDelegate.Storyboard.InstantiateViewController ("HomeViewController");
-		public static UIViewController Login = AppDelegate.Storyboard.InstantiateViewController ("LoginViewController");
-		public static UIViewController Perfil = AppDelegate.Storyboard.InstantiateViewController ("PerfilViewController");
-		public static UIViewController Chamado = AppDelegate.Storyboard.InstantiateViewController ("ChamadoViewController");
+		public static UIViewController Home = AppDelegate.Home;
+		public static UIViewController Login = AppDelegate.Login;
+		public static UIViewController Perfil = AppDelegate.Perfil;
+		public static UIViewController Chamado = AppDelegate.Chamados;
+		public static UIViewController Servicos = AppDelegate.Servicos;
+
 
 		public DummyControllerLeft () 
 			: base(UITableViewStyle.Plain,new RootElement(""))
@@ -106,6 +100,7 @@ namespace SeverinoApp.iOS
 				new StyledStringElement("Inicio", () => NavigationController.PushViewController(Home, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
 				new StyledStringElement("Perfil", () => NavigationController.PushViewController(Perfil, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
 				new StyledStringElement("Chamado", () => NavigationController.PushViewController(Chamado, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
+				new StyledStringElement("Serviços", () => NavigationController.PushViewController(Servicos, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
 				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Black },
 				//new StyledStringElement("Stuff", () => NavigationController.PushViewController(new StuffViewController(), true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear },
 			});

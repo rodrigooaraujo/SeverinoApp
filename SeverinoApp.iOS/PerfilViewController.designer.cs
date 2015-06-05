@@ -24,6 +24,9 @@ namespace SeverinoApp.iOS
 		SeverinoApp.iOS.PerfilView PerfilView { get; set; }
 
 		[Outlet]
+		UIKit.UIScrollView scrCampos { get; set; }
+
+		[Outlet]
 		UIKit.UISwitch swtPrestador { get; set; }
 
 		[Outlet]
