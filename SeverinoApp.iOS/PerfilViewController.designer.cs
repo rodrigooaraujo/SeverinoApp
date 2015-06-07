@@ -47,9 +47,25 @@ namespace SeverinoApp.iOS
 		[Outlet]
 		UIKit.UITextField txtSobrenome { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblHorarioAtendimento { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblRaioAtendimento { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UISlider sldRaioAtendimento { get; set; }
+
 		[Action ("btnGravar_Click:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btnGravar_Click (UIButton sender);
+
+		[Action ("sldRaioAtendimento_Changed:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void sldRaioAtendimento_Changed (UISlider sender);
 
 		[Action ("swtPrestador_Changed:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -57,6 +73,18 @@ namespace SeverinoApp.iOS
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (lblHorarioAtendimento != null) {
+				lblHorarioAtendimento.Dispose ();
+				lblHorarioAtendimento = null;
+			}
+			if (lblRaioAtendimento != null) {
+				lblRaioAtendimento.Dispose ();
+				lblRaioAtendimento = null;
+			}
+			if (sldRaioAtendimento != null) {
+				sldRaioAtendimento.Dispose ();
+				sldRaioAtendimento = null;
+			}
 		}
 	}
 }

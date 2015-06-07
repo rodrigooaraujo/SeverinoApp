@@ -48,47 +48,13 @@ namespace SeverinoApp
 
 		public void CriaLista()
 		{
-			Servicos = new List<Servico> ();
-
-			var servico = new Servico ();
-			servico.Codigo = 1;
-			servico.Descricao = "Pintura";
-			servico.Imagem = "paint-roller.png";
-			servico.Total = 54;
-
-			Servicos.Add (servico);
-
-			var servico2 = new Servico ();
-			servico2.Codigo = 2;
-			servico2.Descricao = "Alvenaria";
-			servico2.Imagem = "paint.png";
-			servico2.Total = 30;
-
-			Servicos.Add (servico2);
-
-			var servico3 = new Servico ();
-			servico3.Codigo = 3;
-			servico3.Descricao = "Reforma";
-			servico3.Imagem = "wheelbarrow.png";
-			servico3.Total = 100;
-
-			Servicos.Add (servico3);
-
-			var servico4 = new Servico ();
-			servico4.Codigo = 4;
-			servico4.Descricao = "Faxina";
-			servico4.Imagem = "water hose.png";
-			servico4.Total = 10;
-
-			Servicos.Add (servico4);
-
-			var servico5 = new Servico ();
-			servico5.Codigo = 5;
-			servico5.Descricao = "Encanamento";
-			servico5.Imagem = "spanner.png";
-			servico5.Total = 74;
-
-			Servicos.Add (servico5);
+			Servicos = new List<Servico> {
+				new Servico {Codigo = 1, Descricao = "Pintura", Imagem = "paint-roller.png", Total = 54},
+				new Servico {Codigo = 2, Descricao = "Alvenaria", Imagem = "paint.png", Total = 30},
+				new Servico {Codigo = 3, Descricao = "Reforma", Imagem = "wheelbarrow.png", Total = 100},
+				new Servico {Codigo = 4, Descricao = "Faxina", Imagem = "water hose.png", Total = 10},
+				new Servico {Codigo = 5, Descricao = "Encanamento", Imagem = "spanner.png", Total = 74}
+			};
 		}
 
 		public void Add(Servico servico)

@@ -5,11 +5,10 @@ using UIKit;
 
 namespace SeverinoApp.iOS
 {
-	partial class ChamadoView : UIView
+	partial class DatePickerController : UIViewController
 	{
-		public ChamadoView (IntPtr handle) : base (handle)
+		public DatePickerController (IntPtr handle) : base (handle)
 		{
 		}
-			
 	}
 }

@@ -5,11 +5,15 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/387-view-388.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/401-view-402.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/442-view-443.nib
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/465-view-466.nib
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/563-view-564.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChamadoViewController.nib
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/DatePickerController.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/FacebookViewController.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/HomeViewController.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/Info.plist
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/LoginViewController.nib
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/MapaViewController.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/PerfilViewController.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/PrincipalNavigationController.nib
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ServicosViewController.nib
@@ -20,14 +24,6 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/LogoSeverino.png
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines.png
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines@2x.png
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SeverinoApp.iOS.exe.mdb
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SeverinoApp.iOS.exe
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/SeverinoApp.iOS.exe
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/SeverinoApp.iOS.exe.mdb
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/MonoTouch.Slideout.dll
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/hammer.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/home.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/id-card.png
@@ -47,5 +43,12 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/wheelbarrow.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/woman.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/water hose.png
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/465-view-466.nib
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/MapaViewController.nib
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines.png
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines@2x.png
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SeverinoApp.iOS.exe.mdb
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SeverinoApp.iOS.exe
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/SeverinoApp.iOS.exe
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/SeverinoApp.iOS.exe.mdb
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/MonoTouch.Slideout.dll
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/search.png

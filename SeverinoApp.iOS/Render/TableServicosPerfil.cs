@@ -31,6 +31,8 @@ namespace SeverinoApp.iOS
 
 			cell.TextLabel.Text = item.Descricao;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Imagem);
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
+
 			return cell;
 		}
 
@@ -59,7 +61,18 @@ namespace SeverinoApp.iOS
 				cell.Accessory = UITableViewCellAccessory.None;
 			else
 				cell.Accessory = UITableViewCellAccessory.Checkmark;
+
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
+
+			//cell.BackgroundColor = UIColor.FromRGB (193, 255, 61);
+
 		}
+
+		public override void RowDeselected (UITableView tableView, NSIndexPath indexPath)
+		{
+			
+		}
+
 		/*
 		public override nint NumberOfSections (UITableView tableView)
 		{

@@ -168,8 +168,14 @@
     <Compile Include="MapaViewController.designer.cs">
       <DependentUpon>MapaViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Render\SearchDelegate.cs" />
     <Compile Include="Render\ShearchSource.cs" />
+    <Compile Include="DatePickerController.cs" />
+    <Compile Include="DatePickerController.designer.cs">
+      <DependentUpon>DatePickerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ListPickerViewModel.cs" />
+    <Compile Include="Model\SearchDelegate.cs" />
+    <Compile Include="Render\TableChamadoUsuarios.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -194,6 +200,7 @@
     <BundleResource Include="Resources\Icons\wheelbarrow.png" />
     <BundleResource Include="Resources\Icons\woman.png" />
     <BundleResource Include="Resources\Icons\water hose.png" />
+    <BundleResource Include="Resources\Icons\search.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
@@ -204,5 +211,6 @@
   <ItemGroup>
     <Folder Include="Render\" />
     <Folder Include="Resources\Icons\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 </Project>
