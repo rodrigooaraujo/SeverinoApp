@@ -45,6 +45,7 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/water hose.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/search.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/PinMap.png
+/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Pin50.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines@2x.png
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SeverinoApp.iOS.exe.mdb
@@ -53,4 +54,3 @@
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/SeverinoApp.iOS.exe.mdb
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/MonoTouch.Slideout.dll
 /Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
-/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Pin50.png

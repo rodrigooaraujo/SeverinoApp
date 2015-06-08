@@ -24,6 +24,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		MapKit.MKMapView mapUsuario { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIPickerView pckServico { get; set; }
 
 		[Outlet]
@@ -59,6 +63,10 @@ namespace SeverinoApp.iOS
 			if (lblServico != null) {
 				lblServico.Dispose ();
 				lblServico = null;
+			}
+			if (mapUsuario != null) {
+				mapUsuario.Dispose ();
+				mapUsuario = null;
 			}
 			if (pckServico != null) {
 				pckServico.Dispose ();

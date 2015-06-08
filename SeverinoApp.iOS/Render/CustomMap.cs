@@ -8,8 +8,12 @@ namespace SeverinoApp.iOS
 {
 	public class CustomMap : MKMapView
 	{
-		UINavigationController NavigationController;
-		UIView View;
+		public UINavigationController NavigationController{ get; set;}
+		public UIView View{ get; set;}
+
+		public CustomMap ()
+		{
+		}
 
 		public CustomMap (UINavigationController NavigationController, UIView View)
 		{
@@ -17,6 +21,16 @@ namespace SeverinoApp.iOS
 			this.View = View;
 			GetViewForAnnotation = getViewForAnnotation;
 		}
+
+		public override void SelectAnnotation (IMKAnnotation annotation, bool animated)
+		{
+			var detail = AppDelegate.Perfil;
+			var popup = new UIPopoverController (detail);
+			popup.PopoverContentSize = new CGSize (320, 320);
+
+			//popup.PresentFromRect (new CGRect(50,100,300,400 , View, UIPopoverArrowDirection.Any, true);
+		}
+
 
 		MKAnnotationView getViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{

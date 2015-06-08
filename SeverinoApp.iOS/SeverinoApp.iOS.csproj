@@ -178,6 +178,7 @@
     <Compile Include="Render\TableChamadoUsuarios.cs" />
     <Compile Include="Render\MKPointAnnotation.cs" />
     <Compile Include="Render\CustomMap.cs" />
+    <Compile Include="Render\CustomUIButton.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

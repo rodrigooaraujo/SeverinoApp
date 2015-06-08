@@ -21,18 +21,20 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewDidLoad ();
 
+			var frame = mkmMapa.Frame;
+
 			mkmMapa.ShowsUserLocation = true;
 			mkmMapa.ZoomEnabled = true;
 			mkmMapa.ScrollEnabled = true;
 
 			var manager = new CLLocationManager ();
 
-			while (manager.Location.Coordinate.Latitude > 0) {
+			//while (manager.Location.Coordinate.Latitude > 0) {
 				if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
 					manager.RequestWhenInUseAuthorization ();
 					manager.RequestAlwaysAuthorization ();
 				}
-			}
+			//}
 
 			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
 
@@ -74,6 +76,7 @@ namespace SeverinoApp.iOS
 
 			//MKPinAnnotationView 
 		}
+
 
 		private MKAnnotationView GetViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{
@@ -117,7 +120,11 @@ namespace SeverinoApp.iOS
 
 				UIImageView sfIconView = new UIImageView (UIImage.FromFile ("Icons/man.png"));
 				annotationView.LeftCalloutAccessoryView = sfIconView;
-				annotationView.RightCalloutAccessoryView = sfIconView;
+	
+				UIButton rightButton = UIButton.FromType (UIButtonType.DetailDisclosure);
+				rightButton.AddTarget ((object sender, EventArgs ea) => NavigationController.PushViewController (AppDelegate.Perfil, true), UIControlEvent.TouchUpInside);
+				annotationView.RightCalloutAccessoryView = rightButton;
+
 				pinViews.Add (annotationView);
 				return annotationView;
 			} else {
