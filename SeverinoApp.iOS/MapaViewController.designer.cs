@@ -26,16 +26,8 @@ namespace SeverinoApp.iOS
 		[Outlet]
 		UIKit.UISearchBar srcPesquisa { get; set; }
 
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UISearchBar shPesquisa { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (shPesquisa != null) {
-				shPesquisa.Dispose ();
-				shPesquisa = null;
-			}
 		}
 	}
 }

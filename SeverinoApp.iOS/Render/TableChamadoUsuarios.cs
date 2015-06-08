@@ -59,10 +59,7 @@ namespace SeverinoApp.iOS
 			foreach (var item in tableView.VisibleCells) {
 				if (item != cell)
 					item.Accessory = UITableViewCellAccessory.None;
-			}
-
-
-				
+			}				
 
 		}
 	}

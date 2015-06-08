@@ -176,6 +176,8 @@
     <Compile Include="Model\ListPickerViewModel.cs" />
     <Compile Include="Model\SearchDelegate.cs" />
     <Compile Include="Render\TableChamadoUsuarios.cs" />
+    <Compile Include="Render\MKPointAnnotation.cs" />
+    <Compile Include="Render\CustomMap.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -201,6 +203,8 @@
     <BundleResource Include="Resources\Icons\woman.png" />
     <BundleResource Include="Resources\Icons\water hose.png" />
     <BundleResource Include="Resources\Icons\search.png" />
+    <BundleResource Include="Resources\PinMap.png" />
+    <BundleResource Include="Resources\Pin50.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
