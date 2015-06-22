@@ -31,8 +31,7 @@ namespace SeverinoApp.iOS
 
 			cell.TextLabel.Text = item.Descricao;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Imagem);
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
-
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
 			return cell;
 		}
 

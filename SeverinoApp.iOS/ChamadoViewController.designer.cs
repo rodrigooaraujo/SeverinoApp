@@ -16,6 +16,10 @@ namespace SeverinoApp.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnAbreChamado { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView direcionadoView { get; set; }
 
 		[Outlet]
@@ -56,6 +60,10 @@ namespace SeverinoApp.iOS
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnAbreChamado != null) {
+				btnAbreChamado.Dispose ();
+				btnAbreChamado = null;
+			}
 			if (direcionadoView != null) {
 				direcionadoView.Dispose ();
 				direcionadoView = null;

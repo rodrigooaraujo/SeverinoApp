@@ -24,6 +24,7 @@ namespace SeverinoApp.iOS
 			var model = new PickerDataModel (servico.Servicos);
 			pckServico.Model = model;
 			direcionadoView.BackgroundColor = View.BackgroundColor;
+			//tblUsuarios.Frame.Width = scrListaUsuarios.Frame.Width;
 			tblUsuarios.BackgroundColor = View.BackgroundColor;
 			tblUsuarios.Frame = scrListaUsuarios.Bounds;
 			Usuario usuario = new Usuario ();
@@ -51,7 +52,7 @@ namespace SeverinoApp.iOS
 		{
 			direcionadoView.Hidden = !sender.On;
 			mapUsuario.Hidden = sender.On;
-
+		
 			if(direcionadoView.Hidden)
 			{
 				mapUsuario.Frame = direcionadoView.Frame;

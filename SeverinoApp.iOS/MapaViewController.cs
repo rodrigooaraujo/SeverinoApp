@@ -12,6 +12,8 @@ namespace SeverinoApp.iOS
 {
 	partial class MapaViewController : UIViewController
 	{
+		public Servico servico { get; set;}
+
 		public MapaViewController (IntPtr handle) : base (handle)
 		{
 			
@@ -39,7 +41,14 @@ namespace SeverinoApp.iOS
 			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
 
 			try {
-				MKCoordinateRegion mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
+				
+				MKCoordinateRegion mapRegion;
+
+				if(manager.Location.Coordinate.Latitude != null)
+					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
+				else
+					mapRegion = MKCoordinateRegion.FromDistance (new CLLocationCoordinate2D(-23.653782, -46.575832), 100, 100);
+				
 				//mkmMapa.CenterCoordinate = mkmMapa.UserLocation.Coordinate;
 
 				MKCoordinateRegion newRegion;
@@ -51,7 +60,7 @@ namespace SeverinoApp.iOS
 				mkmMapa.SetRegion (newRegion, true);
 
 			} catch (Exception ex) {
-				new UIAlertView("Erro", "Não Foi Possivel detectar sua Localidade.", null, "OK", null).Show();
+				new UIAlertView("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show();
 			}
 
 			mkmMapa.GetViewForAnnotation = GetViewForAnnotation;
@@ -122,7 +131,11 @@ namespace SeverinoApp.iOS
 				annotationView.LeftCalloutAccessoryView = sfIconView;
 	
 				UIButton rightButton = UIButton.FromType (UIButtonType.DetailDisclosure);
+				//rightButton.Frame = new CGRect (0, 0, 32, 32);
 				rightButton.AddTarget ((object sender, EventArgs ea) => NavigationController.PushViewController (AppDelegate.Perfil, true), UIControlEvent.TouchUpInside);
+				//rightButton.TitleLabel.Text = "OK";
+				//rightButton.BackgroundColor = UIColor.Red;
+				//rightButton.SetTitle("Tste", UIControlState.Normal);
 				annotationView.RightCalloutAccessoryView = rightButton;
 
 				pinViews.Add (annotationView);

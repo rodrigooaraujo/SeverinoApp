@@ -22,6 +22,7 @@ namespace SeverinoApp.iOS
 			lblRaioAtendimento.Hidden = !swtPrestador.On;
 			txtCustoVisita.Hidden = !swtPrestador.On;
 			sldRaioAtendimento.Hidden = !swtPrestador.On;
+			lblHorarioAtendimento.Hidden= !swtPrestador.On;
 		}
 
 		partial void sldRaioAtendimento_Changed (UISlider sender)

@@ -8,6 +8,8 @@ namespace SeverinoApp.iOS
 	{
 		Servico[] TableItems;
 
+		public UINavigationController Navigation{ get; set;}
+
 		string CellIdentifier = "TableCell";
 		//Dictionary<string, List<Servico>> indexedTableItems = new Dictionary<string, List<Servico>>();
 		//string[] keys;
@@ -31,7 +33,7 @@ namespace SeverinoApp.iOS
 			cell.TextLabel.Text = item.Descricao;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Imagem);
 			cell.DetailTextLabel.Text = "Qtd: " + item.Total.ToString ().PadLeft(4);
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
 			return cell;
 		}
 
@@ -50,12 +52,25 @@ namespace SeverinoApp.iOS
 			keys = indexedTableItems.Keys ();*/
 		}
 
+		public TableHome (Servico[] items, UINavigationController Navigation)
+		{
+			TableItems = items;
+			this.Navigation = Navigation;
+		}
+
 
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
+			if (Navigation == null)
+				return;
+			
 			//new UIAlertView("Serviço Selecionado: ", TableItems[indexPath.Row].Descricao, null, "OK", null).Show();
 			tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
 			var cell = tableView.CellAt(indexPath);
+			Servico item = TableItems[indexPath.Row];
+			var mapa = AppDelegate.Mapa;
+
+			Navigation.PushViewController (mapa, true);			
 		}
 		/*
 		public override nint NumberOfSections (UITableView tableView)

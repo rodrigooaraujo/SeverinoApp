@@ -206,6 +206,7 @@
     <BundleResource Include="Resources\Icons\search.png" />
     <BundleResource Include="Resources\PinMap.png" />
     <BundleResource Include="Resources\Pin50.png" />
+    <BundleResource Include="Resources\Profille.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
