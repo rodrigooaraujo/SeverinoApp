@@ -107,7 +107,7 @@ namespace SeverinoApp.iOS
 				//new StyledStringElement("Stuff", () => NavigationController.PushViewController(new StuffViewController(), true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear },
 			});
 
-			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.SingleLine;
+			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			TableView.BackgroundColor = UIColor.FromRGB (4,188,249);
 			//var img = new UIImageView(UIImage.FromFile("galaxy.png"));
 			//TableView.BackgroundView = img;

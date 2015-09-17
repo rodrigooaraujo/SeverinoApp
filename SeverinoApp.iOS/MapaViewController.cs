@@ -34,26 +34,35 @@ namespace SeverinoApp.iOS
 			//while (manager.Location.Coordinate.Latitude > 0) {
 				if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
 					manager.RequestWhenInUseAuthorization ();
-					manager.RequestAlwaysAuthorization ();
+					//manager.RequestAlwaysAuthorization ();
 				}
 			//}
+
+			if (!CLLocationManager.LocationServicesEnabled)
+				 new UIAlertView("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show();
 
 			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
 
 			try {
-				
 				MKCoordinateRegion mapRegion;
+				var locfake = new CLLocationCoordinate2D(-23.653782, -46.575832);
+				MKCoordinateRegion newRegion;
 
-				if(manager.Location.Coordinate.Latitude != null)
+				if(manager.Location != null)
+				{
 					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
+					newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
+					newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
+				}
 				else
-					mapRegion = MKCoordinateRegion.FromDistance (new CLLocationCoordinate2D(-23.653782, -46.575832), 100, 100);
-				
+				{
+					mapRegion = MKCoordinateRegion.FromDistance (locfake, 100, 100);
+					newRegion.Center.Latitude = locfake.Latitude;
+					newRegion.Center.Longitude = locfake.Longitude;
+				}
+
 				//mkmMapa.CenterCoordinate = mkmMapa.UserLocation.Coordinate;
 
-				MKCoordinateRegion newRegion;
-				newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
-				newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
 				newRegion.Span.LatitudeDelta = 0.012872;
 				newRegion.Span.LongitudeDelta = 0.009863;
 
@@ -132,7 +141,12 @@ namespace SeverinoApp.iOS
 	
 				UIButton rightButton = UIButton.FromType (UIButtonType.DetailDisclosure);
 				//rightButton.Frame = new CGRect (0, 0, 32, 32);
-				rightButton.AddTarget ((object sender, EventArgs ea) => NavigationController.PushViewController (AppDelegate.Perfil, true), UIControlEvent.TouchUpInside);
+				//rightButton.AddTarget ((object sender, EventArgs ea) => NavigationController.PushViewController (AppDelegate.Perfil, true), UIControlEvent.TouchUpInside);
+
+				AppDelegate.Perfil.ModalPresentationStyle = UIModalPresentationStyle.Popover;
+				var teste = AppDelegate.Perfil;
+				teste.View.Frame = new CGRect (20, 50, 400, 300);
+				rightButton.AddTarget ((object sender, EventArgs ea) => this.PresentViewController (teste, true, null), UIControlEvent.TouchUpInside);
 				//rightButton.TitleLabel.Text = "OK";
 				//rightButton.BackgroundColor = UIColor.Red;
 				//rightButton.SetTitle("Tste", UIControlState.Normal);

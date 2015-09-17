@@ -7,3 +7,9 @@ MonoTouch.Slideout.dll
 MonoTouch.Dialog-1.dll
 System.Json.dll
 Xamarin.Auth.iOS.dll
+wsSeverino.dll
+System.Net.Http.dll
+Newtonsoft.Json.dll
+System.Runtime.Serialization.dll
+System.Xml.Linq.dll
+System.ComponentModel.DataAnnotations.dll

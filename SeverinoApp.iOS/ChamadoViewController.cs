@@ -12,6 +12,8 @@ namespace SeverinoApp.iOS
 {
 	partial class ChamadoViewController : UIViewController
 	{
+		CLLocationManager manager = new CLLocationManager ();
+
 		public ChamadoViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -56,7 +58,16 @@ namespace SeverinoApp.iOS
 			if(direcionadoView.Hidden)
 			{
 				mapUsuario.Frame = direcionadoView.Frame;
-				CriaMapa();
+				if (CLLocationManager.LocationServicesEnabled)
+				{
+					CriaMapa();
+
+					manager.UpdatedLocation += (object sender2, CLLocationUpdatedEventArgs e) => {
+						CriaMapa();
+					};	
+				}
+				else
+					new UIAlertView("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show();
 			}
 
 		}
@@ -75,12 +86,13 @@ namespace SeverinoApp.iOS
 			mapUsuario.ZoomEnabled = true;
 			mapUsuario.ScrollEnabled = true;
 
-			var manager = new CLLocationManager ();
+
 			DateTime tempo = DateTime.Now;
 			//while (manager.Location.Coordinate.Latitude != null || DateTime.Now.Subtract(tempo).Seconds < 20) {
 				if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
 					manager.RequestWhenInUseAuthorization ();
-					manager.RequestAlwaysAuthorization ();
+					
+					//manager.RequestAlwaysAuthorization ();
 				}
 			//}
 
@@ -88,17 +100,26 @@ namespace SeverinoApp.iOS
 
 			try {
 				MKCoordinateRegion mapRegion;
+				var locfake = new CLLocationCoordinate2D(-23.653782, -46.575832);
+				MKCoordinateRegion newRegion;
 
-				if(manager.Location.Coordinate.Latitude != null)
+				if(manager.Location != null)
+				{
 					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
+					newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
+					newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
+				}
 				else
-					mapRegion = MKCoordinateRegion.FromDistance (new CLLocationCoordinate2D(-23.653782, -46.575832), 100, 100);
+				{
+					mapRegion = MKCoordinateRegion.FromDistance (locfake, 100, 100);
+					newRegion.Center.Latitude = locfake.Latitude;
+					newRegion.Center.Longitude = locfake.Longitude;
+				}
 					
 				//mkmMapa.CenterCoordinate = mkmMapa.UserLocation.Coordinate;
 
-				MKCoordinateRegion newRegion;
-				newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
-				newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
+
+
 				newRegion.Span.LatitudeDelta = 0.012872;
 				newRegion.Span.LongitudeDelta = 0.009863;
 

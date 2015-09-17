@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
+using System.Threading.Tasks;
 
 namespace SeverinoApp.iOS
 {
@@ -13,19 +14,40 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
+			carrega ();
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+		}
+
+		public async Task<Boolean>  carrega()
+		{
+			var servico = new Servico ();
+
+			await servico.CriaLista ();
+			
 			UIScrollView scroll = new UIScrollView (View.Bounds);
 			UIView servicos = new UIView (View.Bounds);
 			servicos.TranslatesAutoresizingMaskIntoConstraints = false;
 
 			var table = new UITableView (View.Bounds);
-			var servico = new Servico ();
 
-			servico.CriaLista ();
 			table.Source = new TableHome (servico.Servicos.ToArray ());
 			table.TranslatesAutoresizingMaskIntoConstraints = false;
 			servicos.Add (table);
 			scroll.Add (servicos);
 			View.Add (table);
+
+			return true;
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+
 		}
 	}
 }
