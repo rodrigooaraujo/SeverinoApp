@@ -80,13 +80,13 @@ namespace SeverinoApp.iOS
 			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
 		
 			var usuarios = (from usu in usuario.Usuarios
-			                where usu.PrestadorServico == true
+				where usu.PrestaServico == 1
 			                select usu);
 
 			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
 				var usu = (Usuario)usuarios.ToArray () [i];
 				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
-				lstmapAnnotaions [i].Title = usu.Nome + " " + usu.Sobrenome;
+				lstmapAnnotaions [i].Title = usu.Nome;
 				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D (usu.Latitude, usu.Longitude));
 				lstmapAnnotaions [i].usuario = usu;
 				mkmMapa.AddAnnotation (lstmapAnnotaions [i]);

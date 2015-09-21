@@ -32,9 +32,9 @@ namespace SeverinoApp.iOS
 			//---- if there are no cells to reuse, create a new one
 			if (cell == null)
 			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
-			item.Foto = item.Sexo == "F" ? "woman.png" : "man.png";
-			cell.TextLabel.Text = item.Nome +" "+ item.Sobrenome;
-			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Foto);
+			var foto = item.Sexo == "F" ? "woman.png" : "man.png";
+			cell.TextLabel.Text = item.Nome;
+			cell.ImageView.Image = UIImage.FromFile ("Icons/"+foto);
 			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
 			return cell;
 		}

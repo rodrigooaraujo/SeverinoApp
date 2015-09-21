@@ -42,7 +42,7 @@ namespace SeverinoApp.iOS
 			usuario.CriaLista ();
 
 			var usuarios = (from usu in usuario.Usuarios 
-								where usu.PrestadorServico==true 
+								where usu.PrestaServico==1 
 								where usu.Nome.ToUpper().Contains(nome.ToUpper()) 
 							select usu
 							).OrderBy(x => x.Nome) ;
@@ -137,13 +137,13 @@ namespace SeverinoApp.iOS
 			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
 
 			var usuarios = (from usu in usuario.Usuarios
-				where usu.PrestadorServico == true
+				where usu.PrestaServico == 1
 				select usu);
 
 			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
 				var usu = (Usuario)usuarios.ToArray () [i];
 				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
-				lstmapAnnotaions [i].Title = usu.Nome + " " + usu.Sobrenome;
+				lstmapAnnotaions [i].Title = usu.Nome + " ";
 				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D (usu.Latitude, usu.Longitude));
 				lstmapAnnotaions [i].usuario = usu;
 				mapUsuario.AddAnnotation (lstmapAnnotaions [i]);
@@ -228,7 +228,7 @@ namespace SeverinoApp.iOS
 			/// The current selected item
 			/// </summary>
 			public int SelectedItem {
-				get { return Items [selectedIndex].Codigo; }
+				get { return Items [selectedIndex].ID; }
 			}
 
 			int selectedIndex = 0;
@@ -274,7 +274,7 @@ namespace SeverinoApp.iOS
 
 			public override string GetTitle (UIPickerView picker, nint row, nint component)
 			{
-				return Items[(int)row].Descricao;
+				return Items[(int)row].Nome;
 			}
 
 			/// <summary>

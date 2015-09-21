@@ -33,7 +33,9 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Json.dll \
 	-r \
-	../../../Downloads/wsSeverino.dll \
+	../../wsSeverino.dll \
+	-r \
+	../../../Downloads/ModalPickerViewController-master/SharpMobileCode.ModalPicker/obj/Debug/SharpMobileCode.ModalPicker.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -45,5 +47,7 @@
 	-r \
 	../packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
-	../../../Downloads/wsSeverino.dll \
+	../../wsSeverino.dll \
+	-r \
+	../../../Downloads/ModalPickerViewController-master/SharpMobileCode.ModalPicker/obj/Debug/SharpMobileCode.ModalPicker.dll \
 	/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug//SeverinoApp.iOS.exe \

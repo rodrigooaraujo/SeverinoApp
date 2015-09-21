@@ -1,43 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace SeverinoApp
 {
 	public class Usuario
 	{
-		public int Codigo { get; set;}
-		public string Login{ get; set;}
-		public string Senha{ get; set;}
-		public string Nome{ get; set;}
-		public string Sobrenome{ get; set;}
-		public string Telefone{ get; set;}
-		public string Endereco{ get; set;}
-		public string Numero{ get; set;}
-		public string Cidade{ get; set;}
-		public string Estado{ get; set;}
-		public string CEP{ get; set;}
-		public string Bairro{ get; set;}
-		public string Sexo{ get; set;}
-		public int Idade{ get; set;}
-		public DateTime DtCadastro{ get; set;}
-		public double Latitude{ get; set;}
-		public double Longitude{ get; set;}
-		public bool PrestadorServico{ get; set;}
-		public float RaioAtendimento{ get; set;}
-		public string HorarioDe{ get; set;}
-		public string HorarioAte{ get; set;}
-		public string Foto{ get; set;}
-		public string Json{ get; set;}
+		public int ID { get; set; }
+		public string Login { get; set; }
+		public int CPF { get; set; }
+		public string Senha { get; set; }
+		public string Nome { get; set; }
+		public string Sexo { get; set; }
+		public DateTime DtNascimento { get; set; }
+		public int PrestaServico { get; set; }
+		public decimal RaioAtendimento { get; set; }
+		public int CobraVisita { get; set; }
+		public string HrInicio { get; set; }
+		public string HrFim { get; set; }
+		public int Ativo { get; set; }
+		public decimal CustoVisita { get; set; }
+		public DateTime DtCadastro { get; set; }
+
+		public double Latitude { get; set; }
+		public double Longitude { get; set; }
+
 		public List<Usuario> Usuarios;
+		public List<UsuarioEndereco> UsuarioEnderecos;
 
 		public Usuario ()
 		{
-			
+			Usuarios = new List<Usuario> ();
+			//LATITUDE e LONGITUDE Carregar pegando o endereco principal
 		}
 
 		public void CriaLista()
 		{
-			Usuarios = new List<Usuario> {
+			/*Usuarios = new List<Usuario> {
 				new Usuario{Codigo=1 , Login="Rodrigo", Senha="admin", Nome="Rodrigo",Sobrenome="Araújo", Sexo="M", Latitude=-23.665091,Longitude=-46.565693,PrestadorServico=true},
 				new Usuario{Codigo=2, Login="Adelmo", Senha="admin", Nome="Adelmo",Sobrenome="Júnior", Sexo="M",Latitude=-23.661240,Longitude=-46.558187,PrestadorServico=true},
 				new Usuario{Codigo=3 , Login="Lucas", Senha="admin", Nome="Lucas",Sobrenome="Angelo", Sexo="M",Latitude=-23.653567,Longitude=-46.556050,PrestadorServico=true},
@@ -63,8 +63,44 @@ namespace SeverinoApp
 				new Usuario{Codigo=23 , Login="Maiza", Senha="admin", Nome="Maiza",Sobrenome="Ferreira", Sexo="F",Latitude=-23.621843,Longitude=-46.605797,PrestadorServico=true},
 				new Usuario{Codigo=24 , Login="Mayara", Senha="admin", Nome="Mayara",Sobrenome="Gomes", Sexo="F",Latitude=-23.680738,Longitude=-46.544283,PrestadorServico=true},
 				new Usuario{Codigo=25 , Login="Ayla", Senha="admin", Nome="Ayla",Sobrenome="Lopes", Sexo="F",Latitude=-23.677987,Longitude=-46.552845,PrestadorServico=false} 
-			};
+			};*/
 		}
+
+		public void Add(Usuario usu)
+		{
+			Cadastra (usu);
+		}
+
+		public void Exclui(Servico servico)
+		{
+
+		}
+
+
+		private async Task<bool> Cadastra(Usuario usu)
+		{
+			var api = new Api ();
+			var json = JsonConvert.SerializeObject(usu, Formatting.Indented);
+			api.Post (json, "Usuario");
+			return true;
+		}
+	}
+
+	public partial class UsuarioEndereco
+	{
+		public int ID { get; set; }
+		public int IDUsuario { get; set; }
+		public string Descricao { get; set; }
+		public string Endereco { get; set; }
+		public string Cidade { get; set; }
+		public string Estado { get; set; }
+		public int CEP { get; set; }
+		public string Numero { get; set; }
+		public double Latitude { get; set; }
+		public double Longitude { get; set; }
+		public string DtCadastro { get; set; }
+
+		public List<UsuarioEndereco> UsuarioEnderecos;
 	}
 }
 

@@ -29,8 +29,8 @@ namespace SeverinoApp.iOS
 			if (cell == null)
 			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
 
-			cell.TextLabel.Text = item.Descricao;
-			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Imagem);
+			cell.TextLabel.Text = item.Nome;
+			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Icone);
 			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
 			return cell;
 		}

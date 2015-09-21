@@ -1,32 +1,18 @@
 ﻿<Properties StartupItem="SeverinoApp.iOS/SeverinoApp.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeverinoApp/Moldel/Servico.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="SeverinoApp.iOS/PerfilViewController.cs" Line="7" Column="13" />
-      <File FileName="SeverinoApp.iOS/ChamadoViewController.cs" Line="63" Column="17" />
-      <File FileName="SeverinoApp/Moldel/Servico.cs" Line="37" Column="4" />
+      <File FileName="SeverinoApp.iOS/PerfilViewController.cs" Line="81" Column="1" />
+      <File FileName="SeverinoApp.iOS/Main.cs" Line="14" Column="4" />
+      <File FileName="SeverinoApp.iOS/PerfilViewController.designer.cs" Line="64" Column="21" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SeverinoApp" expanded="True">
-            <Node name="SeverinoApp" expanded="True">
-              <Node name="Moldel" expanded="True">
-                <Node name="Servico.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="SeverinoApp.iOS" expanded="True">
-              <Node name="References" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/ChamadoViewController.cs" line="92" column="1" />
       <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/Empty/Moldel/Servico.cs" line="65" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Api.cs" line="83" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Render/TableServicosPerfil.cs" line="34" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

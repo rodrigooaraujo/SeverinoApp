@@ -27,20 +27,20 @@ namespace SeverinoApp.iOS
 		{
 			var servico = new Servico ();
 
-			await servico.CriaLista ();
-			
 			UIScrollView scroll = new UIScrollView (View.Bounds);
 			UIView servicos = new UIView (View.Bounds);
 			servicos.TranslatesAutoresizingMaskIntoConstraints = false;
 
 			var table = new UITableView (View.Bounds);
 
-			table.Source = new TableHome (servico.Servicos.ToArray ());
 			table.TranslatesAutoresizingMaskIntoConstraints = false;
 			servicos.Add (table);
 			scroll.Add (servicos);
 			View.Add (table);
 
+			await servico.CriaLista ();
+			table.Source = new TableHome (servico.Servicos.ToArray ());
+			table.ReloadData ();
 			return true;
 		}
 

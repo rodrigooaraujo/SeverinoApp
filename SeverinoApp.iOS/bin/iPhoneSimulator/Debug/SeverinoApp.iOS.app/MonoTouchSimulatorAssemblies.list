@@ -7,6 +7,7 @@ MonoTouch.Slideout.dll
 MonoTouch.Dialog-1.dll
 System.Json.dll
 Xamarin.Auth.iOS.dll
+SharpMobileCode.ModalPicker.dll
 wsSeverino.dll
 System.Net.Http.dll
 Newtonsoft.Json.dll

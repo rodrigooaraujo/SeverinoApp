@@ -104,7 +104,10 @@
     </Reference>
     <Reference Include="System.Json" />
     <Reference Include="wsSeverino">
-      <HintPath>..\..\..\Downloads\wsSeverino.dll</HintPath>
+      <HintPath>..\..\wsSeverino.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpMobileCode.ModalPicker">
+      <HintPath>..\..\..\Downloads\ModalPickerViewController-master\SharpMobileCode.ModalPicker\obj\Debug\SharpMobileCode.ModalPicker.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +204,7 @@
     <Compile Include="Render\MKPointAnnotation.cs" />
     <Compile Include="Render\CustomMap.cs" />
     <Compile Include="Render\CustomUIButton.cs" />
+    <Compile Include="Render\PickerModel.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
