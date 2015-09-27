@@ -109,6 +109,12 @@
     <Reference Include="SharpMobileCode.ModalPicker">
       <HintPath>..\..\..\Downloads\ModalPickerViewController-master\SharpMobileCode.ModalPicker\obj\Debug\SharpMobileCode.ModalPicker.dll</HintPath>
     </Reference>
+    <Reference Include="Geolocator.Plugin">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.1.0.3\lib\Xamarin.iOS10\Geolocator.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Geolocator.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.1.0.3\lib\Xamarin.iOS10\Geolocator.Plugin.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -135,6 +141,7 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
+    <None Include="PluginsHelp\GeolocatorReadme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -205,6 +212,11 @@
     <Compile Include="Render\CustomMap.cs" />
     <Compile Include="Render\CustomUIButton.cs" />
     <Compile Include="Render\PickerModel.cs" />
+    <Compile Include="EnderecoViewController.cs" />
+    <Compile Include="EnderecoViewController.designer.cs">
+      <DependentUpon>EnderecoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\LoadingOverlay.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -241,6 +253,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="json.net">
       <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="GeolocatorPlugin">
+      <Version>1.0.3</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

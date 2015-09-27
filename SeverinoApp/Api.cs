@@ -22,7 +22,7 @@ namespace SeverinoApp
 			this.Url = url.EndsWith ("/") ? url : url + "/";
 		}
 
-		public async Task<JsonValue> FetchWeatherAsync (string url)
+		public async Task<JsonValue> Get (string url)
 		{
 			// Create an HTTP web request using the URL:
 			HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create (new Uri (url));
@@ -99,6 +99,8 @@ namespace SeverinoApp
 				return false;
 			}
 		}
+
+
 	}
 }
 

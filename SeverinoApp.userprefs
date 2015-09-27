@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="SeverinoApp.iOS/SeverinoApp.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeverinoApp.iOS/PerfilViewController.cs">
     <Files>
-      <File FileName="SeverinoApp.iOS/PerfilViewController.cs" Line="81" Column="1" />
-      <File FileName="SeverinoApp.iOS/Main.cs" Line="14" Column="4" />
-      <File FileName="SeverinoApp.iOS/PerfilViewController.designer.cs" Line="64" Column="21" />
+      <File FileName="SeverinoApp.iOS/PerfilViewController.cs" Line="157" Column="41" />
+      <File FileName="SeverinoApp.iOS/EnderecoViewController.cs" Line="63" Column="4" />
+      <File FileName="SeverinoApp.iOS/AppDelegate.cs" Line="36" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -13,6 +13,8 @@
       <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/Empty/Moldel/Servico.cs" line="65" column="1" />
       <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Api.cs" line="83" column="1" />
       <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Render/TableServicosPerfil.cs" line="34" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Moldel/Usuario.cs" line="84" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Api.cs" line="98" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

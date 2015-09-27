@@ -32,7 +32,9 @@ namespace SeverinoApp.iOS
 		public static UIViewController Chamados = Storyboard.InstantiateViewController ("ChamadoViewController");
 		public static UIViewController Servicos = Storyboard.InstantiateViewController ("ServicosViewController");
 		public static UIViewController Mapa = Storyboard.InstantiateViewController ("MapaViewController");
+		public static UIViewController Endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
 
+		public static Usuario dbUsuario { get; set;}
 
 		public UINavigationController Navigation{ get; set;}
 		
@@ -67,7 +69,7 @@ namespace SeverinoApp.iOS
 
 			Menu = new SlideoutNavigationController ();
 
-			Menu.MainViewController = new MainNavigationController(Home, Menu);;
+			Menu.MainViewController = new MainNavigationController(Login, Menu);;
 			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft(), Menu){ NavigationBarHidden = true};
 
 			Window.RootViewController = Menu;

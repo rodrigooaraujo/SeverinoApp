@@ -7,8 +7,10 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/442-view-443.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/465-view-466.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/563-view-564.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/771-view-772.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChamadoViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/DatePickerController.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/EnderecoViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/FacebookViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/HomeViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/Info.plist
@@ -68,3 +70,5 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/wsSeverino.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SharpMobileCode.ModalPicker.dll
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Geolocator.Plugin.dll
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Geolocator.Plugin.Abstractions.dll

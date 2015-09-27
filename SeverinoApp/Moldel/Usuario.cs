@@ -2,32 +2,50 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Json;
 
 namespace SeverinoApp
 {
 	public class Usuario
 	{
 		public int ID { get; set; }
+
 		public string Login { get; set; }
-		public int CPF { get; set; }
+
+		public Nullable<int> CPF { get; set; }
+
 		public string Senha { get; set; }
+
 		public string Nome { get; set; }
+
 		public string Sexo { get; set; }
+
 		public DateTime DtNascimento { get; set; }
-		public int PrestaServico { get; set; }
+
+		public Nullable<int> PrestaServico { get; set; }
+
 		public decimal RaioAtendimento { get; set; }
+
 		public int CobraVisita { get; set; }
+
 		public string HrInicio { get; set; }
+
 		public string HrFim { get; set; }
-		public int Ativo { get; set; }
+
+		public Nullable<int> Ativo { get; set; }
+
 		public decimal CustoVisita { get; set; }
+
 		public DateTime DtCadastro { get; set; }
 
 		public double Latitude { get; set; }
+
 		public double Longitude { get; set; }
 
 		public List<Usuario> Usuarios;
 		public List<UsuarioEndereco> UsuarioEnderecos;
+
+		public bool Logado{ get; set;}
 
 		public Usuario ()
 		{
@@ -35,7 +53,7 @@ namespace SeverinoApp
 			//LATITUDE e LONGITUDE Carregar pegando o endereco principal
 		}
 
-		public void CriaLista()
+		public void CriaLista ()
 		{
 			/*Usuarios = new List<Usuario> {
 				new Usuario{Codigo=1 , Login="Rodrigo", Senha="admin", Nome="Rodrigo",Sobrenome="Araújo", Sexo="M", Latitude=-23.665091,Longitude=-46.565693,PrestadorServico=true},
@@ -66,21 +84,45 @@ namespace SeverinoApp
 			};*/
 		}
 
-		public void Add(Usuario usu)
+		public void Add (Usuario usu)
 		{
 			Cadastra (usu);
 		}
 
-		public void Exclui(Servico servico)
+		public void Exclui (Usuario usu)
 		{
 
 		}
 
+		public async Task<bool> loga (string login, string senha)
+		{
+			String URL = "http://4e6e09c4.ngrok.io/api/Usuario" + string.Format ("?login={0}&senha={1}", login, senha);
+			var api = new Api ();
+			JsonValue js = await api.Get (URL);
+			try {
+				var result = JsonConvert.DeserializeObject<Usuario> (js.ToString ());
 
-		private async Task<bool> Cadastra(Usuario usu)
+				if (result == null) {
+					this.Logado = false;
+					return false;
+				}
+				this.Logado = true;
+				SeverinoApp.iOS.AppDelegate.dbUsuario = result;
+			} catch (Exception ex) {
+				return false;
+			}
+
+
+
+
+			return true;
+		}
+
+
+		private async Task<bool> Cadastra (Usuario usu)
 		{
 			var api = new Api ();
-			var json = JsonConvert.SerializeObject(usu, Formatting.Indented);
+			var json = JsonConvert.SerializeObject (usu, Formatting.Indented);
 			api.Post (json, "Usuario");
 			return true;
 		}
@@ -89,15 +131,25 @@ namespace SeverinoApp
 	public partial class UsuarioEndereco
 	{
 		public int ID { get; set; }
+
 		public int IDUsuario { get; set; }
+
 		public string Descricao { get; set; }
+
 		public string Endereco { get; set; }
+
 		public string Cidade { get; set; }
+
 		public string Estado { get; set; }
+
 		public int CEP { get; set; }
+
 		public string Numero { get; set; }
+
 		public double Latitude { get; set; }
+
 		public double Longitude { get; set; }
+
 		public string DtCadastro { get; set; }
 
 		public List<UsuarioEndereco> UsuarioEnderecos;

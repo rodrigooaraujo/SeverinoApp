@@ -30,7 +30,7 @@ namespace SeverinoApp
 		{
 			String URL = "http://4e6e09c4.ngrok.io/api/servico";
 			var api = new Api ();
-			JsonValue js = await api.FetchWeatherAsync(URL);
+			JsonValue js = await api.Get(URL);
 
 			var result = JsonConvert.DeserializeObject<List<Servico>>(js.ToString());
 

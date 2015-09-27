@@ -144,18 +144,41 @@ namespace SeverinoApp.iOS
 
 			txtSexo.TouchDown += SetPicker;
 			txtEndereco.TouchDown += abreEndereco;
+
+			//txtEndereco.TouchUpInside += abreEndereco;
 		}
 
 		protected void abreEndereco(object sender, EventArgs e)
 		{
-			var chamado = Storyboard.InstantiateViewController ("ChamadoViewController");
-			chamado.ModalPresentationStyle = UIModalPresentationStyle.FormSheet;
-			this.PresentViewController(chamado, true, null);
+			var endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
+
+			/*endereco.ModalPresentationStyle = UIModalPresentationStyle.Popover;
+			var frmPopup = this.View.Frame;
+
+			//chamado.View.Frame = new CGRect (20, 50,  frmPopup.Height/2, frmPopup.Width/2);
+			endereco.PreferredContentSize = new CGSize (frmPopup.Width / 2, frmPopup.Height / 2);
+			this.PresentViewController(endereco, true, null);*/
+
+			if (endereco != null)
+			{
+				endereco.View.TranslatesAutoresizingMaskIntoConstraints = false;
+				this.NavigationController.PushViewController(endereco, true);
+			} 
+
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+		}
+
+		public override void ApplicationFinishedRestoringState ()
+		{
+			base.ApplicationFinishedRestoringState ();
 		}
 
 		protected void preparaPicker()
 		{
-			
 			List<object> sexo= new List<object> ();
 			sexo.Add ("Masculino");
 			sexo.Add ("Feminino");
@@ -201,14 +224,13 @@ namespace SeverinoApp.iOS
 
 			txtSexo.InputAccessoryView = toolbar;
 		}
-
+			
 		private void SetPicker(object sender, EventArgs e)
 		{
 			UITextField field = (UITextField)sender;
 			picker.Select (picker_model.values.IndexOf (field.Text), 0, true);
 		}
-
-
+			
 		async void DatePickerButtonTapped (object sender, EventArgs e)
 		{
 			var modalPicker = new ModalPickerViewController(ModalPickerType.Date, "Data Nascimento", this)

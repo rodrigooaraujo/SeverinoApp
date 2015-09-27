@@ -98,6 +98,51 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>830</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>830</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>832</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>832</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>834</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>834</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 	</dict>
 </dict>
 </plist>
