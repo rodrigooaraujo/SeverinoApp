@@ -63,17 +63,16 @@ namespace SeverinoApp.iOS
 			usu.Login = txtEmail.Text;
 			usu.Senha = txtSenha.Text;
 
-			int cpf;
+			long cpf;
 			DateTime dtnascimento;
 			decimal custovisita;
 
-			int.TryParse(txtCPF.Text, out cpf);
-			usu.CPF = cpf;
+			usu.CPF = txtCPF.Text.Trim();
 
 			usu.Sexo = (txtSexo.Text == "Masculino" ? "M":"F");
-			DateTime.TryParse(txtDtNascimento.Text, out dtnascimento);
 
-			usu.DtNascimento = dtnascimento;
+
+			usu.DtNascimento = DateTime.Parse(txtDtNascimento.Text);
 
 			usu.PrestaServico = swtPrestador.On ? 1:0;
 			usu.RaioAtendimento = (decimal)sldRaioAtendimento.Value;
@@ -82,8 +81,8 @@ namespace SeverinoApp.iOS
 			usu.HrFim = txtHrFim.Text;
 			decimal.TryParse(txtCustoVisita.Text, out custovisita);
 			usu.CustoVisita = custovisita;
-
-			usu.Add(usu);
+			usu.Ativo = 1;
+			usu.Grava();
 
 		}
 
@@ -146,6 +145,27 @@ namespace SeverinoApp.iOS
 			txtEndereco.TouchDown += abreEndereco;
 
 			//txtEndereco.TouchUpInside += abreEndereco;
+
+			if (AppDelegate.dbUsuario != null) {
+				Usuario usu = AppDelegate.dbUsuario;
+				txtNome.Text = usu.Nome;
+				txtEmail.Text = usu.Login;
+				txtSenha.Text = usu.Senha;
+
+				txtCPF.Text = usu.CPF;
+
+				txtSexo.Text =  (usu.Sexo == "M" ? "Masculino" : "Feminino");
+
+				txtDtNascimento.Text = usu.DtNascimento.ToShortDateString ();
+
+				swtPrestador.On = usu.PrestaServico == 1? true : false;
+				sldRaioAtendimento.Value = (float)usu.RaioAtendimento;
+				swtCobraAtendimento.On = usu.CobraVisita == 1?true:false;
+				txtHrInicio.Text = usu.HrInicio;
+				txtHrFim.Text = usu.HrFim;
+
+				txtCustoVisita.Text = usu.CustoVisita.ToString("N2");
+			}
 		}
 
 		protected void abreEndereco(object sender, EventArgs e)
@@ -273,7 +293,7 @@ namespace SeverinoApp.iOS
 			{
 				var dateFormatter = new NSDateFormatter()
 				{
-					DateFormat = "dd/MM/yyyy"
+					DateFormat = "MM/dd/yyyy"
 				};
 
 				textField.Text = dateFormatter.ToString(modalPicker.DatePicker.Date);

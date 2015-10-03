@@ -12,7 +12,7 @@ namespace SeverinoApp
 
 		public string Login { get; set; }
 
-		public Nullable<int> CPF { get; set; }
+		public string CPF { get; set; }
 
 		public string Senha { get; set; }
 
@@ -38,22 +38,27 @@ namespace SeverinoApp
 
 		public DateTime DtCadastro { get; set; }
 
-		public double Latitude { get; set; }
+		public Nullable<double> Latitude { get; set; }
 
-		public double Longitude { get; set; }
+		public Nullable<double> Longitude { get; set; }
 
-		public List<Usuario> Usuarios;
+		public List<Usuario> Usuarios { get; set; }
+
 		public List<UsuarioEndereco> UsuarioEnderecos;
 
-		public bool Logado{ get; set;}
+		public bool Logado{ get; set; }
+
+		public string Erro{ get; set;}
+		public string Excecao{ get; set;}
 
 		public Usuario ()
 		{
 			Usuarios = new List<Usuario> ();
+			UsuarioEnderecos = new List<UsuarioEndereco> ();
 			//LATITUDE e LONGITUDE Carregar pegando o endereco principal
 		}
 
-		public void CriaLista ()
+		public void CriaLista (bool ok)
 		{
 			/*Usuarios = new List<Usuario> {
 				new Usuario{Codigo=1 , Login="Rodrigo", Senha="admin", Nome="Rodrigo",Sobrenome="Araújo", Sexo="M", Latitude=-23.665091,Longitude=-46.565693,PrestadorServico=true},
@@ -84,46 +89,116 @@ namespace SeverinoApp
 			};*/
 		}
 
-		public void Add (Usuario usu)
+		public async Task<bool> CriaLista ()
 		{
-			Cadastra (usu);
-		}
-
-		public void Exclui (Usuario usu)
-		{
-
-		}
-
-		public async Task<bool> loga (string login, string senha)
-		{
-			String URL = "http://4e6e09c4.ngrok.io/api/Usuario" + string.Format ("?login={0}&senha={1}", login, senha);
 			var api = new Api ();
-			JsonValue js = await api.Get (URL);
-			try {
-				var result = JsonConvert.DeserializeObject<Usuario> (js.ToString ());
+			string controller = string.Format ("Usuario");
 
-				if (result == null) {
-					this.Logado = false;
-					return false;
-				}
-				this.Logado = true;
-				SeverinoApp.iOS.AppDelegate.dbUsuario = result;
-			} catch (Exception ex) {
+			JsonValue js = await api.Get (controller);
+			if (!string.IsNullOrEmpty (api.Erro)) {
+				Erro = api.Erro + "Lista de Usuários";
 				return false;
 			}
 
+			var result = JsonConvert.DeserializeObject<List<Usuario>> (js.ToString ());
 
-
+			Usuarios = result;
 
 			return true;
 		}
 
 
-		private async Task<bool> Cadastra (Usuario usu)
+		/*public async Task<bool> CarregaEnderecos ()
+		{
+			var endereco = new UsuarioEndereco (ID);
+			UsuarioEnderecos = endereco.UsuarioEnderecos;
+			if(UsuarioEnderecos != null && UsuarioEnderecos.Count > 0)
+			{
+				Latitude = UsuarioEnderecos [0].Latitude;
+				Longitude = UsuarioEnderecos [0].Longitude;
+			}
+		}*/
+
+		public void Grava ()
+		{
+			Cadastra ();
+		}
+
+		public void Exclui (Usuario usu)
+		{
+			this.Ativo = 0;
+			Cadastra ();
+		}
+
+		public async Task<bool> loga (string login, string senha)
+		{
+			String URL = "Usuario" + string.Format ("?login={0}&senha={1}", login, senha);
+			var api = new Api ();
+
+			try {
+				
+				JsonValue js = await api.Get (URL);
+				var result = JsonConvert.DeserializeObject<Usuario> (js.ToString ());
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = "Erro ao Efetuar Login";
+					Excecao = api.Excecao;
+					return false;
+				}
+
+				if (result == null) {
+					this.Logado = false;
+					return false;
+				}
+
+				this.Logado = true;
+				SeverinoApp.iOS.AppDelegate.dbUsuario = result;
+				SeverinoApp.iOS.AppDelegate.dbUsuario.Logado = true;
+
+				if(SeverinoApp.iOS.AppDelegate.dbUsuario.ID >0)
+				{
+					var end = new UsuarioEndereco ();
+					bool ok = await end.CriaLista(SeverinoApp.iOS.AppDelegate.dbUsuario.ID);
+					if(!ok)
+					{
+						Erro = api.Erro;
+						Excecao = api.Excecao;
+						return false;
+					}
+
+					SeverinoApp.iOS.AppDelegate.dbUsuario.UsuarioEnderecos = end.UsuarioEnderecos;
+				}
+
+			} catch (Exception ex) {
+				Erro = "Erro ao Efetuar Login";
+				Excecao = ex.Message;
+				return false;
+			}
+
+			return true;
+		}
+
+		private async Task<bool> Cadastra ()
 		{
 			var api = new Api ();
-			var json = JsonConvert.SerializeObject (usu, Formatting.Indented);
-			api.Post (json, "Usuario");
+			var json = JsonConvert.SerializeObject (this, Formatting.Indented);
+
+			if (ID == 0) {
+				await api.Post (json, "Usuario");
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + "Usuario";
+					Excecao = api.Excecao;
+					return false;
+				}
+				await loga (this.Login, this.Senha);
+			} else {
+				await api.Put (json, "Usuario");
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + "Usuário";
+					Excecao = api.Excecao;
+					return false;
+				}
+			}
 			return true;
 		}
 	}
@@ -138,6 +213,8 @@ namespace SeverinoApp
 
 		public string Endereco { get; set; }
 
+		public string Bairro { get; set; }
+
 		public string Cidade { get; set; }
 
 		public string Estado { get; set; }
@@ -150,9 +227,109 @@ namespace SeverinoApp
 
 		public double Longitude { get; set; }
 
-		public string DtCadastro { get; set; }
+		public DateTime DtCadastro { get; set; }
 
-		public List<UsuarioEndereco> UsuarioEnderecos;
+		public int Principal { get; set; }
+
+		public string Erro{ get; set;}
+
+		public string Excecao{ get; set;}
+
+		public List<UsuarioEndereco> UsuarioEnderecos { get; set; }
+
+		public UsuarioEndereco ()
+		{
+			UsuarioEnderecos = new List<UsuarioEndereco> ();
+		}
+
+		/*public UsuarioEndereco ()
+		{
+			UsuarioEnderecos = new List<UsuarioEndereco> ();
+			CriaLista (idUsuario);
+		}*/
+
+		//public Usuario Usuario{ get; set;}
+
+		public async Task<bool> Grava ()
+		{
+			var api = new Api ();
+			var json = JsonConvert.SerializeObject (this, Formatting.Indented);
+			if (ID == 0) {
+				await api.Post (json, "UsuarioEndereco");
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + " Enderecos";
+					Excecao = api.Excecao;
+					return false;
+				}
+			} else {
+				await api.Put (json, "UsuarioEndereco");
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + " Enderecos";
+					Excecao = api.Excecao;
+					return false;
+				}
+			}
+
+			//CriaLista (ID);
+			return true;
+		}
+
+		public async Task<bool> Exclui ()
+		{
+			var api = new Api ();
+			var json = JsonConvert.SerializeObject (this, Formatting.Indented);
+			if (this.ID == 0) {
+				Erro = "Erro ao Excluir. Endereco sem ID";
+				return false;
+			} else {
+				await api.Delete (json, "UsuarioEndereco");
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + "Lista de Enderecos";
+					Excecao = api.Excecao;
+					return false;
+				}
+			}
+
+			//CriaLista (this.IDUsuario);
+			return true;
+		}
+
+		public async Task<bool> CriaLista (int idUsuario, int idEndereco)
+		{
+			try {
+				var api = new Api ();
+				string controller = string.Format ("UsuarioEndereco?idusuario={0}", idUsuario);
+				if (idEndereco > 0)
+					controller += string.Format ("&idEndereco={0}", idEndereco);
+				JsonValue js = await api.Get (controller);
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + "Lista de Enderecos";
+					Excecao = api.Excecao;
+					return false;
+				}
+				var result = JsonConvert.DeserializeObject<List<UsuarioEndereco>> (js.ToString ());
+
+				if (result != null) {
+					UsuarioEnderecos = result;
+					Latitude = result [0].Latitude;
+					Longitude = result [0].Longitude;
+				}
+			} catch (Exception ex) {
+				Erro = "Erro ao Consultar Lista de Enderecos";
+				Excecao = ex.Message;
+				return false;
+			}
+
+			return true;
+		}
+
+		public async Task<bool> CriaLista (int idUsuario)
+		{
+			return await CriaLista (idUsuario, 0);
+		}
 	}
 }
 

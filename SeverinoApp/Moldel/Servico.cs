@@ -28,35 +28,18 @@ namespace SeverinoApp
 
 		public async Task CriaLista()
 		{
-			String URL = "http://4e6e09c4.ngrok.io/api/servico";
 			var api = new Api ();
-			JsonValue js = await api.Get(URL);
+			JsonValue js = await api.Get("Servico");
 
 			var result = JsonConvert.DeserializeObject<List<Servico>>(js.ToString());
 
 			if (result != null)
 				Servicos = result;
 
-
-			/*Servicos = new List<Servico> {
-				new Servico {Codigo = 1, Descricao = "Pintura", Imagem = "paint-roller.png", Total = 54},
-				new Servico {Codigo = 2, Descricao = "Alvenaria", Imagem = "paint.png", Total = 30},
-				new Servico {Codigo = 3, Descricao = "Reforma", Imagem = "wheelbarrow.png", Total = 100},
-				new Servico {Codigo = 4, Descricao = "Faxina", Imagem = "water hose.png", Total = 10},
-				new Servico {Codigo = 5, Descricao = "Encanamento", Imagem = "spanner.png", Total = 74}
-			};*/
-
-			/*var ser = new wsSeverino.Models.Servico();
-			ser.Nome = "Pintura";
-			ser.Imagem = "paint-roller.png";
-			ser.DtCadastro = DateTime.Now;*/
-
 			//var json = JsonConvert.SerializeObject(Servicos, Formatting.Indented);
 			//CadastraServico (ser);
 			//return "";
 		}
-
-
 
 		public void Add(wsSeverino.Models.Servico servico)
 		{
@@ -67,7 +50,6 @@ namespace SeverinoApp
 		{
 			
 		}
-
 
 		private async Task<bool> CadastraServico(wsSeverino.Models.Servico serv)
 		{

@@ -69,14 +69,30 @@ namespace SeverinoApp.iOS
 
 			Menu = new SlideoutNavigationController ();
 
-			Menu.MainViewController = new MainNavigationController(Login, Menu);;
+			Menu.MainViewController = new MainNavigationController(Home, Menu);
+			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft(false), Menu){ NavigationBarHidden = true};
+			Window.RootViewController = Menu;
+			Window.MakeKeyAndVisible ();
+
+			var teste = Menu.MainViewController;
+
+			return true;
+		}
+
+		public bool RecriaPrincipal()
+		{
+			Shared = this;
+
+			Menu = new SlideoutNavigationController ();
+
+			Menu.MainViewController = new MainNavigationController(Home, Menu);;
 			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft(), Menu){ NavigationBarHidden = true};
 
 			Window.RootViewController = Menu;
 			Window.MakeKeyAndVisible ();
 
 			return true;
-		}	
+		}
 	}
 
 	public class DummyControllerLeft : DialogViewController
@@ -88,10 +104,16 @@ namespace SeverinoApp.iOS
 		public static UIViewController Chamado = AppDelegate.Chamados;
 		public static UIViewController Servicos = AppDelegate.Servicos;
 		public static UIViewController Mapa = AppDelegate.Mapa;
+		public static bool Ativo;
 
-		public DummyControllerLeft () 
-			: base(UITableViewStyle.Plain,new RootElement(""))
+		public DummyControllerLeft () : base(UITableViewStyle.Plain,new RootElement(""))
 		{
+			Ativo = true;
+		}
+
+		public DummyControllerLeft (bool ativo) : base(UITableViewStyle.Plain,new RootElement(""))
+		{
+			Ativo = ativo;
 		}
 
 		public override void ViewDidLoad ()
@@ -108,6 +130,8 @@ namespace SeverinoApp.iOS
 				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"lock.png") },
 				//new StyledStringElement("Stuff", () => NavigationController.PushViewController(new StuffViewController(), true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear },
 			});
+
+			//Root.TableView.Hidden = !Ativo;
 
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			TableView.BackgroundColor = UIColor.FromRGB (4,188,249);

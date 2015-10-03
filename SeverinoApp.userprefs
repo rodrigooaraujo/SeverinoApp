@@ -1,20 +1,22 @@
 ﻿<Properties StartupItem="SeverinoApp.iOS/SeverinoApp.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeverinoApp.iOS/PerfilViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeverinoApp.iOS/EnderecoViewController.cs">
     <Files>
-      <File FileName="SeverinoApp.iOS/PerfilViewController.cs" Line="157" Column="41" />
-      <File FileName="SeverinoApp.iOS/EnderecoViewController.cs" Line="63" Column="4" />
-      <File FileName="SeverinoApp.iOS/AppDelegate.cs" Line="36" Column="3" />
+      <File FileName="SeverinoApp/Moldel/GeolocatorAdress.cs" Line="35" Column="32" />
+      <File FileName="SeverinoApp/Api.cs" Line="42" Column="14" />
+      <File FileName="SeverinoApp.iOS/EnderecoViewController.cs" Line="22" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/ChamadoViewController.cs" line="92" column="1" />
       <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/Empty/Moldel/Servico.cs" line="65" column="1" />
-      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Api.cs" line="83" column="1" />
       <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Render/TableServicosPerfil.cs" line="34" column="1" />
-      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Moldel/Usuario.cs" line="84" column="1" />
-      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Api.cs" line="98" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/EnderecoViewController.cs" line="168" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/ChamadoViewController.cs" line="145" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Moldel/GeolocatorAdress.cs" line="30" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/EnderecoViewController.cs" line="68" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/EnderecoViewController.cs" line="88" column="4" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

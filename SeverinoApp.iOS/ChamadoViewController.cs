@@ -144,7 +144,7 @@ namespace SeverinoApp.iOS
 				var usu = (Usuario)usuarios.ToArray () [i];
 				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
 				lstmapAnnotaions [i].Title = usu.Nome + " ";
-				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D (usu.Latitude, usu.Longitude));
+				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)usu.Latitude, (double)usu.Longitude));
 				lstmapAnnotaions [i].usuario = usu;
 				mapUsuario.AddAnnotation (lstmapAnnotaions [i]);
 			}

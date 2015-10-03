@@ -7,12 +7,13 @@ using MapKit;
 using CoreGraphics;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SeverinoApp.iOS
 {
 	partial class MapaViewController : UIViewController
 	{
-		public Servico servico { get; set;}
+		public Servico servico { get; set; }
 
 		public MapaViewController (IntPtr handle) : base (handle)
 		{
@@ -32,30 +33,27 @@ namespace SeverinoApp.iOS
 			var manager = new CLLocationManager ();
 
 			//while (manager.Location.Coordinate.Latitude > 0) {
-				if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-					manager.RequestWhenInUseAuthorization ();
-					//manager.RequestAlwaysAuthorization ();
-				}
+			if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
+				manager.RequestWhenInUseAuthorization ();
+				//manager.RequestAlwaysAuthorization ();
+			}
 			//}
 
 			if (!CLLocationManager.LocationServicesEnabled)
-				 new UIAlertView("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show();
+				new UIAlertView ("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show ();
 
 			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
 
 			try {
 				MKCoordinateRegion mapRegion;
-				var locfake = new CLLocationCoordinate2D(-23.653782, -46.575832);
+				var locfake = new CLLocationCoordinate2D (-23.653782, -46.575832);
 				MKCoordinateRegion newRegion;
 
-				if(manager.Location != null)
-				{
+				if (manager.Location != null) {
 					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
 					newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
 					newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
-				}
-				else
-				{
+				} else {
 					mapRegion = MKCoordinateRegion.FromDistance (locfake, 100, 100);
 					newRegion.Center.Latitude = locfake.Latitude;
 					newRegion.Center.Longitude = locfake.Longitude;
@@ -69,32 +67,45 @@ namespace SeverinoApp.iOS
 				mkmMapa.SetRegion (newRegion, true);
 
 			} catch (Exception ex) {
-				new UIAlertView("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show();
+				new UIAlertView ("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show ();
 			}
 
 			mkmMapa.GetViewForAnnotation = GetViewForAnnotation;
 
-			Usuario usuario = new Usuario ();
-			usuario.CriaLista ();
+			CarregaPontos ();
 
-			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
-		
-			var usuarios = (from usu in usuario.Usuarios
-				where usu.PrestaServico == 1
-			                select usu);
-
-			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
-				var usu = (Usuario)usuarios.ToArray () [i];
-				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
-				lstmapAnnotaions [i].Title = usu.Nome;
-				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D (usu.Latitude, usu.Longitude));
-				lstmapAnnotaions [i].usuario = usu;
-				mkmMapa.AddAnnotation (lstmapAnnotaions [i]);
-			}
-
-			//MKPinAnnotationView 
 		}
 
+		async Task CarregaPontos ()
+		{
+			Usuario usuario = new Usuario ();
+			await usuario.CriaLista ().ContinueWith ((t) => {
+				//usuario.CarregaEnderecos ().ContinueWith ((u) => {
+					
+				//});
+			});
+
+			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
+
+			var usuarios = (from usu in usuario.Usuarios
+				where usu.PrestaServico != 3 && usu.Latitude != null && usu.Longitude != null
+				select usu);
+			try {
+				for (int i = 0; i < usuarios.ToList ().Count (); i++) {
+					var usu = (Usuario)usuarios.ToArray () [i];
+					if (usu.Latitude != null && usu.Longitude != null) {
+						lstmapAnnotaions [i] = new CustomMKPointAnnotation ();
+						lstmapAnnotaions [i].Title = usu.Nome;
+						lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)usu.Latitude, (double)usu.Longitude));
+						lstmapAnnotaions [i].usuario = usu;
+						mkmMapa.AddAnnotation (lstmapAnnotaions [i]);
+					}
+				}
+			} catch (Exception ex) {
+
+			}
+
+		}
 
 		private MKAnnotationView GetViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{
@@ -103,7 +114,7 @@ namespace SeverinoApp.iOS
 			List<UIView> pinViews = new List<UIView> ();
 
 			// if it's the user location, just return nil.
-			if (annotation is MKUserLocation || annotation.GetType().ToString() == "MapKit.MKAnnotationWrapper")
+			if (annotation is MKUserLocation || annotation.GetType ().ToString () == "MapKit.MKAnnotationWrapper")
 				return null;
 
 			// handle our two custom annotations

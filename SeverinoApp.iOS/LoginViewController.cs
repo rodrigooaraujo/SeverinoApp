@@ -3,11 +3,15 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 using System.Threading.Tasks;
+using MonoTouch.SlideoutNavigation;
+using CoreGraphics;
 
 namespace SeverinoApp.iOS
 {
 	partial class LoginViewController : UIViewController
 	{
+		LoadingOverlay loadingOverlay;
+
 		public LoginViewController (IntPtr handle) : base (handle)
 		{
 			
@@ -17,7 +21,11 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewDidLoad ();
 			//btnLoga.TouchDown+= (object sender, EventArgs e) => txtLogin.Text = "Teste";
+			if (AppDelegate.dbUsuario == null || (AppDelegate.dbUsuario != null && AppDelegate.dbUsuario.Logado)) {
 
+			} else {
+				//this.NavigationController.NavigationBar.BackItem.BackBarButtonItem.Enabled = false;
+			}
 		}
 
 		partial void btnLoga_Click (UIButton sender)
@@ -60,19 +68,33 @@ namespace SeverinoApp.iOS
 
 		protected async void loga()
 		{
+			UIAlertView aviso;
+
 			Usuario usu = new Usuario();
-			await usu.loga(txtLogin.Text, txtSenha.Text);
-
-			if(usu.Logado)
-			{
-				var usud = AppDelegate.dbUsuario;
-				var navcontroller = (UINavigationController)Storyboard.InstantiateViewController ("PrincipalNavigationController");
-				AppDelegate.Shared.Window.RootViewController = AppDelegate.Home;
-				navcontroller.PushViewController (AppDelegate.Shared.Window.RootViewController, false);
-
+			try {
+				var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+				if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
+					bounds.Size = new CGSize (bounds.Size.Height, bounds.Size.Width);
+				}
+				this.loadingOverlay = new LoadingOverlay (bounds);
+				this.View.Add (loadingOverlay);
+				await usu.loga (txtLogin.Text, txtSenha.Text).ContinueWith((t) => 
+					{
+						
+					});
+			} catch (Exception ex) {
+				
+			}finally{
+				loadingOverlay.Hide();
 			}
 
-			//return true;
+			if (usu.Logado) {
+				AppDelegate.Shared.RecriaPrincipal();
+				return;
+			} else {
+				aviso = new UIAlertView ("Login ou Senha Inválido", "", null, "OK", null);
+				aviso.Show ();
+			}
 		}
 
 		partial void btnFacebook_Ckick (UIButton sender)

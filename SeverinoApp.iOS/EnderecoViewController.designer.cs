@@ -16,6 +16,10 @@ namespace SeverinoApp.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnBuscaCep { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btnCancela { get; set; }
 
 		[Outlet]
@@ -66,6 +70,10 @@ namespace SeverinoApp.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txtNumero { get; set; }
 
+		[Action ("BtnBuscaCep_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void BtnBuscaCep_Click (UIButton sender);
+
 		[Action ("btnCancela_Click:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btnCancela_Click (UIButton sender);
@@ -82,8 +90,16 @@ namespace SeverinoApp.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void swtAtual_Changed (UISwitch sender);
 
+		[Action ("swtPrincipal_Changed:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void swtPrincipal_Changed (UISwitch sender);
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnBuscaCep != null) {
+				btnBuscaCep.Dispose ();
+				btnBuscaCep = null;
+			}
 			if (btnCancela != null) {
 				btnCancela.Dispose ();
 				btnCancela = null;

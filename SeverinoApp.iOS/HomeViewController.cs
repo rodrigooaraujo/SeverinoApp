@@ -14,6 +14,11 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
+			if (AppDelegate.dbUsuario == null || (AppDelegate.dbUsuario != null  && AppDelegate.dbUsuario.Logado)) {
+				//this.NavigationController.PushViewController (AppDelegate.Login, false);
+				//return;
+			}
+
 			carrega ();
 		}
 

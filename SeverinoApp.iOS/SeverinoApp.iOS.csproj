@@ -115,6 +115,7 @@
     <Reference Include="Geolocator.Plugin.Abstractions">
       <HintPath>..\packages\Xam.Plugin.Geolocator.1.0.3\lib\Xamarin.iOS10\Geolocator.Plugin.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -217,6 +218,7 @@
       <DependentUpon>EnderecoViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Render\LoadingOverlay.cs" />
+    <Compile Include="Render\TableEndereco.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
