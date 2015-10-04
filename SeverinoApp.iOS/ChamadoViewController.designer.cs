@@ -58,6 +58,10 @@ namespace SeverinoApp.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txtBuscaUsuarios { get; set; }
 
+		[Action ("btnAbreChamado_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnAbreChamado_Click (UIButton sender);
+
 		[Action ("sldRaio_Changed:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void sldRaio_Changed (UISlider sender);

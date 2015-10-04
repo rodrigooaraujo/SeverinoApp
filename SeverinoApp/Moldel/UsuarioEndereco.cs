@@ -9,49 +9,26 @@ namespace SeverinoApp
 	public partial class UsuarioEndereco
 	{
 		public int ID { get; set; }
-
 		public int IDUsuario { get; set; }
-
 		public string Descricao { get; set; }
-
 		public string Endereco { get; set; }
-
 		public string Bairro { get; set; }
-
 		public string Cidade { get; set; }
-
 		public string Estado { get; set; }
-
 		public int CEP { get; set; }
-
 		public string Numero { get; set; }
-
 		public double Latitude { get; set; }
-
 		public double Longitude { get; set; }
-
 		public DateTime DtCadastro { get; set; }
-
 		public int Principal { get; set; }
-
 		public string Erro{ get; set;}
-
 		public string Excecao{ get; set;}
-
 		public List<UsuarioEndereco> UsuarioEnderecos { get; set; }
 
 		public UsuarioEndereco ()
 		{
 			UsuarioEnderecos = new List<UsuarioEndereco> ();
 		}
-
-		/*public UsuarioEndereco ()
-		{
-			UsuarioEnderecos = new List<UsuarioEndereco> ();
-			CriaLista (idUsuario);
-		}*/
-
-		//public Usuario Usuario{ get; set;}
 
 		public async Task<bool> Grava ()
 		{
@@ -75,7 +52,6 @@ namespace SeverinoApp
 				}
 			}
 
-			//CriaLista (ID);
 			return true;
 		}
 
@@ -95,7 +71,6 @@ namespace SeverinoApp
 				}
 			}
 
-			//CriaLista (this.IDUsuario);
 			return true;
 		}
 

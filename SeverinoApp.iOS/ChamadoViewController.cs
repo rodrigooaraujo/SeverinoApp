@@ -15,6 +15,7 @@ namespace SeverinoApp.iOS
 	{
 		CLLocationManager manager = new CLLocationManager ();
 		Usuario usu = AppDelegate.dbUsuario;
+		LoadingOverlay loadingOverlay;
 
 		public ChamadoViewController (IntPtr handle) : base (handle)
 		{
@@ -271,95 +272,59 @@ namespace SeverinoApp.iOS
 				pinView.Annotation = annotation;
 			}
 			return pinView;
-
 		}
 
-
-
-		#region PickerDataModel
-		class PickerDataModel : UIPickerViewModel
+		partial void btnAbreChamado_Click (UIButton sender)
 		{
-			public event EventHandler<EventArgs> ValueChanged;
-			public delegate void RowSelectedHandler (Servico value);
-			public RowSelectedHandler NewRowSelected;
+			Grava ();
+		}
 
-			/// <summary>
-			/// The color we wish to display
-			/// </summary>
-			public List<Servico> Items { get; private set; }
+		public async Task Grava ()
+		{	
+			string erro = string.Empty;
+			UIAlertView aviso;
 
-			/// <summary>
-			/// The current selected item
-			/// </summary>
-			public int SelectedItem {
-				get { return Items [selectedIndex].ID; }
+			var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+			if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
+				bounds.Size = new CGSize (bounds.Size.Height, bounds.Size.Width);
 			}
 
-			int selectedIndex = 0;
-			public Servico selectedValue{ get; set;}
+			this.loadingOverlay = new LoadingOverlay (bounds);
+			this.View.Add (loadingOverlay);
 
-			public PickerDataModel ()
-			{
-				Items = new List<Servico> ();
+			try {
+
+				Chamado chamado = new Chamado();
+
+				chamado.Data = DateTime.Now;
+				chamado.IDServico = ((PickerDataModel)pckServico.Model).selectedValue.ID;
+				chamado.IDUsuario = usu.ID;
+				chamado.IDProfissional = 24;
+				chamado.Status = 1;
+				chamado.Tipo = swtDirecionado.On ? 1 : 2;
+				chamado.Atendido = 0;
+				chamado.Raio = (decimal)sldRaio.Value*1000;
+
+				await chamado.Grava ();
+
+				if (!string.IsNullOrEmpty (usu.Erro)) {
+					erro = usu.Erro;
+				}
+
+			} catch (Exception ex) {
+				erro += "Erro ao Gravar";
 			}
-				 
-			public PickerDataModel (List<Servico> items)
-			{
-				Items = items;
-				selectedValue = new Servico();
-
-				if(items.Count > 0)
-					selectedValue = Items[0];
-			}
-
-
-			/// <summary>
-			/// Called by the picker to determine how many rows are in a given spinner item
-			/// </summary>
-			public override nint GetRowsInComponent (UIPickerView picker, nint component)
-			{
-				return Items.Count;
-			}
-
-			/// <summary>
-			/// called by the picker to get the number of spinner items
-			/// </summary>
-			public override nint GetComponentCount (UIPickerView picker)
-			{
-				return 1;
+			finally{
+				loadingOverlay.Hide ();
 			}
 
-			/// <summary>
-			/// called when a row is selected in the spinner
-			/// </summary>
-			public override void Selected (UIPickerView picker, nint row, nint component)
+			if(!string.IsNullOrEmpty(erro))
 			{
-				selectedIndex = (int)row;
-				selectedValue = Items [(int)row];
-
-				/*if (ValueChanged != null) {
-					ValueChanged (this, new EventArgs ());
-				}*/
-
-				NewRowSelected (selectedValue);
-			}
-
-
-			public override string GetTitle (UIPickerView picker, nint row, nint component)
-			{
-				return Items[(int)row].Nome;
-			}
-
-			/// <summary>
-			/// Make the rows in the second component half the size of those in the first
-			/// </summary>
-			public override nfloat GetRowHeight (UIPickerView picker, nint component)
-			{
-				return 44 / (component % 2 + 1);
+				aviso = new UIAlertView("Erro de Validação", erro, null, "OK", null);
+				//aviso.Clicked();
+				aviso.Show();
+				return;
 			}
 		}
-		#endregion
 	}
-
-
 }

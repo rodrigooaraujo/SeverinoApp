@@ -219,6 +219,7 @@
     </Compile>
     <Compile Include="Render\LoadingOverlay.cs" />
     <Compile Include="Render\TableEndereco.cs" />
+    <Compile Include="Render\PickerDataModel.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
