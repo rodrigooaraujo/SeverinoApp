@@ -15,5 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\ServicoWs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Api.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\GeolocatorResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moldel\UsuarioEndereco.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moldel\UsuarioServico.cs" />
   </ItemGroup>
 </Project>

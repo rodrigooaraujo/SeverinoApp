@@ -19,6 +19,7 @@ namespace SeverinoApp.iOS
 	{
 		PickerModel picker_model;
 		UIPickerView picker;
+		LoadingOverlay loadingOverlay;
 
 		public PerfilViewController (IntPtr handle) : base (handle)
 		{
@@ -58,32 +59,75 @@ namespace SeverinoApp.iOS
 				return;
 			}
 
-			Usuario usu = new Usuario();
-			usu.Nome = txtNome.Text;
-			usu.Login = txtEmail.Text;
-			usu.Senha = txtSenha.Text;
 
-			long cpf;
-			DateTime dtnascimento;
-			decimal custovisita;
+			Grava ();
+		}
 
-			usu.CPF = txtCPF.Text.Trim();
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
 
-			usu.Sexo = (txtSexo.Text == "Masculino" ? "M":"F");
+			PreparaTela ();
+		}
+
+		public async Task Grava ()
+		{	
+			string erro = string.Empty;
+			UIAlertView aviso;
+
+			var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+			if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
+				bounds.Size = new CGSize (bounds.Size.Height, bounds.Size.Width);
+			}
+
+			this.loadingOverlay = new LoadingOverlay (bounds);
+			this.View.Add (loadingOverlay);
+
+			try {
+
+				Usuario usu = AppDelegate.dbUsuario ?? new Usuario ();
+				usu.Nome = txtNome.Text;
+				usu.Login = txtEmail.Text;
+				usu.Senha = txtSenha.Text;
 
 
-			usu.DtNascimento = DateTime.Parse(txtDtNascimento.Text);
+				decimal custovisita;
 
-			usu.PrestaServico = swtPrestador.On ? 1:0;
-			usu.RaioAtendimento = (decimal)sldRaioAtendimento.Value;
-			usu.CobraVisita = swtCobraAtendimento.On ? 1:0;
-			usu.HrInicio = txtHrInicio.Text;
-			usu.HrFim = txtHrFim.Text;
-			decimal.TryParse(txtCustoVisita.Text, out custovisita);
-			usu.CustoVisita = custovisita;
-			usu.Ativo = 1;
-			usu.Grava();
+				usu.CPF = txtCPF.Text.Trim();
 
+				usu.Sexo = (txtSexo.Text == "Masculino" ? "M":"F");
+
+				usu.DtNascimento = DateTime.Parse(txtDtNascimento.Text);
+
+				usu.PrestaServico = swtPrestador.On ? 1:0;
+				usu.RaioAtendimento = (decimal)sldRaioAtendimento.Value;
+				usu.CobraVisita = swtCobraAtendimento.On ? 1:0;
+				usu.HrInicio = txtHrInicio.Text;
+				usu.HrFim = txtHrFim.Text;
+				decimal.TryParse(txtCustoVisita.Text, out custovisita);
+				usu.CustoVisita = custovisita;
+				usu.Ativo = 1;
+
+				await usu.Cadastra ();
+
+				if (!string.IsNullOrEmpty (usu.Erro)) {
+					erro = usu.Erro;
+				}
+
+			} catch (Exception ex) {
+				erro += "Erro ao Gravar";
+			}
+			finally{
+				loadingOverlay.Hide ();
+			}
+
+			if(!string.IsNullOrEmpty(erro))
+			{
+				aviso = new UIAlertView("Erro de Validação", erro, null, "OK", null);
+				//aviso.Clicked();
+				aviso.Show();
+				return;
+			}
 		}
 
 		public override void ViewDidLayoutSubviews ()
@@ -94,14 +138,6 @@ namespace SeverinoApp.iOS
 			scrCampos.ContentSize = new CGSize ((nfloat)1.0,contentView.Bounds.Size.Height);;
 		}
 			
-		public async void resposta()
-		{
-			String URL = "http://89d8bfb5.ngrok.io/api/servico";
-
-			JsonValue js = await FetchWeatherAsync(URL);
-
-		}
-
 		partial void swtPrestador_Changed (UISwitch sender)
 		{
 			lblRaioAtendimento.Hidden = !swtPrestador.On;
@@ -144,6 +180,11 @@ namespace SeverinoApp.iOS
 			txtSexo.TouchDown += SetPicker;
 			txtEndereco.TouchDown += abreEndereco;
 
+			PreparaTela ();
+		}
+
+		public void PreparaTela()
+		{
 			//txtEndereco.TouchUpInside += abreEndereco;
 
 			if (AppDelegate.dbUsuario != null) {
@@ -154,17 +195,35 @@ namespace SeverinoApp.iOS
 
 				txtCPF.Text = usu.CPF;
 
-				txtSexo.Text =  (usu.Sexo == "M" ? "Masculino" : "Feminino");
+				txtSexo.Text = (usu.Sexo == "M" ? "Masculino" : "Feminino");
 
 				txtDtNascimento.Text = usu.DtNascimento.ToShortDateString ();
 
-				swtPrestador.On = usu.PrestaServico == 1? true : false;
+				swtPrestador.On = usu.PrestaServico == 1 ? true : false;
 				sldRaioAtendimento.Value = (float)usu.RaioAtendimento;
-				swtCobraAtendimento.On = usu.CobraVisita == 1?true:false;
+				swtCobraAtendimento.On = usu.CobraVisita == 1 ? true : false;
 				txtHrInicio.Text = usu.HrInicio;
 				txtHrFim.Text = usu.HrFim;
 
-				txtCustoVisita.Text = usu.CustoVisita.ToString("N2");
+				txtCustoVisita.Text = usu.CustoVisita.ToString ("N2");
+			} else {
+				txtNome.Text = string.Empty;
+				txtEmail.Text = string.Empty;
+				txtSenha.Text = string.Empty;
+
+				txtCPF.Text = string.Empty;
+
+				txtSexo.Text = string.Empty;;
+
+				txtDtNascimento.Text = string.Empty;;
+
+				swtPrestador.On = false;
+				sldRaioAtendimento.Value = 10f;
+				swtCobraAtendimento.On = false;
+				txtHrInicio.Text = string.Empty;
+				txtHrFim.Text = string.Empty;
+
+				txtCustoVisita.Text = string.Empty;;
 			}
 		}
 
@@ -190,6 +249,8 @@ namespace SeverinoApp.iOS
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
+			//ViewDidLoad ();
+			PreparaTela ();
 		}
 
 		public override void ApplicationFinishedRestoringState ()
@@ -225,7 +286,7 @@ namespace SeverinoApp.iOS
 						var teste = (UIPickerView)txtSexo.InputView;
 						nint linha = teste.SelectedRowInComponent(0);
 						txtSexo.Text = picker_model.values[(int)linha].ToString();
-						txtSexo.ResignFirstResponder();
+						//txtSexo.ResignFirstResponder();
 					}
 					/*foreach (UIPickerView view in txtSexo.InputView) 
 					{
@@ -303,31 +364,5 @@ namespace SeverinoApp.iOS
 
 			return false;
 		}
-
-		private async Task<JsonValue> FetchWeatherAsync (string url)
-		{
-			// Create an HTTP web request using the URL:
-			HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create (new Uri (url));
-			request.ContentType = "application/json";
-			request.Method = "GET";
-
-			// Send the request to the server and wait for the response:
-			using (WebResponse response = await request.GetResponseAsync ())
-			{
-				// Get a stream representation of the HTTP web response:
-				using (Stream stream = response.GetResponseStream ())
-				{
-					// Use this stream to build a JSON document object:
-					JsonValue jsonDoc = await Task.Run (() => JsonObject.Load (stream));
-					Console.Out.WriteLine("Response: {0}", jsonDoc.ToString ());
-
-					// Return the JSON document:
-					return jsonDoc;
-				}
-			}
-		}
-
-
-
 	}
 }

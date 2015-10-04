@@ -21,11 +21,19 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewDidLoad ();
 			//btnLoga.TouchDown+= (object sender, EventArgs e) => txtLogin.Text = "Teste";
+			AppDelegate.dbUsuario = null;
+
 			if (AppDelegate.dbUsuario == null || (AppDelegate.dbUsuario != null && AppDelegate.dbUsuario.Logado)) {
 
 			} else {
 				//this.NavigationController.NavigationBar.BackItem.BackBarButtonItem.Enabled = false;
 			}
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			AppDelegate.dbUsuario = null;
 		}
 
 		partial void btnLoga_Click (UIButton sender)

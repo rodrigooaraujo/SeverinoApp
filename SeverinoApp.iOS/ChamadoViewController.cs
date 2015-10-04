@@ -7,33 +7,164 @@ using CoreGraphics;
 using System.Collections.Generic;
 using MapKit;
 using CoreLocation;
+using System.Threading.Tasks;
 
 namespace SeverinoApp.iOS
 {
 	partial class ChamadoViewController : UIViewController
 	{
 		CLLocationManager manager = new CLLocationManager ();
+		Usuario usu = AppDelegate.dbUsuario;
 
 		public ChamadoViewController (IntPtr handle) : base (handle)
 		{
 		}
 
-		public override void ViewDidLoad ()
+		public override void ViewWillAppear (bool animated)
 		{
-			Servico servico = new Servico ();
-			servico.CriaLista ();
+			base.ViewWillAppear (animated);
+			usu = AppDelegate.dbUsuario;
+		}
 
+		public override void ViewDidLoad ()
+		{		
+			usu = AppDelegate.dbUsuario;
+			carrega ();
+		}
+
+		protected void pckServico_Changed(Servico serv)
+		{
+			sldRaio_Changed (sldRaio);
+		}
+
+		partial void sldRaio_Changed (UISlider sender)
+		{
+			lblRaio.Text = string.Format("Raio: {0} KM", (int)sldRaio.Value);
+
+			if(swtDirecionado.On)
+				PopulaGrid((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+			else
+				PopulaMapa ((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+		}
+
+		public async Task<Boolean>  carrega()
+		{
+			var servico = new Servico ();
+			await servico.CriaLista ();
 			var model = new PickerDataModel (servico.Servicos);
 			pckServico.Model = model;
+			((PickerDataModel)pckServico.Model).NewRowSelected += pckServico_Changed;
 			direcionadoView.BackgroundColor = View.BackgroundColor;
-			//tblUsuarios.Frame.Width = scrListaUsuarios.Frame.Width;
+
 			tblUsuarios.BackgroundColor = View.BackgroundColor;
 			tblUsuarios.Frame = scrListaUsuarios.Bounds;
-			Usuario usuario = new Usuario ();
-			usuario.CriaLista ();
 
 			txtBuscaUsuarios_Changed (txtBuscaUsuarios);
 			swtDirecionado_Changed (swtDirecionado);
+
+			return true;
+		}
+
+		private async Task CriaMapa()
+		{
+			mapUsuario.ShowsUserLocation = true;
+			mapUsuario.ZoomEnabled = true;
+			mapUsuario.ScrollEnabled = true;
+
+
+			DateTime tempo = DateTime.Now;
+			//while (manager.Location.Coordinate.Latitude != null || DateTime.Now.Subtract(tempo).Seconds < 20) {
+			if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
+				manager.RequestWhenInUseAuthorization ();
+
+				//manager.RequestAlwaysAuthorization ();
+			}
+			//}
+
+			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
+
+			try {
+				MKCoordinateRegion mapRegion;
+				var locfake = new CLLocationCoordinate2D(-23.653782, -46.575832);
+				MKCoordinateRegion newRegion;
+
+				if(manager.Location != null)
+				{
+					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
+					newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
+					newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
+				}
+				else
+				{
+					mapRegion = MKCoordinateRegion.FromDistance (locfake, 100, 100);
+					newRegion.Center.Latitude = locfake.Latitude;
+					newRegion.Center.Longitude = locfake.Longitude;
+				}
+
+				//mkmMapa.CenterCoordinate = mkmMapa.UserLocation.Coordinate;
+
+				newRegion.Span.LatitudeDelta = 0.012872;
+				newRegion.Span.LongitudeDelta = 0.009863;
+
+				mapUsuario.SetRegion (newRegion, true);
+
+			} catch (Exception ex) {
+				new UIAlertView("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show();
+			}
+
+			mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
+
+			await PopulaMapa ((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+		}
+
+		private async Task PopulaMapa(double raio, int idservico, double lat, double lon)
+		{
+			if (usu == null) {
+				new UIAlertView("Erro", "Usuário não esta Logado!", null, "OK", null).Show();
+				return;
+			}
+
+			Usuario usuario = new Usuario ();
+			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon); 
+
+			//mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
+			mapUsuario.RemoveAnnotations (mapUsuario.Annotations);
+			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
+
+			var usuarios = usuario.Usuarios;
+
+			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
+				var usu = (Usuario)usuarios.ToArray () [i];
+				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
+				lstmapAnnotaions [i].Title = usu.Nome + " ";
+				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)usu.Latitude, (double)usu.Longitude));
+				lstmapAnnotaions [i].usuario = usu;
+				mapUsuario.AddAnnotation (lstmapAnnotaions [i]);
+			}
+		}
+
+		private async Task PopulaGrid(double raio, int idservico, double lat, double lon)
+		{
+			if (usu == null) {
+				new UIAlertView("Erro", "Usuário não esta Logado!", null, "OK", null).Show();
+				return;
+			}
+
+			Usuario usuario = new Usuario ();
+			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon); 
+
+			var usuarios = usuario.Usuarios;
+
+			if (!string.IsNullOrEmpty(txtBuscaUsuarios.Text)) {
+				usuarios = (from usu in usuario.Usuarios
+				           where usu.PrestaServico == 1
+				           where usu.Nome.ToUpper ().Contains (txtBuscaUsuarios.Text.ToUpper ())
+				           select usu
+				).OrderBy (x => x.Nome).ToList ();
+			} 
+
+			tblUsuarios.Source = new TableChamadoUsuarios (usuarios);
+			tblUsuarios.ReloadData();
 		}
 
 		private List<Usuario> carregaUsuarios(string nome)
@@ -69,86 +200,18 @@ namespace SeverinoApp.iOS
 				else
 					new UIAlertView("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show();
 			}
+			else
+			{
+				PopulaGrid((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+			}
 
 		}
 
 		partial void txtBuscaUsuarios_Changed (UITextField sender)
 		{
-			tblUsuarios.Source = new TableChamadoUsuarios (carregaUsuarios(sender.Text));
-			tblUsuarios.ReloadData();
+			PopulaGrid((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
 		}
 
-		#region Mapa
-
-		private void CriaMapa()
-		{
-			mapUsuario.ShowsUserLocation = true;
-			mapUsuario.ZoomEnabled = true;
-			mapUsuario.ScrollEnabled = true;
-
-
-			DateTime tempo = DateTime.Now;
-			//while (manager.Location.Coordinate.Latitude != null || DateTime.Now.Subtract(tempo).Seconds < 20) {
-				if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-					manager.RequestWhenInUseAuthorization ();
-					
-					//manager.RequestAlwaysAuthorization ();
-				}
-			//}
-
-			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
-
-			try {
-				MKCoordinateRegion mapRegion;
-				var locfake = new CLLocationCoordinate2D(-23.653782, -46.575832);
-				MKCoordinateRegion newRegion;
-
-				if(manager.Location != null)
-				{
-					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
-					newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
-					newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
-				}
-				else
-				{
-					mapRegion = MKCoordinateRegion.FromDistance (locfake, 100, 100);
-					newRegion.Center.Latitude = locfake.Latitude;
-					newRegion.Center.Longitude = locfake.Longitude;
-				}
-					
-				//mkmMapa.CenterCoordinate = mkmMapa.UserLocation.Coordinate;
-
-
-
-				newRegion.Span.LatitudeDelta = 0.012872;
-				newRegion.Span.LongitudeDelta = 0.009863;
-
-				mapUsuario.SetRegion (newRegion, true);
-
-			} catch (Exception ex) {
-				new UIAlertView("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show();
-			}
-
-			mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
-
-			Usuario usuario = new Usuario ();
-			usuario.CriaLista ();
-
-			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
-
-			var usuarios = (from usu in usuario.Usuarios
-				where usu.PrestaServico == 1
-				select usu);
-
-			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
-				var usu = (Usuario)usuarios.ToArray () [i];
-				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
-				lstmapAnnotaions [i].Title = usu.Nome + " ";
-				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)usu.Latitude, (double)usu.Longitude));
-				lstmapAnnotaions [i].usuario = usu;
-				mapUsuario.AddAnnotation (lstmapAnnotaions [i]);
-			}
-		}
 
 		private void SelecionaPinUsuario(IMKAnnotation annotation)
 		{
@@ -211,13 +274,14 @@ namespace SeverinoApp.iOS
 
 		}
 
-		#endregion
 
 
 		#region PickerDataModel
 		class PickerDataModel : UIPickerViewModel
 		{
 			public event EventHandler<EventArgs> ValueChanged;
+			public delegate void RowSelectedHandler (Servico value);
+			public RowSelectedHandler NewRowSelected;
 
 			/// <summary>
 			/// The color we wish to display
@@ -232,6 +296,7 @@ namespace SeverinoApp.iOS
 			}
 
 			int selectedIndex = 0;
+			public Servico selectedValue{ get; set;}
 
 			public PickerDataModel ()
 			{
@@ -241,6 +306,10 @@ namespace SeverinoApp.iOS
 			public PickerDataModel (List<Servico> items)
 			{
 				Items = items;
+				selectedValue = new Servico();
+
+				if(items.Count > 0)
+					selectedValue = Items[0];
 			}
 
 
@@ -266,9 +335,13 @@ namespace SeverinoApp.iOS
 			public override void Selected (UIPickerView picker, nint row, nint component)
 			{
 				selectedIndex = (int)row;
-				if (ValueChanged != null) {
+				selectedValue = Items [(int)row];
+
+				/*if (ValueChanged != null) {
 					ValueChanged (this, new EventArgs ());
-				}
+				}*/
+
+				NewRowSelected (selectedValue);
 			}
 
 

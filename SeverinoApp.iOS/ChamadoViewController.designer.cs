@@ -24,6 +24,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblRaio { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblServico { get; set; }
 
 		[Outlet]
@@ -40,6 +44,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UISlider sldRaio { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UISwitch swtDirecionado { get; set; }
 
 		[Outlet]
@@ -49,6 +57,10 @@ namespace SeverinoApp.iOS
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txtBuscaUsuarios { get; set; }
+
+		[Action ("sldRaio_Changed:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void sldRaio_Changed (UISlider sender);
 
 		[Action ("swtDirecionado_Changed:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -68,6 +80,10 @@ namespace SeverinoApp.iOS
 				direcionadoView.Dispose ();
 				direcionadoView = null;
 			}
+			if (lblRaio != null) {
+				lblRaio.Dispose ();
+				lblRaio = null;
+			}
 			if (lblServico != null) {
 				lblServico.Dispose ();
 				lblServico = null;
@@ -83,6 +99,10 @@ namespace SeverinoApp.iOS
 			if (scrListaUsuarios != null) {
 				scrListaUsuarios.Dispose ();
 				scrListaUsuarios = null;
+			}
+			if (sldRaio != null) {
+				sldRaio.Dispose ();
+				sldRaio = null;
 			}
 			if (swtDirecionado != null) {
 				swtDirecionado.Dispose ();

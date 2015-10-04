@@ -196,12 +196,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="sldRaioAtendimento" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="50" id="524">
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="sldRaioAtendimento" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="50" id="524" continuous="NO">
                                                 <rect key="frame" x="20" y="478" width="283" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="sldRaioAtendimento_Changed:" destination="387" eventType="valueChanged" id="536"/>
+                                                    <action selector="sldRaioAtendimento_EditingEnd:" destination="387" id="968" eventType="editingDidEnd"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Raio de Atendimento: " lineBreakMode="tailTruncation" minimumFontSize="10" id="535">
@@ -347,7 +348,7 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Direcionado" lineBreakMode="tailTruncation" minimumFontSize="10" id="596">
-                                <rect key="frame" x="67" y="176" width="118" height="21"/>
+                                <rect key="frame" x="67" y="176" width="98" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -420,6 +421,23 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" id="953" fixedFrame="YES" continuous="NO">
+                                <rect key="frame" x="8" y="205" width="303" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="maximumTrackTintColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                <connections>
+                                    <action selector="sldRaio_Changed:" destination="401" id="955" eventType="valueChanged"/>
+                                    <action selector="sldRaioEditingEnd:" destination="401" id="969" eventType="editingDidEnd"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Raio: " lineBreakMode="tailTruncation" minimumFontSize="10" id="954" fixedFrame="YES">
+                                <rect key="frame" x="227" y="176" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -433,6 +451,8 @@
                         <outlet property="swtDirecionado" destination="593" id="name-outlet-593"/>
                         <outlet property="tblUsuarios" destination="628" id="name-outlet-628"/>
                         <outlet property="txtBuscaUsuarios" destination="648" id="name-outlet-648"/>
+                        <outlet property="lblRaio" destination="954" id="name-outlet-954"/>
+                        <outlet property="sldRaio" destination="953" id="name-outlet-953"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="403" userLabel="First Responder" sceneMemberID="firstResponder"/>

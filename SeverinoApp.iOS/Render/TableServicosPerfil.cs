@@ -2,16 +2,26 @@
 using UIKit;
 using Foundation;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SeverinoApp.iOS
 {
 	public class TableServicosPerfil : UITableViewSource
 	{
 		Servico[] TableItems;
+		Servico[] ServicosSelecionados;
+		UsuarioServico[] selecionados;
 
 		string CellIdentifier = "TableCell";
-		//Dictionary<string, List<Servico>> indexedTableItems = new Dictionary<string, List<Servico>>();
-		//string[] keys;
+
+		public delegate void RowSelectedHandler (UITableView tableView, NSIndexPath indexPath, UsuarioServico ususervico);
+
+		public RowSelectedHandler NewRowSelected;
+
+		public delegate void RowDeselectedHandler (UITableView tableView, NSIndexPath indexPath, UsuarioServico ususervico);
+
+		public RowSelectedHandler NewRowDeselected;
+
 
 		public override nint RowsInSection (UITableView tableview, nint section)
 		{
@@ -23,21 +33,37 @@ namespace SeverinoApp.iOS
 			//UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
 			UITableViewCell cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier);
 			cell.Accessory = UITableViewCellAccessory.None;
-			Servico item = TableItems[indexPath.Row];
+			Servico item = TableItems [indexPath.Row];
 
 			//---- if there are no cells to reuse, create a new one
-			if (cell == null)
-			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
+			if (cell == null) {
+				cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier);
+			}
 
 			cell.TextLabel.Text = item.Nome;
-			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Icone);
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
+			cell.ImageView.Image = UIImage.FromFile ("Icons/" + item.Icone);
+			//cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
+
+			if(ServicosSelecionados.Contains(item))
+				cell.Accessory = UITableViewCellAccessory.Checkmark;
+			else
+				cell.Accessory = UITableViewCellAccessory.None;
+
 			return cell;
 		}
 
-		public TableServicosPerfil (Servico[] items)
+		public TableServicosPerfil (Servico[] items, UsuarioServico[] selecionados)
 		{
 			TableItems = items;
+			//ServicosSelecionados = selecionados;
+			//var marcados = new UsuarioServicoMod (items.ToList (), selecionados.ToList ());
+			this.selecionados = selecionados;
+
+			ServicosSelecionados = (from serv in items
+				where ((from sel in selecionados
+					where sel.IDServico == serv.ID
+					select sel.ID).Any())
+				select serv).ToArray();
 
 			/*indexedTableItems = new Dictionary<string, List<Servico>>();
 			foreach (var t in items) {
@@ -53,23 +79,38 @@ namespace SeverinoApp.iOS
 
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
-			//new UIAlertView("Serviço Selecionado: ", TableItems[indexPath.Row].Descricao, null, "OK", null).Show();
-			//tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
-			var cell = tableView.CellAt(indexPath);
-			if (cell.Accessory == UITableViewCellAccessory.Checkmark)
-				cell.Accessory = UITableViewCellAccessory.None;
-			else
-				cell.Accessory = UITableViewCellAccessory.Checkmark;
+			try {
+				//new UIAlertView("Serviço Selecionado: ", TableItems[indexPath.Row].Descricao, null, "OK", null).Show();
+				//tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
+				var cell = tableView.CellAt (indexPath);
+				if (cell.Accessory == UITableViewCellAccessory.Checkmark)
+					cell.Accessory = UITableViewCellAccessory.None;
+				else
+					cell.Accessory = UITableViewCellAccessory.Checkmark;
 
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
+				Servico item = TableItems [indexPath.Row];
 
-			//cell.BackgroundColor = UIColor.FromRGB (193, 255, 61);
+				cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
+				var servicousu = (from ususerv in selecionados where ususerv.IDServico == item.ID select ususerv).SingleOrDefault();
 
+				//cell.BackgroundColor = UIColor.FromRGB (193, 255, 61);
+				if (cell.Accessory == UITableViewCellAccessory.Checkmark)
+					NewRowSelected (tableView, indexPath, servicousu);
+				else
+					NewRowDeselected (tableView, indexPath, servicousu);
+			} catch (Exception ex) {
+				
+			}
 		}
 
-		public override void RowDeselected (UITableView tableView, NSIndexPath indexPath)
+		/*public void RowDeselected (UITableView tableView, NSIndexPath indexPath, UsuarioServico ususervico)
 		{
-			
+			NewRowDeselected (tableView, indexPath);
+		}*/
+
+		public Servico GetCellItem (NSIndexPath indexPath)
+		{
+			return TableItems [indexPath.Row];
 		}
 
 		/*
@@ -86,6 +127,45 @@ namespace SeverinoApp.iOS
 			return keys;
 		}
 		*/
+	}
+
+	public class UsuarioServicoMod : Servico
+	{
+		public int Selecionado { get; set; }
+
+		public List<UsuarioServicoMod> UsuarioServicoMods;
+
+		public UsuarioServicoMod ()
+		{
+		}
+
+		public UsuarioServicoMod (List<Servico> servicos, List<UsuarioServico> selecionados)
+		{
+			try {
+				UsuarioServicoMods = new List<UsuarioServicoMod> ();
+
+				var marcados = (from serv in servicos
+					where (serv.ID == (from sel in selecionados
+						where sel.IDServico == serv.ID
+						select sel.ID).FirstOrDefault())
+					select serv).ToList ();
+
+				/*var todos = servicos;
+
+				foreach (Servico item in todos) {
+					UsuarioServicoMod mod = new UsuarioServicoMod ();
+					mod = (UsuarioServicoMod)item;
+					if (marcados.Contains (item))
+						mod.Selecionado = 1;
+					else
+						mod.Selecionado = 0;
+					UsuarioServicoMods.Add (mod);
+
+				}*/
+			} catch (Exception ex) {
+				
+			}
+		}
 	}
 }
 
