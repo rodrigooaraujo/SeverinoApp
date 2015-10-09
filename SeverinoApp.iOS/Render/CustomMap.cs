@@ -31,6 +31,41 @@ namespace SeverinoApp.iOS
 			//popup.PresentFromRect (new CGRect(50,100,300,400 , View, UIPopoverArrowDirection.Any, true);
 		}
 
+		public override void AddAnnotation (IMKAnnotation annotation)
+		{
+			base.AddAnnotation (annotation);
+			var view = ViewForAnnotation (annotation);
+		}
+
+		public override void DeselectAnnotation (IMKAnnotation annotation, bool animated)
+		{
+			base.DeselectAnnotation (annotation, animated);
+		}
+
+		public override void InsertSubview (UIView view, nint atIndex)
+		{
+			base.InsertSubview (view, atIndex);
+		}
+
+		public override void AddAnnotations (params IMKAnnotation[] annotations)
+		{
+			base.AddAnnotations (annotations);
+		}
+
+		public override void DidChange (Foundation.NSKeyValueChange changeKind, Foundation.NSIndexSet indexes, Foundation.NSString forKey)
+		{
+			base.DidChange (changeKind, indexes, forKey);
+		}
+
+		public override MKAnnotationView DequeueReusableAnnotation (string withViewIdentifier)
+		{
+			return base.DequeueReusableAnnotation (withViewIdentifier);
+		}
+
+		public override MKAnnotationView ViewForAnnotation (IMKAnnotation annotation)
+		{
+			return base.ViewForAnnotation (annotation);
+		}
 
 		MKAnnotationView getViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{

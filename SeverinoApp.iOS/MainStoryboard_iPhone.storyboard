@@ -122,7 +122,7 @@
         <!--Perfil-->
         <scene sceneID="386">
             <objects>
-                <viewController storyboardIdentifier="PerfilViewController" title="Perfil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="387" customClass="PerfilViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PerfilViewController" title="Perfil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="387" sceneMemberID="viewController" customClass="PerfilViewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="PerfilView" id="388" customClass="PerfilView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +196,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="sldRaioAtendimento" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="50" id="524" continuous="NO">
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="sldRaioAtendimento" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="50" id="524" continuous="NO">
                                                 <rect key="frame" x="20" y="478" width="283" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -408,7 +408,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="mapUsuario" mapType="standard" id="686">
-                                <rect key="frame" x="8" y="497" width="303" height="19"/>
+                                <rect key="frame" x="8" y="459" width="303" height="19"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btnAbreChamado" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="698">
@@ -765,6 +765,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="773" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-145" y="931"/>
+        </scene>
+        <scene sceneID="1003">
+            <objects>
+                <viewController id="1004" sceneMemberID="viewController" customClass="ConsultaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Consulta Chamados" storyboardIdentifier="ConsultaViewController">
+                    <view key="view" contentMode="scaleToFill" id="1005">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="1009" fixedFrame="YES" restorationIdentifier="pckStatus">
+                                <rect key="frame" x="0.0" y="-2" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Status" lineBreakMode="tailTruncation" minimumFontSize="10" id="1008" fixedFrame="YES">
+                                <rect key="frame" x="20" y="68" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1017" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="196" width="320" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1018" fixedFrame="YES">
+                                        <rect key="frame" x="0.0" y="7" width="314" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1019">
+                                                <rect key="frame" x="0.0" y="22" width="314" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1020" tableViewCell="1019">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1021">
+                                                <rect key="frame" x="0.0" y="66" width="314" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1022" tableViewCell="1021">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1023">
+                                                <rect key="frame" x="0.0" y="110" width="314" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1024" tableViewCell="1023">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="lblStatus" destination="1008" id="name-outlet-1008"/>
+                        <outlet property="pckStatus" destination="1009" id="name-outlet-1009"/>
+                        <outlet property="tblChamados" destination="1018" id="name-outlet-1018"/>
+                        <outlet property="scvLista" destination="1017" id="name-outlet-1017"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1006" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="1058"/>
         </scene>
     </scenes>
     <resources>

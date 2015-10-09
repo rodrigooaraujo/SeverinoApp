@@ -7,36 +7,36 @@ namespace SeverinoApp.iOS
 	class PickerDataModel : UIPickerViewModel
 	{
 		public event EventHandler<EventArgs> ValueChanged;
-		public delegate void RowSelectedHandler (Servico value);
+		public delegate void RowSelectedHandler (Object value);
 		public RowSelectedHandler NewRowSelected;
 
 		/// <summary>
 		/// The color we wish to display
 		/// </summary>
-		public List<Servico> Items { get; private set; }
+		public List<KeyValuePair<object, string>> Items { get; private set; }
 
 		/// <summary>
 		/// The current selected item
 		/// </summary>
-		public int SelectedItem {
-			get { return Items [selectedIndex].ID; }
+		public object SelectedItem {
+			get { return Items [selectedIndex]; }
 		}
 
 		int selectedIndex = 0;
-		public Servico selectedValue{ get; set;}
+		public object selectedValue{ get; set;}
 
-		public PickerDataModel ()
+		/*public PickerDataModel ()
 		{
-			Items = new List<Servico> ();
-		}
+			Items = List<KeyValuePair<object, string>> ();
+		}*/
 
-		public PickerDataModel (List<Servico> items)
+		public PickerDataModel (List<KeyValuePair<object, string>> items)
 		{
 			Items = items;
-			selectedValue = new Servico();
+			selectedValue = null;
 
 			if(items.Count > 0)
-				selectedValue = Items[0];
+				selectedValue = Items[0].Key;
 		}
 
 
@@ -62,7 +62,7 @@ namespace SeverinoApp.iOS
 		public override void Selected (UIPickerView picker, nint row, nint component)
 		{
 			selectedIndex = (int)row;
-			selectedValue = Items [(int)row];
+			selectedValue = Items [(int)row].Key;
 
 			/*if (ValueChanged != null) {
 					ValueChanged (this, new EventArgs ());
@@ -74,7 +74,7 @@ namespace SeverinoApp.iOS
 
 		public override string GetTitle (UIPickerView picker, nint row, nint component)
 		{
-			return Items[(int)row].Nome;
+			return Items[(int)row].Value;
 		}
 
 		/// <summary>

@@ -16,6 +16,8 @@ namespace SeverinoApp.iOS
 		CLLocationManager manager = new CLLocationManager ();
 		Usuario usu = AppDelegate.dbUsuario;
 		LoadingOverlay loadingOverlay;
+		Usuario usuarioSelecionado;
+		//CustomMap mapUsuario;
 
 		public ChamadoViewController (IntPtr handle) : base (handle)
 		{
@@ -29,33 +31,73 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{		
+			//mapUsuario = new CustomMap ();
+			//View.Add (mapUsuario);
 			usu = AppDelegate.dbUsuario;
 			carrega ();
 		}
 
-		protected void pckServico_Changed(Servico serv)
+		public override void ViewDidLayoutSubviews ()
+		{
+			base.ViewDidLayoutSubviews ();
+			scrListaUsuarios.LayoutIfNeeded ();;
+		}
+
+		protected void pckServico_Changed (Object serv)
 		{
 			sldRaio_Changed (sldRaio);
 		}
 
 		partial void sldRaio_Changed (UISlider sender)
 		{
-			lblRaio.Text = string.Format("Raio: {0} KM", (int)sldRaio.Value);
+			lblRaio.Text = string.Format ("Raio: {0} KM", (int)sldRaio.Value);
 
-			if(swtDirecionado.On)
-				PopulaGrid((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
-			else
-				PopulaMapa ((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+			if (swtDirecionado.On)
+				PopulaGrid ((double)sldRaio.Value * 1000, (int)((PickerDataModel)pckServico.Model).selectedValue, (double)usu.Latitude, (double)usu.Longitude);
+			else {
+				//CriaMapa ();
+				PopulaMapa ((double)sldRaio.Value * 1000, (int)((PickerDataModel)pckServico.Model).selectedValue, (double)usu.Latitude, (double)usu.Longitude);
+			}
 		}
 
-		public async Task<Boolean>  carrega()
+		public void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
+			usuarioSelecionado = ((TableChamadoUsuarios)tableView.Source).GetCellItem (indexPath);
+		}
+
+		public void RowDeselected (UITableView tableView, NSIndexPath indexPath)
+		{
+			usuarioSelecionado = null;
+			var cell = ((TableChamadoUsuarios)tableView.Source).GetCellItem (indexPath);
+		}
+
+		public async Task<Boolean>  carrega ()
+		{
+			var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+			if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
+				bounds.Size = new CGSize (bounds.Size.Height, bounds.Size.Width);
+			}
+
+			this.loadingOverlay = new LoadingOverlay (bounds);
+			this.View.Add (loadingOverlay);
+
 			var servico = new Servico ();
 			await servico.CriaLista ();
-			var model = new PickerDataModel (servico.Servicos);
+			var keyvalue = new List<KeyValuePair<object, string>> ();
+
+			foreach (var item in servico.Servicos) {
+				keyvalue.Add (new KeyValuePair<object, string> (item.ID, item.Nome));
+			}
+
+			var model = new PickerDataModel (keyvalue);
 			pckServico.Model = model;
 			((PickerDataModel)pckServico.Model).NewRowSelected += pckServico_Changed;
 			direcionadoView.BackgroundColor = View.BackgroundColor;
+
+			mapUsuario.RegionWillChange += (object sender, MKMapViewChangeEventArgs e) => {
+				//PopulaMapa ((double)sldRaio.Value * 1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+
+			};
 
 			tblUsuarios.BackgroundColor = View.BackgroundColor;
 			tblUsuarios.Frame = scrListaUsuarios.Bounds;
@@ -63,15 +105,18 @@ namespace SeverinoApp.iOS
 			txtBuscaUsuarios_Changed (txtBuscaUsuarios);
 			swtDirecionado_Changed (swtDirecionado);
 
+			loadingOverlay.Hide ();
+
 			return true;
 		}
 
-		private async Task CriaMapa()
+		private async Task CriaMapa ()
 		{
+			//mapUsuario = new MKMapView();
+			//mapUsuario.Frame = direcionadoView.Frame;
 			mapUsuario.ShowsUserLocation = true;
 			mapUsuario.ZoomEnabled = true;
 			mapUsuario.ScrollEnabled = true;
-
 
 			DateTime tempo = DateTime.Now;
 			//while (manager.Location.Coordinate.Latitude != null || DateTime.Now.Subtract(tempo).Seconds < 20) {
@@ -85,18 +130,17 @@ namespace SeverinoApp.iOS
 			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
 
 			try {
+
+
 				MKCoordinateRegion mapRegion;
-				var locfake = new CLLocationCoordinate2D(-23.653782, -46.575832);
+				var locfake = new CLLocationCoordinate2D (-23.653782, -46.575832);
 				MKCoordinateRegion newRegion;
 
-				if(manager.Location != null)
-				{
+				if (manager.Location != null) {
 					mapRegion = MKCoordinateRegion.FromDistance (manager.Location.Coordinate, 100, 100);
 					newRegion.Center.Latitude = manager.Location.Coordinate.Latitude;
 					newRegion.Center.Longitude = manager.Location.Coordinate.Longitude;
-				}
-				else
-				{
+				} else {
 					mapRegion = MKCoordinateRegion.FromDistance (locfake, 100, 100);
 					newRegion.Center.Latitude = locfake.Latitude;
 					newRegion.Center.Longitude = locfake.Longitude;
@@ -110,44 +154,58 @@ namespace SeverinoApp.iOS
 				mapUsuario.SetRegion (newRegion, true);
 
 			} catch (Exception ex) {
-				new UIAlertView("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show();
+				new UIAlertView ("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show ();
 			}
 
-			mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
+			//mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
+			//await carrega();
 
-			await PopulaMapa ((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
 		}
 
-		private async Task PopulaMapa(double raio, int idservico, double lat, double lon)
+		private async Task PopulaMapa (double raio, int idservico, double lat, double lon)
 		{
 			if (usu == null) {
-				new UIAlertView("Erro", "Usuário não esta Logado!", null, "OK", null).Show();
+				new UIAlertView ("Erro", "Usuário não esta Logado!", null, "OK", null).Show ();
 				return;
 			}
 
 			Usuario usuario = new Usuario ();
 			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon); 
-
-			//mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
-			mapUsuario.RemoveAnnotations (mapUsuario.Annotations);
+			var anot = mapUsuario.Annotations;
+			mapUsuario.RemoveAnnotations (anot);
+		
 			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
 
 			var usuarios = usuario.Usuarios;
-
+			mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
 			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
-				var usu = (Usuario)usuarios.ToArray () [i];
-				lstmapAnnotaions [i] = new CustomMKPointAnnotation();
-				lstmapAnnotaions [i].Title = usu.Nome + " ";
-				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)usu.Latitude, (double)usu.Longitude));
-				lstmapAnnotaions [i].usuario = usu;
-				mapUsuario.AddAnnotation (lstmapAnnotaions [i]);
+				
+				Usuario profissional = (Usuario)usuarios.ToArray () [i];
+				lstmapAnnotaions [i] = new CustomMKPointAnnotation ();
+				lstmapAnnotaions [i].Title = profissional.Nome + " ";
+				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)profissional.Latitude, (double)profissional.Longitude));
+				lstmapAnnotaions [i].usuario = profissional;
+
+				mapUsuario.AddAnnotations (lstmapAnnotaions [i]);
+
 			}
+			mapUsuario.DidAddAnnotationViews += alterou;
+			//mapUsuario.AddAnnotations (lstmapAnnotaions);
+			var teste = new MKAnnotationView ();
+			var sub = mapUsuario.Subviews;
+
+
 		}
 
-		private async Task PopulaGrid(double raio, int idservico, double lat, double lon)
+		public void alterou(object sender, MKMapViewAnnotationEventArgs e)
+		{
+					
+		}
+
+		private async Task PopulaGrid (double raio, int idservico, double lat, double lon)
 		{
 			if (usu == null) {
-				new UIAlertView("Erro", "Usuário não esta Logado!", null, "OK", null).Show();
+				new UIAlertView ("Erro", "Usuário não esta Logado!", null, "OK", null).Show ();
 				return;
 			}
 
@@ -156,30 +214,32 @@ namespace SeverinoApp.iOS
 
 			var usuarios = usuario.Usuarios;
 
-			if (!string.IsNullOrEmpty(txtBuscaUsuarios.Text)) {
+			if (!string.IsNullOrEmpty (txtBuscaUsuarios.Text)) {
 				usuarios = (from usu in usuario.Usuarios
-				           where usu.PrestaServico == 1
-				           where usu.Nome.ToUpper ().Contains (txtBuscaUsuarios.Text.ToUpper ())
-				           select usu
+				            where usu.PrestaServico == 1
+				            where usu.Nome.ToUpper ().Contains (txtBuscaUsuarios.Text.ToUpper ())
+				            select usu
 				).OrderBy (x => x.Nome).ToList ();
 			} 
-
-			tblUsuarios.Source = new TableChamadoUsuarios (usuarios);
-			tblUsuarios.ReloadData();
+			var source = new TableChamadoUsuarios (usuarios);
+			tblUsuarios.Source = source;
+			source.NewRowSelected += RowSelected;
+			source.NewRowDeselected += RowDeselected;
+			tblUsuarios.ReloadData ();
 		}
 
-		private List<Usuario> carregaUsuarios(string nome)
+		private List<Usuario> carregaUsuarios (string nome)
 		{
 			Usuario usuario = new Usuario ();
 			usuario.CriaLista ();
 
-			var usuarios = (from usu in usuario.Usuarios 
-								where usu.PrestaServico==1 
-								where usu.Nome.ToUpper().Contains(nome.ToUpper()) 
-							select usu
-							).OrderBy(x => x.Nome) ;
+			var usuarios = (from usu in usuario.Usuarios
+			                where usu.PrestaServico == 1
+			                where usu.Nome.ToUpper ().Contains (nome.ToUpper ())
+			                select usu
+			               ).OrderBy (x => x.Nome);
 
-			return usuarios.ToList();
+			return usuarios.ToList ();
 		}
 
 		partial void swtDirecionado_Changed (UISwitch sender)
@@ -187,52 +247,76 @@ namespace SeverinoApp.iOS
 			direcionadoView.Hidden = !sender.On;
 			mapUsuario.Hidden = sender.On;
 		
-			if(direcionadoView.Hidden)
-			{
+			if (direcionadoView.Hidden) {
 				mapUsuario.Frame = direcionadoView.Frame;
-				if (CLLocationManager.LocationServicesEnabled)
-				{
-					CriaMapa();
+				if (CLLocationManager.LocationServicesEnabled) {
+					CriaMapa ();
 
 					manager.UpdatedLocation += (object sender2, CLLocationUpdatedEventArgs e) => {
-						CriaMapa();
+						CriaMapa ();
 					};	
-				}
-				else
-					new UIAlertView("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show();
-			}
-			else
-			{
-				PopulaGrid((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+				} else
+					new UIAlertView ("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show ();
+			} else {
+				PopulaGrid ((double)sldRaio.Value * 1000, (int)((PickerDataModel)pckServico.Model).selectedValue, (double)usu.Latitude, (double)usu.Longitude);
 			}
 
 		}
 
 		partial void txtBuscaUsuarios_Changed (UITextField sender)
 		{
-			PopulaGrid((double)sldRaio.Value*1000, ((PickerDataModel)pckServico.Model).selectedValue.ID, (double)usu.Latitude, (double)usu.Longitude);
+			PopulaGrid ((double)sldRaio.Value * 1000, (int)((PickerDataModel)pckServico.Model).selectedValue, (double)usu.Latitude, (double)usu.Longitude);
+		}
+
+		partial void btnAbreChamado_Click (UIButton sender)
+		{
+			//new UIAlertView("Alerta", "Você não selecionou nenhum Profissional, deseja abrir um Chamado BroadCast?", null, "OK", null).Show();
+			if (usuarioSelecionado == null) {
+				var Confirm = new UIAlertView ("Alerta", "Você não selecionou nenhum Profissional, deseja abrir um Chamado BroadCast?", null, "Não", "Sim");
+				Confirm.Show ();
+				Confirm.Clicked += (object senders, UIButtonEventArgs es) => {
+					if (es.ButtonIndex == 0) {
+						return;
+					} else {
+						Grava ();
+					}
+				};
+			} else {
+				Grava ();
+			}
 		}
 
 
-		private void SelecionaPinUsuario(IMKAnnotation annotation)
+		private void SelecionaPinUsuario (IMKAnnotation annotation)
 		{
-			var prof = ((CustomMKPointAnnotation)annotation).usuario;
+			var usumapa = ((CustomMKPointAnnotation)annotation).usuario;
+
+			var Confirm = new UIAlertView ("Alerta", string.Format ("Realmente deseja selecionar o Profissional: {0} ?", usumapa.Nome), null, "Não", "Sim");
+			Confirm.Show ();
+			Confirm.Clicked += (object senders, UIButtonEventArgs es) => {
+				if (es.ButtonIndex == 0) {
+					return;
+				} else {
+					usuarioSelecionado = usu;
+				}
+			};
 		}
 
 		private MKAnnotationView GetViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{
+			
 			const float AnnotationPadding = 10;
 			const float CalloutHeight = 40;
 			List<UIView> pinViews = new List<UIView> ();
 
 			// if it's the user location, just return nil.
-			if (annotation is MKUserLocation || annotation.GetType().ToString() == "MapKit.MKAnnotationWrapper")
+			if (annotation is MKUserLocation || annotation.GetType ().ToString () == "MapKit.MKAnnotationWrapper")
 				return null;
 
 			// handle our two custom annotations
 
 			const string SFAnnotationIdentifier = "UsuarioAnnotationIdentifier";
-			MKAnnotationView pinView = (MKAnnotationView)mapView.DequeueReusableAnnotation (SFAnnotationIdentifier);
+			MKAnnotationView pinView = mapView.DequeueReusableAnnotation (SFAnnotationIdentifier);
 			if (pinView == null) {
 				MKAnnotationView annotationView = new MKAnnotationView (annotation, SFAnnotationIdentifier);
 				annotationView.CanShowCallout = true;
@@ -263,20 +347,48 @@ namespace SeverinoApp.iOS
 				annotationView.LeftCalloutAccessoryView = sfIconView;
 
 				UIButton rightButton = UIButton.FromType (UIButtonType.ContactAdd);
+				UIButton leftButton = UIButton.FromType (UIButtonType.DetailDisclosure);
 				//rightButton.TitleLabel.Text = "Selecionar";
-				rightButton.AddTarget ((object sender, EventArgs ea) =>SelecionaPinUsuario(annotation), UIControlEvent.TouchUpInside);
+				var newannotation = annotation;
+
+
+
+				rightButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
+				leftButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
 				annotationView.RightCalloutAccessoryView = rightButton;
-				pinViews.Add (annotationView);
+				annotationView.LeftCalloutAccessoryView = leftButton;
+				//pinViews.Add (annotationView);
+
+				//pinView.Annotation = annotation;
+				//if (mapView.Annotations.Length == 1)
+				//mapView.RemoveAnnotation (annotation);
+				//mapView.AddAnnotation (annotation);
+				annotationView.Annotation = newannotation;
+				//pinView.Annotation = annotation;
 				return annotationView;
 			} else {
-				pinView.Annotation = annotation;
-			}
-			return pinView;
-		}
+				//pinView.RightCalloutAccessoryView 
+				//mapView.RemoveAnnotation (annotation);
+				//mapView.AddAnnotation (annotation);
+				//pinView = null;
 
-		partial void btnAbreChamado_Click (UIButton sender)
-		{
-			Grava ();
+				UIButton rightButton = UIButton.FromType (UIButtonType.ContactAdd);
+				UIButton leftButton = UIButton.FromType (UIButtonType.DetailDisclosure);
+				//rightButton.TitleLabel.Text = "Selecionar";
+				var newannotation = annotation;
+
+				rightButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
+				leftButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
+
+				var targ = ((UIButton)pinView.RightCalloutAccessoryView).AllTargets;
+				pinView.RightCalloutAccessoryView = rightButton;
+				pinView.LeftCalloutAccessoryView = leftButton;
+				//((UIButton)pinView.RightCalloutAccessoryView).AddTarget((object sender, EventArgs ea) => SelecionaPinUsuario (newanottation2), UIControlEvent.TouchUpInside);
+
+				pinView.Annotation = newannotation;
+			}
+			//CriaMapa ();
+			return pinView;
 		}
 
 		public async Task Grava ()
@@ -294,16 +406,17 @@ namespace SeverinoApp.iOS
 
 			try {
 
-				Chamado chamado = new Chamado();
+				Chamado chamado = new Chamado ();
 
 				chamado.Data = DateTime.Now;
-				chamado.IDServico = ((PickerDataModel)pckServico.Model).selectedValue.ID;
+				chamado.IDServico = (int)((PickerDataModel)pckServico.Model).selectedValue;
 				chamado.IDUsuario = usu.ID;
-				chamado.IDProfissional = 24;
+				if (usuarioSelecionado != null)
+					chamado.IDProfissional = usuarioSelecionado.ID;
 				chamado.Status = 1;
 				chamado.Tipo = swtDirecionado.On ? 1 : 2;
 				chamado.Atendido = 0;
-				chamado.Raio = (decimal)sldRaio.Value*1000;
+				chamado.Raio = (decimal)sldRaio.Value * 1000;
 
 				await chamado.Grava ();
 
@@ -313,16 +426,19 @@ namespace SeverinoApp.iOS
 
 			} catch (Exception ex) {
 				erro += "Erro ao Gravar";
-			}
-			finally{
+			} finally {
 				loadingOverlay.Hide ();
 			}
 
-			if(!string.IsNullOrEmpty(erro))
-			{
-				aviso = new UIAlertView("Erro de Validação", erro, null, "OK", null);
+			if (!string.IsNullOrEmpty (erro)) {
+				aviso = new UIAlertView ("Erro de Validação", erro, null, "OK", null);
 				//aviso.Clicked();
-				aviso.Show();
+				aviso.Show ();
+				return;
+			} else {
+				aviso = new UIAlertView ("Chamado Aberto com Sucesso!", erro, null, "OK", null);
+				//aviso.Clicked();
+				aviso.Show ();
 				return;
 			}
 		}

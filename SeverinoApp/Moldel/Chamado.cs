@@ -109,5 +109,29 @@ namespace SeverinoApp
 			return chamado;
 		}
 	}
+
+	public class Status
+	{
+		public int Codigo {get;	set; }
+		public string Descricao {get; set; }
+		public List<Status> Lista{ get; set;}
+
+		public Status()
+		{
+		}
+
+		public void CriaLista()
+		{
+			Lista = new List<Status> ();
+
+			Lista.Add (new Status{ Codigo=1, Descricao="Novo"});
+			Lista.Add (new Status{ Codigo=2, Descricao="Aceito"});
+			Lista.Add (new Status{ Codigo=3, Descricao="Entrou em Contato"});
+			Lista.Add (new Status{ Codigo=4, Descricao="Encerrado Pelo Técnico"});
+			Lista.Add (new Status{ Codigo=5, Descricao="Encerrado pelo Usuário"});
+			Lista.Add (new Status{ Codigo=6, Descricao="Cacelado pelo Técnico"});
+			Lista.Add (new Status{ Codigo=7, Descricao="Cacelado pelo Usuário"});
+		}
+	}
 }
 

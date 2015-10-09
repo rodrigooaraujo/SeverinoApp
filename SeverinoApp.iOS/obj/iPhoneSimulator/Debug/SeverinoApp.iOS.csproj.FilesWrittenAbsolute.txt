@@ -72,3 +72,5 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/SharpMobileCode.ModalPicker.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Geolocator.Plugin.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/Geolocator.Plugin.Abstractions.dll
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1004-view-1005.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ConsultaViewController.nib

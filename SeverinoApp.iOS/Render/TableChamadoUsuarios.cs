@@ -7,6 +7,11 @@ namespace SeverinoApp.iOS
 {
 	public class TableChamadoUsuarios : UITableViewSource
 	{
+		public delegate void RowSelectedHandler (UITableView tableView, NSIndexPath indexPath);
+		public RowSelectedHandler NewRowSelected;
+		public delegate void RowDeselectedHandler (UITableView tableView, NSIndexPath indexPath, UsuarioServico ususervico);
+		public RowSelectedHandler NewRowDeselected;
+
 		public TableChamadoUsuarios ()
 		{
 		}
@@ -59,8 +64,22 @@ namespace SeverinoApp.iOS
 			foreach (var item in tableView.VisibleCells) {
 				if (item != cell)
 					item.Accessory = UITableViewCellAccessory.None;
-			}				
+			}	
 
+			if (cell.Accessory == UITableViewCellAccessory.Checkmark)
+				NewRowSelected (tableView, indexPath);
+			else
+				NewRowDeselected (tableView, indexPath);
+		}
+
+		public override void RowDeselected (UITableView tableView, NSIndexPath indexPath)
+		{
+			base.RowDeselected (tableView, indexPath);
+		}
+
+		public Usuario GetCellItem(NSIndexPath indexPath)
+		{
+			return TableItems[indexPath.Row];
 		}
 	}
 }

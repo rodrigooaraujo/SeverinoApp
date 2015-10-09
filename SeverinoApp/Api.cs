@@ -17,7 +17,7 @@ namespace SeverinoApp
 
 		public Api ()
 		{
-			this.Url = "http://65c3d66c.ngrok.io/api/";
+			this.Url = "http://7916abde.ngrok.io/api/";
 		}
 
 		public Api (string url)

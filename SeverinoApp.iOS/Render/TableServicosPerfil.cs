@@ -13,15 +13,10 @@ namespace SeverinoApp.iOS
 		UsuarioServico[] selecionados;
 
 		string CellIdentifier = "TableCell";
-
 		public delegate void RowSelectedHandler (UITableView tableView, NSIndexPath indexPath, UsuarioServico ususervico);
-
 		public RowSelectedHandler NewRowSelected;
-
 		public delegate void RowDeselectedHandler (UITableView tableView, NSIndexPath indexPath, UsuarioServico ususervico);
-
 		public RowSelectedHandler NewRowDeselected;
-
 
 		public override nint RowsInSection (UITableView tableview, nint section)
 		{
@@ -127,45 +122,6 @@ namespace SeverinoApp.iOS
 			return keys;
 		}
 		*/
-	}
-
-	public class UsuarioServicoMod : Servico
-	{
-		public int Selecionado { get; set; }
-
-		public List<UsuarioServicoMod> UsuarioServicoMods;
-
-		public UsuarioServicoMod ()
-		{
-		}
-
-		public UsuarioServicoMod (List<Servico> servicos, List<UsuarioServico> selecionados)
-		{
-			try {
-				UsuarioServicoMods = new List<UsuarioServicoMod> ();
-
-				var marcados = (from serv in servicos
-					where (serv.ID == (from sel in selecionados
-						where sel.IDServico == serv.ID
-						select sel.ID).FirstOrDefault())
-					select serv).ToList ();
-
-				/*var todos = servicos;
-
-				foreach (Servico item in todos) {
-					UsuarioServicoMod mod = new UsuarioServicoMod ();
-					mod = (UsuarioServicoMod)item;
-					if (marcados.Contains (item))
-						mod.Selecionado = 1;
-					else
-						mod.Selecionado = 0;
-					UsuarioServicoMods.Add (mod);
-
-				}*/
-			} catch (Exception ex) {
-				
-			}
-		}
 	}
 }
 

@@ -9,6 +9,7 @@ namespace SeverinoApp.iOS
 
 		public CustomMKPointAnnotation ()
 		{
+			
 		}
 	}
 }

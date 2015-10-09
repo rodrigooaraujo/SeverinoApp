@@ -220,6 +220,10 @@
     <Compile Include="Render\LoadingOverlay.cs" />
     <Compile Include="Render\TableEndereco.cs" />
     <Compile Include="Render\PickerDataModel.cs" />
+    <Compile Include="ConsultaViewController.cs" />
+    <Compile Include="ConsultaViewController.designer.cs">
+      <DependentUpon>ConsultaViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

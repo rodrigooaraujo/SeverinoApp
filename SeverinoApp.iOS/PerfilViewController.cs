@@ -26,6 +26,72 @@ namespace SeverinoApp.iOS
 			
 		}
 
+		public override void ViewDidLayoutSubviews ()
+		{
+			base.ViewDidLayoutSubviews ();
+
+			scrCampos.LayoutIfNeeded ();
+			scrCampos.ContentSize = new CGSize ((nfloat)1.0,contentView.Bounds.Size.Height);;
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+			PreparaTela ();
+		}
+
+		partial void swtPrestador_Changed (UISwitch sender)
+		{
+			lblRaioAtendimento.Hidden = !swtPrestador.On;
+			txtCustoVisita.Hidden = !swtPrestador.On;
+			sldRaioAtendimento.Hidden = !swtPrestador.On;
+			lblHorarioAtendimento.Hidden= !swtPrestador.On;
+			txtHrInicio.Hidden= !swtPrestador.On;
+			txtHrFim.Hidden= !swtPrestador.On;
+			lblAs.Hidden= !swtPrestador.On;
+			swtCobraAtendimento.Hidden= !swtPrestador.On;
+			lblCobra.Hidden= !swtPrestador.On;
+			txtCustoVisita.Hidden= !swtPrestador.On || !swtCobraAtendimento.On;
+			swtCobraAtendimento_Changed (swtCobraAtendimento);
+		}
+
+		partial void sldRaioAtendimento_Changed (UISlider sender)
+		{
+			lblRaioAtendimento.Text = string.Format("Raio de Atendimento: {0} KM", (int)sldRaioAtendimento.Value);
+		}
+
+		partial void swtCobraAtendimento_Changed (UISwitch sender)
+		{
+			txtCustoVisita.Hidden = !swtCobraAtendimento.On || !swtPrestador.On;
+		}
+
+		public override void ViewDidLoad ()
+		{
+			swtPrestador_Changed (swtPrestador);
+			sldRaioAtendimento_Changed (sldRaioAtendimento);
+			swtCobraAtendimento_Changed (swtCobraAtendimento);
+			/*txtNome.ShouldReturn += (textField) => {
+				textField.ResignFirstResponder();
+				return true;
+			};*/
+
+			txtDtNascimento.ShouldBeginEditing += OnTextFieldShouldBeginEditing;
+
+			preparaPicker ();
+
+			txtSexo.TouchDown += SetPicker;
+			txtEndereco.TouchDown += abreEndereco;
+
+			PreparaTela ();
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			PreparaTela ();
+		}
+
 		partial void btnGravar_Click (UIButton sender)
 		{
 			UIAlertView aviso;
@@ -61,13 +127,6 @@ namespace SeverinoApp.iOS
 
 
 			Grava ();
-		}
-
-		public override void ViewDidAppear (bool animated)
-		{
-			base.ViewDidAppear (animated);
-
-			PreparaTela ();
 		}
 
 		public async Task Grava ()
@@ -130,59 +189,6 @@ namespace SeverinoApp.iOS
 			}
 		}
 
-		public override void ViewDidLayoutSubviews ()
-		{
-			base.ViewDidLayoutSubviews ();
-
-			scrCampos.LayoutIfNeeded ();
-			scrCampos.ContentSize = new CGSize ((nfloat)1.0,contentView.Bounds.Size.Height);;
-		}
-			
-		partial void swtPrestador_Changed (UISwitch sender)
-		{
-			lblRaioAtendimento.Hidden = !swtPrestador.On;
-			txtCustoVisita.Hidden = !swtPrestador.On;
-			sldRaioAtendimento.Hidden = !swtPrestador.On;
-			lblHorarioAtendimento.Hidden= !swtPrestador.On;
-			txtHrInicio.Hidden= !swtPrestador.On;
-			txtHrFim.Hidden= !swtPrestador.On;
-			lblAs.Hidden= !swtPrestador.On;
-			swtCobraAtendimento.Hidden= !swtPrestador.On;
-			lblCobra.Hidden= !swtPrestador.On;
-			txtCustoVisita.Hidden= !swtPrestador.On || !swtCobraAtendimento.On;
-			swtCobraAtendimento_Changed (swtCobraAtendimento);
-		}
-
-		partial void sldRaioAtendimento_Changed (UISlider sender)
-		{
-			lblRaioAtendimento.Text = string.Format("Raio de Atendimento: {0} KM", (int)sldRaioAtendimento.Value);
-		}
-
-		partial void swtCobraAtendimento_Changed (UISwitch sender)
-		{
-			txtCustoVisita.Hidden = !swtCobraAtendimento.On || !swtPrestador.On;
-		}
-
-		public override void ViewDidLoad ()
-		{
-			swtPrestador_Changed (swtPrestador);
-			sldRaioAtendimento_Changed (sldRaioAtendimento);
-			swtCobraAtendimento_Changed (swtCobraAtendimento);
-			/*txtNome.ShouldReturn += (textField) => {
-				textField.ResignFirstResponder();
-				return true;
-			};*/
-
-			txtDtNascimento.ShouldBeginEditing += OnTextFieldShouldBeginEditing;
-
-			preparaPicker ();
-
-			txtSexo.TouchDown += SetPicker;
-			txtEndereco.TouchDown += abreEndereco;
-
-			PreparaTela ();
-		}
-
 		public void PreparaTela()
 		{
 			//txtEndereco.TouchUpInside += abreEndereco;
@@ -231,31 +237,12 @@ namespace SeverinoApp.iOS
 		{
 			var endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
 
-			/*endereco.ModalPresentationStyle = UIModalPresentationStyle.Popover;
-			var frmPopup = this.View.Frame;
-
-			//chamado.View.Frame = new CGRect (20, 50,  frmPopup.Height/2, frmPopup.Width/2);
-			endereco.PreferredContentSize = new CGSize (frmPopup.Width / 2, frmPopup.Height / 2);
-			this.PresentViewController(endereco, true, null);*/
-
 			if (endereco != null)
 			{
 				endereco.View.TranslatesAutoresizingMaskIntoConstraints = false;
 				this.NavigationController.PushViewController(endereco, true);
 			} 
 
-		}
-
-		public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
-			//ViewDidLoad ();
-			PreparaTela ();
-		}
-
-		public override void ApplicationFinishedRestoringState ()
-		{
-			base.ApplicationFinishedRestoringState ();
 		}
 
 		protected void preparaPicker()
@@ -286,7 +273,7 @@ namespace SeverinoApp.iOS
 						var teste = (UIPickerView)txtSexo.InputView;
 						nint linha = teste.SelectedRowInComponent(0);
 						txtSexo.Text = picker_model.values[(int)linha].ToString();
-						//txtSexo.ResignFirstResponder();
+						txtSexo.ResignFirstResponder();
 					}
 					/*foreach (UIPickerView view in txtSexo.InputView) 
 					{
