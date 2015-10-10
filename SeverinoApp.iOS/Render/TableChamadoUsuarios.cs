@@ -31,6 +31,8 @@ namespace SeverinoApp.iOS
 		{
 			//UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
 			UITableViewCell cell = new UITableViewCell (UITableViewCellStyle.Value1, CellIdentifier);
+		
+
 			cell.Accessory = UITableViewCellAccessory.None;
 			Usuario item = TableItems[indexPath.Row];
 

@@ -1,0 +1,14 @@
+mscorlib.dll
+System.dll
+System.Xml.dll
+System.Core.dll
+Mono.Dynamic.Interpreter.dll
+DSoft.Datatypes.dll
+DSoft.UI.dll
+DSoft.Datatypes.Grid.dll
+DSoft.Themes.dll
+System.Data.dll
+Mono.Data.Tds.dll
+Mono.Security.dll
+System.Transactions.dll
+System.Xml.Linq.dll

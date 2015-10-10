@@ -116,6 +116,18 @@
       <HintPath>..\packages\Xam.Plugin.Geolocator.1.0.3\lib\Xamarin.iOS10\Geolocator.Plugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="DSoft.Datatypes.Grid">
+      <HintPath>..\Components\dsgridview-3.0.2\lib\ios-unified\DSoft.Datatypes.Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="DSoft.Datatypes">
+      <HintPath>..\Components\dsgridview-3.0.2\lib\ios-unified\DSoft.Datatypes.dll</HintPath>
+    </Reference>
+    <Reference Include="DSoft.Themes">
+      <HintPath>..\Components\dsgridview-3.0.2\lib\ios-unified\DSoft.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="DSoft.UI">
+      <HintPath>..\Components\dsgridview-3.0.2\lib\ios-unified\DSoft.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -135,46 +147,32 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
-    <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
     <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
+    <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Info.plist" />
+    <None Include="Info.plist">
+      <DependentUpon>Info.plist</DependentUpon>
+    </None>
+    <None Include="PluginsHelp\GeolocatorReadme.txt" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <None Include="PluginsHelp\GeolocatorReadme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
+    <Compile Include="Render\TableServicosPerfil.cs" />
+    <Compile Include="Render\TableHome.cs" />
+    <Compile Include="Render\ShearchSource.cs" />
+    <Compile Include="Model\ListPickerViewModel.cs" />
+    <Compile Include="Model\SearchDelegate.cs" />
+    <Compile Include="Render\TableChamadoUsuarios.cs" />
+    <Compile Include="Render\MKPointAnnotation.cs" />
+    <Compile Include="Render\CustomMap.cs" />
+    <Compile Include="Render\CustomUIButton.cs" />
+    <Compile Include="Render\PickerModel.cs" />
+    <Compile Include="Render\LoadingOverlay.cs" />
+    <Compile Include="Render\TableEndereco.cs" />
+    <Compile Include="Render\PickerDataModel.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="LoginViewController.cs" />
-    <Compile Include="LoginViewController.designer.cs">
-      <DependentUpon>LoginViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomeViewController.cs" />
-    <Compile Include="HomeViewController.designer.cs">
-      <DependentUpon>HomeViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrincipalNavigationController.cs" />
-    <Compile Include="PrincipalNavigationController.designer.cs">
-      <DependentUpon>PrincipalNavigationController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FacebookViewController.cs" />
-    <Compile Include="FacebookViewController.designer.cs">
-      <DependentUpon>FacebookViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FacebookView.cs" />
-    <Compile Include="FacebookView.designer.cs">
-      <DependentUpon>FacebookView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PerfilViewController.cs" />
-    <Compile Include="PerfilViewController.designer.cs">
-      <DependentUpon>PerfilViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PerfilView.cs" />
-    <Compile Include="PerfilView.designer.cs">
-      <DependentUpon>PerfilView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChamadoView.cs" />
     <Compile Include="ChamadoView.designer.cs">
       <DependentUpon>ChamadoView.cs</DependentUpon>
@@ -183,46 +181,66 @@
     <Compile Include="ChamadoViewController.designer.cs">
       <DependentUpon>ChamadoViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaViewController.cs" />
+    <Compile Include="ConsultaViewController.designer.cs">
+      <DependentUpon>ConsultaViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatePickerController.cs" />
+    <Compile Include="DatePickerController.designer.cs">
+      <DependentUpon>DatePickerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnderecoViewController.cs" />
+    <Compile Include="EnderecoViewController.designer.cs">
+      <DependentUpon>EnderecoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookView.cs" />
+    <Compile Include="FacebookView.designer.cs">
+      <DependentUpon>FacebookView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookViewController.cs" />
+    <Compile Include="FacebookViewController.designer.cs">
+      <DependentUpon>FacebookViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeView.cs" />
     <Compile Include="HomeView.designer.cs">
       <DependentUpon>HomeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServicosViewController.cs" />
-    <Compile Include="ServicosViewController.designer.cs">
-      <DependentUpon>ServicosViewController.cs</DependentUpon>
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="MapaViewController.cs" />
+    <Compile Include="MapaViewController.designer.cs">
+      <DependentUpon>MapaViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilView.cs" />
+    <Compile Include="PerfilView.designer.cs">
+      <DependentUpon>PerfilView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilViewController.cs" />
+    <Compile Include="PerfilViewController.designer.cs">
+      <DependentUpon>PerfilViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalNavigationController.cs" />
+    <Compile Include="PrincipalNavigationController.designer.cs">
+      <DependentUpon>PrincipalNavigationController.cs</DependentUpon>
     </Compile>
     <Compile Include="ServicosView.cs" />
     <Compile Include="ServicosView.designer.cs">
       <DependentUpon>ServicosView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Render\TableServicosPerfil.cs" />
-    <Compile Include="Render\TableHome.cs" />
-    <Compile Include="MapaViewController.cs" />
-    <Compile Include="MapaViewController.designer.cs">
-      <DependentUpon>MapaViewController.cs</DependentUpon>
+    <Compile Include="ServicosViewController.cs" />
+    <Compile Include="ServicosViewController.designer.cs">
+      <DependentUpon>ServicosViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Render\ShearchSource.cs" />
-    <Compile Include="DatePickerController.cs" />
-    <Compile Include="DatePickerController.designer.cs">
-      <DependentUpon>DatePickerController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ListPickerViewModel.cs" />
-    <Compile Include="Model\SearchDelegate.cs" />
-    <Compile Include="Render\TableChamadoUsuarios.cs" />
-    <Compile Include="Render\MKPointAnnotation.cs" />
-    <Compile Include="Render\CustomMap.cs" />
-    <Compile Include="Render\CustomUIButton.cs" />
-    <Compile Include="Render\PickerModel.cs" />
-    <Compile Include="EnderecoViewController.cs" />
-    <Compile Include="EnderecoViewController.designer.cs">
-      <DependentUpon>EnderecoViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Render\LoadingOverlay.cs" />
-    <Compile Include="Render\TableEndereco.cs" />
-    <Compile Include="Render\PickerDataModel.cs" />
-    <Compile Include="ConsultaViewController.cs" />
-    <Compile Include="ConsultaViewController.designer.cs">
-      <DependentUpon>ConsultaViewController.cs</DependentUpon>
+    <Compile Include="DetalheChamadoViewController.cs" />
+    <Compile Include="DetalheChamadoViewController.designer.cs">
+      <DependentUpon>DetalheChamadoViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
@@ -266,10 +284,15 @@
       <Version>1.0.3</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="dsgridview">
+      <Version>3.0.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Render\" />
     <Folder Include="Resources\Icons\" />
     <Folder Include="Model\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>

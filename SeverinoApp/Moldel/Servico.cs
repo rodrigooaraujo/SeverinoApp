@@ -21,6 +21,9 @@ namespace SeverinoApp
 		public List<Servico> Servicos{ get; set;}
 		public int Total { get; set; }
 
+		public string Erro{ get; set;}
+		public string Excecao{ get; set;}
+
 		public Servico ()
 		{
 			Servicos = new List<Servico> ();
@@ -57,6 +60,36 @@ namespace SeverinoApp
 			var json = JsonConvert.SerializeObject(serv, Formatting.Indented);
 			api.Post (json, "Servico");
 			return true;
+		}
+
+		public async Task<Servico> Consulta (int idServico)
+		{
+			String URL = "Servico" + string.Format ("?id={0}", idServico);
+			var api = new Api ();
+			var usu = new Servico ();
+			try {
+
+				JsonValue js = await api.Get (URL);
+				var result = JsonConvert.DeserializeObject<Servico> (js.ToString ());
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = "Erro ao carregar Servico";
+					Excecao = api.Excecao;
+					return null;
+				}
+
+				if (result == null) {
+					return null;
+				}
+
+				usu = result;
+			} catch (Exception ex) {
+				Erro = "Erro ao Carregar Servico";
+				Excecao = ex.Message;
+				return null;
+			}
+
+			return usu;
 		}
 
 	}

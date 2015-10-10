@@ -1,0 +1,17 @@
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/Default-568h@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/first.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/first@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/header.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/second.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/second@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/checkmark.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/checkmark@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/bin/unified/iPhoneSimulator/Debug/DSComponentsSampleiOS.exe.mdb
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/bin/unified/iPhoneSimulator/Debug/DSComponentsSampleiOS.exe
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/DSComponentsSampleiOS.exe
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/obj/unified/iPhoneSimulator/Debug/DSComponentsSampleiOS.exe.mdb
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/bin/unified/iPhoneSimulator/Debug/DSoft.Datatypes.dll
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/bin/unified/iPhoneSimulator/Debug/DSoft.Themes.dll
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/bin/unified/iPhoneSimulator/Debug/DSoft.Datatypes.Grid.dll
+/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/samples/DSComponentsSample/DSComponentsSample/bin/unified/iPhoneSimulator/Debug/DSoft.UI.dll

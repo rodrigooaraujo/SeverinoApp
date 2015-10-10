@@ -221,6 +221,36 @@ namespace SeverinoApp
 			}
 			return true;
 		}
+
+		public async Task<Usuario> Consulta (int idUsuario)
+		{
+			String URL = "Usuario" + string.Format ("?idUsuario={0}", idUsuario);
+			var api = new Api ();
+			var usu = new Usuario ();
+			try {
+
+				JsonValue js = await api.Get (URL);
+				var result = JsonConvert.DeserializeObject<Usuario> (js.ToString ());
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = "Erro ao carregar Usuário";
+					Excecao = api.Excecao;
+					return null;
+				}
+
+				if (result == null) {
+					return null;
+				}
+
+				usu = result;
+			} catch (Exception ex) {
+				Erro = "Erro ao Efetuar Login";
+				Excecao = ex.Message;
+				return null;
+			}
+
+			return usu;
+		}
 	}
 
 

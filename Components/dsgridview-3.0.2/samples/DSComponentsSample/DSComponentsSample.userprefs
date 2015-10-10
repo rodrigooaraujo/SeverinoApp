@@ -1,0 +1,45 @@
+﻿<Properties StartupItem="DSComponentsSample/DSComponentsSample.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DSComponentsSample/Data/Grid/ExampleDataTable.cs">
+    <Files>
+      <File FileName="DSComponentsSample/Data/Grid/ExampleDataSet.cs" Line="34" Column="26" />
+      <File FileName="DSComponentsSample/Data/Grid/ExampleDataTable.cs" Line="75" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DSComponentsSample" expanded="True">
+            <Node name="DSComponentsSample.iOS" expanded="True">
+              <Node name="Data" expanded="True">
+                <Node name="Grid" expanded="True">
+                  <Node name="ExampleDataTable.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Themes" expanded="True">
+                <Node name="Grid" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="SeverinoApp" expanded="True">
+            <Node name="SeverinoApp" expanded="True">
+              <Node name="Moldel" expanded="True" />
+            </Node>
+            <Node name="SeverinoApp.iOS" expanded="True">
+              <Node name="Render" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/ChamadoViewController.cs" line="92" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/Empty/Moldel/Servico.cs" line="65" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Moldel/GeolocatorAdress.cs" line="30" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/EnderecoViewController.cs" line="88" column="4" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

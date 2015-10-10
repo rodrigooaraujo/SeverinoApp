@@ -128,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="396">
-                                <rect key="frame" x="20" y="827" width="280" height="37"/>
+                                <rect key="frame" x="10" y="827" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.26666666666666666" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Gravar">
@@ -838,6 +838,132 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1006" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="1058"/>
+        </scene>
+        <scene sceneID="1038">
+            <objects>
+                <viewController id="1039" sceneMemberID="viewController" customClass="DetalheChamadoViewController" storyboardIdentifier="DetalheChamadoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Detalhes Chamado">
+                    <view key="view" contentMode="scaleToFill" id="1040">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número" lineBreakMode="tailTruncation" minimumFontSize="10" id="1043" fixedFrame="YES">
+                                <rect key="frame" x="14" y="68" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1044" fixedFrame="YES" enabled="NO" textAlignment="right" restorationIdentifier="txtNumero">
+                                <rect key="frame" x="83" y="63" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Data" lineBreakMode="tailTruncation" minimumFontSize="10" id="1045" fixedFrame="YES">
+                                <rect key="frame" x="169" y="68" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1046" fixedFrame="YES" enabled="NO" textAlignment="center" restorationIdentifier="txtData">
+                                <rect key="frame" x="212" y="63" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Profissional" lineBreakMode="tailTruncation" minimumFontSize="10" id="1047" fixedFrame="YES">
+                                <rect key="frame" x="14" y="107" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1048" fixedFrame="YES" enabled="NO" restorationIdentifier="txtProfissional">
+                                <rect key="frame" x="14" y="136" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1049" fixedFrame="YES" enabled="NO" restorationIdentifier="txtStatus">
+                                <rect key="frame" x="14" y="197" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Status" lineBreakMode="tailTruncation" minimumFontSize="10" id="1050" fixedFrame="YES">
+                                <rect key="frame" x="14" y="174" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Serviço" lineBreakMode="tailTruncation" minimumFontSize="10" id="1051" fixedFrame="YES">
+                                <rect key="frame" x="14" y="235" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1052" fixedFrame="YES" enabled="NO" restorationIdentifier="txtServico">
+                                <rect key="frame" x="14" y="258" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1053" fixedFrame="YES" enabled="NO" restorationIdentifier="txtRaio">
+                                <rect key="frame" x="14" y="328" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Raio de Atendimento" lineBreakMode="tailTruncation" minimumFontSize="10" id="1054" fixedFrame="YES">
+                                <rect key="frame" x="14" y="299" width="164" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1069" fixedFrame="YES" restorationIdentifier="btnAcoes">
+                                <rect key="frame" x="8" y="520" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.34901960784313724" green="0.50980392156862742" blue="1" alpha="1"/>
+                                <state key="normal" title="Ações">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAcoes_Click:" destination="1039" id="1084" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="lblNumero" destination="1043" id="name-outlet-1043"/>
+                        <outlet property="txtNumero" destination="1044" id="name-outlet-1044"/>
+                        <outlet property="txtProfissional" destination="1048" id="name-outlet-1048"/>
+                        <outlet property="lblServico" destination="1051" id="name-outlet-1051"/>
+                        <outlet property="txtServico" destination="1052" id="name-outlet-1052"/>
+                        <outlet property="lblRaio" destination="1054" id="name-outlet-1054"/>
+                        <outlet property="txtRaio" destination="1053" id="name-outlet-1053"/>
+                        <outlet property="lblStatus" destination="1050" id="name-outlet-1050"/>
+                        <outlet property="lblProfissional" destination="1047" id="name-outlet-1047"/>
+                        <outlet property="txtData" destination="1046" id="name-outlet-1046"/>
+                        <outlet property="lblData" destination="1045" id="name-outlet-1045"/>
+                        <outlet property="btnAcoes" destination="1069" id="name-outlet-1069"/>
+                        <outlet property="txtStatus" destination="1049" id="name-outlet-1049"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1041" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="-14"/>
         </scene>
     </scenes>
     <resources>

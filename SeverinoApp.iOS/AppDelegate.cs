@@ -26,6 +26,7 @@ namespace SeverinoApp.iOS
 		public SlideoutNavigationController Menu { get; private set; }
 		public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard_iPhone", null);
 		public static UIViewController initialViewController;
+
 		public static UIViewController Home = Storyboard.InstantiateViewController ("HomeViewController");
 		public static UIViewController Login = Storyboard.InstantiateViewController ("LoginViewController");
 		public static UIViewController Perfil = Storyboard.InstantiateViewController ("PerfilViewController");
@@ -34,6 +35,7 @@ namespace SeverinoApp.iOS
 		public static UIViewController Mapa = Storyboard.InstantiateViewController ("MapaViewController");
 		public static UIViewController Endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
 		public static UIViewController Consulta = Storyboard.InstantiateViewController ("ConsultaViewController");
+		//public static UIViewController Detalhe = Storyboard.InstantiateViewController ("DetalheChamadoViewController");
 
 		public static Usuario dbUsuario { get; set;}
 
@@ -93,7 +95,7 @@ namespace SeverinoApp.iOS
 			Window.MakeKeyAndVisible ();
 
 			return true;
-		}
+		}	
 	}
 
 	public class DummyControllerLeft : DialogViewController
