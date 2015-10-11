@@ -1,37 +1,11 @@
 ﻿<Properties StartupItem="DSComponentsSample/DSComponentsSample.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DSComponentsSample/Data/Grid/ExampleDataTable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DSComponentsSample/Controllers/Grid/DSDemoGridViewController.cs">
     <Files>
-      <File FileName="DSComponentsSample/Data/Grid/ExampleDataSet.cs" Line="34" Column="26" />
-      <File FileName="DSComponentsSample/Data/Grid/ExampleDataTable.cs" Line="75" Column="6" />
+      <File FileName="DSComponentsSample/Controllers/DSComponentsMenuControllerSource.cs" Line="61" Column="4" />
+      <File FileName="DSComponentsSample/Controllers/Grid/DSDemoGridViewController.cs" Line="145" Column="14" />
+      <File FileName="DSComponentsSample/Controllers/Grid/DSDemoViewWithGridController.cs" Line="35" Column="58" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="DSComponentsSample" expanded="True">
-            <Node name="DSComponentsSample.iOS" expanded="True">
-              <Node name="Data" expanded="True">
-                <Node name="Grid" expanded="True">
-                  <Node name="ExampleDataTable.cs" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Themes" expanded="True">
-                <Node name="Grid" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True" />
-            </Node>
-          </Node>
-          <Node name="SeverinoApp" expanded="True">
-            <Node name="SeverinoApp" expanded="True">
-              <Node name="Moldel" expanded="True" />
-            </Node>
-            <Node name="SeverinoApp.iOS" expanded="True">
-              <Node name="Render" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

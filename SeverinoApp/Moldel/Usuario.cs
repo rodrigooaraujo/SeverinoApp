@@ -107,11 +107,20 @@ namespace SeverinoApp
 			return true;
 		}
 
-		public async Task<bool> CarregaUsuariosDisponiveis (double distancia, int idservico, double lat, double lon)
+		/// <summary>
+		/// Carrega os Usuarios que estão disponiveis.
+		/// </summary>
+		/// <returns>The usuarios disponiveis.</returns>
+		/// <param name="distancia">Distancia.</param>
+		/// <param name="idservico">Idservico.</param>
+		/// <param name="lat">Lat.</param>
+		/// <param name="lon">Lon.</param>
+		/// <param name="idUsu">Usuario Logado</param>
+		public async Task<bool> CarregaUsuariosDisponiveis (double distancia, int idservico, double lat, double lon, int idUsu)
 		{
 			var api = new Api ();
-			string controller = string.Format (string.Format("Usuario?distancia={0}&idservico={1}&lat={2}&lon={3}",
-				distancia.ToString().Replace(',','.'), idservico, lat.ToString().Replace(',','.'), lon.ToString().Replace(',','.')));
+			string controller = string.Format (string.Format("Usuario?distancia={0}&idservico={1}&lat={2}&lon={3}&IdUsuario={4}",
+				distancia.ToString().Replace(',','.'), idservico, lat.ToString().Replace(',','.'), lon.ToString().Replace(',','.'), idUsu));
 
 			JsonValue js = await api.Get (controller);
 			if (!string.IsNullOrEmpty (api.Erro)) {

@@ -20,6 +20,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIView contentView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblData { get; set; }
 
 		[Outlet]
@@ -41,6 +45,10 @@ namespace SeverinoApp.iOS
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblStatus { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrCampos { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -76,6 +84,10 @@ namespace SeverinoApp.iOS
 				btnAcoes.Dispose ();
 				btnAcoes = null;
 			}
+			if (contentView != null) {
+				contentView.Dispose ();
+				contentView = null;
+			}
 			if (lblData != null) {
 				lblData.Dispose ();
 				lblData = null;
@@ -99,6 +111,10 @@ namespace SeverinoApp.iOS
 			if (lblStatus != null) {
 				lblStatus.Dispose ();
 				lblStatus = null;
+			}
+			if (scrCampos != null) {
+				scrCampos.Dispose ();
+				scrCampos = null;
 			}
 			if (txtData != null) {
 				txtData.Dispose ();

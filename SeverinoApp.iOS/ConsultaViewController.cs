@@ -17,6 +17,7 @@ namespace SeverinoApp.iOS
 	{
 		private DSGridView gvChamados;
 		private UIScrollView scroll;
+		LoadingOverlay loadingOverlay;
 
 		public ConsultaViewController (IntPtr handle) : base (handle)
 		{
@@ -66,7 +67,7 @@ namespace SeverinoApp.iOS
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			WillRotate (UIInterfaceOrientation.LandscapeRight, 1);
+			//WillRotate (UIInterfaceOrientation.LandscapeRight, 1);
 			tblChamados.Hidden = true;
 			carrega ();
 		}
@@ -102,6 +103,7 @@ namespace SeverinoApp.iOS
 
 			//set a theme on the control itself so that it doesn't use the global theme
 			//gvChamados.Theme = new ItunesTheme ();
+
 			if (!View.Subviews.Contains (scroll)) {
 				scroll.Add (gvChamados);
 				gvChamados.OnRowSelect += RowSelected;
@@ -112,7 +114,6 @@ namespace SeverinoApp.iOS
 
 		protected async Task populaGrid(int width)
 		{
-			
 			var chamado = new Chamado ();
 			await chamado.CriaLista (AppDelegate.dbUsuario.ID, (int)((PickerDataModel)pckStatus.Model).selectedValue, DateTime.MinValue, DateTime.MinValue);
 
@@ -121,25 +122,34 @@ namespace SeverinoApp.iOS
 			//dataset.
 			gvChamados.DataSource = dataset;
 			gvChamados.ReloadData ();
-
-
 		}
 
 		protected void RowSelected (object sender, int RowIndex)
 		{
 			//((ChamadoDataSet)gvChamados.DataSource).Name;
-			var selecionado = ((ChamadoDataSet)gvChamados.DataSource).GetRow (RowIndex, "ChamadoConsulta");
-			int numero = int.Parse(selecionado ["Numero"].ToString());
-			DetalheChamadoViewController detalhes = (DetalheChamadoViewController)Storyboard.InstantiateViewController ("DetalheChamadoViewController");
-			detalhes.NumeroChamado = numero;
-			if (detalhes != null)
-			{
-				detalhes.View.TranslatesAutoresizingMaskIntoConstraints = false;
-				//var con = new DetalheChamadoViewController (detalhes.Handle);
-				//con.NumeroChamado = numero;
-				//((DetalheChamadoViewController)detalhes).NumeroChamado = (int)numero;
-				this.NavigationController.PushViewController(detalhes, true);
-			} 
+			try {
+				var selecionado = ((ChamadoDataSet)gvChamados.DataSource).GetRow (RowIndex, "ChamadoConsulta");
+				int numero = int.Parse(selecionado ["Numero"].ToString());
+				bool solicitante = int.Parse(selecionado ["IDUsuario"].ToString()) == AppDelegate.dbUsuario.ID;
+				int status = int.Parse(selecionado ["IDStatus"].ToString());
+
+				DetalheChamadoViewController detalhes = (DetalheChamadoViewController)Storyboard.InstantiateViewController ("DetalheChamadoViewController");
+				detalhes.NumeroChamado = numero;
+				detalhes.Solicitante = solicitante;
+				detalhes.Status = status;
+
+				if (detalhes != null)
+				{
+					detalhes.View.TranslatesAutoresizingMaskIntoConstraints = false;
+					//var con = new DetalheChamadoViewController (detalhes.Handle);
+					//con.NumeroChamado = numero;
+					//((DetalheChamadoViewController)detalhes).NumeroChamado = (int)numero;
+					this.NavigationController.PushViewController(detalhes, true);
+				} 
+			} catch (Exception ex) {
+				
+			}
+
 		}
 	}
 
@@ -188,6 +198,9 @@ namespace SeverinoApp.iOS
 			columnsDefs.Add ("Servico", 70);
 			columnsDefs.Add ("Profissional", 70);
 			columnsDefs.Add ("Status", 50);
+			columnsDefs.Add ("IDProfissional", 0);
+			columnsDefs.Add ("IDUsuario", 0);
+			columnsDefs.Add ("IDStatus", 0);
 
 			var soma = columnsDefs.Sum( x => x.Value);
 
@@ -195,6 +208,8 @@ namespace SeverinoApp.iOS
 				var column = new DSDataColumn (item.Key);
 				var tam = (item.Value * 100) / soma;
 				var tamrel = (weight * tam) / 100;
+
+				column.Width = tamrel;
 
 				switch (item.Key) {
 				case "Numero":
@@ -211,6 +226,21 @@ namespace SeverinoApp.iOS
 						column.Formatter = new DSTextFormatter (TextAlignment.Middle);
 						break;
 					}
+				case "IDProfissional":
+					{
+						column.DataType = typeof(int);
+						break;
+					}
+				case "IDUsuario":
+					{
+						column.DataType = typeof(int);
+						break;
+					}
+				case "IDStatus":
+					{
+						column.DataType = typeof(int);
+						break;
+					}
 				default:
 					{
 						column.DataType = typeof(string);
@@ -220,8 +250,6 @@ namespace SeverinoApp.iOS
 					}
 					break;
 				}
-
-				column.Width = tamrel;
 
 				this.Columns.Add (column);
 			}
@@ -234,6 +262,9 @@ namespace SeverinoApp.iOS
 				aRow ["Servico"] = items[i].ServicoNome;
 				aRow ["Profissional"] = items [i].ProfissionalNome;
 				aRow ["Status"] = items[i].StatusNome;
+				aRow ["IDProfissional"] = items[i].IDProfissional;
+				aRow ["IDUsuario"] = items[i].IDUsuario;
+				aRow ["IDStatus"] = items[i].Status;
 
 				Rows.Add (aRow);
 			}

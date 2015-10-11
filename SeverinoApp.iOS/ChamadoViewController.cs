@@ -170,7 +170,7 @@ namespace SeverinoApp.iOS
 			}
 
 			Usuario usuario = new Usuario ();
-			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon); 
+			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon, usu.ID); 
 			var anot = mapUsuario.Annotations;
 			mapUsuario.RemoveAnnotations (anot);
 		
@@ -210,7 +210,7 @@ namespace SeverinoApp.iOS
 			}
 
 			Usuario usuario = new Usuario ();
-			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon); 
+			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon, usu.ID); 
 
 			var usuarios = usuario.Usuarios;
 
@@ -297,7 +297,7 @@ namespace SeverinoApp.iOS
 				if (es.ButtonIndex == 0) {
 					return;
 				} else {
-					usuarioSelecionado = usu;
+					usuarioSelecionado = usumapa;
 				}
 			};
 		}
@@ -348,33 +348,19 @@ namespace SeverinoApp.iOS
 
 				UIButton rightButton = UIButton.FromType (UIButtonType.ContactAdd);
 				UIButton leftButton = UIButton.FromType (UIButtonType.DetailDisclosure);
-				//rightButton.TitleLabel.Text = "Selecionar";
+
 				var newannotation = annotation;
-
-
 
 				rightButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
 				leftButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
 				annotationView.RightCalloutAccessoryView = rightButton;
 				annotationView.LeftCalloutAccessoryView = leftButton;
-				//pinViews.Add (annotationView);
 
-				//pinView.Annotation = annotation;
-				//if (mapView.Annotations.Length == 1)
-				//mapView.RemoveAnnotation (annotation);
-				//mapView.AddAnnotation (annotation);
 				annotationView.Annotation = newannotation;
-				//pinView.Annotation = annotation;
 				return annotationView;
 			} else {
-				//pinView.RightCalloutAccessoryView 
-				//mapView.RemoveAnnotation (annotation);
-				//mapView.AddAnnotation (annotation);
-				//pinView = null;
-
 				UIButton rightButton = UIButton.FromType (UIButtonType.ContactAdd);
 				UIButton leftButton = UIButton.FromType (UIButtonType.DetailDisclosure);
-				//rightButton.TitleLabel.Text = "Selecionar";
 				var newannotation = annotation;
 
 				rightButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
@@ -383,11 +369,9 @@ namespace SeverinoApp.iOS
 				var targ = ((UIButton)pinView.RightCalloutAccessoryView).AllTargets;
 				pinView.RightCalloutAccessoryView = rightButton;
 				pinView.LeftCalloutAccessoryView = leftButton;
-				//((UIButton)pinView.RightCalloutAccessoryView).AddTarget((object sender, EventArgs ea) => SelecionaPinUsuario (newanottation2), UIControlEvent.TouchUpInside);
 
 				pinView.Annotation = newannotation;
 			}
-			//CriaMapa ();
 			return pinView;
 		}
 
@@ -436,10 +420,9 @@ namespace SeverinoApp.iOS
 				aviso.Show ();
 				return;
 			} else {
-				aviso = new UIAlertView ("Chamado Aberto com Sucesso!", erro, null, "OK", null);
-				//aviso.Clicked();
-				aviso.Show ();
-				return;
+				ConsultaViewController consulta = (ConsultaViewController)Storyboard.InstantiateViewController ("ConsultaViewController");
+				consulta.View.TranslatesAutoresizingMaskIntoConstraints = false;
+				this.NavigationController.PushViewController(consulta, true);
 			}
 		}
 	}
