@@ -10,9 +10,9 @@ namespace SeverinoApp.iOS
 	partial class DetalheChamadoViewController : UIViewController
 	{
 		LoadingOverlay loadingOverlay;
-		public int NumeroChamado;
+		public int NumeroChamado, Status, IDServico;
 		public bool Solicitante;
-		public int Status;
+		public bool Orcamento;
 
 		public DetalheChamadoViewController (IntPtr handle) : base (handle)
 		{
@@ -31,8 +31,8 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewDidLoad ();
 			Carrega (NumeroChamado);
-			if (Status == 8)
-				btnAcoes.Enabled = false;
+			/*if (Status == 8)
+				btnAcoes.Enabled = false;*/
 		}
 
 		public override void ViewDidAppear (bool animated)
@@ -43,92 +43,192 @@ namespace SeverinoApp.iOS
 
 		partial void btnAcoes_Click (UIButton sender)
 		{
-			var botao = new UIButton ();
+			/*
+				1 - Novo
+				2 - Aceito
+				3 - Recusado
+				4 - Encerrado pelo Técnico
+				5 - Encerrado pelo Usuário
+				6 - Cancelado pelo técnico
+				7 - Cancelado pelo Usuário
+				8 - Solicitado Orçamento
+				9 - Enviado Orçamento 
+				10 - Orçamento Recusado
+				11 - Orçamento Aceito 
+			*/
 
-			//botao.Clicked += (object sender2, EventArgs e) => {
 			var alert = new UIActionSheet ("Selecione uma Ação");
-			string msg = "";
-			string msg2 = "";
 
-			alert.AddButton ("Encerrar");//0
-			alert.AddButton ("Cancelar");//1
 
-			//2
-			if (Solicitante) {
-				alert.AddButton ("Solicitar Orçamento");
-				msg = "Tem certeza que deseja Solicitar Orçamento?";
-			} else if (!Solicitante && Status == 1) {
-				//2
-				alert.AddButton ("Aceitar");
-				msg = "Tem certeza que deseja Aceitar o Chamado?";
-
-				//3
-				alert.AddButton ("Recusar");
-				msg2 = "Tem certeza que deseja Recusar o Chamado?";
+			switch (Status) {
+			case 1:
+				if (!Solicitante) {
+					alert.AddButton ("Aceitar");
+					alert.AddButton ("Recusar");
+				} else {
+					alert.AddButton ("Cancelar Chamado");
+				}
+				break;
+			case 2:
+				{
+					if (Solicitante && Orcamento) {
+						alert.AddButton ("Solicitar Orçamento");
+					}
+				}
+				break;
+			case 3:
+				{
+					alert.AddButton ("Abrir novo Chamado");
+				}
+				break;
+			case 8:
+				{
+					if (!Solicitante) {
+						alert.AddButton ("Enviar Orçamento");
+					}
+				}
+				break;
+			default:
+				if (Util.VerificaLista (Status.ToString (), "9#10#11#4#5")) {
+					alert.AddButton ("Consulta Orçamento");
+				}
+				break;
 			}
 
-			//4
+			if (!Util.VerificaLista(Status.ToString(), "1#3#4#5#6#7")) {
+				alert.AddButton ("Cancelar Chamado");
+				alert.AddButton ("Encerrar Chamado");
+
+			}
+
+			if(Util.VerificaLista(Status.ToString(), "4#5") && Solicitante)
+			{
+				alert.AddButton ("Avaliar Atendimento");
+			}
+
 			alert.AddButton ("Sair");
-
-
 
 			alert.CancelButtonIndex = alert.ButtonCount - 1;
 
 			var confirm = new UIAlertView ();
 
 			alert.Clicked += (object action, UIButtonEventArgs e2) => {	
-				switch (e2.ButtonIndex) {
-				case 0:
-					confirm = new UIAlertView ("Alerta", "Tem certeza que deseja encerrar o chamado?", null, "Não", "Sim");
-					confirm.Show ();
-					confirm.Clicked += (object senders, UIButtonEventArgs es) => {
-						if (es.ButtonIndex == 0) {
-							return;
-						} else {
-							AlteraStatus (NumeroChamado, Solicitante ? 6 : 5);
-							//new UIAlertView ("Sucesso", "Chamado Encerrado!", null, "OK", null).Show ();
-						}
-					};
+				UIActionSheet obj = (UIActionSheet)action;
+				var titulo = obj.ButtonTitle (e2.ButtonIndex);
+
+				switch (titulo) {
+				case "Aceitar":
+					{
+						confirm = new UIAlertView ("Alerta", "Tem certeza que deseja ACEITAR o chamado?", null, "Não", "Sim");
+						confirm.Show ();
+						confirm.Clicked += (object senders, UIButtonEventArgs es) => {
+							if (es.ButtonIndex == 0) {
+								return;
+							} else {
+								AlteraStatus (NumeroChamado, 2);
+							}
+						};
+					}
 					break;
-				case 1:
-					confirm = new UIAlertView ("Alerta", "Tem certeza que deseja Cancelar o chamado?", null, "Não", "Sim");
-					confirm.Show ();
-					confirm.Clicked += (object senders, UIButtonEventArgs es) => {
-						if (es.ButtonIndex == 0) {
-							return;
-						} else {
-							AlteraStatus (NumeroChamado, Solicitante ? 8 : 7);
-							//new UIAlertView ("Sucesso", "Chamado Encerrado!", null, "OK", null).Show ();
-						}
-					};
-					break;
-				case 2:
-					confirm = new UIAlertView ("Alerta", msg, null, "Não", "Sim");
-					confirm.Show ();
-					confirm.Clicked += (object senders, UIButtonEventArgs es) => {
-						if (es.ButtonIndex == 0) {
-							return;
-						} else {
-							AlteraStatus (NumeroChamado, Solicitante ? 9 : 2);
-							//new UIAlertView ("Sucesso", "Chamado Encerrado!", null, "OK", null).Show ();
-						}
-					};
-					break;
-				case 3:
-					if (!Solicitante && Status == 1) {
-						confirm = new UIAlertView ("Alerta", msg2, null, "Não", "Sim");
+				case "Recusar":
+					{
+						confirm = new UIAlertView ("Alerta", "Tem certeza que deseja RECUSAR o chamado?", null, "Não", "Sim");
 						confirm.Show ();
 						confirm.Clicked += (object senders, UIButtonEventArgs es) => {
 							if (es.ButtonIndex == 0) {
 								return;
 							} else {
 								AlteraStatus (NumeroChamado, 3);
-								//new UIAlertView ("Sucesso", "Chamado Encerrado!", null, "OK", null).Show ();
 							}
 						};
 					}
 					break;
-				
+				case "Solicitar Orçamento":
+					{
+						confirm = new UIAlertView ("Alerta", "Tem certeza que deseja SOLICITAR ORÇAMENTO ?", null, "Não", "Sim");
+						confirm.Show ();
+						confirm.Clicked += (object senders, UIButtonEventArgs es) => {
+							if (es.ButtonIndex == 0) {
+								return;
+							} else {
+								AlteraStatus (NumeroChamado, 8);
+							}
+						};
+					}
+					break;
+				case "Abrir novo Chamado":
+					{
+						var chamado = (ChamadoViewController)Storyboard.InstantiateViewController ("ChamadoViewController");
+						if (chamado != null) {
+							chamado.View.TranslatesAutoresizingMaskIntoConstraints = false;
+							this.NavigationController.PushViewController (chamado, true);
+						} 
+					}
+					break;
+				case "Enviar Orçamento":
+					{
+						var orcamento = (OrcamentoViewController)Storyboard.InstantiateViewController ("OrcamentoViewController");
+
+						if (orcamento != null) {
+							orcamento.NumeroChamado = NumeroChamado;
+							orcamento.Solicitante = Solicitante;
+							orcamento.Status = Status;
+							orcamento.View.TranslatesAutoresizingMaskIntoConstraints = false;
+							this.NavigationController.PushViewController (orcamento, true);
+						} 
+					}
+					break;
+				case "Consulta Orçamento":
+					{
+						var orcamento = (OrcamentoViewController)Storyboard.InstantiateViewController ("OrcamentoViewController");
+
+						if (orcamento != null) {
+							orcamento.NumeroChamado = NumeroChamado;
+							orcamento.Solicitante = Solicitante;
+							orcamento.Status = Status;
+							orcamento.View.TranslatesAutoresizingMaskIntoConstraints = false;
+							this.NavigationController.PushViewController (orcamento, true);
+						} 
+					}
+					break;
+				case "Cancelar Chamado":
+					{
+						confirm = new UIAlertView ("Alerta", "Tem certeza que deseja CANCELAR o chamado?", null, "Não", "Sim");
+						confirm.Show ();
+						confirm.Clicked += (object senders, UIButtonEventArgs es) => {
+							if (es.ButtonIndex == 0) {
+								return;
+							} else {
+								AlteraStatus (NumeroChamado, Solicitante ? 7 : 8);
+							}
+						};
+					}
+					break;
+				case "Encerrar Chamado":
+					{
+						confirm = new UIAlertView ("Alerta", "Tem certeza que deseja ENCERRAR o chamado?", null, "Não", "Sim");
+						confirm.Show ();
+						confirm.Clicked += (object senders, UIButtonEventArgs es) => {
+							if (es.ButtonIndex == 0) {
+								return;
+							} else {
+								AlteraStatus (NumeroChamado, Solicitante ? 5 : 4);
+							}
+						};
+					}
+					break;
+				case "Avaliar Atendimento":
+					{
+						var avaliar = (AvaliarViewController)Storyboard.InstantiateViewController ("AvaliarViewController");
+
+						if (avaliar != null) {
+							avaliar.NumeroChamado = NumeroChamado;
+							avaliar.Status = Status;
+							avaliar.View.TranslatesAutoresizingMaskIntoConstraints = false;
+							this.NavigationController.PushViewController (avaliar, true);
+						} 
+					}
+					break;
 				default:
 					return;
 					break;
@@ -136,7 +236,6 @@ namespace SeverinoApp.iOS
 			};
 
 			alert.ShowInView (View);
-			//};
 		
 		}
 
@@ -161,6 +260,13 @@ namespace SeverinoApp.iOS
 					aviso.Show ();
 					return;
 				}
+
+				if(Util.VerificaLista(status.ToString(), "4#5#6#7"))
+				{
+					var avaliacao = new ChamadoAvaliacao();
+					sucesso = await avaliacao.CriaAvaliacoes(numero, IDServico); 
+				} 
+
 			} catch (Exception ex) {
 				aviso = new UIAlertView ("Erro ao Atualzar Status", ex.Message, null, "OK", null);
 				loadingOverlay.Hide ();

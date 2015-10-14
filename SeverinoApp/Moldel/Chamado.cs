@@ -101,7 +101,9 @@ namespace SeverinoApp
 				var result = JsonConvert.DeserializeObject<List<ChamadoConsulta>> (js.ToString ());
 
 				if (result != null) {
-					Chamados = result;
+					Chamados = result.OrderBy(x => x.Data).ThenBy(x => x.Status).ToList();;
+
+					var chamado = AutoMapper.Mapper.Map<Chamado>(Chamados.ToArray()[0]);
 
 					Status stat = new Status ();
 					stat.CriaLista ();
@@ -155,17 +157,15 @@ namespace SeverinoApp
 	public class ChamadoConsulta : Chamado
 	{
 		public string UsuarioNome{ get; set; }
-
 		public string ProfissionalNome{ get; set; }
-
 		public string ServicoNome{ get; set; }
-
 		public string StatusNome{ get; set; }
+		public int ServicoOrcamento{ get; set;}
 
 		public ChamadoConsulta ()
 		{
 			
-		}
+		} 
 	}
 
 	public class Status
@@ -178,6 +178,7 @@ namespace SeverinoApp
 
 		public Status ()
 		{
+			
 		}
 
 		public void CriaLista ()
@@ -187,13 +188,20 @@ namespace SeverinoApp
 			Lista.Add (new Status{ Codigo = 1, Descricao = "Novo" });
 			Lista.Add (new Status{ Codigo = 2, Descricao = "Aceito" });
 			Lista.Add (new Status{ Codigo = 3, Descricao = "Recusado" });
-			Lista.Add (new Status{ Codigo = 4, Descricao = "Entrou em Contato" });
 
-			Lista.Add (new Status{ Codigo = 5, Descricao = "Encerrado Pelo Técnico" });
-			Lista.Add (new Status{ Codigo = 6, Descricao = "Encerrado pelo Usuário" });
-			Lista.Add (new Status{ Codigo = 7, Descricao = "Cacelado pelo Técnico" });
-			Lista.Add (new Status{ Codigo = 8, Descricao = "Cacelado pelo Usuário" });
-			Lista.Add (new Status{ Codigo = 9, Descricao = "Solicitado Orçamento" });
+			//Lista.Add (new Status{ Codigo = 4, Descricao = "Entrou em Contato" });
+
+			Lista.Add (new Status{ Codigo = 4, Descricao = "Encerrado Pelo Técnico" });
+			Lista.Add (new Status{ Codigo = 5, Descricao = "Encerrado pelo Usuário" });
+
+			Lista.Add (new Status{ Codigo = 6, Descricao = "Cacelado pelo Técnico" });
+			Lista.Add (new Status{ Codigo = 7, Descricao = "Cacelado pelo Usuário" });
+
+			Lista.Add (new Status{ Codigo = 8, Descricao = "Solicitado Orçamento" });
+			Lista.Add (new Status{ Codigo = 9, Descricao = "Orçamento Enviado" });
+
+			Lista.Add (new Status{ Codigo = 10, Descricao = "Orçamento Recusado" });
+			Lista.Add (new Status{ Codigo = 11, Descricao = "Orçamento Aceito" });
 		}
 
 		public async Task<Status> Consulta (int idStatus)

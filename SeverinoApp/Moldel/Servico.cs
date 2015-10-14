@@ -18,6 +18,8 @@ namespace SeverinoApp
 		public byte[] Imagem { get; set; }
 		public string Icone { get; set; }
 		public DateTime DtCadastro { get; set; }
+		public int Orcamento{ get; set;}
+
 		public List<Servico> Servicos{ get; set;}
 		public int Total { get; set; }
 
@@ -38,10 +40,6 @@ namespace SeverinoApp
 
 			if (result != null)
 				Servicos = result;
-
-			//var json = JsonConvert.SerializeObject(Servicos, Formatting.Indented);
-			//CadastraServico (ser);
-			//return "";
 		}
 
 		public void Add(wsSeverino.Models.Servico servico)

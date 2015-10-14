@@ -12,6 +12,7 @@ System.Data.dll
 Mono.Data.Tds.dll
 Mono.Security.dll
 System.Transactions.dll
+AutoMapper.dll
 MonoTouch.Dialog-1.dll
 System.Json.dll
 Geolocator.Plugin.Abstractions.dll

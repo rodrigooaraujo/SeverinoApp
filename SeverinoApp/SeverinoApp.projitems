@@ -18,5 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\UsuarioEndereco.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\UsuarioServico.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\Chamado.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moldel\Orcamento.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moldel\Avaliacao.cs" />
   </ItemGroup>
 </Project>

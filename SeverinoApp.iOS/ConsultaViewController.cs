@@ -30,11 +30,6 @@ namespace SeverinoApp.iOS
 			populaGrid ((int)View.Frame.Width);
 		}
 
-		public override void WillRotate (UIInterfaceOrientation toInterfaceOrientation, double duration)
-		{
-			base.WillRotate (toInterfaceOrientation, duration);
-		}
-
 		public override void ViewDidLoad ()
 		{
 			//var shared = AppDelegate.Shared;
@@ -42,12 +37,12 @@ namespace SeverinoApp.iOS
 			//WillRotate(UIInterfaceOrientation.LandscapeRight,5);
 
 			base.ViewDidLoad ();
-			WillRotate (UIInterfaceOrientation.LandscapeRight, 1);
+			//WillRotate (UIInterfaceOrientation.LandscapeRight, 1);
 			var status = new Status ();
 			status.CriaLista ();
 
 			var keyvalue = new List<KeyValuePair<object, string>> ();
-
+			keyvalue.Add (new KeyValuePair<object, string> (0, "Todos"));
 			foreach (var item in status.Lista) {
 				keyvalue.Add (new KeyValuePair<object, string> (item.Codigo, item.Descricao));
 			}
@@ -129,14 +124,18 @@ namespace SeverinoApp.iOS
 			//((ChamadoDataSet)gvChamados.DataSource).Name;
 			try {
 				var selecionado = ((ChamadoDataSet)gvChamados.DataSource).GetRow (RowIndex, "ChamadoConsulta");
-				int numero = int.Parse(selecionado ["Numero"].ToString());
-				bool solicitante = int.Parse(selecionado ["IDUsuario"].ToString()) == AppDelegate.dbUsuario.ID;
-				int status = int.Parse(selecionado ["IDStatus"].ToString());
+				int numero = Util.ConverteInteiro(selecionado ["Numero"].ToString());
+				bool solicitante = Util.ConverteInteiro(selecionado ["IDUsuario"].ToString()) == AppDelegate.dbUsuario.ID;
+				bool orcamento = Util.ConverteBool(selecionado ["ServicoOrcamento"].ToString());
+				int status = Util.ConverteInteiro(selecionado ["IDStatus"].ToString());
+				int idservico = Util.ConverteInteiro(selecionado ["IDServico"].ToString());
 
 				DetalheChamadoViewController detalhes = (DetalheChamadoViewController)Storyboard.InstantiateViewController ("DetalheChamadoViewController");
 				detalhes.NumeroChamado = numero;
 				detalhes.Solicitante = solicitante;
 				detalhes.Status = status;
+				detalhes.Orcamento = orcamento;
+				detalhes.IDServico = idservico;
 
 				if (detalhes != null)
 				{
@@ -201,6 +200,8 @@ namespace SeverinoApp.iOS
 			columnsDefs.Add ("IDProfissional", 0);
 			columnsDefs.Add ("IDUsuario", 0);
 			columnsDefs.Add ("IDStatus", 0);
+			columnsDefs.Add ("ServicoOrcamento", 0);
+			columnsDefs.Add ("IDServico", 0);
 
 			var soma = columnsDefs.Sum( x => x.Value);
 
@@ -241,6 +242,16 @@ namespace SeverinoApp.iOS
 						column.DataType = typeof(int);
 						break;
 					}
+				case "ServicoOrcamento":
+					{
+						column.DataType = typeof(int);
+						break;
+					}
+				case "IDServico":
+					{
+						column.DataType = typeof(int);
+						break;
+					}
 				default:
 					{
 						column.DataType = typeof(string);
@@ -265,6 +276,8 @@ namespace SeverinoApp.iOS
 				aRow ["IDProfissional"] = items[i].IDProfissional;
 				aRow ["IDUsuario"] = items[i].IDUsuario;
 				aRow ["IDStatus"] = items[i].Status;
+				aRow ["ServicoOrcamento"] = items[i].ServicoOrcamento;
+				aRow ["IDServico"] = items[i].IDServico;
 
 				Rows.Add (aRow);
 			}

@@ -105,9 +105,6 @@ namespace SeverinoApp.iOS
 			if (string.IsNullOrEmpty (campos))
 				Exclui ();
 
-			//if (!string.IsNullOrEmpty (erro))
-			//campos += erro;
-			
 			if (!string.IsNullOrEmpty (campos)) {
 				aviso = new UIAlertView ("Erro de Validação", campos, null, "OK", null);
 				aviso.Show ();
