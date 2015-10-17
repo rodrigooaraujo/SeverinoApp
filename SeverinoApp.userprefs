@@ -1,6 +1,10 @@
 ﻿<Properties StartupItem="SeverinoApp.iOS/SeverinoApp.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeverinoApp/Api.cs">
+    <Files>
+      <File FileName="SeverinoApp/Api.cs" Line="16" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/ChamadoViewController.cs" line="92" column="1" />

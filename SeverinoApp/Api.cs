@@ -17,7 +17,7 @@ namespace SeverinoApp
 
 		public Api ()
 		{
-			this.Url = "http://9558d88a.ngrok.io/api/";
+			this.Url = "http://531b9d7b.ngrok.io/api/";
 		}
 
 		public Api (string url)
@@ -25,14 +25,14 @@ namespace SeverinoApp
 			this.Url = (url.EndsWith ("/") || url.EndsWith ("?")) ? url : url + "/";
 		}
 
-		public async Task<JsonValue> Get (string controller)
+		public async Task<JsonValue> Get (string metodo, string controller)
 		{
 			// Create an HTTP web request using the URL:
 			string url = string.IsNullOrEmpty(controller) ? this.Url.Substring(0, this.Url.Length-1):this.Url;
 
 			HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create (new Uri (url + controller));
 			request.ContentType = ContentType == null ? "application/json" : ContentType;
-			request.Method = "GET";
+			request.Method =  "GET";
 			try {
 				// Send the request to the server and wait for the response:
 				using (WebResponse response = await request.GetResponseAsync ()) {
@@ -52,6 +52,11 @@ namespace SeverinoApp
 				Excecao = ex.Message;
 				return null;
 			}
+		}
+
+		public async Task<JsonValue> Get (string controller)
+		{
+			return await Get (string.Empty, controller);
 		}
 
 		public async Task<bool> CadastraServico (wsSeverino.Models.Servico serv)

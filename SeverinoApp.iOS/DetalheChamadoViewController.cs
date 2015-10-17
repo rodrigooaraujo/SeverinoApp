@@ -199,7 +199,7 @@ namespace SeverinoApp.iOS
 							if (es.ButtonIndex == 0) {
 								return;
 							} else {
-								AlteraStatus (NumeroChamado, Solicitante ? 7 : 8);
+								AlteraStatus (NumeroChamado, Solicitante ? 7 : 6);
 							}
 						};
 					}

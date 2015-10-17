@@ -90,3 +90,5 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/DSoft.UI.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug/AutoMapper.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/Icons/estrela-amarela2.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1257-view-1258.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/DetalheProfissionalViewController.nib

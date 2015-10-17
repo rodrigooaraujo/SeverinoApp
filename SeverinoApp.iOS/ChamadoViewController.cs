@@ -302,6 +302,19 @@ namespace SeverinoApp.iOS
 			};
 		}
 
+		private void infoUsuario (IMKAnnotation annotation)
+		{
+			var usumapa = ((CustomMKPointAnnotation)annotation).usuario;
+
+			var perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController");
+
+			if (perfil != null) {
+				perfil.IDUsuario = usumapa.ID;
+				perfil.View.TranslatesAutoresizingMaskIntoConstraints = false;
+				this.NavigationController.PushViewController (perfil, true);
+			} 
+		}
+
 		private MKAnnotationView GetViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{
 			
@@ -352,7 +365,7 @@ namespace SeverinoApp.iOS
 				var newannotation = annotation;
 
 				rightButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
-				leftButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
+				leftButton.AddTarget ((object sender, EventArgs ea) => infoUsuario (newannotation), UIControlEvent.TouchUpInside);
 				annotationView.RightCalloutAccessoryView = rightButton;
 				annotationView.LeftCalloutAccessoryView = leftButton;
 
@@ -364,7 +377,7 @@ namespace SeverinoApp.iOS
 				var newannotation = annotation;
 
 				rightButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
-				leftButton.AddTarget ((object sender, EventArgs ea) => SelecionaPinUsuario (newannotation), UIControlEvent.TouchUpInside);
+				leftButton.AddTarget ((object sender, EventArgs ea) => infoUsuario (newannotation), UIControlEvent.TouchUpInside);
 
 				var targ = ((UIButton)pinView.RightCalloutAccessoryView).AllTargets;
 				pinView.RightCalloutAccessoryView = rightButton;

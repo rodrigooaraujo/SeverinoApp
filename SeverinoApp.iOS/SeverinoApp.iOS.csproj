@@ -265,6 +265,10 @@
     <Compile Include="AvaliarViewController.designer.cs">
       <DependentUpon>AvaliarViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalheProfissionalViewController.cs" />
+    <Compile Include="DetalheProfissionalViewController.designer.cs">
+      <DependentUpon>DetalheProfissionalViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

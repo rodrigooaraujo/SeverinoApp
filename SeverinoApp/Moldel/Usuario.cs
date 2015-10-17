@@ -9,17 +9,11 @@ namespace SeverinoApp
 	public class Usuario
 	{
 		public int ID { get; set; }
-
 		public string Login { get; set; }
-
 		public string CPF { get; set; }
-
 		public string Senha { get; set; }
-
 		public string Nome { get; set; }
-
 		public string Sexo { get; set; }
-
 		public DateTime DtNascimento { get; set; }
 
 		public Nullable<int> PrestaServico { get; set; }
@@ -45,6 +39,12 @@ namespace SeverinoApp
 		public List<Usuario> Usuarios { get; set; }
 
 		public List<UsuarioEndereco> UsuarioEnderecos;
+
+		public int QtdRealizados { get; set; }
+
+		public int QtdCancelados { get; set; }
+
+		public double Avaliacao { get; set; }
 
 		public bool Logado{ get; set; }
 
@@ -260,8 +260,46 @@ namespace SeverinoApp
 
 			return usu;
 		}
+
+		public async Task<UsuarioConsulta> ConsultaPerfil (int idUsuario)
+		{
+			String URL = @"Usuario\PerfilUsuario" + string.Format ("?idUsuario={0}&perfil=true", idUsuario);
+			var api = new Api ();
+			var usu = new UsuarioConsulta ();
+			try {
+
+				JsonValue js = await api.Get (URL);
+				var result = JsonConvert.DeserializeObject<UsuarioConsulta> (js.ToString ());
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = "Erro ao carregar Usuário";
+					Excecao = api.Excecao;
+					return null;
+				}
+
+				if (result == null) {
+					return null;
+				}
+
+				usu = result;
+			} catch (Exception ex) {
+				Erro = "Erro ao Efetuar Login";
+				Excecao = ex.Message;
+				return null;
+			}
+
+			return usu;
+		}
 	}
 
+	public class UsuarioConsulta : Usuario
+	{
+		public List<Servico> ServicosPrestados { get; set; }
+		public int QtdTotalServicos { get; set; }
+		public UsuarioConsulta()
+		{ 
 
+		}
+	}
 }
 
