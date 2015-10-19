@@ -255,6 +255,9 @@ namespace SeverinoApp.iOS
 					manager.UpdatedLocation += (object sender2, CLLocationUpdatedEventArgs e) => {
 						CriaMapa ();
 					};	
+
+					sldRaio_Changed (sldRaio);
+
 				} else
 					new UIAlertView ("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show ();
 			} else {

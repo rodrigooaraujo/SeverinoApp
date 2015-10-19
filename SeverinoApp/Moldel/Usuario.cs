@@ -295,6 +295,8 @@ namespace SeverinoApp
 	public class UsuarioConsulta : Usuario
 	{
 		public List<Servico> ServicosPrestados { get; set; }
+		public List<UsuarioTelefone> Telefones { get; set; }
+		public List<FeedbackConsulta> Feedbacks { get; set; }
 		public int QtdTotalServicos { get; set; }
 		public UsuarioConsulta()
 		{ 

@@ -81,7 +81,6 @@ namespace SeverinoApp.iOS
 			preparaPicker ();
 
 			txtSexo.TouchDown += SetPicker;
-			txtEndereco.TouchDown += abreEndereco;
 
 			PreparaTela ();
 		}
@@ -212,6 +211,8 @@ namespace SeverinoApp.iOS
 				txtHrFim.Text = usu.HrFim;
 
 				txtCustoVisita.Text = usu.CustoVisita.ToString ("N2");
+
+				swtPrestador_Changed (swtPrestador);
 			} else {
 				txtNome.Text = string.Empty;
 				txtEmail.Text = string.Empty;
@@ -231,18 +232,6 @@ namespace SeverinoApp.iOS
 
 				txtCustoVisita.Text = string.Empty;;
 			}
-		}
-
-		protected void abreEndereco(object sender, EventArgs e)
-		{
-			var endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
-
-			if (endereco != null)
-			{
-				endereco.View.TranslatesAutoresizingMaskIntoConstraints = false;
-				this.NavigationController.PushViewController(endereco, true);
-			} 
-
 		}
 
 		protected void preparaPicker()
@@ -350,6 +339,65 @@ namespace SeverinoApp.iOS
 			PresentViewController(modalPicker, true, null);
 
 			return false;
+		}
+
+		partial void btnEndereco_Click (UIButton sender)
+		{
+			abreEndereco ();
+		}
+
+		async void abreEndereco ()
+		{
+			var endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
+
+			if (endereco != null)
+			{
+				endereco.View.TranslatesAutoresizingMaskIntoConstraints = false;
+				var modalPicker = new ModalController(endereco.View, "Telefone", this)
+				{
+					HeaderBackgroundColor = UIColor.White,
+					HeaderTextColor = UIColor.Black,
+					TransitioningDelegate = new ModalPickerTransitionDelegate(),
+					ModalPresentationStyle = UIModalPresentationStyle.Custom
+				};
+
+				modalPicker.OnModalPickerDismissed += (s, ea) => 
+				{
+
+				};
+
+				//await PresentViewControllerAsync(modalPicker, true);
+
+				this.NavigationController.PushViewController(endereco, true);
+			} 
+		}
+
+		partial void btnTelefone_Click (UIButton sender)
+		{
+			abreTelefone ();
+		}
+
+		async void abreTelefone ()
+		{
+			var telefone = Storyboard.InstantiateViewController ("TelefoneViewController");
+
+			if (telefone != null)
+			{
+				var modalPicker = new ModalController(telefone.View.Subviews[0], "Telefone", this)
+				{
+					HeaderBackgroundColor = UIColor.White,
+					HeaderTextColor = UIColor.Black,
+					TransitioningDelegate = new ModalPickerTransitionDelegate(),
+					ModalPresentationStyle = UIModalPresentationStyle.Custom
+				};
+						
+				modalPicker.OnModalPickerDismissed += (s, ea) => 
+				{
+					
+				};
+
+				await PresentViewControllerAsync(modalPicker, true);
+			} 
 		}
 	}
 }

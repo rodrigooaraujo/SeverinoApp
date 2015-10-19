@@ -49,6 +49,14 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnEndereco { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnTelefone { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView contentView { get; set; }
 
 		[Outlet]
@@ -103,9 +111,17 @@ namespace SeverinoApp.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txtSexo { get; set; }
 
+		[Action ("btnEndereco_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnEndereco_Click (UIButton sender);
+
 		[Action ("btnGravar_Click:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btnGravar_Click (UIButton sender);
+
+		[Action ("btnTelefone_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnTelefone_Click (UIButton sender);
 
 		[Action ("sldRaioAtendimento_Changed:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -121,6 +137,14 @@ namespace SeverinoApp.iOS
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnEndereco != null) {
+				btnEndereco.Dispose ();
+				btnEndereco = null;
+			}
+			if (btnTelefone != null) {
+				btnTelefone.Dispose ();
+				btnTelefone = null;
+			}
 			if (contentView != null) {
 				contentView.Dispose ();
 				contentView = null;

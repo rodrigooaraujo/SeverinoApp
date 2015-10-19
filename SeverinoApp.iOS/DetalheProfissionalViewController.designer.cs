@@ -16,6 +16,10 @@ namespace SeverinoApp.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnAdicionaComentario { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView contentView { get; set; }
 
 		[Outlet]
@@ -68,10 +72,22 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrollTelefones { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UISwitch swtCobra { get; set; }
+
+		[Action ("btnAdicionaComentario_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnAdicionaComentario_Click (UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnAdicionaComentario != null) {
+				btnAdicionaComentario.Dispose ();
+				btnAdicionaComentario = null;
+			}
 			if (contentView != null) {
 				contentView.Dispose ();
 				contentView = null;
@@ -123,6 +139,10 @@ namespace SeverinoApp.iOS
 			if (scrollServicos != null) {
 				scrollServicos.Dispose ();
 				scrollServicos = null;
+			}
+			if (scrollTelefones != null) {
+				scrollTelefones.Dispose ();
+				scrollTelefones = null;
 			}
 			if (swtCobra != null) {
 				swtCobra.Dispose ();

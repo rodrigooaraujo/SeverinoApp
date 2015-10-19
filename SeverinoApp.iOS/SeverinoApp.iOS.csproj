@@ -269,6 +269,15 @@
     <Compile Include="DetalheProfissionalViewController.designer.cs">
       <DependentUpon>DetalheProfissionalViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelefoneViewController.cs" />
+    <Compile Include="TelefoneViewController.designer.cs">
+      <DependentUpon>TelefoneViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\ModalController.cs" />
+    <Compile Include="FeedbackViewController.cs" />
+    <Compile Include="FeedbackViewController.designer.cs">
+      <DependentUpon>FeedbackViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
