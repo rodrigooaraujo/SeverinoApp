@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CoreGraphics;
 using System.Linq;
 using SharpMobileCode.ModalPicker;
+using System.Drawing;
 
 namespace SeverinoApp.iOS
 {
@@ -168,16 +169,45 @@ namespace SeverinoApp.iOS
 
 						using (var comentario = new UITextView ()) {
 							comentario.Text = feedback.Mensagem;
-							comentario.SizeToFit();
-							comentario.LayoutIfNeeded();
-							var heigth = comentario.SizeThatFits(new CGSize(comentario.Frame.Size.Width, nfloat.MaxValue)).Height;
-							comentario.Frame = new CGRect(0,y,scrollComentarios.Frame.Width,heigth);
-							comentario.ContentSize = new CGSize(comentario.Frame.Size.Width, heigth);
+							//comentario.SizeToFit();
+							//var boundheight = comentario.Bounds.Height;
+
+							//comentario.LayoutIfNeeded();
+
+							NSString ns = new NSString(comentario.Text);
+							UIStringAttributes atri = new UIStringAttributes{Font = comentario.Font};
+							var boundSize = new SizeF((float)this.View.Frame.Width, float.MaxValue);
+							var options = NSStringDrawingOptions.DisableScreenFontSubstitution | NSStringDrawingOptions.UsesLineFragmentOrigin;
+								//NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin | NSStringDrawingOptions.OneShot;
+
+							var sizeF = ns.GetBoundingRect(boundSize, options, atri, null).Size;
+							comentario.TranslatesAutoresizingMaskIntoConstraints = false;
+
+							//var size = ns.GetSizeUsingAttributes(atri);
+
+							var heigth = comentario.SizeThatFits(new CGSize(scrollComentarios.Frame.Width-20, nfloat.MaxValue)).Height+30;
+
+							//comentario.ContentSize = new CGSize(comentario.Frame.Size.Width, heigth);
 							comentario.Layer.BorderWidth = 1;
 							comentario.Layer.CornerRadius = 8;
 							comentario.Layer.BorderColor = UIColor.FromRGB(234,234,234).CGColor;
-							comentario.Layer.MasksToBounds = true;
+							//comentario.Layer.MasksToBounds = true;
 							comentario.BackgroundColor = UIColor.Blue.ColorWithAlpha((nfloat)0.5);
+
+
+
+							//var width = comentario.Frame.Width; 
+							//CGSize lbl1Size = ((NSString) comentario.Text).StringSize(comentario.Font,constrainedToSize:new CGSize(comentario.Frame.Width,400.0f),lineBreakMode:UILineBreakMode.WordWrap);
+							comentario.Frame = new CGRect(0,y,scrollComentarios.Frame.Width-20,sizeF.Height+40);
+							//var labelFrame = comentario.Frame;
+							//var sizef = new SizeF((float)width,size.Height);
+
+							var inset = comentario.TextContainerInset;
+
+							//CGFloat fixedWidth = comentario.Frame.Size.Width;
+							CGSize newSize = comentario.SizeThatFits(new CGSize(scrollComentarios.Frame.Width-10, nfloat.MaxValue));//[textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+							CGRect newFrame = comentario.Frame;
+
 
 							scrollComentarios.AddSubview(comentario);
 						}
