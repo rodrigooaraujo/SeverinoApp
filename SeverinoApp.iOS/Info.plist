@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>SeverinoApp.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.SeverinoApp.iOS</string>
+	<string>com.SeverinoApp.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

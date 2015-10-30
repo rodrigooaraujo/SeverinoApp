@@ -69,7 +69,7 @@ namespace SeverinoApp.iOS
 			txtEndereco.ShouldBeginEditing += textFieldShouldBeginEditing;
 			txtEstado.ShouldBeginEditing += textFieldShouldBeginEditing;
 			txtMunicipio.ShouldBeginEditing += textFieldShouldBeginEditing;
-
+			Helpers.criaReturn (this.View);
 			carrega ();
 		}
 

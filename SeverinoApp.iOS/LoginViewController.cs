@@ -5,6 +5,7 @@ using UIKit;
 using System.Threading.Tasks;
 using MonoTouch.SlideoutNavigation;
 using CoreGraphics;
+using System.Linq;
 
 namespace SeverinoApp.iOS
 {
@@ -28,7 +29,11 @@ namespace SeverinoApp.iOS
 			} else {
 				//this.NavigationController.NavigationBar.BackItem.BackBarButtonItem.Enabled = false;
 			}
+
+			Helpers.criaReturn (this.View);
 		}
+
+
 
 		public override void ViewWillAppear (bool animated)
 		{
@@ -55,7 +60,7 @@ namespace SeverinoApp.iOS
 				return;
 			}
 
-			loga();
+			loga ();
 
 			/*if(!loga())
 			{
@@ -74,11 +79,11 @@ namespace SeverinoApp.iOS
 			}*/
 		}
 
-		protected async void loga()
+		protected async void loga ()
 		{
 			UIAlertView aviso;
 
-			Usuario usu = new Usuario();
+			Usuario usu = new Usuario ();
 			try {
 				var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
 				if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
@@ -86,18 +91,17 @@ namespace SeverinoApp.iOS
 				}
 				this.loadingOverlay = new LoadingOverlay (bounds);
 				this.View.Add (loadingOverlay);
-				await usu.loga (txtLogin.Text, txtSenha.Text).ContinueWith((t) => 
-					{
+				await usu.loga (txtLogin.Text, txtSenha.Text).ContinueWith ((t) => {
 						
-					});
+				});
 			} catch (Exception ex) {
 				
-			}finally{
-				loadingOverlay.Hide();
+			} finally {
+				loadingOverlay.Hide ();
 			}
 
 			if (usu.Logado) {
-				AppDelegate.Shared.RecriaPrincipal();
+				AppDelegate.Shared.RecriaPrincipal ();
 				return;
 			} else {
 				aviso = new UIAlertView ("Login ou Senha Inválido", "", null, "OK", null);

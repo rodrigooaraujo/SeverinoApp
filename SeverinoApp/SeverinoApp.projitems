@@ -22,5 +22,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\Avaliacao.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\UsuarioTelefone.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Moldel\Feedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moldel\Mensagem.cs" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="XamarinChat/XamarinChat.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinChat/ChatViewController.cs">
+    <Files>
+      <File FileName="../../../../SeverinoApp.iOS/DetalheProfissionalViewController.cs" Line="1" Column="1" />
+      <File FileName="../../../../SeverinoApp/Api.cs" Line="1" Column="1" />
+      <File FileName="XamarinChat/AppDelegate.cs" Line="32" Column="64" />
+      <File FileName="XamarinChat/ChatViewController.cs" Line="17" Column="58" />
+      <File FileName="XamarinChat/MessageFactory.cs" Line="45" Column="18" />
+      <File FileName="XamarinChat/Entitlements.plist" />
+      <File FileName="XamarinChat/Main.cs" Line="16" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/rodrigoaraujo/Projects/SeverinoApp/SeverinoApp.iOS/ChamadoViewController.cs" line="92" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/Empty/Moldel/Servico.cs" line="65" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp/Moldel/GeolocatorAdress.cs" line="30" column="1" />
+      <Breakpoint file="/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/EnderecoViewController.cs" line="88" column="4" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

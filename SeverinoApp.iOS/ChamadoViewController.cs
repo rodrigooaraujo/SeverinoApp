@@ -35,6 +35,7 @@ namespace SeverinoApp.iOS
 			//View.Add (mapUsuario);
 			usu = AppDelegate.dbUsuario;
 			carrega ();
+			Helpers.criaReturn (this.View);
 		}
 
 		public override void ViewDidLayoutSubviews ()

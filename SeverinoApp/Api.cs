@@ -17,7 +17,7 @@ namespace SeverinoApp
 
 		public Api ()
 		{
-			this.Url = "http://19166bf5.ngrok.io/api/";
+			this.Url = "http://d6c6fdec.ngrok.io/api/";
 		}
 
 		public Api (string url)
@@ -59,7 +59,7 @@ namespace SeverinoApp
 			return await Get (string.Empty, controller);
 		}
 
-		public async Task<bool> CadastraServico (wsSeverino.Models.Servico serv)
+		public async Task<bool> CadastraServico (Servico serv)
 		{
 			try {
 				// Serialize new class object to a Json string

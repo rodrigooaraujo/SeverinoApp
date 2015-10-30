@@ -1,0 +1,34 @@
+# Version: 8.8.2.4 (981acb3)
+# [first argument, ignore] # /Users/rodrigoaraujo/Documents/SeverinoApp/Components/jsqmessagesviewcontroller-7.2.0/samples/XamarinChat/XamarinChat/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.2.4/bin/mtouch-64 \
+	--cache \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/jsqmessagesviewcontroller-7.2.0/samples/XamarinChat/XamarinChat/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/jsqmessagesviewcontroller-7.2.0/samples/XamarinChat/XamarinChat/bin/iPhoneSimulator/Debug/XamarinChat.app \
+	--executable \
+	XamarinChat \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.2 \
+	--targetver \
+	8.2 \
+	--new-refcount \
+	--abi=i386 \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	../../../lib/ios-unified/JSQMessagesViewController.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	../../../lib/ios-unified/JSQMessagesViewController.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/jsqmessagesviewcontroller-7.2.0/samples/XamarinChat/XamarinChat/bin/iPhoneSimulator/Debug//XamarinChat.exe \

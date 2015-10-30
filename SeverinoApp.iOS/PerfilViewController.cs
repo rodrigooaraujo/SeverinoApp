@@ -7,7 +7,7 @@ using SeverinoApp;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using wsSeverino;
+//using wsSeverino;
 using CoreGraphics;
 using SharpMobileCode.ModalPicker;
 using System.Collections.Generic;
@@ -76,8 +76,7 @@ namespace SeverinoApp.iOS
 				return true;
 			};*/
 
-			txtDtNascimento.ShouldBeginEditing += OnTextFieldShouldBeginEditing;
-
+			txtDtNascimento.TouchDown += (x, y) => OnTextFieldShouldBeginEditing (txtDtNascimento);
 			preparaPicker ();
 
 			txtSexo.TouchDown += SetPicker;
@@ -232,6 +231,8 @@ namespace SeverinoApp.iOS
 
 				txtCustoVisita.Text = string.Empty;;
 			}
+
+			Helpers.criaReturn (this.View);
 		}
 
 		protected void preparaPicker()

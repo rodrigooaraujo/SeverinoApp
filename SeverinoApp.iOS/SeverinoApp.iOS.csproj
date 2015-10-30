@@ -23,6 +23,10 @@
     <MtouchArch>i386</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: rodrigooaraujo@live.com (NS9S6GMCL4)</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -45,10 +49,14 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: rodrigooaraujo@live.com (NS9S6GMCL4)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <IpaPackageName>
     </IpaPackageName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignProvision>f268abce-35a5-411b-8cca-b73ddd6a13c1</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -71,9 +79,15 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IpaIncludeArtwork>true</IpaIncludeArtwork>
-    <CodesignKey>iPhone Distribution</CodesignKey>
-    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Developer: rodrigooaraujo@live.com (NS9S6GMCL4)</CodesignKey>
+    <CodesignProvision>f268abce-35a5-411b-8cca-b73ddd6a13c1</CodesignProvision>
     <BuildIpa>true</BuildIpa>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>full</DebugType>
@@ -103,9 +117,6 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Json" />
-    <Reference Include="wsSeverino">
-      <HintPath>..\..\wsSeverino.dll</HintPath>
-    </Reference>
     <Reference Include="SharpMobileCode.ModalPicker">
       <HintPath>..\..\..\Downloads\ModalPickerViewController-master\SharpMobileCode.ModalPicker\obj\Debug\SharpMobileCode.ModalPicker.dll</HintPath>
     </Reference>
@@ -128,9 +139,6 @@
     <Reference Include="DSoft.UI">
       <HintPath>..\Components\dsgridview-3.0.2\lib\ios-unified\DSoft.UI.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.4.0.4\lib\Xamarin.iOS10\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System.Collections" />
     <Reference Include="System.Runtime" />
     <Reference Include="System.Linq" />
@@ -143,6 +151,9 @@
     <Reference Include="System.ObjectModel" />
     <Reference Include="System.Runtime.Extensions" />
     <Reference Include="System.Threading" />
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\Xamarin.iOS10\AutoMapper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -278,6 +289,18 @@
     <Compile Include="FeedbackViewController.designer.cs">
       <DependentUpon>FeedbackViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Render\Helpers.cs" />
+    <Compile Include="Render\Chat\Cells\BubbleCell.cs" />
+    <Compile Include="Render\Chat\Cells\IncomingCell.cs" />
+    <Compile Include="Render\Chat\Cells\OutgoingCell.cs" />
+    <Compile Include="Render\Chat\MessageType.cs" />
+    <Compile Include="Render\Chat\Message.cs" />
+    <Compile Include="ChatViewController2.cs" />
+    <Compile Include="ChatViewController2.designer.cs">
+      <DependentUpon>ChatViewController2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\Chat\ChatSource.cs" />
+    <Compile Include="Render\Chat\ChatInputView.cs" />
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -309,6 +332,17 @@
     <BundleResource Include="Resources\Icons\strela-amarela.png" />
     <BundleResource Include="Resources\Icons\strela-vermelha.png" />
     <BundleResource Include="Resources\Icons\estrela-amarela2.png" />
+    <BundleResource Include="Resources\Images.xcassets\AppIcon.appiconset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\LaunchImage-2.launchimage\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\Brand Assets.launchimage\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleIncoming.imageset\bubble_regular.png" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleIncoming.imageset\bubble_regular%402x.png" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleIncoming.imageset\bubble_regular%403x.png" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleIncoming.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleOutgoing.imageset\bubble_regular.png" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleOutgoing.imageset\bubble_regular%402x.png" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleOutgoing.imageset\bubble_regular%403x.png" />
+    <BundleResource Include="Resources\Images.xcassets\BubbleOutgoing.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
@@ -333,5 +367,6 @@
     <Folder Include="Resources\Icons\" />
     <Folder Include="Model\" />
     <Folder Include="Views\" />
+    <Folder Include="Render\Chat\" />
   </ItemGroup>
 </Project>

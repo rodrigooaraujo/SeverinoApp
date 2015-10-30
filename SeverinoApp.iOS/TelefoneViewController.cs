@@ -21,6 +21,7 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewDidLoad ();
 			carrega ();
+			Helpers.criaReturn (this.View);
 		}
 
 		partial void btnCancela_Click (UIButton sender)

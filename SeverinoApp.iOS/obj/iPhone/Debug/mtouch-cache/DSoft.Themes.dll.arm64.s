@@ -1,0 +1,12435 @@
+.subsections_via_symbols
+.section __DWARF, __debug_abbrev,regular,debug
+
+	.byte 1,17,1,37,8,3,8,27,8,19,11,17,1,18,1,16,6,0,0,2,46,1,3,8,135,64,8,58,15,59,15,17
+	.byte 1,18,1,64,10,0,0,3,5,0,3,8,73,19,2,10,0,0,15,5,0,3,8,73,19,2,6,0,0,4,36,0
+	.byte 11,11,62,11,3,8,0,0,5,2,1,3,8,11,15,0,0,17,2,0,3,8,11,15,0,0,6,13,0,3,8,73
+	.byte 19,56,10,0,0,7,22,0,3,8,73,19,0,0,8,4,1,3,8,11,15,73,19,0,0,9,40,0,3,8,28,13
+	.byte 0,0,10,57,1,3,8,0,0,11,52,0,3,8,73,19,2,10,0,0,12,52,0,3,8,73,19,2,6,0,0,13
+	.byte 15,0,73,19,0,0,14,16,0,73,19,0,0,16,28,0,73,19,56,10,0,0,18,46,0,3,8,17,1,18,1,0
+	.byte 0,0
+.section __DWARF, __debug_info,regular,debug
+Ldebug_info_start:
+
+LDIFF_SYM0=Ldebug_info_end - Ldebug_info_begin
+	.long LDIFF_SYM0
+Ldebug_info_begin:
+
+	.short 2
+	.long 0
+	.byte 8,1
+	.asciz "Mono AOT Compiler 4.0.4 (xcode7-c5/751e0fa Tue Oct 27 18:54:16 EDT 2015)"
+	.asciz "DSoft.Themes.dll"
+	.asciz ""
+
+	.byte 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LDIFF_SYM1=Ldebug_line_start - Ldebug_line_section_start
+	.long LDIFF_SYM1
+LDIE_I1:
+
+	.byte 4,1,5
+	.asciz "sbyte"
+LDIE_U1:
+
+	.byte 4,1,7
+	.asciz "byte"
+LDIE_I2:
+
+	.byte 4,2,5
+	.asciz "short"
+LDIE_U2:
+
+	.byte 4,2,7
+	.asciz "ushort"
+LDIE_I4:
+
+	.byte 4,4,5
+	.asciz "int"
+LDIE_U4:
+
+	.byte 4,4,7
+	.asciz "uint"
+LDIE_I8:
+
+	.byte 4,8,5
+	.asciz "long"
+LDIE_U8:
+
+	.byte 4,8,7
+	.asciz "ulong"
+LDIE_I:
+
+	.byte 4,8,5
+	.asciz "intptr"
+LDIE_U:
+
+	.byte 4,8,7
+	.asciz "uintptr"
+LDIE_R4:
+
+	.byte 4,4,4
+	.asciz "float"
+LDIE_R8:
+
+	.byte 4,8,4
+	.asciz "double"
+LDIE_BOOLEAN:
+
+	.byte 4,1,2
+	.asciz "boolean"
+LDIE_CHAR:
+
+	.byte 4,2,8
+	.asciz "char"
+LDIE_STRING:
+
+	.byte 4,8,1
+	.asciz "string"
+LDIE_OBJECT:
+
+	.byte 4,8,1
+	.asciz "object"
+LDIE_SZARRAY:
+
+	.byte 4,8,1
+	.asciz "object"
+.section __DWARF, __debug_loc,regular,debug
+Ldebug_loc_start:
+.section __DWARF, __debug_frame,regular,debug
+	.align 3
+
+LDIFF_SYM2=Lcie0_end - Lcie0_start
+	.long LDIFF_SYM2
+Lcie0_start:
+
+	.long -1
+	.byte 3
+	.asciz ""
+
+	.byte 1,120,30
+	.align 3
+Lcie0_end:
+.text
+	.align 3
+methods:
+jit_code_start:
+
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutTheme__ctor
+DSoft_Themes_Flyout_DSFlyoutTheme__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #32]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xf9400fb1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_0:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme
+DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme:
+.word 0xa9bd7bfd
+.word 0x910003fd
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #40]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9402e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404631
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #48]
+.word 0xf9400000
+.word 0xb5000280
+.word 0xf9400bb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #56]
+bl _p_1
+.word 0xf90013a0
+bl _p_2
+.word 0xf9400bb1
+.word 0xf9409231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #48]
+.word 0xf9000001
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf940be31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #48]
+.word 0xf9400000
+.word 0xf90013a0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf940ea31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a0
+.word 0xf9400bb1
+.word 0xf940fe31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_1:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme
+DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #64]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #48]
+.word 0xf9000001
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_2:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutTheme_Register_T
+DSoft_Themes_Flyout_DSFlyoutTheme_Register_T:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf90013af
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #72]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a0
+bl _p_3
+.word 0xaa0003ef
+bl _p_4
+.word 0xf9001ba0
+.word 0xf9400bb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+bl _p_5
+.word 0xf9400bb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_3:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarTheme__ctor
+DSoft_Themes_Toolbar_DSToolbarTheme__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #80]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xf9400fb1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_12:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme
+DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme:
+.word 0xa9bd7bfd
+.word 0x910003fd
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #88]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9402e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404631
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #96]
+.word 0xf9400000
+.word 0xb5000280
+.word 0xf9400bb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #104]
+bl _p_1
+.word 0xf90013a0
+bl _p_6
+.word 0xf9400bb1
+.word 0xf9409231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #96]
+.word 0xf9000001
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf940be31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #96]
+.word 0xf9400000
+.word 0xf90013a0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf940ea31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a0
+.word 0xf9400bb1
+.word 0xf940fe31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_13:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme
+DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #112]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #96]
+.word 0xf9000001
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_14:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarTheme_Register_T
+DSoft_Themes_Toolbar_DSToolbarTheme_Register_T:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf90013af
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #120]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a0
+bl _p_7
+.word 0xaa0003ef
+bl _p_8
+.word 0xf9001ba0
+.word 0xf9400bb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+bl _p_9
+.word 0xf9400bb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_15:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor
+DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #128]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+bl _p_10
+.word 0xf9400fb1
+.word 0xf9406231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_18:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color
+DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #136]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400b40
+.word 0xb5000440
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #144]
+.word 0xf9001fa0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xf9401fa1
+.word 0xf9001ba0
+bl _p_11
+.word 0xf9400fb1
+.word 0xf940aa31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9000b40
+.word 0x91004341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9412e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_19:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #160]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_1a:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #168]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+bl _p_12
+.word 0xf9400fb1
+.word 0xf9406231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_1b:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #176]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400f40
+.word 0xb5000720
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd001fa0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0023a0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0027a0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd002ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xfd401fa0
+.word 0xfd4023a1
+.word 0xfd4027a2
+.word 0xfd402ba3
+.word 0xf9001ba0
+.word 0x1e624000
+.word 0x1e624021
+.word 0x1e624042
+.word 0x1e624063
+bl _p_13
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9000f40
+.word 0x91006341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400f40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9417631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+
+Lme_1c:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #184]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9000c20
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_1d:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #192]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401740
+.word 0xb50003a0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xf9400341
+.word 0xf9406030
+.word 0xd63f0200
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001740
+.word 0x9100a341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401740
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_1e:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #200]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001420
+.word 0x9100a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_1f:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #208]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401340
+.word 0xb50003a0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xf9400341
+.word 0xf9406030
+.word 0xd63f0200
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001340
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401340
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_20:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #216]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001020
+.word 0x91008021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_21:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #224]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401b40
+.word 0xb5000440
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #232]
+.word 0xf9001fa0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xf9401fa1
+.word 0xf9001ba0
+bl _p_11
+.word 0xf9400fb1
+.word 0xf940aa31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001b40
+.word 0x9100c341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9412e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_22:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #240]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001820
+.word 0x9100c021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_23:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #248]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400b40
+.word 0xb5000440
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #256]
+.word 0xf9001fa0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xf9401fa1
+.word 0xf9001ba0
+bl _p_11
+.word 0xf9400fb1
+.word 0xf940aa31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9000b40
+.word 0x91004341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9412e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_24:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #264]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_25:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #272]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401f40
+.word 0xb50003a0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xf9400341
+.word 0xf9404030
+.word 0xd63f0200
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001f40
+.word 0x9100e341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401f40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_26:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #280]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001c20
+.word 0x9100e021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_27:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #288]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402340
+.word 0xb50003a0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xf9400341
+.word 0xf9404030
+.word 0xd63f0200
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9002340
+.word 0x91010341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402340
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_28:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #296]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9002020
+.word 0x91010021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_29:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme__ctor
+DSoft_Themes_Grid_DSGridTheme__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #304]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xf9400fb1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_2a:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme_get_Current
+DSoft_Themes_Grid_DSGridTheme_get_Current:
+.word 0xa9bd7bfd
+.word 0x910003fd
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #312]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9402e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404631
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #320]
+.word 0xf9400000
+.word 0xb5000280
+.word 0xf9400bb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #328]
+bl _p_1
+.word 0xf90013a0
+bl _p_14
+.word 0xf9400bb1
+.word 0xf9409231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #320]
+.word 0xf9000001
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf940be31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #320]
+.word 0xf9400000
+.word 0xf90013a0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf940ea31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a0
+.word 0xf9400bb1
+.word 0xf940fe31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_2b:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme
+DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme:
+.word 0xa9bb7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #336]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #320]
+.word 0xf9400000
+.word 0xaa1a03e1
+.word 0xeb1a001f
+.word 0x540005c0
+.word 0xf9400fb1
+.word 0xf9407a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #320]
+.word 0xf900001a
+.word 0xf9400fb1
+.word 0xf9409e31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #344]
+.word 0xf9400000
+.word 0xf90027a0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #320]
+.word 0xf9400000
+.word 0xf9001fa0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #352]
+bl _p_15
+.word 0xf90023a0
+bl _p_16
+.word 0xf9400fb1
+.word 0xf940ee31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401fa1
+.word 0xf94023a2
+.word 0xf94027a3
+.word 0xaa0303e0
+.word 0xf9001ba3
+.word 0xf9400c70
+.word 0xd63f0200
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9413631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9414631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c57bfd
+.word 0xd65f03c0
+
+Lme_2c:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme_Register_T
+DSoft_Themes_Grid_DSGridTheme_Register_T:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf90013af
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #360]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013a0
+bl _p_17
+.word 0xaa0003ef
+bl _p_18
+.word 0xf9001ba0
+.word 0xf9400bb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+bl _p_19
+.word 0xf9400bb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_2d:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler
+DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xa9015fb6
+.word 0xa90267b8
+.word 0xf9001bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #368]
+.word 0xf9001fb0
+.word 0xf9401fb0
+.word 0xf9400210
+.word 0xf90023b0
+.word 0xd2800019
+.word 0xd2800018
+.word 0xf9401fb1
+.word 0xf9404631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023b0
+.word 0xf9400210
+.word 0xf9401fb1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #344]
+.word 0xf9400000
+.word 0xaa0003f9
+.word 0xf94023b0
+.word 0xf9400210
+.word 0xf9401fb1
+.word 0xf9408a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1903e0
+.word 0xaa1903f8
+.word 0xf9401fb1
+.word 0xf940a231
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x23, [x16, #344]
+.word 0xaa1903e0
+.word 0xaa1a03e0
+.word 0xaa1903e0
+.word 0xaa1a03e1
+bl _p_20
+.word 0xaa0003f6
+.word 0xf9401fb1
+.word 0xf940d631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xb4000176
+.word 0xf94002c0
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400c00
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x1, [x16, #376]
+.word 0xeb01001f
+.word 0x10000011
+.word 0x54000681
+.word 0xaa1903e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #384]
+.word 0xc85ffef0
+.word 0xeb19021f
+.word 0x54000061
+.word 0xc811fef6
+.word 0x35ffff91
+.word 0xaa1003e0
+.word 0xf9002fa0
+.word 0xd349fee0
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
+.word 0xf9401fb1
+.word 0xf9416631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9402fa0
+.word 0xf9002ba0
+.word 0xaa0003f9
+.word 0xf9401fb1
+.word 0xf9418231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9402ba0
+.word 0xaa0003e1
+.word 0xaa1803e1
+.word 0xeb18001f
+.word 0x54fff701
+.word 0xf9401fb1
+.word 0xf941a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401fb1
+.word 0xf941b631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xa9415fb6
+.word 0xa94267b8
+.word 0xf9401bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+.word 0xd28071c0
+.word 0xaa1103e1
+bl _p_21
+
+Lme_2e:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler
+DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xa9015fb6
+.word 0xa90267b8
+.word 0xf9001bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #392]
+.word 0xf9001fb0
+.word 0xf9401fb0
+.word 0xf9400210
+.word 0xf90023b0
+.word 0xd2800019
+.word 0xd2800018
+.word 0xf9401fb1
+.word 0xf9404631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023b0
+.word 0xf9400210
+.word 0xf9401fb1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #344]
+.word 0xf9400000
+.word 0xaa0003f9
+.word 0xf94023b0
+.word 0xf9400210
+.word 0xf9401fb1
+.word 0xf9408a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1903e0
+.word 0xaa1903f8
+.word 0xf9401fb1
+.word 0xf940a231
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x23, [x16, #344]
+.word 0xaa1903e0
+.word 0xaa1a03e0
+.word 0xaa1903e0
+.word 0xaa1a03e1
+bl _p_22
+.word 0xaa0003f6
+.word 0xf9401fb1
+.word 0xf940d631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xb4000176
+.word 0xf94002c0
+.word 0xf9400000
+.word 0xf9400800
+.word 0xf9400c00
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x1, [x16, #376]
+.word 0xeb01001f
+.word 0x10000011
+.word 0x54000681
+.word 0xaa1903e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #384]
+.word 0xc85ffef0
+.word 0xeb19021f
+.word 0x54000061
+.word 0xc811fef6
+.word 0x35ffff91
+.word 0xaa1003e0
+.word 0xf9002fa0
+.word 0xd349fee0
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
+.word 0xf9401fb1
+.word 0xf9416631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9402fa0
+.word 0xf9002ba0
+.word 0xaa0003f9
+.word 0xf9401fb1
+.word 0xf9418231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9402ba0
+.word 0xaa0003e1
+.word 0xaa1803e1
+.word 0xeb18001f
+.word 0x54fff701
+.word 0xf9401fb1
+.word 0xf941a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401fb1
+.word 0xf941b631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xa9415fb6
+.word 0xa94267b8
+.word 0xf9401bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+.word 0xd28071c0
+.word 0xaa1103e1
+bl _p_21
+
+Lme_2f:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme__cctor
+DSoft_Themes_Grid_DSGridTheme__cctor:
+.word 0xa9be7bfd
+.word 0x910003fd
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #400]
+.word 0xf9000bb0
+.word 0xf9400bb0
+.word 0xf9400210
+.word 0xf9000fb0
+.word 0xf9400bb1
+.word 0xf9402e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf9400bb1
+.word 0xf9404631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xd2800000
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #408]
+bl _p_1
+.word 0xaa0003e1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #416]
+.word 0xf9001420
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #424]
+.word 0xf9001c20
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #432]
+.word 0xf9401402
+.word 0xf9000c22
+.word 0xf9401000
+.word 0xf9000820
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #344]
+.word 0xf9000001
+.word 0xf9400bb1
+.word 0xf940ba31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bb1
+.word 0xf940ca31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c27bfd
+.word 0xd65f03c0
+
+Lme_5c:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs
+DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #440]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_5d:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme__ctor
+DSoft_Themes_Grid_DSGridDefaultTheme__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #448]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a8001e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008350
+.word 0xf9400fb1
+.word 0xf9407a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a8461e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008750
+.word 0xf9400fb1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a7e01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008b50
+.word 0xf9400fb1
+.word 0xf940d231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a8461e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008f50
+.word 0xf9400fb1
+.word 0xf940fe31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd2800020
+.word 0xd280003e
+.word 0xb900935e
+.word 0xf9400fb1
+.word 0xf9411e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd2800040
+.word 0xd280005e
+.word 0xb9009f5e
+.word 0xf9400fb1
+.word 0xf9413e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+bl _p_23
+.word 0xf9400fb1
+.word 0xf9415a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9416a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9417a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_5e:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth
+DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #456]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd408010
+.word 0x1e22c200
+.word 0xfd001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xfd401ba0
+.word 0x1e624000
+.word 0xf9400fb1
+.word 0xf9408a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_5f:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single
+DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xbd001ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #464]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd401bb0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008010
+.word 0xf94013b1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_60:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor
+DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #472]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401340
+.word 0xb5000720
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd29d3d5e
+.word 0xf2a7ed3e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd001fa0
+.word 0xd29d5d7e
+.word 0xf2a7ed5e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0023a0
+.word 0xd29d9dbe
+.word 0xf2a7ed9e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0027a0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd002ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xfd401fa0
+.word 0xfd4023a1
+.word 0xfd4027a2
+.word 0xfd402ba3
+.word 0xf9001ba0
+.word 0x1e624000
+.word 0x1e624021
+.word 0x1e624042
+.word 0x1e624063
+bl _p_13
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001340
+.word 0x91008341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401340
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9417631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+
+Lme_61:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #480]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001020
+.word 0x91008021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_62:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor
+DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #488]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401740
+.word 0xb5000320
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+bl _p_24
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001740
+.word 0x9100a341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940d231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401740
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_63:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #496]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001420
+.word 0x9100a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_64:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #504]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401b40
+.word 0xb5000720
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd001fa0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0023a0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0027a0
+.word 0xd28cccde
+.word 0xf2a7ecde
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd002ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xfd401fa0
+.word 0xfd4023a1
+.word 0xfd4027a2
+.word 0xfd402ba3
+.word 0xf9001ba0
+.word 0x1e624000
+.word 0x1e624021
+.word 0x1e624042
+.word 0x1e624063
+bl _p_13
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001b40
+.word 0x9100c341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9417631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+
+Lme_65:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #512]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001820
+.word 0x9100c021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_66:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #520]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401f40
+.word 0xb5000320
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+bl _p_24
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9001f40
+.word 0x9100e341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940d231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9401f40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_67:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #528]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9001c20
+.word 0x9100e021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_68:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #536]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd408410
+.word 0x1e22c200
+.word 0xfd001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xfd401ba0
+.word 0x1e624000
+.word 0xf9400fb1
+.word 0xf9408a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_69:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xbd001ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #544]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd401bb0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008410
+.word 0xf94013b1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_6a:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #552]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9809000
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_6b:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #560]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9801ba1
+.word 0xb9009001
+.word 0xf94013b1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9407a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_6c:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #568]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9809400
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_6d:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #576]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9801ba1
+.word 0xb9009401
+.word 0xf94013b1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9407a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_6e:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #584]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403b40
+.word 0xb50003c0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a8301e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0x1e624000
+bl _p_25
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9003b40
+.word 0x9101c341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_6f:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #592]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9003820
+.word 0x9101c021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_70:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp:
+.word 0xa9bb7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #600]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400b40
+.word 0xb5000620
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #608]
+bl _p_26
+.word 0xf90023a0
+.word 0xf9400fb1
+.word 0xf9409231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023a1
+.word 0xaa0103e0
+.word 0xf9400021
+.word 0xf9408430
+.word 0xd63f0200
+.word 0xf9001fa0
+.word 0xf9400fb1
+.word 0xf940ba31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #616]
+bl _p_1
+.word 0xf9401fa1
+.word 0xf9001ba0
+bl _p_27
+.word 0xf9400fb1
+.word 0xf940e631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9000b40
+.word 0x91004341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9413231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9416a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c57bfd
+.word 0xd65f03c0
+
+Lme_71:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #624]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9000820
+.word 0x91004021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_72:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown
+DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown:
+.word 0xa9bb7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #632]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400f40
+.word 0xb5000620
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #640]
+bl _p_26
+.word 0xf90023a0
+.word 0xf9400fb1
+.word 0xf9409231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023a1
+.word 0xaa0103e0
+.word 0xf9400021
+.word 0xf9408430
+.word 0xd63f0200
+.word 0xf9001fa0
+.word 0xf9400fb1
+.word 0xf940ba31
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #616]
+bl _p_1
+.word 0xf9401fa1
+.word 0xf9001ba0
+bl _p_27
+.word 0xf9400fb1
+.word 0xf940e631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9000f40
+.word 0x91006341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9413231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9400f40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9416a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c57bfd
+.word 0xd65f03c0
+
+Lme_73:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap
+DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #648]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9000c20
+.word 0x91006021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_74:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #656]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402340
+.word 0xb5000320
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+bl _p_28
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9002340
+.word 0x91010341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940d231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402340
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_75:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #664]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9002020
+.word 0x91010021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_76:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #672]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402740
+.word 0xb5000720
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd29e3e5e
+.word 0xf2a7ee3e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd001fa0
+.word 0xd29e9ebe
+.word 0xf2a7ee9e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0023a0
+.word 0xd29eff1e
+.word 0xf2a7eefe
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0027a0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd002ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xfd401fa0
+.word 0xfd4023a1
+.word 0xfd4027a2
+.word 0xfd402ba3
+.word 0xf9001ba0
+.word 0x1e624000
+.word 0x1e624021
+.word 0x1e624042
+.word 0x1e624063
+bl _p_13
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9002740
+.word 0x91012341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402740
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9417631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+
+Lme_77:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #680]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9002420
+.word 0x91012021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_78:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight:
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #688]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402b40
+.word 0xb5000720
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd29e1e3e
+.word 0xf2a7ce1e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd001fa0
+.word 0xd29dddfe
+.word 0xf2a7ddde
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0023a0
+.word 0xd29a9abe
+.word 0xf2a7ea9e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd0027a0
+.word 0xd280001e
+.word 0xf2a7f01e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0xfd002ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #152]
+bl _p_1
+.word 0xfd401fa0
+.word 0xfd4023a1
+.word 0xfd4027a2
+.word 0xfd402ba3
+.word 0xf9001ba0
+.word 0x1e624000
+.word 0x1e624021
+.word 0x1e624042
+.word 0x1e624063
+bl _p_13
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9002b40
+.word 0x91014341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9415231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402b40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9417631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+
+Lme_79:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #696]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9002820
+.word 0x91014021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_7a:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #704]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402f40
+.word 0xb5000320
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+bl _p_29
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9002f40
+.word 0x91016341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940d231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9402f40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_7b:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #712]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9002c20
+.word 0x91016021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_7c:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #720]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403340
+.word 0xb50003a0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xaa1a03e0
+.word 0xf9400341
+.word 0xf9405830
+.word 0xd63f0200
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9003340
+.word 0x91018341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403340
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_7d:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #728]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9003020
+.word 0x91018021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_7e:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #736]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403740
+.word 0xb5000320
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+bl _p_30
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9408631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9003740
+.word 0x9101a341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940d231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403740
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940f631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_7f:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #744]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9003420
+.word 0x9101a021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_80:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #752]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9809c00
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_81:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #760]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9801ba1
+.word 0xb9009c01
+.word 0xf94013b1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9407a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_82:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #768]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd408810
+.word 0x1e22c200
+.word 0xfd001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xfd401ba0
+.word 0x1e624000
+.word 0xf9400fb1
+.word 0xf9408a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_83:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xbd001ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #776]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd401bb0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008810
+.word 0xf94013b1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_84:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #784]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9809800
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_85:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #792]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xb9801ba1
+.word 0xb9009801
+.word 0xf94013b1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9407a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_86:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont
+DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000bba
+.word 0xaa0003fa
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #800]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403f40
+.word 0xb50003c0
+.word 0xf9400fb1
+.word 0xf9406a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xd280001e
+.word 0xf2a8301e
+.word 0x9e6703d0
+.word 0x1e22c200
+.word 0x1e624000
+bl _p_31
+.word 0xf9001ba0
+.word 0xf9400fb1
+.word 0xf9409a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9003f40
+.word 0x9101e341
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf940e631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1a03e0
+.word 0xf9403f40
+.word 0xf9001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9410a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401ba0
+.word 0xf9400fb1
+.word 0xf9411e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400bba
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_87:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont
+DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xf9000fa1
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #808]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba1
+.word 0xf9400fa0
+.word 0xf9003c20
+.word 0x9101e021
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf94013b1
+.word 0xf9409631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_88:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight
+DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight:
+.word 0xa9bc7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #816]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd408c10
+.word 0x1e22c200
+.word 0xfd001ba0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xfd401ba0
+.word 0x1e624000
+.word 0xf9400fb1
+.word 0xf9408a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c47bfd
+.word 0xd65f03c0
+
+Lme_89:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single
+DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+.word 0xbd001ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #824]
+.word 0xf90013b0
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf90017b0
+.word 0xf94013b1
+.word 0xf9403631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94017b0
+.word 0xf9400210
+.word 0xf94013b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xbd401bb0
+.word 0x1e22c200
+.word 0x1e624010
+.word 0xbd008c10
+.word 0xf94013b1
+.word 0xf9407231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_8a:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_ResourceHelper__ctor
+DSoft_Themes_ResourceHelper__ctor:
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000ba0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #832]
+.word 0xf9000fb0
+.word 0xf9400fb0
+.word 0xf9400210
+.word 0xf90013b0
+.word 0xf9400fb1
+.word 0xf9403231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94013b0
+.word 0xf9400210
+.word 0xf9400fb1
+.word 0xf9404a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400ba0
+.word 0xf9400fb1
+.word 0xf9405e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9406e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400fb1
+.word 0xf9407e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_8b:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_ResourceHelper_LoadResource_string
+DSoft_Themes_ResourceHelper_LoadResource_string:
+.word 0xa9b67bfd
+.word 0x910003fd
+.word 0xa9015bb5
+.word 0xa90263b7
+.word 0xf9001bb9
+.word 0xf9001fa0
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #840]
+.word 0xf90023b0
+.word 0xf94023b0
+.word 0xf9400210
+.word 0xf90027b0
+.word 0xd2800019
+.word 0xd2800018
+.word 0xd2800017
+.word 0xd2800016
+.word 0xf94023b1
+.word 0xf9404e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94027b0
+.word 0xf9400210
+.word 0xf94023b1
+.word 0xf9406631
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #848]
+bl _p_1
+.word 0xf9004ba0
+bl _p_32
+.word 0xf94023b1
+.word 0xf9408e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9404ba0
+.word 0xaa0003f9
+.word 0xf94023b1
+.word 0xf940a631
+.word 0xb4000051
+.word 0xf9400231
+bl _p_33
+.word 0xf90047a0
+.word 0xf94023b1
+.word 0xf940be31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94047a0
+.word 0xaa0003f8
+.word 0xf94023b1
+.word 0xf940d631
+.word 0xb4000051
+.word 0xf9400231
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #856]
+.word 0xf9003fa0
+.word 0xd2800020
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x0, [x16, #864]
+.word 0xd2800021
+bl _p_34
+.word 0xaa0003f5
+.word 0xaa1503e0
+.word 0xf90043a0
+.word 0xaa1503e0
+.word 0xd2800000
+.word 0xf9401fa2
+.word 0xaa1503e0
+.word 0xd2800001
+.word 0xf94002a3
+.word 0xf9407c70
+.word 0xd63f0200
+.word 0xf9403fa0
+.word 0xf94043a1
+bl _p_35
+.word 0xf9003ba0
+.word 0xf94023b1
+.word 0xf9414a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9403ba0
+.word 0xf90037a0
+.word 0xaa0003f7
+.word 0xf94023b1
+.word 0xf9416631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94037a1
+.word 0xaa1803e2
+.word 0xaa0103e0
+.word 0xaa0203e0
+.word 0xf9400042
+.word 0xf9407050
+.word 0xd63f0200
+.word 0xf90033a0
+.word 0xf94023b1
+.word 0xf9419631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94033a0
+.word 0xf9002fa0
+.word 0xaa0003f6
+.word 0xf94023b1
+.word 0xf941b231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9402fa2
+.word 0xaa0203e0
+.word 0xaa1903e1
+.word 0xaa0203e0
+.word 0xf940005e
+bl _p_36
+.word 0xf94023b1
+.word 0xf941da31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023b1
+.word 0xf941ea31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xaa1903e0
+.word 0xf9002ba0
+.word 0xf94027b0
+.word 0xf9400210
+.word 0xf94023b1
+.word 0xf9420a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9402ba0
+.word 0xf94023b1
+.word 0xf9421e31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xa9415bb5
+.word 0xa94263b7
+.word 0xf9401bb9
+.word 0x910003bf
+.word 0xa8ca7bfd
+.word 0xd65f03c0
+
+Lme_8c:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Flyout_DSFlyoutTheme_Register___0
+DSoft_Themes_Flyout_DSFlyoutTheme_Register___0:
+.word 0xa9b97bfd
+.word 0x910003fd
+.word 0xa90163b7
+.word 0xa9026bb9
+.word 0xf90023af
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #872]
+.word 0xf9001bb0
+.word 0xf9401bb0
+.word 0xf9400210
+.word 0xf9001fb0
+.word 0xf94023a0
+bl _p_37
+.word 0xaa0003fa
+.word 0xb9800340
+.word 0x91003c10
+.word 0x928001f1
+.word 0xf2bffff1
+.word 0x8a110210
+.word 0x910003f1
+.word 0xcb100231
+.word 0x9100023f
+.word 0x8b100230
+.word 0xeb10023f
+.word 0x54000080
+.word 0xa9007e3f
+.word 0x91004231
+.word 0x17fffffc
+.word 0x910003f9
+.word 0xf9401bb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401fb0
+.word 0xf9400210
+.word 0xf9401bb1
+.word 0xf9409a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023a0
+bl _p_38
+.word 0xf9002ba0
+.word 0xf94023a0
+bl _p_39
+.word 0xf9402baf
+.word 0xb9802b42
+.word 0xaa1903e1
+.word 0x8b020021
+.word 0xaa0103e8
+.word 0xd63f0000
+.word 0xf9401bb1
+.word 0xf940d631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400758
+.word 0xd280003e
+.word 0xeb1e031f
+.word 0x54000320
+.word 0xd280005e
+.word 0xeb1e031f
+.word 0x54000360
+.word 0xf94023a0
+bl _p_40
+bl _p_41
+.word 0xb9802b41
+.word 0xaa1903e2
+.word 0x8b010321
+.word 0xf90033a1
+.word 0xf9002ba0
+.word 0x91004000
+.word 0xf9002fa0
+.word 0xf9400f40
+.word 0xf9401340
+.word 0xf94023a0
+bl _p_42
+.word 0xaa0003e2
+.word 0xf9402fa0
+.word 0xf94033a1
+bl _mono_gsharedvt_value_copy
+.word 0xf9402ba0
+.word 0xaa0003f7
+.word 0x1400000c
+.word 0xb9802b40
+.word 0xaa1903e1
+.word 0x8b000320
+.word 0xf9400017
+.word 0x14000007
+.word 0xf9400b41
+.word 0xb9802b40
+.word 0xaa1903e2
+.word 0x8b000320
+.word 0xd63f0020
+.word 0xaa0003f7
+.word 0xaa1703e0
+bl _p_5
+.word 0xf9401bb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401bb1
+.word 0xf9419a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401bb1
+.word 0xf941aa31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xa94163b7
+.word 0xa9426bb9
+.word 0x910003bf
+.word 0xa8c77bfd
+.word 0xd65f03c0
+
+Lme_8e:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Toolbar_DSToolbarTheme_Register___0
+DSoft_Themes_Toolbar_DSToolbarTheme_Register___0:
+.word 0xa9b97bfd
+.word 0x910003fd
+.word 0xa90163b7
+.word 0xa9026bb9
+.word 0xf90023af
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #880]
+.word 0xf9001bb0
+.word 0xf9401bb0
+.word 0xf9400210
+.word 0xf9001fb0
+.word 0xf94023a0
+bl _p_43
+.word 0xaa0003fa
+.word 0xb9800340
+.word 0x91003c10
+.word 0x928001f1
+.word 0xf2bffff1
+.word 0x8a110210
+.word 0x910003f1
+.word 0xcb100231
+.word 0x9100023f
+.word 0x8b100230
+.word 0xeb10023f
+.word 0x54000080
+.word 0xa9007e3f
+.word 0x91004231
+.word 0x17fffffc
+.word 0x910003f9
+.word 0xf9401bb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401fb0
+.word 0xf9400210
+.word 0xf9401bb1
+.word 0xf9409a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023a0
+bl _p_44
+.word 0xf9002ba0
+.word 0xf94023a0
+bl _p_45
+.word 0xf9402baf
+.word 0xb9802b42
+.word 0xaa1903e1
+.word 0x8b020021
+.word 0xaa0103e8
+.word 0xd63f0000
+.word 0xf9401bb1
+.word 0xf940d631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400758
+.word 0xd280003e
+.word 0xeb1e031f
+.word 0x54000320
+.word 0xd280005e
+.word 0xeb1e031f
+.word 0x54000360
+.word 0xf94023a0
+bl _p_46
+bl _p_41
+.word 0xb9802b41
+.word 0xaa1903e2
+.word 0x8b010321
+.word 0xf90033a1
+.word 0xf9002ba0
+.word 0x91004000
+.word 0xf9002fa0
+.word 0xf9400f40
+.word 0xf9401340
+.word 0xf94023a0
+bl _p_47
+.word 0xaa0003e2
+.word 0xf9402fa0
+.word 0xf94033a1
+bl _mono_gsharedvt_value_copy
+.word 0xf9402ba0
+.word 0xaa0003f7
+.word 0x1400000c
+.word 0xb9802b40
+.word 0xaa1903e1
+.word 0x8b000320
+.word 0xf9400017
+.word 0x14000007
+.word 0xf9400b41
+.word 0xb9802b40
+.word 0xaa1903e2
+.word 0x8b000320
+.word 0xd63f0020
+.word 0xaa0003f7
+.word 0xaa1703e0
+bl _p_9
+.word 0xf9401bb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401bb1
+.word 0xf9419a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401bb1
+.word 0xf941aa31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xa94163b7
+.word 0xa9426bb9
+.word 0x910003bf
+.word 0xa8c77bfd
+.word 0xd65f03c0
+
+Lme_8f:
+.text
+	.align 4
+	.no_dead_strip DSoft_Themes_Grid_DSGridTheme_Register___0
+DSoft_Themes_Grid_DSGridTheme_Register___0:
+.word 0xa9b97bfd
+.word 0x910003fd
+.word 0xa90163b7
+.word 0xa9026bb9
+.word 0xf90023af
+
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #888]
+.word 0xf9001bb0
+.word 0xf9401bb0
+.word 0xf9400210
+.word 0xf9001fb0
+.word 0xf94023a0
+bl _p_48
+.word 0xaa0003fa
+.word 0xb9800340
+.word 0x91003c10
+.word 0x928001f1
+.word 0xf2bffff1
+.word 0x8a110210
+.word 0x910003f1
+.word 0xcb100231
+.word 0x9100023f
+.word 0x8b100230
+.word 0xeb10023f
+.word 0x54000080
+.word 0xa9007e3f
+.word 0x91004231
+.word 0x17fffffc
+.word 0x910003f9
+.word 0xf9401bb1
+.word 0xf9408231
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401fb0
+.word 0xf9400210
+.word 0xf9401bb1
+.word 0xf9409a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf94023a0
+bl _p_49
+.word 0xf9002ba0
+.word 0xf94023a0
+bl _p_50
+.word 0xf9402baf
+.word 0xb9802b42
+.word 0xaa1903e1
+.word 0x8b020021
+.word 0xaa0103e8
+.word 0xd63f0000
+.word 0xf9401bb1
+.word 0xf940d631
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9400758
+.word 0xd280003e
+.word 0xeb1e031f
+.word 0x54000320
+.word 0xd280005e
+.word 0xeb1e031f
+.word 0x54000360
+.word 0xf94023a0
+bl _p_51
+bl _p_41
+.word 0xb9802b41
+.word 0xaa1903e2
+.word 0x8b010321
+.word 0xf90033a1
+.word 0xf9002ba0
+.word 0x91004000
+.word 0xf9002fa0
+.word 0xf9400f40
+.word 0xf9401340
+.word 0xf94023a0
+bl _p_52
+.word 0xaa0003e2
+.word 0xf9402fa0
+.word 0xf94033a1
+bl _mono_gsharedvt_value_copy
+.word 0xf9402ba0
+.word 0xaa0003f7
+.word 0x1400000c
+.word 0xb9802b40
+.word 0xaa1903e1
+.word 0x8b000320
+.word 0xf9400017
+.word 0x14000007
+.word 0xf9400b41
+.word 0xb9802b40
+.word 0xaa1903e2
+.word 0x8b000320
+.word 0xd63f0020
+.word 0xaa0003f7
+.word 0xaa1703e0
+bl _p_19
+.word 0xf9401bb1
+.word 0xf9418a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401bb1
+.word 0xf9419a31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xf9401bb1
+.word 0xf941aa31
+.word 0xb4000051
+.word 0xf9400231
+.word 0xa94163b7
+.word 0xa9426bb9
+.word 0x910003bf
+.word 0xa8c77bfd
+.word 0xd65f03c0
+
+Lme_90:
+.text
+	.align 3
+jit_code_end:
+
+	.byte 0,0,0,0
+.text
+	.align 3
+method_addresses:
+	.no_dead_strip method_addresses
+bl DSoft_Themes_Flyout_DSFlyoutTheme__ctor
+bl DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme
+bl DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme
+bl DSoft_Themes_Flyout_DSFlyoutTheme_Register_T
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl DSoft_Themes_Toolbar_DSToolbarTheme__ctor
+bl DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme
+bl DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme
+bl DSoft_Themes_Toolbar_DSToolbarTheme_Register_T
+bl method_addresses
+bl method_addresses
+bl DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor
+bl DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color
+bl DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor
+bl DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridTheme__ctor
+bl DSoft_Themes_Grid_DSGridTheme_get_Current
+bl DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme
+bl DSoft_Themes_Grid_DSGridTheme_Register_T
+bl DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler
+bl DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl DSoft_Themes_Grid_DSGridTheme__cctor
+bl DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs
+bl DSoft_Themes_Grid_DSGridDefaultTheme__ctor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont
+bl DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight
+bl DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single
+bl DSoft_Themes_ResourceHelper__ctor
+bl DSoft_Themes_ResourceHelper_LoadResource_string
+bl method_addresses
+bl DSoft_Themes_Flyout_DSFlyoutTheme_Register___0
+bl DSoft_Themes_Toolbar_DSToolbarTheme_Register___0
+bl DSoft_Themes_Grid_DSGridTheme_Register___0
+method_addresses_end:
+
+.section __TEXT, __const
+	.align 3
+unbox_trampolines:
+unbox_trampolines_end:
+
+	.long 0
+.text
+	.align 3
+unbox_trampoline_addresses:
+
+	.long 0
+.section __TEXT, __const
+	.align 3
+method_info_offsets:
+
+	.long 145,10,15,2
+	.short 0, 14, 24, 38, 48, 62, 72, 82
+	.short 92, 102, 113, 124, 135, 146, 157
+	.byte 1,3,7,4,255,255,255,255,241,0,0,0,0,0,0,0,0,0,0,0,0,0,18,3,28,4,255,255,255,255,224,0
+	.byte 35,3,5,3,3,4,56,3,3,3,3,5,3,5,3,3,90,3,3,4,8,9,4,8,255,255,255,255,127,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,128,137,9,4,3,3,3,4,3,128,169,3,4,3,3,3,3,3,3,3,128,200,3,3
+	.byte 3,5,3,5,3,3,3,128,235,3,4,3,3,3,3,3,3,3,129,10,3,3,3,3,3,3,3,3,3,129,40,255
+	.byte 255,255,254,216,129,46,3,3
+.section __TEXT, __const
+	.align 3
+extra_method_table:
+
+	.long 11,0,0,0,0,0,0,334
+	.long 143,0,0,0,0,351,144,0
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,0,0,0,317
+	.long 142,0
+.section __TEXT, __const
+	.align 3
+extra_method_info_offsets:
+
+	.long 3,142,317,143,334,144,351
+.section __TEXT, __const
+	.align 3
+class_name_table:
+
+	.short 19, 2, 0, 0, 0, 0, 0, 0
+	.short 0, 0, 0, 0, 0, 1, 19, 0
+	.short 0, 5, 0, 0, 0, 0, 0, 3
+	.short 0, 0, 0, 0, 0, 4, 0, 0
+	.short 0, 8, 0, 6, 0, 0, 0, 7
+	.short 0
+.section __TEXT, __const
+	.align 3
+got_info_offsets:
+
+	.long 112,10,12,2
+	.short 0, 11, 22, 33, 44, 55, 66, 77
+	.short 88, 99, 110, 121
+	.byte 129,112,2,1,1,1,1,1,4,3,1,129,128,1,1,4,3,1,1,1,1,3,129,148,1,1,1,1,1,1,1,1
+	.byte 1,129,160,1,1,3,1,1,1,1,1,1,129,172,4,3,1,4,5,1,1,5,12,129,209,1,5,2,2,8,1,1
+	.byte 1,1,129,232,1,1,1,1,1,1,1,1,1,129,242,1,1,1,1,1,1,3,4,1,130,1,3,1,1,1,1,1
+	.byte 1,1,1,130,13,1,1,1,1,1,1,1,1,1,130,23,1,1,1,1,1,1,5,3,7,130,45,1
+.section __TEXT, __const
+	.align 3
+ex_info_offsets:
+
+	.long 145,10,15,2
+	.short 0, 15, 26, 42, 53, 69, 79, 89
+	.short 99, 109, 120, 131, 144, 155, 166
+	.byte 133,135,47,87,44,255,255,255,249,199,0,0,0,0,0,0,0,0,0,0,0,0,0,134,143,47,135,21,44,255,255,255
+	.byte 248,191,0,135,151,51,108,62,51,120,137,93,99,62,99,62,108,62,108,62,99,140,148,99,62,47,87,112,86,128,145,255
+	.byte 255,255,240,238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,143,163,68,36,127,44,47,120,62,145,248,62,120,62,93,62,44
+	.byte 47,44,47,148,105,47,97,62,128,131,62,128,131,62,93,62,151,204,62,120,62,93,62,99,62,93,62,154,195,47,44,47
+	.byte 44,47,97,62,44,47,156,209,255,255,255,227,47,157,150,128,146,128,146
+.section __TEXT, __const
+	.align 3
+unwind_info:
+
+	.byte 13,12,31,0,68,14,48,157,6,158,5,68,13,29,13,12,31,0,68,14,64,157,8,158,7,68,13,29,16,12,31,0
+	.byte 68,14,64,157,8,158,7,68,13,29,68,154,6,16,12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10,16,12
+	.byte 31,0,68,14,80,157,10,158,9,68,13,29,68,154,8,26,12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10
+	.byte 151,9,68,152,8,153,7,68,154,6,13,12,31,0,68,14,32,157,4,158,3,68,13,29,16,12,31,0,68,14,48,157
+	.byte 6,158,5,68,13,29,68,154,4,27,12,31,0,68,14,160,1,157,20,158,19,68,13,29,68,149,18,150,17,68,151,16
+	.byte 152,15,68,153,14,23,12,31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,153,10,154,9
+.section __TEXT, __const
+	.align 3
+class_info_offsets:
+
+	.long 8,10,1,2
+	.short 0
+	.byte 159,76,7,37,25,25,37,68,80
+
+.text
+	.align 4
+plt:
+_mono_aot_DSoft_Themes_plt:
+	.no_dead_strip plt__jit_icall_mono_object_new_fast
+plt__jit_icall_mono_object_new_fast:
+_p_1:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #904]
+br x16
+.word 559
+	.no_dead_strip plt_DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor
+plt_DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor:
+_p_2:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #912]
+br x16
+.word 582
+	.no_dead_strip plt__rgctx_fetch_0
+plt__rgctx_fetch_0:
+_p_3:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #920]
+br x16
+.word 611
+	.no_dead_strip plt_System_Activator_CreateInstance_T
+plt_System_Activator_CreateInstance_T:
+_p_4:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #928]
+br x16
+.word 635
+	.no_dead_strip plt_DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme
+plt_DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme:
+_p_5:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #936]
+br x16
+.word 655
+	.no_dead_strip plt_DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor
+plt_DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor:
+_p_6:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #944]
+br x16
+.word 657
+	.no_dead_strip plt__rgctx_fetch_1
+plt__rgctx_fetch_1:
+_p_7:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #952]
+br x16
+.word 686
+	.no_dead_strip plt_System_Activator_CreateInstance_T_0
+plt_System_Activator_CreateInstance_T_0:
+_p_8:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #960]
+br x16
+.word 710
+	.no_dead_strip plt_DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme
+plt_DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme:
+_p_9:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #968]
+br x16
+.word 730
+	.no_dead_strip plt_DSoft_Themes_Toolbar_DSToolbarTheme__ctor
+plt_DSoft_Themes_Toolbar_DSToolbarTheme__ctor:
+_p_10:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #976]
+br x16
+.word 732
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSColor__ctor_string
+plt_DSoft_Datatypes_Types_DSColor__ctor_string:
+_p_11:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #984]
+br x16
+.word 734
+	.no_dead_strip plt_DSoft_Themes_Flyout_DSFlyoutTheme__ctor
+plt_DSoft_Themes_Flyout_DSFlyoutTheme__ctor:
+_p_12:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #992]
+br x16
+.word 739
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSColor__ctor_single_single_single_single
+plt_DSoft_Datatypes_Types_DSColor__ctor_single_single_single_single:
+_p_13:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1000]
+br x16
+.word 741
+	.no_dead_strip plt_DSoft_Themes_Grid_DSGridDefaultTheme__ctor
+plt_DSoft_Themes_Grid_DSGridDefaultTheme__ctor:
+_p_14:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1008]
+br x16
+.word 746
+	.no_dead_strip plt__jit_icall_mono_object_new_ptrfree
+plt__jit_icall_mono_object_new_ptrfree:
+_p_15:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1016]
+br x16
+.word 748
+	.no_dead_strip plt_System_EventArgs__ctor
+plt_System_EventArgs__ctor:
+_p_16:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1024]
+br x16
+.word 774
+	.no_dead_strip plt__rgctx_fetch_2
+plt__rgctx_fetch_2:
+_p_17:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1032]
+br x16
+.word 806
+	.no_dead_strip plt_System_Activator_CreateInstance_T_1
+plt_System_Activator_CreateInstance_T_1:
+_p_18:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1040]
+br x16
+.word 830
+	.no_dead_strip plt_DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme
+plt_DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme:
+_p_19:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1048]
+br x16
+.word 850
+	.no_dead_strip plt_System_Delegate_Combine_System_Delegate_System_Delegate
+plt_System_Delegate_Combine_System_Delegate_System_Delegate:
+_p_20:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1056]
+br x16
+.word 852
+	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
+plt__jit_icall_mono_arch_throw_corlib_exception:
+_p_21:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1064]
+br x16
+.word 857
+	.no_dead_strip plt_System_Delegate_Remove_System_Delegate_System_Delegate
+plt_System_Delegate_Remove_System_Delegate_System_Delegate:
+_p_22:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1072]
+br x16
+.word 892
+	.no_dead_strip plt_DSoft_Themes_Grid_DSGridTheme__ctor
+plt_DSoft_Themes_Grid_DSGridTheme__ctor:
+_p_23:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1080]
+br x16
+.word 897
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSColor_get_LightGray
+plt_DSoft_Datatypes_Types_DSColor_get_LightGray:
+_p_24:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1088]
+br x16
+.word 899
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSFont_BoldFontOfSize_single
+plt_DSoft_Datatypes_Types_DSFont_BoldFontOfSize_single:
+_p_25:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1096]
+br x16
+.word 904
+	.no_dead_strip plt_DSoft_Themes_ResourceHelper_LoadResource_string
+plt_DSoft_Themes_ResourceHelper_LoadResource_string:
+_p_26:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1104]
+br x16
+.word 909
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSBitmap__ctor_byte__
+plt_DSoft_Datatypes_Types_DSBitmap__ctor_byte__:
+_p_27:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1112]
+br x16
+.word 912
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSColor_get_Clear
+plt_DSoft_Datatypes_Types_DSColor_get_Clear:
+_p_28:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1120]
+br x16
+.word 917
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSColor_get_Black
+plt_DSoft_Datatypes_Types_DSColor_get_Black:
+_p_29:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1128]
+br x16
+.word 922
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSColor_get_White
+plt_DSoft_Datatypes_Types_DSColor_get_White:
+_p_30:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1136]
+br x16
+.word 927
+	.no_dead_strip plt_DSoft_Datatypes_Types_DSFont_NormalFontOfSize_single
+plt_DSoft_Datatypes_Types_DSFont_NormalFontOfSize_single:
+_p_31:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1144]
+br x16
+.word 932
+	.no_dead_strip plt_System_IO_MemoryStream__ctor
+plt_System_IO_MemoryStream__ctor:
+_p_32:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1152]
+br x16
+.word 937
+	.no_dead_strip plt_System_Reflection_Assembly_GetExecutingAssembly
+plt_System_Reflection_Assembly_GetExecutingAssembly:
+_p_33:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1160]
+br x16
+.word 942
+	.no_dead_strip plt__jit_icall_mono_array_new_specific
+plt__jit_icall_mono_array_new_specific:
+_p_34:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1168]
+br x16
+.word 947
+	.no_dead_strip plt_string_Format_string_object__
+plt_string_Format_string_object__:
+_p_35:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1176]
+br x16
+.word 973
+	.no_dead_strip plt_System_IO_Stream_CopyTo_System_IO_Stream
+plt_System_IO_Stream_CopyTo_System_IO_Stream:
+_p_36:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1184]
+br x16
+.word 978
+	.no_dead_strip plt__rgctx_fetch_3
+plt__rgctx_fetch_3:
+_p_37:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1192]
+br x16
+.word 1000
+	.no_dead_strip plt__rgctx_fetch_4
+plt__rgctx_fetch_4:
+_p_38:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1200]
+br x16
+.word 1045
+	.no_dead_strip plt__rgctx_fetch_5
+plt__rgctx_fetch_5:
+_p_39:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1208]
+br x16
+.word 1069
+	.no_dead_strip plt__rgctx_fetch_6
+plt__rgctx_fetch_6:
+_p_40:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1216]
+br x16
+.word 1102
+	.no_dead_strip plt__jit_icall_mono_object_new_specific
+plt__jit_icall_mono_object_new_specific:
+_p_41:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1224]
+br x16
+.word 1110
+	.no_dead_strip plt__rgctx_fetch_7
+plt__rgctx_fetch_7:
+_p_42:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1232]
+br x16
+.word 1137
+	.no_dead_strip plt__rgctx_fetch_8
+plt__rgctx_fetch_8:
+_p_43:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1240]
+br x16
+.word 1162
+	.no_dead_strip plt__rgctx_fetch_9
+plt__rgctx_fetch_9:
+_p_44:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1248]
+br x16
+.word 1207
+	.no_dead_strip plt__rgctx_fetch_10
+plt__rgctx_fetch_10:
+_p_45:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1256]
+br x16
+.word 1231
+	.no_dead_strip plt__rgctx_fetch_11
+plt__rgctx_fetch_11:
+_p_46:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1264]
+br x16
+.word 1264
+	.no_dead_strip plt__rgctx_fetch_12
+plt__rgctx_fetch_12:
+_p_47:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1272]
+br x16
+.word 1272
+	.no_dead_strip plt__rgctx_fetch_13
+plt__rgctx_fetch_13:
+_p_48:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1280]
+br x16
+.word 1297
+	.no_dead_strip plt__rgctx_fetch_14
+plt__rgctx_fetch_14:
+_p_49:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1288]
+br x16
+.word 1342
+	.no_dead_strip plt__rgctx_fetch_15
+plt__rgctx_fetch_15:
+_p_50:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1296]
+br x16
+.word 1366
+	.no_dead_strip plt__rgctx_fetch_16
+plt__rgctx_fetch_16:
+_p_51:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1304]
+br x16
+.word 1399
+	.no_dead_strip plt__rgctx_fetch_17
+plt__rgctx_fetch_17:
+_p_52:
+adrp x16, _mono_aot_DSoft_Themes_got@PAGE+0
+add x16, x16, _mono_aot_DSoft_Themes_got@PAGEOFF
+ldr x16, [x16, #1312]
+br x16
+.word 1407
+plt_end:
+.section __TEXT, __const
+	.align 3
+image_table:
+
+	.long 3
+	.asciz "DSoft.Themes"
+	.asciz "1C85815F-8C45-4589-B3AB-C3860C0746A2"
+	.asciz ""
+	.asciz ""
+	.align 3
+
+	.long 0,3,0,0,0
+	.asciz "DSoft.Datatypes"
+	.asciz "31DC3074-AE81-463C-B5BB-79D22957E3A2"
+	.asciz ""
+	.asciz ""
+	.align 3
+
+	.long 0,3,0,0,0
+	.asciz "mscorlib"
+	.asciz "4D8ADC30-0E43-4191-BC92-7BE34DCB9230"
+	.asciz ""
+	.asciz "7cec85d7bea7798e"
+	.align 3
+
+	.long 1,2,0,5,0
+.data
+	.align 3
+_mono_aot_DSoft_Themes_got:
+	.space 1320
+got_end:
+.section __TEXT, __const
+	.align 2
+assembly_guid:
+	.asciz "1C85815F-8C45-4589-B3AB-C3860C0746A2"
+.section __TEXT, __const
+	.align 2
+runtime_version:
+	.asciz ""
+.section __TEXT, __const
+	.align 2
+assembly_name:
+	.asciz "DSoft.Themes"
+.data
+	.align 3
+_mono_aot_file_info:
+
+	.long 111,0
+	.align 3
+	.quad _mono_aot_DSoft_Themes_got
+	.align 3
+	.quad 0
+	.align 3
+	.quad methods
+	.align 3
+	.quad jit_code_start
+	.align 3
+	.quad jit_code_end
+	.align 3
+	.quad 0
+	.align 3
+	.quad blob
+	.align 3
+	.quad class_name_table
+	.align 3
+	.quad class_info_offsets
+	.align 3
+	.quad method_info_offsets
+	.align 3
+	.quad ex_info_offsets
+	.align 3
+	.quad method_addresses
+	.align 3
+	.quad extra_method_info_offsets
+	.align 3
+	.quad extra_method_table
+	.align 3
+	.quad got_info_offsets
+	.align 3
+	.quad 0
+	.align 3
+	.quad unwind_info
+	.align 3
+	.quad mem_end
+	.align 3
+	.quad image_table
+	.align 3
+	.quad plt
+	.align 3
+	.quad plt_end
+	.align 3
+	.quad assembly_guid
+	.align 3
+	.quad runtime_version
+	.align 3
+	.quad 0
+	.align 3
+	.quad 0
+	.align 3
+	.quad 0
+	.align 3
+	.quad 0
+	.align 3
+	.quad 0
+	.align 3
+	.quad globals
+	.align 3
+	.quad assembly_name
+	.align 3
+	.quad unbox_trampolines
+	.align 3
+	.quad unbox_trampolines_end
+	.align 3
+	.quad unbox_trampoline_addresses
+
+	.long 112,1320,53,145,6,387000831,0,8314
+	.long 0,0,0,0,0,0,0,0
+	.long 0,0,0,0,128,8,8,15
+	.long 0,0,0,0,0
+	.globl _mono_aot_module_DSoft_Themes_info
+	.align 3
+_mono_aot_module_DSoft_Themes_info:
+	.align 3
+	.quad _mono_aot_file_info
+.section __TEXT, __const
+	.align 3
+blob:
+
+	.byte 0,0,1,4,0,5,5,6,7,6,6,0,2,8,6,0,1,9,0,1,10,0,5,11,12,13,12,12,0,2,14,12
+	.byte 0,1,15,0,1,16,0,3,17,18,19,0,1,20,0,1,21,0,2,22,19,0,1,23,0,1,24,0,1,25,0,1
+	.byte 26,0,1,27,0,3,28,29,19,0,1,30,0,3,31,32,19,0,1,33,0,1,34,0,1,35,0,1,36,0,1,37
+	.byte 1,6,1,38,1,6,5,39,40,41,40,40,1,6,6,42,40,40,43,40,44,1,6,1,45,1,6,5,46,43,43,47
+	.byte 48,1,6,5,49,43,43,47,48,1,6,6,50,51,52,53,54,43,1,6,1,55,0,1,56,0,1,57,0,1,58,0
+	.byte 2,59,19,0,1,60,0,1,61,0,1,62,0,2,63,19,0,1,64,0,1,65,0,1,66,0,1,67,0,1,68,0
+	.byte 1,69,0,1,70,0,1,71,0,1,72,0,1,73,0,1,74,0,3,75,76,77,0,1,78,0,3,79,80,77,0,1
+	.byte 81,0,1,82,0,1,83,0,2,84,19,0,1,85,0,2,86,19,0,1,87,0,1,88,0,1,89,0,1,90,0,1
+	.byte 91,0,1,92,0,1,93,0,1,94,0,1,95,0,1,96,0,1,97,0,1,98,0,1,99,0,1,100,0,1,101,0
+	.byte 1,102,0,1,103,0,1,104,0,4,105,106,107,108,0,1,109,0,1,110,1,6,1,111,5,30,0,0,1,255,253,0
+	.byte 0,0,1,2,0,198,0,0,4,0,1,7,129,56,255,253,0,0,0,1,3,0,198,0,0,22,0,1,7,129,56,255
+	.byte 253,0,0,0,1,6,0,198,0,0,46,0,1,7,129,56,12,0,40,43,48,41,41,16,1,2,1,14,1,5,41,41
+	.byte 41,41,16,1,3,2,14,1,4,41,41,41,41,17,0,1,14,2,2,1,41,41,41,41,41,41,41,41,41,17,0,17
+	.byte 41,41,17,0,33,41,41,41,41,41,41,41,16,1,6,11,14,1,7,41,16,1,6,12,14,2,131,111,2,41,41,11
+	.byte 2,131,113,2,34,255,254,0,0,0,0,255,43,0,0,2,41,41,14,2,131,113,2,6,94,51,94,30,2,131,113,2
+	.byte 1,94,0,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,17,0,49,14,2,18,1,41
+	.byte 41,17,0,73,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,14,2,128
+	.byte 191,2,17,0,101,14,6,1,2,131,166,2,41,41,41,7,20,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119
+	.byte 95,102,97,115,116,0,3,28,5,30,0,1,255,255,255,255,255,4,255,253,0,0,0,1,2,0,198,0,0,4,0,1
+	.byte 7,130,72,35,130,82,140,17,255,253,0,0,0,2,131,64,2,2,198,0,25,37,0,1,7,130,72,3,255,253,0,0
+	.byte 0,2,131,64,2,2,198,0,25,37,0,1,7,130,72,3,3,3,25,5,30,0,1,255,255,255,255,255,22,255,253,0
+	.byte 0,0,1,3,0,198,0,0,22,0,1,7,130,147,35,130,157,140,17,255,253,0,0,0,2,131,64,2,2,198,0,25
+	.byte 37,0,1,7,130,147,3,255,253,0,0,0,2,131,64,2,2,198,0,25,37,0,1,7,130,147,3,21,3,19,3,193
+	.byte 0,0,5,3,1,3,193,0,0,2,3,95,7,23,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,112,116
+	.byte 114,102,114,101,101,0,3,194,0,26,187,5,30,0,1,255,255,255,255,255,46,255,253,0,0,0,1,6,0,198,0,0
+	.byte 46,0,1,7,131,11,35,131,21,140,17,255,253,0,0,0,2,131,64,2,2,198,0,25,37,0,1,7,131,11,3,255
+	.byte 253,0,0,0,2,131,64,2,2,198,0,25,37,0,1,7,131,11,3,45,3,194,0,26,54,7,32,109,111,110,111,95
+	.byte 97,114,99,104,95,116,104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111,110,0,3,194,0,26
+	.byte 57,3,43,3,193,0,0,27,3,193,0,0,43,3,128,141,3,193,0,0,45,3,193,0,0,21,3,193,0,0,18,3
+	.byte 193,0,0,32,3,193,0,0,42,3,194,0,8,186,3,194,0,19,53,7,23,109,111,110,111,95,97,114,114,97,121,95
+	.byte 110,101,119,95,115,112,101,99,105,102,105,99,0,3,194,0,29,13,3,194,0,8,220,255,253,0,0,0,1,2,0,198
+	.byte 0,0,4,0,1,7,129,56,35,131,215,192,0,94,41,255,253,0,0,0,1,2,0,198,0,0,4,0,1,7,129,56
+	.byte 5,19,7,129,56,24,7,129,56,14,7,129,56,22,7,129,56,21,7,129,56,35,131,215,140,17,255,253,0,0,0,2
+	.byte 131,64,2,2,198,0,25,37,0,1,7,129,56,35,131,215,192,0,92,33,16,1,0,30,7,129,56,255,253,0,0,0
+	.byte 2,131,64,2,2,198,0,25,37,0,1,7,129,56,35,131,215,150,5,7,129,56,7,24,109,111,110,111,95,111,98,106
+	.byte 101,99,116,95,110,101,119,95,115,112,101,99,105,102,105,99,0,35,131,215,150,3,7,129,56,255,253,0,0,0,1,3
+	.byte 0,198,0,0,22,0,1,7,129,56,35,132,121,192,0,94,41,255,253,0,0,0,1,3,0,198,0,0,22,0,1,7
+	.byte 129,56,5,19,7,129,56,24,7,129,56,14,7,129,56,22,7,129,56,21,7,129,56,35,132,121,140,17,255,253,0,0
+	.byte 0,2,131,64,2,2,198,0,25,37,0,1,7,129,56,35,132,121,192,0,92,33,16,1,0,30,7,129,56,255,253,0
+	.byte 0,0,2,131,64,2,2,198,0,25,37,0,1,7,129,56,35,132,121,150,5,7,129,56,35,132,121,150,3,7,129,56
+	.byte 255,253,0,0,0,1,6,0,198,0,0,46,0,1,7,129,56,35,133,0,192,0,94,41,255,253,0,0,0,1,6,0
+	.byte 198,0,0,46,0,1,7,129,56,5,19,7,129,56,24,7,129,56,14,7,129,56,22,7,129,56,21,7,129,56,35,133
+	.byte 0,140,17,255,253,0,0,0,2,131,64,2,2,198,0,25,37,0,1,7,129,56,35,133,0,192,0,92,33,16,1,0
+	.byte 30,7,129,56,255,253,0,0,0,2,131,64,2,2,198,0,25,37,0,1,7,129,56,35,133,0,150,5,7,129,56,35
+	.byte 133,0,150,3,7,129,56,10,0,1,22,1,80,0,0,2,48,0,1,2,12,40,1,1,3,0,32,0,0,0,32,2
+	.byte 0,20,128,132,56,128,144,208,0,0,29,16,0,4,0,56,1,28,5,16,1,32,10,0,1,33,1,72,0,0,2,48
+	.byte 0,2,2,4,20,72,0,1,3,10,80,1,1,4,10,88,0,1,5,10,88,0,0,0,40,2,0,49,129,4,52,129
+	.byte 16,0,21,0,52,0,24,0,12,5,4,0,0,5,4,0,16,0,12,0,0,0,4,0,4,0,0,0,4,5,20,0
+	.byte 12,5,4,0,24,0,12,5,8,0,28,1,16,10,0,1,17,1,80,0,0,2,48,0,1,2,12,72,0,0,0,32
+	.byte 2,0,22,128,132,56,128,144,208,0,0,29,16,0,5,0,56,1,28,0,12,5,4,1,32,11,14,0,1,29,32,17
+	.byte 255,253,0,0,0,1,2,0,198,0,0,4,0,1,7,130,72,0,1,27,1,80,0,0,2,48,0,1,2,10,72,1
+	.byte 1,3,20,48,1,1,4,0,32,0,0,0,32,2,0,31,128,172,56,128,184,0,12,0,56,0,28,0,0,0,4,0
+	.byte 4,0,0,0,8,10,20,0,0,0,4,5,16,1,32,10,0,1,22,1,80,0,0,2,48,0,1,2,12,40,1,1
+	.byte 3,0,32,0,0,0,32,2,0,20,128,132,56,128,144,208,0,0,29,16,0,4,0,56,1,28,5,16,1,32,10,0
+	.byte 1,33,1,72,0,0,2,48,0,2,2,4,20,72,0,1,3,10,80,1,1,4,10,88,0,1,5,10,88,0,0,0
+	.byte 40,2,0,49,129,4,52,129,16,0,21,0,52,0,24,0,12,5,4,0,0,5,4,0,16,0,12,0,0,0,4,0
+	.byte 4,0,0,0,4,5,20,0,12,5,4,0,24,0,12,5,8,0,28,1,16,10,0,1,17,1,80,0,0,2,48,0
+	.byte 1,2,12,72,0,0,0,32,2,0,22,128,132,56,128,144,208,0,0,29,16,0,5,0,56,1,28,0,12,5,4,1
+	.byte 32,11,14,0,1,29,32,17,255,253,0,0,0,1,3,0,198,0,0,22,0,1,7,130,147,0,1,27,1,80,0,0
+	.byte 2,48,0,1,2,10,72,1,1,3,20,48,1,1,4,0,32,0,0,0,32,2,0,31,128,172,56,128,184,0,12,0
+	.byte 56,0,28,0,0,0,4,0,4,0,0,0,8,10,20,0,0,0,4,5,16,1,32,10,0,1,22,1,80,0,0,2
+	.byte 48,0,1,2,12,48,1,1,3,0,32,0,0,0,32,2,0,24,128,136,56,128,148,208,0,0,29,16,0,6,0,56
+	.byte 1,28,0,0,0,4,5,16,1,32,10,28,1,35,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,22,128,1
+	.byte 1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,68,129,52,60,129,68,26,0,30,0,60,0,24,1,4
+	.byte 5,4,0,0,5,4,0,16,1,4,5,16,0,12,0,0,0,8,0,4,0,0,0,0,0,4,5,20,0,4,0,4
+	.byte 0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48
+	.byte 0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60
+	.byte 2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,0,1,22,1,80,0,0,2,48,0,1
+	.byte 2,12,48,1,1,3,0,32,0,0,0,32,2,0,24,128,136,56,128,148,208,0,0,29,16,0,6,0,56,1,28,0
+	.byte 0,0,4,5,16,1,32,10,45,1,35,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,52,184,2,1,1,4
+	.byte 10,152,1,0,1,5,12,72,0,0,0,40,2,0,80,129,144,60,129,160,26,0,36,0,60,0,24,1,4,5,4,0
+	.byte 0,5,4,0,16,1,4,5,20,5,20,5,20,5,20,0,12,0,0,0,20,0,4,0,0,0,4,0,4,0,4,0
+	.byte 4,0,4,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10
+	.byte 0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24
+	.byte 208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1
+	.byte 34,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,14,88,1,1,4,10,152,1,0,1,5,12,72,0,0,0
+	.byte 40,2,0,60,129,32,60,129,48,26,0,26,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,1,4,0,4
+	.byte 0,4,0,12,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16
+	.byte 10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29
+	.byte 24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28
+	.byte 1,34,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,14,88,1,1,4,10,152,1,0,1,5,12,72,0,0
+	.byte 0,40,2,0,60,129,32,60,129,48,26,0,26,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,1,4,0
+	.byte 4,0,4,0,12,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1
+	.byte 16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0
+	.byte 29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10
+	.byte 28,1,35,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,22,128,1,1,1,4,10,152,1,0,1,5,12,72
+	.byte 0,0,0,40,2,0,68,129,52,60,129,68,26,0,30,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,5
+	.byte 16,0,12,0,0,0,8,0,4,0,0,0,0,0,4,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5
+	.byte 0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2
+	.byte 0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0
+	.byte 12,0,4,0,8,5,0,1,32,10,28,1,35,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,22,128,1,1
+	.byte 1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,68,129,52,60,129,68,26,0,30,0,60,0,24,1,4,5
+	.byte 4,0,0,5,4,0,16,1,4,5,16,0,12,0,0,0,8,0,4,0,0,0,0,0,4,5,20,0,4,0,4,0
+	.byte 4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48,0
+	.byte 1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60,2
+	.byte 32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34,1,88,0,0,2,48,0,2,2
+	.byte 4,22,56,0,1,3,14,88,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,60,129,32,60,129,48,26
+	.byte 0,26,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,1,4,0,4,0,4,0,12,5,20,0,4,0,4
+	.byte 0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48
+	.byte 0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60
+	.byte 2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34,1,88,0,0,2,48,0,2
+	.byte 2,4,22,56,0,1,3,14,88,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,60,129,32,60,129,48
+	.byte 26,0,26,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,1,4,0,4,0,4,0,12,5,20,0,4,0
+	.byte 4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2
+	.byte 48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0
+	.byte 60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,0,1,22,1,80,0,0,2,48,0
+	.byte 1,2,12,40,1,1,3,0,32,0,0,0,32,2,0,20,128,132,56,128,144,208,0,0,29,16,0,4,0,56,1,28
+	.byte 5,16,1,32,10,0,1,33,1,72,0,0,2,48,0,2,2,4,20,72,0,1,3,10,80,1,1,4,10,88,0,1
+	.byte 5,10,88,0,0,0,40,2,0,49,129,4,52,129,16,0,21,0,52,0,24,0,12,5,4,0,0,5,4,0,16,0
+	.byte 12,0,0,0,4,0,4,0,0,0,4,5,20,0,12,5,4,0,24,0,12,5,8,0,28,1,16,10,62,1,39,1
+	.byte 88,0,0,2,48,0,2,2,6,22,88,0,1,3,12,72,0,1,4,30,160,1,1,1,5,10,96,1,1,6,0,48
+	.byte 0,0,0,32,2,0,68,129,76,60,129,92,26,0,30,0,60,0,24,0,12,5,4,1,4,0,4,5,4,0,16,1
+	.byte 4,0,12,5,4,0,16,0,12,5,8,0,12,5,8,0,12,0,0,0,4,0,4,0,0,0,4,5,28,0,4,0
+	.byte 0,0,4,0,12,0,0,5,16,1,40,11,14,0,1,29,32,17,255,253,0,0,0,1,6,0,198,0,0,46,0,1
+	.byte 7,131,11,0,1,27,1,80,0,0,2,48,0,1,2,10,72,1,1,3,20,48,1,1,4,0,32,0,0,0,32,2
+	.byte 0,31,128,172,56,128,184,0,12,0,56,0,28,0,0,0,4,0,4,0,0,0,8,10,20,0,0,0,4,5,16,1
+	.byte 32,10,79,1,44,1,120,0,0,2,48,0,1,2,12,88,0,1,3,4,48,0,1,4,24,104,1,1,5,22,160,2
+	.byte 1,1,6,2,56,0,2,2,7,14,72,0,0,0,32,2,0,96,129,188,76,129,224,26,25,24,0,43,0,76,0,24
+	.byte 0,12,5,4,1,4,0,24,1,4,1,4,0,16,5,12,1,4,1,4,0,4,0,4,0,4,0,4,5,16,0,0
+	.byte 0,4,0,4,0,4,0,4,0,4,0,12,0,4,5,8,1,4,0,12,0,28,0,4,0,12,0,12,0,4,0,8
+	.byte 0,0,5,24,1,4,0,20,1,4,1,4,0,4,5,4,1,32,10,79,1,44,1,120,0,0,2,48,0,1,2,12
+	.byte 88,0,1,3,4,48,0,1,4,24,104,1,1,5,22,160,2,1,1,6,2,56,0,2,2,7,14,72,0,0,0,32
+	.byte 2,0,96,129,188,76,129,224,26,25,24,0,43,0,76,0,24,0,12,5,4,1,4,0,24,1,4,1,4,0,16,5
+	.byte 12,1,4,1,4,0,4,0,4,0,4,0,4,5,16,0,0,0,4,0,4,0,4,0,4,0,4,0,12,0,4,5
+	.byte 8,1,4,0,12,0,28,0,4,0,12,0,12,0,4,0,8,0,0,5,24,1,4,0,20,1,4,1,4,0,4,5
+	.byte 4,1,32,10,106,1,18,1,72,0,0,2,48,0,1,2,34,232,1,0,0,0,32,2,0,45,128,208,52,128,220,0
+	.byte 19,0,52,0,24,1,4,0,12,0,0,0,4,0,4,0,12,0,4,0,12,0,4,0,12,0,4,0,4,0,4,11
+	.byte 4,0,12,5,4,1,32,10,0,1,12,1,88,0,0,2,48,0,0,0,32,2,0,19,100,60,112,208,0,0,29,16
+	.byte 208,0,0,29,24,0,2,0,60,1,40,10,120,1,52,1,88,0,0,2,48,0,1,2,22,88,0,1,3,22,88,0
+	.byte 1,4,22,88,0,1,5,22,88,0,1,6,14,64,0,1,7,14,64,0,1,8,12,56,1,1,9,0,32,0,0,0
+	.byte 32,2,0,70,129,128,60,129,144,26,0,31,0,60,0,24,1,4,5,16,5,8,0,16,1,4,5,16,5,8,0,16
+	.byte 1,4,5,16,5,8,0,16,1,4,5,16,5,8,0,16,1,4,1,4,5,8,0,16,1,4,1,4,5,8,0,16
+	.byte 1,4,0,4,0,4,5,16,1,32,10,14,1,17,1,80,0,0,2,48,0,1,2,12,80,0,0,0,48,2,0,22
+	.byte 128,144,56,128,156,208,0,0,29,16,0,5,0,56,1,28,5,12,0,28,1,20,10,0,1,17,1,88,0,0,2,48
+	.byte 0,1,2,14,72,0,0,0,32,2,0,25,128,136,60,128,148,208,0,0,29,24,208,0,0,29,16,0,4,0,60,2
+	.byte 36,5,8,1,32,10,45,1,35,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,52,184,2,1,1,4,10,152
+	.byte 1,0,1,5,12,72,0,0,0,40,2,0,80,129,144,60,129,160,26,0,36,0,60,0,24,1,4,5,4,0,0,5
+	.byte 4,0,16,1,4,5,20,5,20,5,20,5,20,0,12,0,0,0,20,0,4,0,0,0,4,0,4,0,4,0,4,0
+	.byte 4,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1
+	.byte 18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0
+	.byte 0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34,1
+	.byte 88,0,0,2,48,0,2,2,4,22,56,0,1,3,12,56,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2
+	.byte 0,54,129,16,60,129,32,26,0,23,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,0,8,5,20,0,4
+	.byte 0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0
+	.byte 2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11
+	.byte 0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,45,1,35,1,88,0,0,2,48
+	.byte 0,2,2,4,22,56,0,1,3,52,184,2,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,80,129,144
+	.byte 60,129,160,26,0,36,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,5,20,5,20,5,20,5,20,0,12
+	.byte 0,0,0,20,0,4,0,0,0,4,0,4,0,4,0,4,0,4,5,20,0,4,0,4,0,4,0,12,0,12,0,4
+	.byte 0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0
+	.byte 0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4
+	.byte 0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,12
+	.byte 56,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,54,129,16,60,129,32,26,0,23,0,60,0,24,1
+	.byte 4,5,4,0,0,5,4,0,16,1,4,0,8,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0
+	.byte 24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39
+	.byte 128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0
+	.byte 4,0,8,5,0,1,32,10,14,1,17,1,80,0,0,2,48,0,1,2,12,80,0,0,0,48,2,0,22,128,144,56
+	.byte 128,156,208,0,0,29,16,0,5,0,56,1,28,5,12,0,28,1,20,10,0,1,17,1,88,0,0,2,48,0,1,2
+	.byte 14,72,0,0,0,32,2,0,25,128,136,60,128,148,208,0,0,29,24,208,0,0,29,16,0,4,0,60,2,36,5,8
+	.byte 1,32,10,14,1,17,1,80,0,0,2,48,0,1,2,12,72,0,0,0,40,2,0,22,128,136,56,128,148,208,0,0
+	.byte 29,16,0,5,0,56,1,28,5,8,0,28,1,16,10,0,1,17,1,88,0,0,2,48,0,1,2,14,56,0,0,0
+	.byte 32,2,0,25,128,128,60,128,140,208,0,0,29,24,208,0,0,29,16,0,4,0,60,2,32,5,4,1,32,10,14,1
+	.byte 17,1,80,0,0,2,48,0,1,2,12,72,0,0,0,40,2,0,22,128,136,56,128,148,208,0,0,29,16,0,5,0
+	.byte 56,1,28,5,8,0,28,1,16,10,0,1,17,1,88,0,0,2,48,0,1,2,14,56,0,0,0,32,2,0,25,128
+	.byte 128,60,128,140,208,0,0,29,24,208,0,0,29,16,0,4,0,60,2,32,5,4,1,32,10,28,1,34,1,88,0,0
+	.byte 2,48,0,2,2,4,22,56,0,1,3,22,96,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,58,129
+	.byte 36,60,129,52,26,0,25,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,5,16,0,4,0,8,5,20,0
+	.byte 4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0
+	.byte 0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0
+	.byte 11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,62,1,44,1,88,0,0,2
+	.byte 48,0,2,2,6,22,56,0,1,3,22,80,1,1,4,10,80,1,1,5,10,88,1,1,6,10,152,1,0,1,7,12
+	.byte 72,0,0,0,40,2,0,82,129,112,60,129,128,26,0,37,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4
+	.byte 5,12,0,0,0,8,5,20,0,4,0,4,0,12,5,16,0,12,0,0,0,8,0,4,0,0,0,0,0,4,5,20
+	.byte 0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88
+	.byte 0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16
+	.byte 0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,62,1,44,1,88,0,0
+	.byte 2,48,0,2,2,6,22,56,0,1,3,22,80,1,1,4,10,80,1,1,5,10,88,1,1,6,10,152,1,0,1,7
+	.byte 12,72,0,0,0,40,2,0,82,129,112,60,129,128,26,0,37,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1
+	.byte 4,5,12,0,0,0,8,5,20,0,4,0,4,0,12,5,16,0,12,0,0,0,8,0,4,0,0,0,0,0,4,5
+	.byte 20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1
+	.byte 88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29
+	.byte 16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34,1,88,0
+	.byte 0,2,48,0,2,2,4,22,56,0,1,3,12,56,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,54
+	.byte 129,16,60,129,32,26,0,23,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,0,8,5,20,0,4,0,4
+	.byte 0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48
+	.byte 0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60
+	.byte 2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,45,1,35,1,88,0,0,2,48,0,2
+	.byte 2,4,22,56,0,1,3,52,184,2,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,80,129,144,60,129
+	.byte 160,26,0,36,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,5,20,5,20,5,20,5,20,0,12,0,0
+	.byte 0,20,0,4,0,0,0,4,0,4,0,4,0,4,0,4,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8
+	.byte 5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32
+	.byte 2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12
+	.byte 0,12,0,4,0,8,5,0,1,32,10,45,1,35,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,52,184,2
+	.byte 1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2,0,80,129,144,60,129,160,26,0,36,0,60,0,24,1,4
+	.byte 5,4,0,0,5,4,0,16,1,4,5,20,5,20,5,20,5,20,0,12,0,0,0,20,0,4,0,0,0,4,0,4
+	.byte 0,4,0,4,0,4,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28
+	.byte 1,16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0
+	.byte 0,29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32
+	.byte 10,28,1,34,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,12,56,1,1,4,10,152,1,0,1,5,12,72
+	.byte 0,0,0,40,2,0,54,129,16,60,129,32,26,0,23,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,0
+	.byte 8,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1
+	.byte 18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0
+	.byte 0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34,1
+	.byte 88,0,0,2,48,0,2,2,4,22,56,0,1,3,14,88,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40,2
+	.byte 0,60,129,32,60,129,48,26,0,26,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,1,4,0,4,0,4
+	.byte 0,12,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0
+	.byte 1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208
+	.byte 0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,28,1,34
+	.byte 1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,12,56,1,1,4,10,152,1,0,1,5,12,72,0,0,0,40
+	.byte 2,0,54,129,16,60,129,32,26,0,23,0,60,0,24,1,4,5,4,0,0,5,4,0,16,1,4,0,8,5,20,0
+	.byte 4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0,24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0
+	.byte 0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39,128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0
+	.byte 11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,1,32,10,14,1,17,1,80,0,0,2
+	.byte 48,0,1,2,12,72,0,0,0,40,2,0,22,128,136,56,128,148,208,0,0,29,16,0,5,0,56,1,28,5,8,0
+	.byte 28,1,16,10,0,1,17,1,88,0,0,2,48,0,1,2,14,56,0,0,0,32,2,0,25,128,128,60,128,140,208,0
+	.byte 0,29,24,208,0,0,29,16,0,4,0,60,2,32,5,4,1,32,10,14,1,17,1,80,0,0,2,48,0,1,2,12
+	.byte 80,0,0,0,48,2,0,22,128,144,56,128,156,208,0,0,29,16,0,5,0,56,1,28,5,12,0,28,1,20,10,0
+	.byte 1,17,1,88,0,0,2,48,0,1,2,14,72,0,0,0,32,2,0,25,128,136,60,128,148,208,0,0,29,24,208,0
+	.byte 0,29,16,0,4,0,60,2,36,5,8,1,32,10,14,1,17,1,80,0,0,2,48,0,1,2,12,72,0,0,0,40
+	.byte 2,0,22,128,136,56,128,148,208,0,0,29,16,0,5,0,56,1,28,5,8,0,28,1,16,10,0,1,17,1,88,0
+	.byte 0,2,48,0,1,2,14,56,0,0,0,32,2,0,25,128,128,60,128,140,208,0,0,29,24,208,0,0,29,16,0,4
+	.byte 0,60,2,32,5,4,1,32,10,28,1,34,1,88,0,0,2,48,0,2,2,4,22,56,0,1,3,22,96,1,1,4
+	.byte 10,152,1,0,1,5,12,72,0,0,0,40,2,0,58,129,36,60,129,52,26,0,25,0,60,0,24,1,4,5,4,0
+	.byte 0,5,4,0,16,1,4,5,16,0,4,0,8,5,20,0,4,0,4,0,4,0,12,0,12,0,4,0,8,5,0,0
+	.byte 24,1,4,5,8,0,28,1,16,10,0,1,18,1,88,0,0,2,48,0,1,2,14,144,1,0,0,0,32,2,0,39
+	.byte 128,172,60,128,184,208,0,0,29,24,208,0,0,29,16,0,11,0,60,2,32,0,4,0,4,0,4,0,12,0,12,0
+	.byte 4,0,8,5,0,1,32,10,14,1,17,1,80,0,0,2,48,0,1,2,12,80,0,0,0,48,2,0,22,128,144,56
+	.byte 128,156,208,0,0,29,16,0,5,0,56,1,28,5,12,0,28,1,20,10,0,1,17,1,88,0,0,2,48,0,1,2
+	.byte 14,72,0,0,0,32,2,0,25,128,136,60,128,148,208,0,0,29,24,208,0,0,29,16,0,4,0,60,2,36,5,8
+	.byte 1,32,10,0,1,22,1,80,0,0,2,48,0,1,2,12,40,1,1,3,0,32,0,0,0,32,2,0,20,128,132,56
+	.byte 128,144,208,0,0,29,16,0,4,0,56,1,28,5,16,1,32,10,128,137,1,69,1,136,1,0,0,2,48,0,1,2
+	.byte 10,80,1,1,3,2,48,0,1,4,10,48,1,1,5,2,48,0,1,6,40,232,1,1,1,7,2,56,0,1,8,14
+	.byte 96,1,1,9,2,56,0,1,10,14,80,1,1,11,0,32,0,1,12,2,64,0,0,0,40,2,0,122,130,36,84,130
+	.byte 60,208,0,0,29,56,25,24,23,22,0,53,0,84,0,24,0,12,0,0,0,4,0,4,0,0,0,4,5,20,1,4
+	.byte 0,16,0,8,5,20,1,4,0,16,5,16,6,24,0,4,0,8,1,4,2,8,0,4,0,4,0,0,0,4,1,16
+	.byte 0,0,0,0,0,8,5,24,1,4,0,20,1,4,1,4,0,4,0,0,0,4,0,12,5,24,1,4,0,20,1,4
+	.byte 1,4,0,4,0,0,0,4,0,0,0,4,5,16,0,16,1,8,0,28,1,16,11,128,165,0,1,29,64,17,255,253
+	.byte 0,0,0,1,2,0,198,0,0,4,0,1,7,129,56,1,0,1,1,1,29,1,240,1,0,0,2,48,0,1,2,10
+	.byte 120,1,1,3,20,232,2,1,1,4,0,32,0,0,0,32,2,0,85,129,176,52,129,196,1,26,25,38,0,52,0,0
+	.byte 0,4,0,4,0,4,0,72,0,28,0,0,0,12,0,0,0,8,0,12,0,4,0,4,5,16,0,4,0,8,0,4
+	.byte 0,8,0,8,0,0,0,4,0,0,0,68,0,4,0,4,0,0,0,8,0,4,0,4,0,4,0,16,0,4,5,4
+	.byte 0,4,0,4,5,16,1,32,11,128,165,0,1,29,64,17,255,253,0,0,0,1,3,0,198,0,0,22,0,1,7,129
+	.byte 56,1,0,1,1,1,29,1,240,1,0,0,2,48,0,1,2,10,120,1,1,3,20,232,2,1,1,4,0,32,0,0
+	.byte 0,32,2,0,85,129,176,52,129,196,1,26,25,38,0,52,0,0,0,4,0,4,0,4,0,72,0,28,0,0,0,12
+	.byte 0,0,0,8,0,12,0,4,0,4,5,16,0,4,0,8,0,4,0,8,0,8,0,0,0,4,0,0,0,68,0,4
+	.byte 0,4,0,0,0,8,0,4,0,4,0,4,0,16,0,4,5,4,0,4,0,4,5,16,1,32,11,128,165,0,1,29
+	.byte 64,17,255,253,0,0,0,1,6,0,198,0,0,46,0,1,7,129,56,1,0,1,1,1,29,1,240,1,0,0,2,48
+	.byte 0,1,2,10,120,1,1,3,20,232,2,1,1,4,0,32,0,0,0,32,2,0,85,129,176,52,129,196,1,26,25,38
+	.byte 0,52,0,0,0,4,0,4,0,4,0,72,0,28,0,0,0,12,0,0,0,8,0,12,0,4,0,4,5,16,0,4
+	.byte 0,8,0,4,0,8,0,8,0,0,0,4,0,0,0,68,0,4,0,4,0,0,0,8,0,4,0,4,0,4,0,16
+	.byte 0,4,5,4,0,4,0,4,5,16,1,32,0,128,144,16,0,0,1,18,128,192,16,8,0,1,194,0,28,66,194,0
+	.byte 28,63,194,0,28,62,194,0,28,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,128,192,16,8,0,1,194
+	.byte 0,28,66,194,0,28,63,194,0,28,62,194,0,28,60,0,0,6,128,160,24,0,0,8,194,0,28,66,194,0,28,63
+	.byte 194,0,28,62,194,0,28,60,27,26,18,128,160,72,0,0,8,194,0,28,66,194,0,28,63,194,0,28,62,194,0,28
+	.byte 60,42,41,40,39,38,37,36,35,34,33,32,31,30,29,48,128,196,93,16,16,0,1,194,0,28,66,194,0,28,63,194
+	.byte 0,28,62,194,0,28,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,128,160,128,160,0,0,8,194,0,28,66,194
+	.byte 0,28,63,194,0,28,62,194,0,28,60,128,139,128,138,128,137,128,136,128,135,128,134,128,129,128,128,127,126,125,124,123
+	.byte 122,121,120,119,118,128,133,128,132,128,131,128,130,117,116,115,114,113,112,111,110,105,104,103,102,109,108,107,106,101,100,99
+	.byte 98,97,96,4,128,144,16,0,0,1,194,0,28,66,194,0,28,63,194,0,28,62,194,0,28,60,115,103,101,110,0
+.section __TEXT, __const
+	.align 3
+Lglobals_hash:
+
+	.short 11, 0, 0, 0, 0, 0, 0, 0
+	.short 0, 0, 0, 0, 0, 0, 0, 0
+	.short 0, 0, 0, 0, 0, 0, 0
+.data
+	.align 3
+globals:
+	.align 3
+	.quad Lglobals_hash
+
+	.long 0,0
+.section __DWARF, __debug_info,regular,debug
+LTDIE_1:
+
+	.byte 17
+	.asciz "System_Object"
+
+	.byte 16,7
+	.asciz "System_Object"
+
+LDIFF_SYM3=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM3
+LTDIE_1_POINTER:
+
+	.byte 13
+LDIFF_SYM4=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM4
+LTDIE_1_REFERENCE:
+
+	.byte 14
+LDIFF_SYM5=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM5
+LTDIE_0:
+
+	.byte 5
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme"
+
+	.byte 16,16
+LDIFF_SYM6=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM6
+	.byte 2,35,0,0,7
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme"
+
+LDIFF_SYM7=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM7
+LTDIE_0_POINTER:
+
+	.byte 13
+LDIFF_SYM8=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM8
+LTDIE_0_REFERENCE:
+
+	.byte 14
+LDIFF_SYM9=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM9
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutTheme:.ctor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme__ctor
+	.quad Lme_0
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM10=LTDIE_0_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM10
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM11=Lfde0_end - Lfde0_start
+	.long LDIFF_SYM11
+Lfde0_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme__ctor
+
+LDIFF_SYM12=Lme_0 - DSoft_Themes_Flyout_DSFlyoutTheme__ctor
+	.long LDIFF_SYM12
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde0_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutTheme:get_CurrentTheme"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme
+	.quad Lme_1
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM13=Lfde1_end - Lfde1_start
+	.long LDIFF_SYM13
+Lfde1_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme
+
+LDIFF_SYM14=Lme_1 - DSoft_Themes_Flyout_DSFlyoutTheme_get_CurrentTheme
+	.long LDIFF_SYM14
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde1_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutTheme:set_CurrentTheme"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme
+	.quad Lme_2
+
+	.byte 2,118,16,3
+	.asciz "value"
+
+LDIFF_SYM15=LTDIE_0_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM15
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM16=Lfde2_end - Lfde2_start
+	.long LDIFF_SYM16
+Lfde2_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme
+
+LDIFF_SYM17=Lme_2 - DSoft_Themes_Flyout_DSFlyoutTheme_set_CurrentTheme_DSoft_Themes_Flyout_DSFlyoutTheme
+	.long LDIFF_SYM17
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde2_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutTheme:Register<T>"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme_Register_T"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_Register_T
+	.quad Lme_3
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM18=Lfde3_end - Lfde3_start
+	.long LDIFF_SYM18
+Lfde3_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_Register_T
+
+LDIFF_SYM19=Lme_3 - DSoft_Themes_Flyout_DSFlyoutTheme_Register_T
+	.long LDIFF_SYM19
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde3_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_2:
+
+	.byte 5
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme"
+
+	.byte 16,16
+LDIFF_SYM20=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM20
+	.byte 2,35,0,0,7
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme"
+
+LDIFF_SYM21=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM21
+LTDIE_2_POINTER:
+
+	.byte 13
+LDIFF_SYM22=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM22
+LTDIE_2_REFERENCE:
+
+	.byte 14
+LDIFF_SYM23=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM23
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarTheme:.ctor"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme__ctor
+	.quad Lme_12
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM24=LTDIE_2_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM24
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM25=Lfde4_end - Lfde4_start
+	.long LDIFF_SYM25
+Lfde4_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme__ctor
+
+LDIFF_SYM26=Lme_12 - DSoft_Themes_Toolbar_DSToolbarTheme__ctor
+	.long LDIFF_SYM26
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde4_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarTheme:get_CurrentTheme"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme
+	.quad Lme_13
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM27=Lfde5_end - Lfde5_start
+	.long LDIFF_SYM27
+Lfde5_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme
+
+LDIFF_SYM28=Lme_13 - DSoft_Themes_Toolbar_DSToolbarTheme_get_CurrentTheme
+	.long LDIFF_SYM28
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde5_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarTheme:set_CurrentTheme"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme
+	.quad Lme_14
+
+	.byte 2,118,16,3
+	.asciz "value"
+
+LDIFF_SYM29=LTDIE_2_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM29
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM30=Lfde6_end - Lfde6_start
+	.long LDIFF_SYM30
+Lfde6_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme
+
+LDIFF_SYM31=Lme_14 - DSoft_Themes_Toolbar_DSToolbarTheme_set_CurrentTheme_DSoft_Themes_Toolbar_DSToolbarTheme
+	.long LDIFF_SYM31
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde6_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarTheme:Register<T>"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme_Register_T"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_Register_T
+	.quad Lme_15
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM32=Lfde7_end - Lfde7_start
+	.long LDIFF_SYM32
+Lfde7_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_Register_T
+
+LDIFF_SYM33=Lme_15 - DSoft_Themes_Toolbar_DSToolbarTheme_Register_T
+	.long LDIFF_SYM33
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde7_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_6:
+
+	.byte 5
+	.asciz "System_ValueType"
+
+	.byte 16,16
+LDIFF_SYM34=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM34
+	.byte 2,35,0,0,7
+	.asciz "System_ValueType"
+
+LDIFF_SYM35=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM35
+LTDIE_6_POINTER:
+
+	.byte 13
+LDIFF_SYM36=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM36
+LTDIE_6_REFERENCE:
+
+	.byte 14
+LDIFF_SYM37=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM37
+LTDIE_5:
+
+	.byte 5
+	.asciz "System_Int32"
+
+	.byte 20,16
+LDIFF_SYM38=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM38
+	.byte 2,35,0,6
+	.asciz "m_value"
+
+LDIFF_SYM39=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM39
+	.byte 2,35,16,0,7
+	.asciz "System_Int32"
+
+LDIFF_SYM40=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM40
+LTDIE_5_POINTER:
+
+	.byte 13
+LDIFF_SYM41=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM41
+LTDIE_5_REFERENCE:
+
+	.byte 14
+LDIFF_SYM42=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM42
+LTDIE_7:
+
+	.byte 5
+	.asciz "DSoft_Datatypes_Types_DSBitmap"
+
+	.byte 24,16
+LDIFF_SYM43=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM43
+	.byte 2,35,0,6
+	.asciz "<ImageData>k__BackingField"
+
+LDIFF_SYM44=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM44
+	.byte 2,35,16,0,7
+	.asciz "DSoft_Datatypes_Types_DSBitmap"
+
+LDIFF_SYM45=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM45
+LTDIE_7_POINTER:
+
+	.byte 13
+LDIFF_SYM46=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM46
+LTDIE_7_REFERENCE:
+
+	.byte 14
+LDIFF_SYM47=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM47
+LTDIE_4:
+
+	.byte 5
+	.asciz "DSoft_Datatypes_Types_DSColor"
+
+	.byte 40,16
+LDIFF_SYM48=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM48
+	.byte 2,35,0,6
+	.asciz "<RedValue>k__BackingField"
+
+LDIFF_SYM49=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM49
+	.byte 2,35,24,6
+	.asciz "<GreenValue>k__BackingField"
+
+LDIFF_SYM50=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM50
+	.byte 2,35,28,6
+	.asciz "<BlueValue>k__BackingField"
+
+LDIFF_SYM51=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM51
+	.byte 2,35,32,6
+	.asciz "<AlphaValue>k__BackingField"
+
+LDIFF_SYM52=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM52
+	.byte 2,35,36,6
+	.asciz "<PatternImage>k__BackingField"
+
+LDIFF_SYM53=LTDIE_7_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM53
+	.byte 2,35,16,0,7
+	.asciz "DSoft_Datatypes_Types_DSColor"
+
+LDIFF_SYM54=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM54
+LTDIE_4_POINTER:
+
+	.byte 13
+LDIFF_SYM55=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM55
+LTDIE_4_REFERENCE:
+
+	.byte 14
+LDIFF_SYM56=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM56
+LTDIE_3:
+
+	.byte 5
+	.asciz "DSoft_Themes_Toolbar_DSToolbarDefaultTheme"
+
+	.byte 24,16
+LDIFF_SYM57=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM57
+	.byte 2,35,0,6
+	.asciz "mColor"
+
+LDIFF_SYM58=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM58
+	.byte 2,35,16,0,7
+	.asciz "DSoft_Themes_Toolbar_DSToolbarDefaultTheme"
+
+LDIFF_SYM59=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM59
+LTDIE_3_POINTER:
+
+	.byte 13
+LDIFF_SYM60=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM60
+LTDIE_3_REFERENCE:
+
+	.byte 14
+LDIFF_SYM61=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM61
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarDefaultTheme:.ctor"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor
+	.quad Lme_18
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM62=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM62
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM63=Lfde8_end - Lfde8_start
+	.long LDIFF_SYM63
+Lfde8_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor
+
+LDIFF_SYM64=Lme_18 - DSoft_Themes_Toolbar_DSToolbarDefaultTheme__ctor
+	.long LDIFF_SYM64
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde8_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarDefaultTheme:get_Color"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color
+	.quad Lme_19
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM65=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM65
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM66=Lfde9_end - Lfde9_start
+	.long LDIFF_SYM66
+Lfde9_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color
+
+LDIFF_SYM67=Lme_19 - DSoft_Themes_Toolbar_DSToolbarDefaultTheme_get_Color
+	.long LDIFF_SYM67
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde9_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarDefaultTheme:set_Color"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor
+	.quad Lme_1a
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM68=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM68
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM69=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM69
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM70=Lfde10_end - Lfde10_start
+	.long LDIFF_SYM70
+Lfde10_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM71=Lme_1a - DSoft_Themes_Toolbar_DSToolbarDefaultTheme_set_Color_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM71
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde10_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_8:
+
+	.byte 5
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme"
+
+	.byte 72,16
+LDIFF_SYM72=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM72
+	.byte 2,35,0,6
+	.asciz "mMenuBackgroundColor"
+
+LDIFF_SYM73=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM73
+	.byte 2,35,16,6
+	.asciz "mMenuTextColor"
+
+LDIFF_SYM74=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM74
+	.byte 2,35,24,6
+	.asciz "mMenuHighlightedTextColor"
+
+LDIFF_SYM75=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM75
+	.byte 2,35,32,6
+	.asciz "mMenuSelectedTextColor"
+
+LDIFF_SYM76=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM76
+	.byte 2,35,40,6
+	.asciz "mMenuSegmentTextColor"
+
+LDIFF_SYM77=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM77
+	.byte 2,35,48,6
+	.asciz "mMenuItemSelectedColor"
+
+LDIFF_SYM78=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM78
+	.byte 2,35,56,6
+	.asciz "mMenuItemHighlightedColor"
+
+LDIFF_SYM79=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM79
+	.byte 2,35,64,0,7
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme"
+
+LDIFF_SYM80=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM80
+LTDIE_8_POINTER:
+
+	.byte 13
+LDIFF_SYM81=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM81
+LTDIE_8_REFERENCE:
+
+	.byte 14
+LDIFF_SYM82=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM82
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:.ctor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor
+	.quad Lme_1b
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM83=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM83
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM84=Lfde11_end - Lfde11_start
+	.long LDIFF_SYM84
+Lfde11_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor
+
+LDIFF_SYM85=Lme_1b - DSoft_Themes_Flyout_DSFlyoutDefaultTheme__ctor
+	.long LDIFF_SYM85
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde11_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor
+	.quad Lme_1c
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM86=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM86
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM87=Lfde12_end - Lfde12_start
+	.long LDIFF_SYM87
+Lfde12_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor
+
+LDIFF_SYM88=Lme_1c - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuTextColor
+	.long LDIFF_SYM88
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10
+	.align 3
+Lfde12_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_1d
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM89=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM89
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM90=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM90
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM91=Lfde13_end - Lfde13_start
+	.long LDIFF_SYM91
+Lfde13_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM92=Lme_1d - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuTextColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM92
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde13_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuSelectedTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor
+	.quad Lme_1e
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM93=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM93
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM94=Lfde14_end - Lfde14_start
+	.long LDIFF_SYM94
+Lfde14_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor
+
+LDIFF_SYM95=Lme_1e - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedTextColor
+	.long LDIFF_SYM95
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde14_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuSelectedTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_1f
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM96=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM96
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM97=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM97
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM98=Lfde15_end - Lfde15_start
+	.long LDIFF_SYM98
+Lfde15_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM99=Lme_1f - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedTextColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM99
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde15_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuHighlightedTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor
+	.quad Lme_20
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM100=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM100
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM101=Lfde16_end - Lfde16_start
+	.long LDIFF_SYM101
+Lfde16_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor
+
+LDIFF_SYM102=Lme_20 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighlightedTextColor
+	.long LDIFF_SYM102
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde16_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuHighlightedTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_21
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM103=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM103
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM104=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM104
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM105=Lfde17_end - Lfde17_start
+	.long LDIFF_SYM105
+Lfde17_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM106=Lme_21 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighlightedTextColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM106
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde17_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuSegmentTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor
+	.quad Lme_22
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM107=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM107
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM108=Lfde18_end - Lfde18_start
+	.long LDIFF_SYM108
+Lfde18_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor
+
+LDIFF_SYM109=Lme_22 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSegmentTextColor
+	.long LDIFF_SYM109
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde18_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuSegmentTextColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_23
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM110=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM110
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM111=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM111
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM112=Lfde19_end - Lfde19_start
+	.long LDIFF_SYM112
+Lfde19_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM113=Lme_23 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSegmentTextColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM113
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde19_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuBackgroundColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor
+	.quad Lme_24
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM114=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM114
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM115=Lfde20_end - Lfde20_start
+	.long LDIFF_SYM115
+Lfde20_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor
+
+LDIFF_SYM116=Lme_24 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuBackgroundColor
+	.long LDIFF_SYM116
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde20_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuBackgroundColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_25
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM117=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM117
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM118=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM118
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM119=Lfde21_end - Lfde21_start
+	.long LDIFF_SYM119
+Lfde21_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM120=Lme_25 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuBackgroundColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM120
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde21_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuSelectedBackgroundColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor
+	.quad Lme_26
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM121=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM121
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM122=Lfde22_end - Lfde22_start
+	.long LDIFF_SYM122
+Lfde22_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor
+
+LDIFF_SYM123=Lme_26 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuSelectedBackgroundColor
+	.long LDIFF_SYM123
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde22_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuSelectedBackgroundColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_27
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM124=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM124
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM125=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM125
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM126=Lfde23_end - Lfde23_start
+	.long LDIFF_SYM126
+Lfde23_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM127=Lme_27 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuSelectedBackgroundColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM127
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde23_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:get_MenuHighLightedBackgroundColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor
+	.quad Lme_28
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM128=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM128
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM129=Lfde24_end - Lfde24_start
+	.long LDIFF_SYM129
+Lfde24_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor
+
+LDIFF_SYM130=Lme_28 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_get_MenuHighLightedBackgroundColor
+	.long LDIFF_SYM130
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde24_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutDefaultTheme:set_MenuHighLightedBackgroundColor"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_29
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM131=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM131
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM132=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM132
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM133=Lfde25_end - Lfde25_start
+	.long LDIFF_SYM133
+Lfde25_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM134=Lme_29 - DSoft_Themes_Flyout_DSFlyoutDefaultTheme_set_MenuHighLightedBackgroundColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM134
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde25_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_9:
+
+	.byte 5
+	.asciz "DSoft_Themes_Grid_DSGridTheme"
+
+	.byte 16,16
+LDIFF_SYM135=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM135
+	.byte 2,35,0,0,7
+	.asciz "DSoft_Themes_Grid_DSGridTheme"
+
+LDIFF_SYM136=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM136
+LTDIE_9_POINTER:
+
+	.byte 13
+LDIFF_SYM137=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM137
+LTDIE_9_REFERENCE:
+
+	.byte 14
+LDIFF_SYM138=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM138
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:.ctor"
+	.asciz "DSoft_Themes_Grid_DSGridTheme__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme__ctor
+	.quad Lme_2a
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM139=LTDIE_9_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM139
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM140=Lfde26_end - Lfde26_start
+	.long LDIFF_SYM140
+Lfde26_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme__ctor
+
+LDIFF_SYM141=Lme_2a - DSoft_Themes_Grid_DSGridTheme__ctor
+	.long LDIFF_SYM141
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde26_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:get_Current"
+	.asciz "DSoft_Themes_Grid_DSGridTheme_get_Current"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme_get_Current
+	.quad Lme_2b
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM142=Lfde27_end - Lfde27_start
+	.long LDIFF_SYM142
+Lfde27_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme_get_Current
+
+LDIFF_SYM143=Lme_2b - DSoft_Themes_Grid_DSGridTheme_get_Current
+	.long LDIFF_SYM143
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde27_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:set_Current"
+	.asciz "DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme
+	.quad Lme_2c
+
+	.byte 2,118,16,3
+	.asciz "value"
+
+LDIFF_SYM144=LTDIE_9_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM144
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM145=Lfde28_end - Lfde28_start
+	.long LDIFF_SYM145
+Lfde28_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme
+
+LDIFF_SYM146=Lme_2c - DSoft_Themes_Grid_DSGridTheme_set_Current_DSoft_Themes_Grid_DSGridTheme
+	.long LDIFF_SYM146
+	.long 0
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,154,8
+	.align 3
+Lfde28_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:Register<T>"
+	.asciz "DSoft_Themes_Grid_DSGridTheme_Register_T"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme_Register_T
+	.quad Lme_2d
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM147=Lfde29_end - Lfde29_start
+	.long LDIFF_SYM147
+Lfde29_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme_Register_T
+
+LDIFF_SYM148=Lme_2d - DSoft_Themes_Grid_DSGridTheme_Register_T
+	.long LDIFF_SYM148
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde29_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_15:
+
+	.byte 5
+	.asciz "System_Reflection_MemberInfo"
+
+	.byte 16,16
+LDIFF_SYM149=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM149
+	.byte 2,35,0,0,7
+	.asciz "System_Reflection_MemberInfo"
+
+LDIFF_SYM150=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM150
+LTDIE_15_POINTER:
+
+	.byte 13
+LDIFF_SYM151=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM151
+LTDIE_15_REFERENCE:
+
+	.byte 14
+LDIFF_SYM152=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM152
+LTDIE_14:
+
+	.byte 5
+	.asciz "System_Reflection_MethodBase"
+
+	.byte 16,16
+LDIFF_SYM153=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM153
+	.byte 2,35,0,0,7
+	.asciz "System_Reflection_MethodBase"
+
+LDIFF_SYM154=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM154
+LTDIE_14_POINTER:
+
+	.byte 13
+LDIFF_SYM155=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM155
+LTDIE_14_REFERENCE:
+
+	.byte 14
+LDIFF_SYM156=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM156
+LTDIE_13:
+
+	.byte 5
+	.asciz "System_Reflection_MethodInfo"
+
+	.byte 16,16
+LDIFF_SYM157=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM157
+	.byte 2,35,0,0,7
+	.asciz "System_Reflection_MethodInfo"
+
+LDIFF_SYM158=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM158
+LTDIE_13_POINTER:
+
+	.byte 13
+LDIFF_SYM159=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM159
+LTDIE_13_REFERENCE:
+
+	.byte 14
+LDIFF_SYM160=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM160
+LTDIE_17:
+
+	.byte 5
+	.asciz "System_Type"
+
+	.byte 24,16
+LDIFF_SYM161=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM161
+	.byte 2,35,0,6
+	.asciz "_impl"
+
+LDIFF_SYM162=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM162
+	.byte 2,35,16,0,7
+	.asciz "System_Type"
+
+LDIFF_SYM163=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM163
+LTDIE_17_POINTER:
+
+	.byte 13
+LDIFF_SYM164=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM164
+LTDIE_17_REFERENCE:
+
+	.byte 14
+LDIFF_SYM165=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM165
+LTDIE_18:
+
+	.byte 5
+	.asciz "System_Boolean"
+
+	.byte 17,16
+LDIFF_SYM166=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM166
+	.byte 2,35,0,6
+	.asciz "m_value"
+
+LDIFF_SYM167=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM167
+	.byte 2,35,16,0,7
+	.asciz "System_Boolean"
+
+LDIFF_SYM168=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM168
+LTDIE_18_POINTER:
+
+	.byte 13
+LDIFF_SYM169=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM169
+LTDIE_18_REFERENCE:
+
+	.byte 14
+LDIFF_SYM170=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM170
+LTDIE_16:
+
+	.byte 5
+	.asciz "System_DelegateData"
+
+	.byte 40,16
+LDIFF_SYM171=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM171
+	.byte 2,35,0,6
+	.asciz "target_type"
+
+LDIFF_SYM172=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM172
+	.byte 2,35,16,6
+	.asciz "method_name"
+
+LDIFF_SYM173=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM173
+	.byte 2,35,24,6
+	.asciz "curried_first_arg"
+
+LDIFF_SYM174=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM174
+	.byte 2,35,32,0,7
+	.asciz "System_DelegateData"
+
+LDIFF_SYM175=LTDIE_16 - Ldebug_info_start
+	.long LDIFF_SYM175
+LTDIE_16_POINTER:
+
+	.byte 13
+LDIFF_SYM176=LTDIE_16 - Ldebug_info_start
+	.long LDIFF_SYM176
+LTDIE_16_REFERENCE:
+
+	.byte 14
+LDIFF_SYM177=LTDIE_16 - Ldebug_info_start
+	.long LDIFF_SYM177
+LTDIE_12:
+
+	.byte 5
+	.asciz "System_Delegate"
+
+	.byte 88,16
+LDIFF_SYM178=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM178
+	.byte 2,35,0,6
+	.asciz "method_ptr"
+
+LDIFF_SYM179=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM179
+	.byte 2,35,16,6
+	.asciz "invoke_impl"
+
+LDIFF_SYM180=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM180
+	.byte 2,35,24,6
+	.asciz "m_target"
+
+LDIFF_SYM181=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM181
+	.byte 2,35,32,6
+	.asciz "method"
+
+LDIFF_SYM182=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM182
+	.byte 2,35,40,6
+	.asciz "delegate_trampoline"
+
+LDIFF_SYM183=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM183
+	.byte 2,35,48,6
+	.asciz "method_code"
+
+LDIFF_SYM184=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM184
+	.byte 2,35,56,6
+	.asciz "method_info"
+
+LDIFF_SYM185=LTDIE_13_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM185
+	.byte 2,35,64,6
+	.asciz "original_method_info"
+
+LDIFF_SYM186=LTDIE_13_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM186
+	.byte 2,35,72,6
+	.asciz "data"
+
+LDIFF_SYM187=LTDIE_16_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM187
+	.byte 2,35,80,0,7
+	.asciz "System_Delegate"
+
+LDIFF_SYM188=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM188
+LTDIE_12_POINTER:
+
+	.byte 13
+LDIFF_SYM189=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM189
+LTDIE_12_REFERENCE:
+
+	.byte 14
+LDIFF_SYM190=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM190
+LTDIE_11:
+
+	.byte 5
+	.asciz "System_MulticastDelegate"
+
+	.byte 104,16
+LDIFF_SYM191=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM191
+	.byte 2,35,0,6
+	.asciz "prev"
+
+LDIFF_SYM192=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM192
+	.byte 2,35,88,6
+	.asciz "kpm_next"
+
+LDIFF_SYM193=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM193
+	.byte 2,35,96,0,7
+	.asciz "System_MulticastDelegate"
+
+LDIFF_SYM194=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM194
+LTDIE_11_POINTER:
+
+	.byte 13
+LDIFF_SYM195=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM195
+LTDIE_11_REFERENCE:
+
+	.byte 14
+LDIFF_SYM196=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM196
+LTDIE_10:
+
+	.byte 5
+	.asciz "System_EventHandler"
+
+	.byte 104,16
+LDIFF_SYM197=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM197
+	.byte 2,35,0,0,7
+	.asciz "System_EventHandler"
+
+LDIFF_SYM198=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM198
+LTDIE_10_POINTER:
+
+	.byte 13
+LDIFF_SYM199=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM199
+LTDIE_10_REFERENCE:
+
+	.byte 14
+LDIFF_SYM200=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM200
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:add_OnThemeChanged"
+	.asciz "DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler
+	.quad Lme_2e
+
+	.byte 2,118,16,3
+	.asciz "value"
+
+LDIFF_SYM201=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM201
+	.byte 1,106,11
+	.asciz "V_0"
+
+LDIFF_SYM202=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM202
+	.byte 1,105,11
+	.asciz "V_1"
+
+LDIFF_SYM203=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM203
+	.byte 1,104,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM204=Lfde30_end - Lfde30_start
+	.long LDIFF_SYM204
+Lfde30_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler
+
+LDIFF_SYM205=Lme_2e - DSoft_Themes_Grid_DSGridTheme_add_OnThemeChanged_System_EventHandler
+	.long LDIFF_SYM205
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6
+	.align 3
+Lfde30_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:remove_OnThemeChanged"
+	.asciz "DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler
+	.quad Lme_2f
+
+	.byte 2,118,16,3
+	.asciz "value"
+
+LDIFF_SYM206=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM206
+	.byte 1,106,11
+	.asciz "V_0"
+
+LDIFF_SYM207=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM207
+	.byte 1,105,11
+	.asciz "V_1"
+
+LDIFF_SYM208=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM208
+	.byte 1,104,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM209=Lfde31_end - Lfde31_start
+	.long LDIFF_SYM209
+Lfde31_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler
+
+LDIFF_SYM210=Lme_2f - DSoft_Themes_Grid_DSGridTheme_remove_OnThemeChanged_System_EventHandler
+	.long LDIFF_SYM210
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6
+	.align 3
+Lfde31_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:.cctor"
+	.asciz "DSoft_Themes_Grid_DSGridTheme__cctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme__cctor
+	.quad Lme_5c
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM211=Lfde32_end - Lfde32_start
+	.long LDIFF_SYM211
+Lfde32_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme__cctor
+
+LDIFF_SYM212=Lme_5c - DSoft_Themes_Grid_DSGridTheme__cctor
+	.long LDIFF_SYM212
+	.long 0
+	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
+	.align 3
+Lfde32_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_19:
+
+	.byte 5
+	.asciz "System_EventArgs"
+
+	.byte 16,16
+LDIFF_SYM213=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM213
+	.byte 2,35,0,0,7
+	.asciz "System_EventArgs"
+
+LDIFF_SYM214=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM214
+LTDIE_19_POINTER:
+
+	.byte 13
+LDIFF_SYM215=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM215
+LTDIE_19_REFERENCE:
+
+	.byte 14
+LDIFF_SYM216=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM216
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:<OnThemeChanged>m__0"
+	.asciz "DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs
+	.quad Lme_5d
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM217=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM217
+	.byte 2,141,16,3
+	.asciz "param1"
+
+LDIFF_SYM218=LTDIE_19_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM218
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM219=Lfde33_end - Lfde33_start
+	.long LDIFF_SYM219
+Lfde33_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs
+
+LDIFF_SYM220=Lme_5d - DSoft_Themes_Grid_DSGridTheme__OnThemeChangedm__0_object_System_EventArgs
+	.long LDIFF_SYM220
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde33_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_21:
+
+	.byte 5
+	.asciz "System_Single"
+
+	.byte 20,16
+LDIFF_SYM221=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM221
+	.byte 2,35,0,6
+	.asciz "m_value"
+
+LDIFF_SYM222=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM222
+	.byte 2,35,16,0,7
+	.asciz "System_Single"
+
+LDIFF_SYM223=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM223
+LTDIE_21_POINTER:
+
+	.byte 13
+LDIFF_SYM224=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM224
+LTDIE_21_REFERENCE:
+
+	.byte 14
+LDIFF_SYM225=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM225
+LTDIE_22:
+
+	.byte 8
+	.asciz "DSoft_Datatypes_Enums_GridHeaderStyle"
+
+	.byte 4
+LDIFF_SYM226=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM226
+	.byte 9
+	.asciz "Standard"
+
+	.byte 0,9
+	.asciz "Fixed"
+
+	.byte 1,9
+	.asciz "None"
+
+	.byte 2,0,7
+	.asciz "DSoft_Datatypes_Enums_GridHeaderStyle"
+
+LDIFF_SYM227=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM227
+LTDIE_22_POINTER:
+
+	.byte 13
+LDIFF_SYM228=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM228
+LTDIE_22_REFERENCE:
+
+	.byte 14
+LDIFF_SYM229=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM229
+LTDIE_23:
+
+	.byte 8
+	.asciz "DSoft_Datatypes_Enums_TextAlignment"
+
+	.byte 4
+LDIFF_SYM230=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM230
+	.byte 9
+	.asciz "Left"
+
+	.byte 0,9
+	.asciz "Middle"
+
+	.byte 1,9
+	.asciz "Right"
+
+	.byte 2,0,7
+	.asciz "DSoft_Datatypes_Enums_TextAlignment"
+
+LDIFF_SYM231=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM231
+LTDIE_23_POINTER:
+
+	.byte 13
+LDIFF_SYM232=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM232
+LTDIE_23_REFERENCE:
+
+	.byte 14
+LDIFF_SYM233=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM233
+LTDIE_24:
+
+	.byte 8
+	.asciz "DSoft_Datatypes_Enums_BorderStyle"
+
+	.byte 4
+LDIFF_SYM234=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM234
+	.byte 9
+	.asciz "None"
+
+	.byte 0,9
+	.asciz "Full"
+
+	.byte 1,9
+	.asciz "HorizontalOnly"
+
+	.byte 2,9
+	.asciz "VerticalOnly"
+
+	.byte 3,0,7
+	.asciz "DSoft_Datatypes_Enums_BorderStyle"
+
+LDIFF_SYM235=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM235
+LTDIE_24_POINTER:
+
+	.byte 13
+LDIFF_SYM236=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM236
+LTDIE_24_REFERENCE:
+
+	.byte 14
+LDIFF_SYM237=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM237
+LTDIE_26:
+
+	.byte 8
+	.asciz "DSoft_Datatypes_Enums_FontWeight"
+
+	.byte 4
+LDIFF_SYM238=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM238
+	.byte 9
+	.asciz "Normal"
+
+	.byte 0,9
+	.asciz "Bold"
+
+	.byte 1,0,7
+	.asciz "DSoft_Datatypes_Enums_FontWeight"
+
+LDIFF_SYM239=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM239
+LTDIE_26_POINTER:
+
+	.byte 13
+LDIFF_SYM240=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM240
+LTDIE_26_REFERENCE:
+
+	.byte 14
+LDIFF_SYM241=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM241
+LTDIE_25:
+
+	.byte 5
+	.asciz "DSoft_Datatypes_Types_DSFont"
+
+	.byte 32,16
+LDIFF_SYM242=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM242
+	.byte 2,35,0,6
+	.asciz "<FontSize>k__BackingField"
+
+LDIFF_SYM243=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM243
+	.byte 2,35,24,6
+	.asciz "<FontFamily>k__BackingField"
+
+LDIFF_SYM244=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM244
+	.byte 2,35,16,6
+	.asciz "<FontWeight>k__BackingField"
+
+LDIFF_SYM245=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM245
+	.byte 2,35,28,0,7
+	.asciz "DSoft_Datatypes_Types_DSFont"
+
+LDIFF_SYM246=LTDIE_25 - Ldebug_info_start
+	.long LDIFF_SYM246
+LTDIE_25_POINTER:
+
+	.byte 13
+LDIFF_SYM247=LTDIE_25 - Ldebug_info_start
+	.long LDIFF_SYM247
+LTDIE_25_REFERENCE:
+
+	.byte 14
+LDIFF_SYM248=LTDIE_25 - Ldebug_info_start
+	.long LDIFF_SYM248
+LTDIE_20:
+
+	.byte 5
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme"
+
+	.byte 160,1,16
+LDIFF_SYM249=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM249
+	.byte 2,35,0,6
+	.asciz "mUpSortIndicator"
+
+LDIFF_SYM250=LTDIE_7_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM250
+	.byte 2,35,16,6
+	.asciz "mDownSortIndicator"
+
+LDIFF_SYM251=LTDIE_7_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM251
+	.byte 2,35,24,6
+	.asciz "mBorderWidth"
+
+LDIFF_SYM252=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM252
+	.byte 3,35,128,1,6
+	.asciz "mHeaderHeight"
+
+LDIFF_SYM253=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM253
+	.byte 3,35,132,1,6
+	.asciz "mCellBorderWidth"
+
+LDIFF_SYM254=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM254
+	.byte 3,35,136,1,6
+	.asciz "mRowHeight"
+
+LDIFF_SYM255=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM255
+	.byte 3,35,140,1,6
+	.asciz "mBackgroundColor"
+
+LDIFF_SYM256=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM256
+	.byte 2,35,32,6
+	.asciz "mBorderColor"
+
+LDIFF_SYM257=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM257
+	.byte 2,35,40,6
+	.asciz "mHeaderBackground"
+
+LDIFF_SYM258=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM258
+	.byte 2,35,48,6
+	.asciz "mHeaderTextForeground"
+
+LDIFF_SYM259=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM259
+	.byte 2,35,56,6
+	.asciz "mCellBackground"
+
+LDIFF_SYM260=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM260
+	.byte 2,35,64,6
+	.asciz "mCellBackground2"
+
+LDIFF_SYM261=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM261
+	.byte 2,35,72,6
+	.asciz "mCellBackgroundHighlight"
+
+LDIFF_SYM262=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM262
+	.byte 2,35,80,6
+	.asciz "mCellTextForeground"
+
+LDIFF_SYM263=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM263
+	.byte 2,35,88,6
+	.asciz "mCellTextForeground2"
+
+LDIFF_SYM264=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM264
+	.byte 2,35,96,6
+	.asciz "mCellTextHighlight"
+
+LDIFF_SYM265=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM265
+	.byte 2,35,104,6
+	.asciz "mHeaderStyle"
+
+LDIFF_SYM266=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM266
+	.byte 3,35,144,1,6
+	.asciz "mHeaderTextAlignment"
+
+LDIFF_SYM267=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM267
+	.byte 3,35,148,1,6
+	.asciz "mCellContentAlignment"
+
+LDIFF_SYM268=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM268
+	.byte 3,35,152,1,6
+	.asciz "mCellBorderStyle"
+
+LDIFF_SYM269=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM269
+	.byte 3,35,156,1,6
+	.asciz "mHeaderTextFont"
+
+LDIFF_SYM270=LTDIE_25_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM270
+	.byte 2,35,112,6
+	.asciz "mCellTextFont"
+
+LDIFF_SYM271=LTDIE_25_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM271
+	.byte 2,35,120,0,7
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme"
+
+LDIFF_SYM272=LTDIE_20 - Ldebug_info_start
+	.long LDIFF_SYM272
+LTDIE_20_POINTER:
+
+	.byte 13
+LDIFF_SYM273=LTDIE_20 - Ldebug_info_start
+	.long LDIFF_SYM273
+LTDIE_20_REFERENCE:
+
+	.byte 14
+LDIFF_SYM274=LTDIE_20 - Ldebug_info_start
+	.long LDIFF_SYM274
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:.ctor"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme__ctor
+	.quad Lme_5e
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM275=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM275
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM276=Lfde34_end - Lfde34_start
+	.long LDIFF_SYM276
+Lfde34_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme__ctor
+
+LDIFF_SYM277=Lme_5e - DSoft_Themes_Grid_DSGridDefaultTheme__ctor
+	.long LDIFF_SYM277
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
+	.align 3
+Lfde34_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_BorderWidth"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth
+	.quad Lme_5f
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM278=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM278
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM279=Lfde35_end - Lfde35_start
+	.long LDIFF_SYM279
+Lfde35_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth
+
+LDIFF_SYM280=Lme_5f - DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderWidth
+	.long LDIFF_SYM280
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde35_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_BorderWidth"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single
+	.quad Lme_60
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM281=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM281
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM282=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM282
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM283=Lfde36_end - Lfde36_start
+	.long LDIFF_SYM283
+Lfde36_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single
+
+LDIFF_SYM284=Lme_60 - DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderWidth_single
+	.long LDIFF_SYM284
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde36_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_BackgroundColor"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor
+	.quad Lme_61
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM285=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM285
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM286=Lfde37_end - Lfde37_start
+	.long LDIFF_SYM286
+Lfde37_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor
+
+LDIFF_SYM287=Lme_61 - DSoft_Themes_Grid_DSGridDefaultTheme_get_BackgroundColor
+	.long LDIFF_SYM287
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10
+	.align 3
+Lfde37_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_BackgroundColor"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_62
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM288=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM288
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM289=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM289
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM290=Lfde38_end - Lfde38_start
+	.long LDIFF_SYM290
+Lfde38_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM291=Lme_62 - DSoft_Themes_Grid_DSGridDefaultTheme_set_BackgroundColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM291
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde38_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_BorderColor"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor
+	.quad Lme_63
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM292=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM292
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM293=Lfde39_end - Lfde39_start
+	.long LDIFF_SYM293
+Lfde39_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor
+
+LDIFF_SYM294=Lme_63 - DSoft_Themes_Grid_DSGridDefaultTheme_get_BorderColor
+	.long LDIFF_SYM294
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde39_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_BorderColor"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor
+	.quad Lme_64
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM295=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM295
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM296=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM296
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM297=Lfde40_end - Lfde40_start
+	.long LDIFF_SYM297
+Lfde40_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM298=Lme_64 - DSoft_Themes_Grid_DSGridDefaultTheme_set_BorderColor_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM298
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde40_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderBackground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground
+	.quad Lme_65
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM299=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM299
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM300=Lfde41_end - Lfde41_start
+	.long LDIFF_SYM300
+Lfde41_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground
+
+LDIFF_SYM301=Lme_65 - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderBackground
+	.long LDIFF_SYM301
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10
+	.align 3
+Lfde41_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderBackground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor
+	.quad Lme_66
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM302=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM302
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM303=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM303
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM304=Lfde42_end - Lfde42_start
+	.long LDIFF_SYM304
+Lfde42_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM305=Lme_66 - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderBackground_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM305
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde42_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderTextForeground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground
+	.quad Lme_67
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM306=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM306
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM307=Lfde43_end - Lfde43_start
+	.long LDIFF_SYM307
+Lfde43_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground
+
+LDIFF_SYM308=Lme_67 - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextForeground
+	.long LDIFF_SYM308
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde43_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderTextForeground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor
+	.quad Lme_68
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM309=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM309
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM310=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM310
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM311=Lfde44_end - Lfde44_start
+	.long LDIFF_SYM311
+Lfde44_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM312=Lme_68 - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextForeground_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM312
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde44_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderHeight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight
+	.quad Lme_69
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM313=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM313
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM314=Lfde45_end - Lfde45_start
+	.long LDIFF_SYM314
+Lfde45_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight
+
+LDIFF_SYM315=Lme_69 - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderHeight
+	.long LDIFF_SYM315
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde45_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderHeight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single
+	.quad Lme_6a
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM316=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM316
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM317=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM317
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM318=Lfde46_end - Lfde46_start
+	.long LDIFF_SYM318
+Lfde46_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single
+
+LDIFF_SYM319=Lme_6a - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderHeight_single
+	.long LDIFF_SYM319
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde46_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderStyle"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle
+	.quad Lme_6b
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM320=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM320
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM321=Lfde47_end - Lfde47_start
+	.long LDIFF_SYM321
+Lfde47_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle
+
+LDIFF_SYM322=Lme_6b - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderStyle
+	.long LDIFF_SYM322
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde47_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderStyle"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle
+	.quad Lme_6c
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM323=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM323
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM324=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM324
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM325=Lfde48_end - Lfde48_start
+	.long LDIFF_SYM325
+Lfde48_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle
+
+LDIFF_SYM326=Lme_6c - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderStyle_DSoft_Datatypes_Enums_GridHeaderStyle
+	.long LDIFF_SYM326
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde48_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderTextAlignment"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment
+	.quad Lme_6d
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM327=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM327
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM328=Lfde49_end - Lfde49_start
+	.long LDIFF_SYM328
+Lfde49_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment
+
+LDIFF_SYM329=Lme_6d - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextAlignment
+	.long LDIFF_SYM329
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde49_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderTextAlignment"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment
+	.quad Lme_6e
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM330=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM330
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM331=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM331
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM332=Lfde50_end - Lfde50_start
+	.long LDIFF_SYM332
+Lfde50_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment
+
+LDIFF_SYM333=Lme_6e - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextAlignment_DSoft_Datatypes_Enums_TextAlignment
+	.long LDIFF_SYM333
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde50_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderTextFont"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont
+	.quad Lme_6f
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM334=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM334
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM335=Lfde51_end - Lfde51_start
+	.long LDIFF_SYM335
+Lfde51_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont
+
+LDIFF_SYM336=Lme_6f - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderTextFont
+	.long LDIFF_SYM336
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde51_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderTextFont"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont
+	.quad Lme_70
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM337=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM337
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM338=LTDIE_25_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM338
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM339=Lfde52_end - Lfde52_start
+	.long LDIFF_SYM339
+Lfde52_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont
+
+LDIFF_SYM340=Lme_70 - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderTextFont_DSoft_Datatypes_Types_DSFont
+	.long LDIFF_SYM340
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde52_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderSortIndicatorUp"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp
+	.quad Lme_71
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM341=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM341
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM342=Lfde53_end - Lfde53_start
+	.long LDIFF_SYM342
+Lfde53_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp
+
+LDIFF_SYM343=Lme_71 - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorUp
+	.long LDIFF_SYM343
+	.long 0
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,154,8
+	.align 3
+Lfde53_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderSortIndicatorUp"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap
+	.quad Lme_72
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM344=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM344
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM345=LTDIE_7_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM345
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM346=Lfde54_end - Lfde54_start
+	.long LDIFF_SYM346
+Lfde54_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap
+
+LDIFF_SYM347=Lme_72 - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorUp_DSoft_Datatypes_Types_DSBitmap
+	.long LDIFF_SYM347
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde54_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_HeaderSortIndicatorDown"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown
+	.quad Lme_73
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM348=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM348
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM349=Lfde55_end - Lfde55_start
+	.long LDIFF_SYM349
+Lfde55_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown
+
+LDIFF_SYM350=Lme_73 - DSoft_Themes_Grid_DSGridDefaultTheme_get_HeaderSortIndicatorDown
+	.long LDIFF_SYM350
+	.long 0
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,154,8
+	.align 3
+Lfde55_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_HeaderSortIndicatorDown"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap
+	.quad Lme_74
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM351=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM351
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM352=LTDIE_7_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM352
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM353=Lfde56_end - Lfde56_start
+	.long LDIFF_SYM353
+Lfde56_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap
+
+LDIFF_SYM354=Lme_74 - DSoft_Themes_Grid_DSGridDefaultTheme_set_HeaderSortIndicatorDown_DSoft_Datatypes_Types_DSBitmap
+	.long LDIFF_SYM354
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde56_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellBackground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground
+	.quad Lme_75
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM355=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM355
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM356=Lfde57_end - Lfde57_start
+	.long LDIFF_SYM356
+Lfde57_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground
+
+LDIFF_SYM357=Lme_75 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground
+	.long LDIFF_SYM357
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde57_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellBackground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor
+	.quad Lme_76
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM358=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM358
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM359=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM359
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM360=Lfde58_end - Lfde58_start
+	.long LDIFF_SYM360
+Lfde58_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM361=Lme_76 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM361
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde58_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellBackground2"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2
+	.quad Lme_77
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM362=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM362
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM363=Lfde59_end - Lfde59_start
+	.long LDIFF_SYM363
+Lfde59_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2
+
+LDIFF_SYM364=Lme_77 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackground2
+	.long LDIFF_SYM364
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10
+	.align 3
+Lfde59_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellBackground2"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor
+	.quad Lme_78
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM365=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM365
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM366=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM366
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM367=Lfde60_end - Lfde60_start
+	.long LDIFF_SYM367
+Lfde60_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM368=Lme_78 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackground2_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM368
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde60_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellBackgroundHighlight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight
+	.quad Lme_79
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM369=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM369
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM370=Lfde61_end - Lfde61_start
+	.long LDIFF_SYM370
+Lfde61_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight
+
+LDIFF_SYM371=Lme_79 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBackgroundHighlight
+	.long LDIFF_SYM371
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,154,10
+	.align 3
+Lfde61_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellBackgroundHighlight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor
+	.quad Lme_7a
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM372=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM372
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM373=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM373
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM374=Lfde62_end - Lfde62_start
+	.long LDIFF_SYM374
+Lfde62_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM375=Lme_7a - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBackgroundHighlight_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM375
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde62_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellTextForeground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground
+	.quad Lme_7b
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM376=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM376
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM377=Lfde63_end - Lfde63_start
+	.long LDIFF_SYM377
+Lfde63_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground
+
+LDIFF_SYM378=Lme_7b - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground
+	.long LDIFF_SYM378
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde63_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellTextForeground"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor
+	.quad Lme_7c
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM379=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM379
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM380=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM380
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM381=Lfde64_end - Lfde64_start
+	.long LDIFF_SYM381
+Lfde64_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM382=Lme_7c - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM382
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde64_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellTextForeground2"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2
+	.quad Lme_7d
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM383=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM383
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM384=Lfde65_end - Lfde65_start
+	.long LDIFF_SYM384
+Lfde65_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2
+
+LDIFF_SYM385=Lme_7d - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextForeground2
+	.long LDIFF_SYM385
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde65_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellTextForeground2"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor
+	.quad Lme_7e
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM386=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM386
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM387=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM387
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM388=Lfde66_end - Lfde66_start
+	.long LDIFF_SYM388
+Lfde66_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM389=Lme_7e - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextForeground2_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM389
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde66_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellTextHighlight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight
+	.quad Lme_7f
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM390=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM390
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM391=Lfde67_end - Lfde67_start
+	.long LDIFF_SYM391
+Lfde67_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight
+
+LDIFF_SYM392=Lme_7f - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextHighlight
+	.long LDIFF_SYM392
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde67_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellTextHighlight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor
+	.quad Lme_80
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM393=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM393
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM394=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM394
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM395=Lfde68_end - Lfde68_start
+	.long LDIFF_SYM395
+Lfde68_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor
+
+LDIFF_SYM396=Lme_80 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextHighlight_DSoft_Datatypes_Types_DSColor
+	.long LDIFF_SYM396
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde68_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellBorderStyle"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle
+	.quad Lme_81
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM397=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM397
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM398=Lfde69_end - Lfde69_start
+	.long LDIFF_SYM398
+Lfde69_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle
+
+LDIFF_SYM399=Lme_81 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderStyle
+	.long LDIFF_SYM399
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde69_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellBorderStyle"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle
+	.quad Lme_82
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM400=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM400
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM401=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM401
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM402=Lfde70_end - Lfde70_start
+	.long LDIFF_SYM402
+Lfde70_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle
+
+LDIFF_SYM403=Lme_82 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderStyle_DSoft_Datatypes_Enums_BorderStyle
+	.long LDIFF_SYM403
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde70_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellBorderWidth"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth
+	.quad Lme_83
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM404=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM404
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM405=Lfde71_end - Lfde71_start
+	.long LDIFF_SYM405
+Lfde71_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth
+
+LDIFF_SYM406=Lme_83 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellBorderWidth
+	.long LDIFF_SYM406
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde71_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellBorderWidth"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single
+	.quad Lme_84
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM407=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM407
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM408=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM408
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM409=Lfde72_end - Lfde72_start
+	.long LDIFF_SYM409
+Lfde72_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single
+
+LDIFF_SYM410=Lme_84 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellBorderWidth_single
+	.long LDIFF_SYM410
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde72_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellContentAlignment"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment
+	.quad Lme_85
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM411=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM411
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM412=Lfde73_end - Lfde73_start
+	.long LDIFF_SYM412
+Lfde73_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment
+
+LDIFF_SYM413=Lme_85 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellContentAlignment
+	.long LDIFF_SYM413
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde73_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellContentAlignment"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment
+	.quad Lme_86
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM414=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM414
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM415=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM415
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM416=Lfde74_end - Lfde74_start
+	.long LDIFF_SYM416
+Lfde74_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment
+
+LDIFF_SYM417=Lme_86 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellContentAlignment_DSoft_Datatypes_Enums_TextAlignment
+	.long LDIFF_SYM417
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde74_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_CellTextFont"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont
+	.quad Lme_87
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM418=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM418
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM419=Lfde75_end - Lfde75_start
+	.long LDIFF_SYM419
+Lfde75_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont
+
+LDIFF_SYM420=Lme_87 - DSoft_Themes_Grid_DSGridDefaultTheme_get_CellTextFont
+	.long LDIFF_SYM420
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
+	.align 3
+Lfde75_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_CellTextFont"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont
+	.quad Lme_88
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM421=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM421
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM422=LTDIE_25_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM422
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM423=Lfde76_end - Lfde76_start
+	.long LDIFF_SYM423
+Lfde76_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont
+
+LDIFF_SYM424=Lme_88 - DSoft_Themes_Grid_DSGridDefaultTheme_set_CellTextFont_DSoft_Datatypes_Types_DSFont
+	.long LDIFF_SYM424
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde76_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:get_RowHeight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight
+	.quad Lme_89
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM425=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM425
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM426=Lfde77_end - Lfde77_start
+	.long LDIFF_SYM426
+Lfde77_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight
+
+LDIFF_SYM427=Lme_89 - DSoft_Themes_Grid_DSGridDefaultTheme_get_RowHeight
+	.long LDIFF_SYM427
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
+	.align 3
+Lfde77_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridDefaultTheme:set_RowHeight"
+	.asciz "DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single
+	.quad Lme_8a
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM428=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM428
+	.byte 2,141,16,3
+	.asciz "value"
+
+LDIFF_SYM429=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM429
+	.byte 2,141,24,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM430=Lfde78_end - Lfde78_start
+	.long LDIFF_SYM430
+Lfde78_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single
+
+LDIFF_SYM431=Lme_8a - DSoft_Themes_Grid_DSGridDefaultTheme_set_RowHeight_single
+	.long LDIFF_SYM431
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde78_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_27:
+
+	.byte 5
+	.asciz "DSoft_Themes_ResourceHelper"
+
+	.byte 16,16
+LDIFF_SYM432=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM432
+	.byte 2,35,0,0,7
+	.asciz "DSoft_Themes_ResourceHelper"
+
+LDIFF_SYM433=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM433
+LTDIE_27_POINTER:
+
+	.byte 13
+LDIFF_SYM434=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM434
+LTDIE_27_REFERENCE:
+
+	.byte 14
+LDIFF_SYM435=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM435
+	.byte 2
+	.asciz "DSoft.Themes.ResourceHelper:.ctor"
+	.asciz "DSoft_Themes_ResourceHelper__ctor"
+
+	.byte 0,0
+	.quad DSoft_Themes_ResourceHelper__ctor
+	.quad Lme_8b
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM436=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM436
+	.byte 2,141,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM437=Lfde79_end - Lfde79_start
+	.long LDIFF_SYM437
+Lfde79_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_ResourceHelper__ctor
+
+LDIFF_SYM438=Lme_8b - DSoft_Themes_ResourceHelper__ctor
+	.long LDIFF_SYM438
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde79_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_33:
+
+	.byte 5
+	.asciz "System_Threading_Tasks_TaskScheduler"
+
+	.byte 20,16
+LDIFF_SYM439=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM439
+	.byte 2,35,0,6
+	.asciz "m_taskSchedulerId"
+
+LDIFF_SYM440=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM440
+	.byte 2,35,16,0,7
+	.asciz "System_Threading_Tasks_TaskScheduler"
+
+LDIFF_SYM441=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM441
+LTDIE_33_POINTER:
+
+	.byte 13
+LDIFF_SYM442=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM442
+LTDIE_33_REFERENCE:
+
+	.byte 14
+LDIFF_SYM443=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM443
+LTDIE_38:
+
+	.byte 17
+	.asciz "System_Collections_ICollection"
+
+	.byte 16,7
+	.asciz "System_Collections_ICollection"
+
+LDIFF_SYM444=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM444
+LTDIE_38_POINTER:
+
+	.byte 13
+LDIFF_SYM445=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM445
+LTDIE_38_REFERENCE:
+
+	.byte 14
+LDIFF_SYM446=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM446
+LTDIE_39:
+
+	.byte 17
+	.asciz "System_Collections_IEqualityComparer"
+
+	.byte 16,7
+	.asciz "System_Collections_IEqualityComparer"
+
+LDIFF_SYM447=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM447
+LTDIE_39_POINTER:
+
+	.byte 13
+LDIFF_SYM448=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM448
+LTDIE_39_REFERENCE:
+
+	.byte 14
+LDIFF_SYM449=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM449
+LTDIE_37:
+
+	.byte 5
+	.asciz "System_Collections_Hashtable"
+
+	.byte 80,16
+LDIFF_SYM450=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM450
+	.byte 2,35,0,6
+	.asciz "buckets"
+
+LDIFF_SYM451=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM451
+	.byte 2,35,16,6
+	.asciz "count"
+
+LDIFF_SYM452=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM452
+	.byte 2,35,56,6
+	.asciz "occupancy"
+
+LDIFF_SYM453=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM453
+	.byte 2,35,60,6
+	.asciz "loadsize"
+
+LDIFF_SYM454=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM454
+	.byte 2,35,64,6
+	.asciz "loadFactor"
+
+LDIFF_SYM455=LDIE_R4 - Ldebug_info_start
+	.long LDIFF_SYM455
+	.byte 2,35,68,6
+	.asciz "version"
+
+LDIFF_SYM456=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM456
+	.byte 2,35,72,6
+	.asciz "isWriterInProgress"
+
+LDIFF_SYM457=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM457
+	.byte 2,35,76,6
+	.asciz "keys"
+
+LDIFF_SYM458=LTDIE_38_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM458
+	.byte 2,35,24,6
+	.asciz "values"
+
+LDIFF_SYM459=LTDIE_38_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM459
+	.byte 2,35,32,6
+	.asciz "_keycomparer"
+
+LDIFF_SYM460=LTDIE_39_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM460
+	.byte 2,35,40,6
+	.asciz "_syncRoot"
+
+LDIFF_SYM461=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM461
+	.byte 2,35,48,0,7
+	.asciz "System_Collections_Hashtable"
+
+LDIFF_SYM462=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM462
+LTDIE_37_POINTER:
+
+	.byte 13
+LDIFF_SYM463=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM463
+LTDIE_37_REFERENCE:
+
+	.byte 14
+LDIFF_SYM464=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM464
+LTDIE_40:
+
+	.byte 5
+	.asciz "System_Runtime_Remoting_Messaging_CallContextRemotingData"
+
+	.byte 16,16
+LDIFF_SYM465=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM465
+	.byte 2,35,0,0,7
+	.asciz "System_Runtime_Remoting_Messaging_CallContextRemotingData"
+
+LDIFF_SYM466=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM466
+LTDIE_40_POINTER:
+
+	.byte 13
+LDIFF_SYM467=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM467
+LTDIE_40_REFERENCE:
+
+	.byte 14
+LDIFF_SYM468=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM468
+LTDIE_36:
+
+	.byte 5
+	.asciz "System_Runtime_Remoting_Messaging_LogicalCallContext"
+
+	.byte 32,16
+LDIFF_SYM469=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM469
+	.byte 2,35,0,6
+	.asciz "_data"
+
+LDIFF_SYM470=LTDIE_37_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM470
+	.byte 2,35,16,6
+	.asciz "_remotingData"
+
+LDIFF_SYM471=LTDIE_40_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM471
+	.byte 2,35,24,0,7
+	.asciz "System_Runtime_Remoting_Messaging_LogicalCallContext"
+
+LDIFF_SYM472=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM472
+LTDIE_36_POINTER:
+
+	.byte 13
+LDIFF_SYM473=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM473
+LTDIE_36_REFERENCE:
+
+	.byte 14
+LDIFF_SYM474=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM474
+LTDIE_42:
+
+	.byte 17
+	.asciz "System_Collections_Generic_IEqualityComparer`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEqualityComparer`1"
+
+LDIFF_SYM475=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM475
+LTDIE_42_POINTER:
+
+	.byte 13
+LDIFF_SYM476=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM476
+LTDIE_42_REFERENCE:
+
+	.byte 14
+LDIFF_SYM477=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM477
+LTDIE_43:
+
+	.byte 5
+	.asciz "_KeyCollection"
+
+	.byte 24,16
+LDIFF_SYM478=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM478
+	.byte 2,35,0,6
+	.asciz "dictionary"
+
+LDIFF_SYM479=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM479
+	.byte 2,35,16,0,7
+	.asciz "_KeyCollection"
+
+LDIFF_SYM480=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM480
+LTDIE_43_POINTER:
+
+	.byte 13
+LDIFF_SYM481=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM481
+LTDIE_43_REFERENCE:
+
+	.byte 14
+LDIFF_SYM482=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM482
+LTDIE_44:
+
+	.byte 5
+	.asciz "_ValueCollection"
+
+	.byte 24,16
+LDIFF_SYM483=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM483
+	.byte 2,35,0,6
+	.asciz "dictionary"
+
+LDIFF_SYM484=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM484
+	.byte 2,35,16,0,7
+	.asciz "_ValueCollection"
+
+LDIFF_SYM485=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM485
+LTDIE_44_POINTER:
+
+	.byte 13
+LDIFF_SYM486=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM486
+LTDIE_44_REFERENCE:
+
+	.byte 14
+LDIFF_SYM487=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM487
+LTDIE_41:
+
+	.byte 5
+	.asciz "System_Collections_Generic_Dictionary`2"
+
+	.byte 80,16
+LDIFF_SYM488=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM488
+	.byte 2,35,0,6
+	.asciz "buckets"
+
+LDIFF_SYM489=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM489
+	.byte 2,35,16,6
+	.asciz "entries"
+
+LDIFF_SYM490=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM490
+	.byte 2,35,24,6
+	.asciz "count"
+
+LDIFF_SYM491=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM491
+	.byte 2,35,64,6
+	.asciz "version"
+
+LDIFF_SYM492=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM492
+	.byte 2,35,68,6
+	.asciz "freeList"
+
+LDIFF_SYM493=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM493
+	.byte 2,35,72,6
+	.asciz "freeCount"
+
+LDIFF_SYM494=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM494
+	.byte 2,35,76,6
+	.asciz "comparer"
+
+LDIFF_SYM495=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM495
+	.byte 2,35,32,6
+	.asciz "keys"
+
+LDIFF_SYM496=LTDIE_43_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM496
+	.byte 2,35,40,6
+	.asciz "values"
+
+LDIFF_SYM497=LTDIE_44_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM497
+	.byte 2,35,48,6
+	.asciz "_syncRoot"
+
+LDIFF_SYM498=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM498
+	.byte 2,35,56,0,7
+	.asciz "System_Collections_Generic_Dictionary`2"
+
+LDIFF_SYM499=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM499
+LTDIE_41_POINTER:
+
+	.byte 13
+LDIFF_SYM500=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM500
+LTDIE_41_REFERENCE:
+
+	.byte 14
+LDIFF_SYM501=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM501
+LTDIE_35:
+
+	.byte 5
+	.asciz "System_Threading_ExecutionContext"
+
+	.byte 40,16
+LDIFF_SYM502=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM502
+	.byte 2,35,0,6
+	.asciz "_lcc"
+
+LDIFF_SYM503=LTDIE_36_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM503
+	.byte 2,35,16,6
+	.asciz "_suppressFlow"
+
+LDIFF_SYM504=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM504
+	.byte 2,35,32,6
+	.asciz "_capture"
+
+LDIFF_SYM505=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM505
+	.byte 2,35,33,6
+	.asciz "local_data"
+
+LDIFF_SYM506=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM506
+	.byte 2,35,24,6
+	.asciz "<CopyOnWrite>k__BackingField"
+
+LDIFF_SYM507=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM507
+	.byte 2,35,34,0,7
+	.asciz "System_Threading_ExecutionContext"
+
+LDIFF_SYM508=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM508
+LTDIE_35_POINTER:
+
+	.byte 13
+LDIFF_SYM509=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM509
+LTDIE_35_REFERENCE:
+
+	.byte 14
+LDIFF_SYM510=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM510
+LTDIE_49:
+
+	.byte 5
+	.asciz "System_MarshalByRefObject"
+
+	.byte 24,16
+LDIFF_SYM511=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM511
+	.byte 2,35,0,6
+	.asciz "_identity"
+
+LDIFF_SYM512=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM512
+	.byte 2,35,16,0,7
+	.asciz "System_MarshalByRefObject"
+
+LDIFF_SYM513=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM513
+LTDIE_49_POINTER:
+
+	.byte 13
+LDIFF_SYM514=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM514
+LTDIE_49_REFERENCE:
+
+	.byte 14
+LDIFF_SYM515=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM515
+LTDIE_53:
+
+	.byte 5
+	.asciz "System_Runtime_ConstrainedExecution_CriticalFinalizerObject"
+
+	.byte 16,16
+LDIFF_SYM516=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM516
+	.byte 2,35,0,0,7
+	.asciz "System_Runtime_ConstrainedExecution_CriticalFinalizerObject"
+
+LDIFF_SYM517=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM517
+LTDIE_53_POINTER:
+
+	.byte 13
+LDIFF_SYM518=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM518
+LTDIE_53_REFERENCE:
+
+	.byte 14
+LDIFF_SYM519=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM519
+LTDIE_52:
+
+	.byte 5
+	.asciz "System_Runtime_InteropServices_SafeHandle"
+
+	.byte 32,16
+LDIFF_SYM520=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM520
+	.byte 2,35,0,6
+	.asciz "handle"
+
+LDIFF_SYM521=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM521
+	.byte 2,35,16,6
+	.asciz "refcount"
+
+LDIFF_SYM522=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM522
+	.byte 2,35,24,6
+	.asciz "owns_handle"
+
+LDIFF_SYM523=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM523
+	.byte 2,35,28,6
+	.asciz "closed"
+
+LDIFF_SYM524=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM524
+	.byte 2,35,29,6
+	.asciz "disposed"
+
+LDIFF_SYM525=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM525
+	.byte 2,35,30,0,7
+	.asciz "System_Runtime_InteropServices_SafeHandle"
+
+LDIFF_SYM526=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM526
+LTDIE_52_POINTER:
+
+	.byte 13
+LDIFF_SYM527=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM527
+LTDIE_52_REFERENCE:
+
+	.byte 14
+LDIFF_SYM528=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM528
+LTDIE_51:
+
+	.byte 5
+	.asciz "Microsoft_Win32_SafeHandles_SafeHandleZeroOrMinusOneIsInvalid"
+
+	.byte 32,16
+LDIFF_SYM529=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM529
+	.byte 2,35,0,0,7
+	.asciz "Microsoft_Win32_SafeHandles_SafeHandleZeroOrMinusOneIsInvalid"
+
+LDIFF_SYM530=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM530
+LTDIE_51_POINTER:
+
+	.byte 13
+LDIFF_SYM531=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM531
+LTDIE_51_REFERENCE:
+
+	.byte 14
+LDIFF_SYM532=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM532
+LTDIE_50:
+
+	.byte 5
+	.asciz "Microsoft_Win32_SafeHandles_SafeWaitHandle"
+
+	.byte 32,16
+LDIFF_SYM533=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM533
+	.byte 2,35,0,0,7
+	.asciz "Microsoft_Win32_SafeHandles_SafeWaitHandle"
+
+LDIFF_SYM534=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM534
+LTDIE_50_POINTER:
+
+	.byte 13
+LDIFF_SYM535=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM535
+LTDIE_50_REFERENCE:
+
+	.byte 14
+LDIFF_SYM536=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM536
+LTDIE_48:
+
+	.byte 5
+	.asciz "System_Threading_WaitHandle"
+
+	.byte 40,16
+LDIFF_SYM537=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM537
+	.byte 2,35,0,6
+	.asciz "safe_wait_handle"
+
+LDIFF_SYM538=LTDIE_50_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM538
+	.byte 2,35,24,6
+	.asciz "disposed"
+
+LDIFF_SYM539=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM539
+	.byte 2,35,32,0,7
+	.asciz "System_Threading_WaitHandle"
+
+LDIFF_SYM540=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM540
+LTDIE_48_POINTER:
+
+	.byte 13
+LDIFF_SYM541=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM541
+LTDIE_48_REFERENCE:
+
+	.byte 14
+LDIFF_SYM542=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM542
+LTDIE_47:
+
+	.byte 5
+	.asciz "System_Threading_EventWaitHandle"
+
+	.byte 40,16
+LDIFF_SYM543=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM543
+	.byte 2,35,0,0,7
+	.asciz "System_Threading_EventWaitHandle"
+
+LDIFF_SYM544=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM544
+LTDIE_47_POINTER:
+
+	.byte 13
+LDIFF_SYM545=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM545
+LTDIE_47_REFERENCE:
+
+	.byte 14
+LDIFF_SYM546=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM546
+LTDIE_46:
+
+	.byte 5
+	.asciz "System_Threading_ManualResetEvent"
+
+	.byte 40,16
+LDIFF_SYM547=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM547
+	.byte 2,35,0,0,7
+	.asciz "System_Threading_ManualResetEvent"
+
+LDIFF_SYM548=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM548
+LTDIE_46_POINTER:
+
+	.byte 13
+LDIFF_SYM549=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM549
+LTDIE_46_REFERENCE:
+
+	.byte 14
+LDIFF_SYM550=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM550
+LTDIE_45:
+
+	.byte 5
+	.asciz "System_Threading_ManualResetEventSlim"
+
+	.byte 40,16
+LDIFF_SYM551=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM551
+	.byte 2,35,0,6
+	.asciz "m_lock"
+
+LDIFF_SYM552=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM552
+	.byte 2,35,16,6
+	.asciz "m_eventObj"
+
+LDIFF_SYM553=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM553
+	.byte 2,35,24,6
+	.asciz "m_combinedState"
+
+LDIFF_SYM554=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM554
+	.byte 2,35,32,0,7
+	.asciz "System_Threading_ManualResetEventSlim"
+
+LDIFF_SYM555=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM555
+LTDIE_45_POINTER:
+
+	.byte 13
+LDIFF_SYM556=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM556
+LTDIE_45_REFERENCE:
+
+	.byte 14
+LDIFF_SYM557=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM557
+LTDIE_55:
+
+	.byte 5
+	.asciz "System_Collections_Generic_List`1"
+
+	.byte 40,16
+LDIFF_SYM558=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM558
+	.byte 2,35,0,6
+	.asciz "_items"
+
+LDIFF_SYM559=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM559
+	.byte 2,35,16,6
+	.asciz "_size"
+
+LDIFF_SYM560=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM560
+	.byte 2,35,32,6
+	.asciz "_version"
+
+LDIFF_SYM561=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM561
+	.byte 2,35,36,6
+	.asciz "_syncRoot"
+
+LDIFF_SYM562=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM562
+	.byte 2,35,24,0,7
+	.asciz "System_Collections_Generic_List`1"
+
+LDIFF_SYM563=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM563
+LTDIE_55_POINTER:
+
+	.byte 13
+LDIFF_SYM564=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM564
+LTDIE_55_REFERENCE:
+
+	.byte 14
+LDIFF_SYM565=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM565
+LTDIE_58:
+
+	.byte 17
+	.asciz "System_Collections_IDictionary"
+
+	.byte 16,7
+	.asciz "System_Collections_IDictionary"
+
+LDIFF_SYM566=LTDIE_58 - Ldebug_info_start
+	.long LDIFF_SYM566
+LTDIE_58_POINTER:
+
+	.byte 13
+LDIFF_SYM567=LTDIE_58 - Ldebug_info_start
+	.long LDIFF_SYM567
+LTDIE_58_REFERENCE:
+
+	.byte 14
+LDIFF_SYM568=LTDIE_58 - Ldebug_info_start
+	.long LDIFF_SYM568
+LTDIE_57:
+
+	.byte 5
+	.asciz "System_Exception"
+
+	.byte 112,16
+LDIFF_SYM569=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM569
+	.byte 2,35,0,6
+	.asciz "trace_ips"
+
+LDIFF_SYM570=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM570
+	.byte 2,35,16,6
+	.asciz "inner_exception"
+
+LDIFF_SYM571=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM571
+	.byte 2,35,24,6
+	.asciz "message"
+
+LDIFF_SYM572=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM572
+	.byte 2,35,32,6
+	.asciz "help_link"
+
+LDIFF_SYM573=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM573
+	.byte 2,35,40,6
+	.asciz "class_name"
+
+LDIFF_SYM574=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM574
+	.byte 2,35,48,6
+	.asciz "stack_trace"
+
+LDIFF_SYM575=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM575
+	.byte 2,35,56,6
+	.asciz "_remoteStackTraceString"
+
+LDIFF_SYM576=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM576
+	.byte 2,35,64,6
+	.asciz "remote_stack_index"
+
+LDIFF_SYM577=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM577
+	.byte 2,35,72,6
+	.asciz "hresult"
+
+LDIFF_SYM578=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM578
+	.byte 2,35,76,6
+	.asciz "source"
+
+LDIFF_SYM579=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM579
+	.byte 2,35,80,6
+	.asciz "_data"
+
+LDIFF_SYM580=LTDIE_58_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM580
+	.byte 2,35,88,6
+	.asciz "captured_traces"
+
+LDIFF_SYM581=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM581
+	.byte 2,35,96,6
+	.asciz "native_trace_ips"
+
+LDIFF_SYM582=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM582
+	.byte 2,35,104,0,7
+	.asciz "System_Exception"
+
+LDIFF_SYM583=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM583
+LTDIE_57_POINTER:
+
+	.byte 13
+LDIFF_SYM584=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM584
+LTDIE_57_REFERENCE:
+
+	.byte 14
+LDIFF_SYM585=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM585
+LTDIE_56:
+
+	.byte 5
+	.asciz "System_Runtime_ExceptionServices_ExceptionDispatchInfo"
+
+	.byte 24,16
+LDIFF_SYM586=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM586
+	.byte 2,35,0,6
+	.asciz "exception"
+
+LDIFF_SYM587=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM587
+	.byte 2,35,16,0,7
+	.asciz "System_Runtime_ExceptionServices_ExceptionDispatchInfo"
+
+LDIFF_SYM588=LTDIE_56 - Ldebug_info_start
+	.long LDIFF_SYM588
+LTDIE_56_POINTER:
+
+	.byte 13
+LDIFF_SYM589=LTDIE_56 - Ldebug_info_start
+	.long LDIFF_SYM589
+LTDIE_56_REFERENCE:
+
+	.byte 14
+LDIFF_SYM590=LTDIE_56 - Ldebug_info_start
+	.long LDIFF_SYM590
+LTDIE_54:
+
+	.byte 5
+	.asciz "System_Threading_Tasks_TaskExceptionHolder"
+
+	.byte 48,16
+LDIFF_SYM591=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM591
+	.byte 2,35,0,6
+	.asciz "m_task"
+
+LDIFF_SYM592=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM592
+	.byte 2,35,16,6
+	.asciz "m_faultExceptions"
+
+LDIFF_SYM593=LTDIE_55_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM593
+	.byte 2,35,24,6
+	.asciz "m_cancellationException"
+
+LDIFF_SYM594=LTDIE_56_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM594
+	.byte 2,35,32,6
+	.asciz "m_isHandled"
+
+LDIFF_SYM595=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM595
+	.byte 2,35,40,0,7
+	.asciz "System_Threading_Tasks_TaskExceptionHolder"
+
+LDIFF_SYM596=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM596
+LTDIE_54_POINTER:
+
+	.byte 13
+LDIFF_SYM597=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM597
+LTDIE_54_REFERENCE:
+
+	.byte 14
+LDIFF_SYM598=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM598
+LTDIE_59:
+
+	.byte 5
+	.asciz "System_Threading_Tasks_Shared`1"
+
+	.byte 40,16
+LDIFF_SYM599=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM599
+	.byte 2,35,0,6
+	.asciz "Value"
+
+LDIFF_SYM600=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM600
+	.byte 2,35,16,0,7
+	.asciz "System_Threading_Tasks_Shared`1"
+
+LDIFF_SYM601=LTDIE_59 - Ldebug_info_start
+	.long LDIFF_SYM601
+LTDIE_59_POINTER:
+
+	.byte 13
+LDIFF_SYM602=LTDIE_59 - Ldebug_info_start
+	.long LDIFF_SYM602
+LTDIE_59_REFERENCE:
+
+	.byte 14
+LDIFF_SYM603=LTDIE_59 - Ldebug_info_start
+	.long LDIFF_SYM603
+LTDIE_60:
+
+	.byte 5
+	.asciz "System_Collections_Generic_List`1"
+
+	.byte 40,16
+LDIFF_SYM604=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM604
+	.byte 2,35,0,6
+	.asciz "_items"
+
+LDIFF_SYM605=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM605
+	.byte 2,35,16,6
+	.asciz "_size"
+
+LDIFF_SYM606=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM606
+	.byte 2,35,32,6
+	.asciz "_version"
+
+LDIFF_SYM607=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM607
+	.byte 2,35,36,6
+	.asciz "_syncRoot"
+
+LDIFF_SYM608=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM608
+	.byte 2,35,24,0,7
+	.asciz "System_Collections_Generic_List`1"
+
+LDIFF_SYM609=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM609
+LTDIE_60_POINTER:
+
+	.byte 13
+LDIFF_SYM610=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM610
+LTDIE_60_REFERENCE:
+
+	.byte 14
+LDIFF_SYM611=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM611
+LTDIE_34:
+
+	.byte 5
+	.asciz "_ContingentProperties"
+
+	.byte 72,16
+LDIFF_SYM612=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM612
+	.byte 2,35,0,6
+	.asciz "m_capturedContext"
+
+LDIFF_SYM613=LTDIE_35_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM613
+	.byte 2,35,16,6
+	.asciz "m_completionEvent"
+
+LDIFF_SYM614=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM614
+	.byte 2,35,24,6
+	.asciz "m_exceptionsHolder"
+
+LDIFF_SYM615=LTDIE_54_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM615
+	.byte 2,35,32,6
+	.asciz "m_cancellationToken"
+
+LDIFF_SYM616=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM616
+	.byte 2,35,40,6
+	.asciz "m_cancellationRegistration"
+
+LDIFF_SYM617=LTDIE_59_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM617
+	.byte 2,35,48,6
+	.asciz "m_internalCancellationRequested"
+
+LDIFF_SYM618=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM618
+	.byte 2,35,64,6
+	.asciz "m_completionCountdown"
+
+LDIFF_SYM619=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM619
+	.byte 2,35,68,6
+	.asciz "m_exceptionalChildren"
+
+LDIFF_SYM620=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM620
+	.byte 2,35,56,0,7
+	.asciz "_ContingentProperties"
+
+LDIFF_SYM621=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM621
+LTDIE_34_POINTER:
+
+	.byte 13
+LDIFF_SYM622=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM622
+LTDIE_34_REFERENCE:
+
+	.byte 14
+LDIFF_SYM623=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM623
+LTDIE_32:
+
+	.byte 5
+	.asciz "System_Threading_Tasks_Task"
+
+	.byte 72,16
+LDIFF_SYM624=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM624
+	.byte 2,35,0,6
+	.asciz "m_taskId"
+
+LDIFF_SYM625=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM625
+	.byte 2,35,64,6
+	.asciz "m_action"
+
+LDIFF_SYM626=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM626
+	.byte 2,35,16,6
+	.asciz "m_stateObject"
+
+LDIFF_SYM627=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM627
+	.byte 2,35,24,6
+	.asciz "m_taskScheduler"
+
+LDIFF_SYM628=LTDIE_33_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM628
+	.byte 2,35,32,6
+	.asciz "m_parent"
+
+LDIFF_SYM629=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM629
+	.byte 2,35,40,6
+	.asciz "m_stateFlags"
+
+LDIFF_SYM630=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM630
+	.byte 2,35,68,6
+	.asciz "m_continuationObject"
+
+LDIFF_SYM631=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM631
+	.byte 2,35,48,6
+	.asciz "m_contingentProperties"
+
+LDIFF_SYM632=LTDIE_34_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM632
+	.byte 2,35,56,0,7
+	.asciz "System_Threading_Tasks_Task"
+
+LDIFF_SYM633=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM633
+LTDIE_32_POINTER:
+
+	.byte 13
+LDIFF_SYM634=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM634
+LTDIE_32_REFERENCE:
+
+	.byte 14
+LDIFF_SYM635=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM635
+LTDIE_31:
+
+	.byte 5
+	.asciz "System_Threading_Tasks_Task`1"
+
+	.byte 80,16
+LDIFF_SYM636=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM636
+	.byte 2,35,0,6
+	.asciz "m_result"
+
+LDIFF_SYM637=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM637
+	.byte 2,35,72,0,7
+	.asciz "System_Threading_Tasks_Task`1"
+
+LDIFF_SYM638=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM638
+LTDIE_31_POINTER:
+
+	.byte 13
+LDIFF_SYM639=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM639
+LTDIE_31_REFERENCE:
+
+	.byte 14
+LDIFF_SYM640=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM640
+LTDIE_61:
+
+	.byte 5
+	.asciz "System_AsyncCallback"
+
+	.byte 104,16
+LDIFF_SYM641=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM641
+	.byte 2,35,0,0,7
+	.asciz "System_AsyncCallback"
+
+LDIFF_SYM642=LTDIE_61 - Ldebug_info_start
+	.long LDIFF_SYM642
+LTDIE_61_POINTER:
+
+	.byte 13
+LDIFF_SYM643=LTDIE_61 - Ldebug_info_start
+	.long LDIFF_SYM643
+LTDIE_61_REFERENCE:
+
+	.byte 14
+LDIFF_SYM644=LTDIE_61 - Ldebug_info_start
+	.long LDIFF_SYM644
+LTDIE_30:
+
+	.byte 5
+	.asciz "_ReadWriteTask"
+
+	.byte 128,1,16
+LDIFF_SYM645=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM645
+	.byte 2,35,0,6
+	.asciz "_isRead"
+
+LDIFF_SYM646=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM646
+	.byte 2,35,112,6
+	.asciz "_stream"
+
+LDIFF_SYM647=LTDIE_29_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM647
+	.byte 2,35,80,6
+	.asciz "_buffer"
+
+LDIFF_SYM648=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM648
+	.byte 2,35,88,6
+	.asciz "_offset"
+
+LDIFF_SYM649=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM649
+	.byte 2,35,116,6
+	.asciz "_count"
+
+LDIFF_SYM650=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM650
+	.byte 2,35,120,6
+	.asciz "_callback"
+
+LDIFF_SYM651=LTDIE_61_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM651
+	.byte 2,35,96,6
+	.asciz "_context"
+
+LDIFF_SYM652=LTDIE_35_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM652
+	.byte 2,35,104,0,7
+	.asciz "_ReadWriteTask"
+
+LDIFF_SYM653=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM653
+LTDIE_30_POINTER:
+
+	.byte 13
+LDIFF_SYM654=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM654
+LTDIE_30_REFERENCE:
+
+	.byte 14
+LDIFF_SYM655=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM655
+LTDIE_64:
+
+	.byte 5
+	.asciz "System_Threading_Tasks_Task`1"
+
+	.byte 80,16
+LDIFF_SYM656=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM656
+	.byte 2,35,0,6
+	.asciz "m_result"
+
+LDIFF_SYM657=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM657
+	.byte 2,35,72,0,7
+	.asciz "System_Threading_Tasks_Task`1"
+
+LDIFF_SYM658=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM658
+LTDIE_64_POINTER:
+
+	.byte 13
+LDIFF_SYM659=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM659
+LTDIE_64_REFERENCE:
+
+	.byte 14
+LDIFF_SYM660=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM660
+LTDIE_63:
+
+	.byte 5
+	.asciz "_TaskNode"
+
+	.byte 96,16
+LDIFF_SYM661=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM661
+	.byte 2,35,0,6
+	.asciz "Prev"
+
+LDIFF_SYM662=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM662
+	.byte 2,35,80,6
+	.asciz "Next"
+
+LDIFF_SYM663=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM663
+	.byte 2,35,88,0,7
+	.asciz "_TaskNode"
+
+LDIFF_SYM664=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM664
+LTDIE_63_POINTER:
+
+	.byte 13
+LDIFF_SYM665=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM665
+LTDIE_63_REFERENCE:
+
+	.byte 14
+LDIFF_SYM666=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM666
+LTDIE_62:
+
+	.byte 5
+	.asciz "System_Threading_SemaphoreSlim"
+
+	.byte 64,16
+LDIFF_SYM667=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM667
+	.byte 2,35,0,6
+	.asciz "m_currentCount"
+
+LDIFF_SYM668=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM668
+	.byte 2,35,48,6
+	.asciz "m_maxCount"
+
+LDIFF_SYM669=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM669
+	.byte 2,35,52,6
+	.asciz "m_waitCount"
+
+LDIFF_SYM670=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM670
+	.byte 2,35,56,6
+	.asciz "m_lockObj"
+
+LDIFF_SYM671=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM671
+	.byte 2,35,16,6
+	.asciz "m_waitHandle"
+
+LDIFF_SYM672=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM672
+	.byte 2,35,24,6
+	.asciz "m_asyncHead"
+
+LDIFF_SYM673=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM673
+	.byte 2,35,32,6
+	.asciz "m_asyncTail"
+
+LDIFF_SYM674=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM674
+	.byte 2,35,40,0,7
+	.asciz "System_Threading_SemaphoreSlim"
+
+LDIFF_SYM675=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM675
+LTDIE_62_POINTER:
+
+	.byte 13
+LDIFF_SYM676=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM676
+LTDIE_62_REFERENCE:
+
+	.byte 14
+LDIFF_SYM677=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM677
+LTDIE_29:
+
+	.byte 5
+	.asciz "System_IO_Stream"
+
+	.byte 32,16
+LDIFF_SYM678=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM678
+	.byte 2,35,0,6
+	.asciz "_activeReadWriteTask"
+
+LDIFF_SYM679=LTDIE_30_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM679
+	.byte 2,35,16,6
+	.asciz "_asyncActiveSemaphore"
+
+LDIFF_SYM680=LTDIE_62_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM680
+	.byte 2,35,24,0,7
+	.asciz "System_IO_Stream"
+
+LDIFF_SYM681=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM681
+LTDIE_29_POINTER:
+
+	.byte 13
+LDIFF_SYM682=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM682
+LTDIE_29_REFERENCE:
+
+	.byte 14
+LDIFF_SYM683=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM683
+LTDIE_28:
+
+	.byte 5
+	.asciz "System_IO_MemoryStream"
+
+	.byte 72,16
+LDIFF_SYM684=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM684
+	.byte 2,35,0,6
+	.asciz "_buffer"
+
+LDIFF_SYM685=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM685
+	.byte 2,35,32,6
+	.asciz "_origin"
+
+LDIFF_SYM686=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM686
+	.byte 2,35,48,6
+	.asciz "_position"
+
+LDIFF_SYM687=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM687
+	.byte 2,35,52,6
+	.asciz "_length"
+
+LDIFF_SYM688=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM688
+	.byte 2,35,56,6
+	.asciz "_capacity"
+
+LDIFF_SYM689=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM689
+	.byte 2,35,60,6
+	.asciz "_expandable"
+
+LDIFF_SYM690=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM690
+	.byte 2,35,64,6
+	.asciz "_writable"
+
+LDIFF_SYM691=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM691
+	.byte 2,35,65,6
+	.asciz "_exposable"
+
+LDIFF_SYM692=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM692
+	.byte 2,35,66,6
+	.asciz "_isOpen"
+
+LDIFF_SYM693=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM693
+	.byte 2,35,67,6
+	.asciz "_lastReadTask"
+
+LDIFF_SYM694=LTDIE_31_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM694
+	.byte 2,35,40,0,7
+	.asciz "System_IO_MemoryStream"
+
+LDIFF_SYM695=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM695
+LTDIE_28_POINTER:
+
+	.byte 13
+LDIFF_SYM696=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM696
+LTDIE_28_REFERENCE:
+
+	.byte 14
+LDIFF_SYM697=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM697
+LTDIE_66:
+
+	.byte 5
+	.asciz "_ResolveEventHolder"
+
+	.byte 16,16
+LDIFF_SYM698=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM698
+	.byte 2,35,0,0,7
+	.asciz "_ResolveEventHolder"
+
+LDIFF_SYM699=LTDIE_66 - Ldebug_info_start
+	.long LDIFF_SYM699
+LTDIE_66_POINTER:
+
+	.byte 13
+LDIFF_SYM700=LTDIE_66 - Ldebug_info_start
+	.long LDIFF_SYM700
+LTDIE_66_REFERENCE:
+
+	.byte 14
+LDIFF_SYM701=LTDIE_66 - Ldebug_info_start
+	.long LDIFF_SYM701
+LTDIE_65:
+
+	.byte 5
+	.asciz "System_Reflection_Assembly"
+
+	.byte 96,16
+LDIFF_SYM702=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM702
+	.byte 2,35,0,6
+	.asciz "_mono_assembly"
+
+LDIFF_SYM703=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM703
+	.byte 2,35,16,6
+	.asciz "resolve_event_holder"
+
+LDIFF_SYM704=LTDIE_66_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM704
+	.byte 2,35,24,6
+	.asciz "_evidence"
+
+LDIFF_SYM705=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM705
+	.byte 2,35,32,6
+	.asciz "_minimum"
+
+LDIFF_SYM706=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM706
+	.byte 2,35,40,6
+	.asciz "_optional"
+
+LDIFF_SYM707=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM707
+	.byte 2,35,48,6
+	.asciz "_refuse"
+
+LDIFF_SYM708=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM708
+	.byte 2,35,56,6
+	.asciz "_granted"
+
+LDIFF_SYM709=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM709
+	.byte 2,35,64,6
+	.asciz "_denied"
+
+LDIFF_SYM710=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM710
+	.byte 2,35,72,6
+	.asciz "fromByteArray"
+
+LDIFF_SYM711=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM711
+	.byte 2,35,80,6
+	.asciz "assemblyName"
+
+LDIFF_SYM712=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM712
+	.byte 2,35,88,0,7
+	.asciz "System_Reflection_Assembly"
+
+LDIFF_SYM713=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM713
+LTDIE_65_POINTER:
+
+	.byte 13
+LDIFF_SYM714=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM714
+LTDIE_65_REFERENCE:
+
+	.byte 14
+LDIFF_SYM715=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM715
+	.byte 2
+	.asciz "DSoft.Themes.ResourceHelper:LoadResource"
+	.asciz "DSoft_Themes_ResourceHelper_LoadResource_string"
+
+	.byte 0,0
+	.quad DSoft_Themes_ResourceHelper_LoadResource_string
+	.quad Lme_8c
+
+	.byte 2,118,16,3
+	.asciz "Name"
+
+LDIFF_SYM716=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM716
+	.byte 2,141,56,11
+	.asciz "V_0"
+
+LDIFF_SYM717=LTDIE_28_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM717
+	.byte 1,105,11
+	.asciz "V_1"
+
+LDIFF_SYM718=LTDIE_65_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM718
+	.byte 1,104,11
+	.asciz "V_2"
+
+LDIFF_SYM719=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM719
+	.byte 1,103,11
+	.asciz "V_3"
+
+LDIFF_SYM720=LTDIE_29_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM720
+	.byte 1,102,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM721=Lfde80_end - Lfde80_start
+	.long LDIFF_SYM721
+Lfde80_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_ResourceHelper_LoadResource_string
+
+LDIFF_SYM722=Lme_8c - DSoft_Themes_ResourceHelper_LoadResource_string
+	.long LDIFF_SYM722
+	.long 0
+	.byte 12,31,0,68,14,160,1,157,20,158,19,68,13,29,68,149,18,150,17,68,151,16,152,15,68,153,14
+	.align 3
+Lfde80_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Flyout.DSFlyoutTheme:Register<!!0>"
+	.asciz "DSoft_Themes_Flyout_DSFlyoutTheme_Register___0"
+
+	.byte 0,0
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_Register___0
+	.quad Lme_8e
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM723=Lfde81_end - Lfde81_start
+	.long LDIFF_SYM723
+Lfde81_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Flyout_DSFlyoutTheme_Register___0
+
+LDIFF_SYM724=Lme_8e - DSoft_Themes_Flyout_DSFlyoutTheme_Register___0
+	.long LDIFF_SYM724
+	.long 0
+	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,153,10,154,9
+	.align 3
+Lfde81_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Toolbar.DSToolbarTheme:Register<!!0>"
+	.asciz "DSoft_Themes_Toolbar_DSToolbarTheme_Register___0"
+
+	.byte 0,0
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_Register___0
+	.quad Lme_8f
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM725=Lfde82_end - Lfde82_start
+	.long LDIFF_SYM725
+Lfde82_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Toolbar_DSToolbarTheme_Register___0
+
+LDIFF_SYM726=Lme_8f - DSoft_Themes_Toolbar_DSToolbarTheme_Register___0
+	.long LDIFF_SYM726
+	.long 0
+	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,153,10,154,9
+	.align 3
+Lfde82_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "DSoft.Themes.Grid.DSGridTheme:Register<!!0>"
+	.asciz "DSoft_Themes_Grid_DSGridTheme_Register___0"
+
+	.byte 0,0
+	.quad DSoft_Themes_Grid_DSGridTheme_Register___0
+	.quad Lme_90
+
+	.byte 2,118,16,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM727=Lfde83_end - Lfde83_start
+	.long LDIFF_SYM727
+Lfde83_start:
+
+	.long 0
+	.align 3
+	.quad DSoft_Themes_Grid_DSGridTheme_Register___0
+
+LDIFF_SYM728=Lme_90 - DSoft_Themes_Grid_DSGridTheme_Register___0
+	.long LDIFF_SYM728
+	.long 0
+	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,153,10,154,9
+	.align 3
+Lfde83_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 0
+Ldebug_info_end:
+.section __DWARF, __debug_line,regular,debug
+Ldebug_line_section_start:
+Ldebug_line_start:
+
+	.long Ldebug_line_end - . -4
+	.short 2
+	.long Ldebug_line_header_end - . -4
+	.byte 1,1,251,14,13,0,1,1,1,1,0,0,0,1,0,0,1
+.section __DWARF, __debug_line,regular,debug
+
+	.byte 0
+	.asciz "<unknown>"
+
+	.byte 0,0,0,0
+Ldebug_line_header_end:
+
+	.byte 0,1,1
+Ldebug_line_end:
+.text
+	.align 3
+mem_end:

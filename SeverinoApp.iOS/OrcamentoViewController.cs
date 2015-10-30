@@ -37,6 +37,8 @@ namespace SeverinoApp.iOS
 				btnAceita.Enabled = false;
 			}
 
+			Helpers.criaReturn (this.View);
+
 			carrega ();
 		}
 

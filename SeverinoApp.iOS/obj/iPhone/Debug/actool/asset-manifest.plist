@@ -6,16 +6,16 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-157x57.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-157x57@2x.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-160x60@2x.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-172x72~ipad.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-172x72@2x~ipad.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-176x76~ipad.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/AppIcons-176x76@2x~ipad.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/LaunchImage-1.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/LaunchImage-1@2x.png</string>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/LaunchImage-1-568h@2x.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-157x57.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-157x57@2x.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-160x60@2x.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-172x72~ipad.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-172x72@2x~ipad.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-176x76~ipad.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/AppIcons-176x76@2x~ipad.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1@2x.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1-568h@2x.png</string>
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
@@ -119,6 +119,44 @@
 			<string>An iPhone Retina (4-inch) launch image for iOS 7.0 and later is required.</string>
 			<key>type</key>
 			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./Brand Assets.launchimage/[iphone][][2x][portrait][][7.0][2d][(null)]</string>
+				<string>./Brand Assets.launchimage/[iphone][retina4][2x][portrait][][7.0][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The launch image set "Brand Assets" has 2 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcons" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./LaunchImage-2.launchimage/[iphone][][2x][portrait][][7.0][2d][(null)]</string>
+				<string>./LaunchImage-2.launchimage/[iphone][retina4][2x][portrait][][7.0][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The launch image set "LaunchImage-2" has 2 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
 		</dict>
 	</array>
 </dict>

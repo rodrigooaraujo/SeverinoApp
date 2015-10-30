@@ -27,6 +27,7 @@ namespace SeverinoApp.iOS
 			txvComentario.Layer.BorderColor = UIColor.FromRGB(234,234,234).CGColor;
 			txvComentario.Layer.MasksToBounds = true;
 			txvComentario.BackgroundColor = UIColor.White;
+			Helpers.criaReturn (this.View);
 		}
 
 		partial void btnCancela_Click (UIButton sender)

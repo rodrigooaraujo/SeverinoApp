@@ -185,7 +185,7 @@ namespace SeverinoApp.iOS
 
 							//var size = ns.GetSizeUsingAttributes(atri);
 
-							var heigth = comentario.SizeThatFits(new CGSize(scrollComentarios.Frame.Width-20, nfloat.MaxValue)).Height+30;
+							var heigth = comentario.SizeThatFits(new CGSize(scrollComentarios.Frame.Width-20, nfloat.MaxValue)).Height;
 
 							//comentario.ContentSize = new CGSize(comentario.Frame.Size.Width, heigth);
 							comentario.Layer.BorderWidth = 1;

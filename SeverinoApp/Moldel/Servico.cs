@@ -42,7 +42,7 @@ namespace SeverinoApp
 				Servicos = result;
 		}
 
-		public void Add(wsSeverino.Models.Servico servico)
+		public void Add(Servico servico)
 		{
 			CadastraServico (servico);
 		}
@@ -52,7 +52,7 @@ namespace SeverinoApp
 			
 		}
 
-		private async Task<bool> CadastraServico(wsSeverino.Models.Servico serv)
+		private async Task<bool> CadastraServico(Servico serv)
 		{
 			var api = new Api ();
 			var json = JsonConvert.SerializeObject(serv, Formatting.Indented);

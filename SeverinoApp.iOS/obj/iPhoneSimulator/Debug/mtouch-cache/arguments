@@ -1,6 +1,6 @@
-# Version: 8.8.2.4 (981acb3)
+# Version: 9.1.0.27 (monotouch-9.1.0-branch: 1f068b4)
 # [first argument, ignore] # /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.2.4/bin/mtouch-64 \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.1.0.27/bin/mtouch \
 	--cache \
 	/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
@@ -12,10 +12,14 @@
 	--sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--sdk \
-	8.2 \
+	9.1 \
 	--targetver \
 	8.0 \
+	--new-refcount \
 	--abi=i386 \
+	--symbollist \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	--dsym=no \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
@@ -23,35 +27,33 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
-	../packages/MonoTouch.SlideoutNavigation.0.1.1/lib/Xamarin.iOS10/MonoTouch.Slideout.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/MonoTouch.SlideoutNavigation.0.1.1/lib/Xamarin.iOS10/MonoTouch.Slideout.dll \
 	-r \
-	../Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/MonoTouch.Dialog-1.dll \
 	-r \
-	../packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Json.dll \
 	-r \
-	../../wsSeverino.dll \
+	/Users/rodrigoaraujo/Downloads/ModalPickerViewController-master/SharpMobileCode.ModalPicker/obj/Debug/SharpMobileCode.ModalPicker.dll \
 	-r \
-	../../../Downloads/ModalPickerViewController-master/SharpMobileCode.ModalPicker/obj/Debug/SharpMobileCode.ModalPicker.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.dll \
 	-r \
-	../packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.dll \
-	-r \
-	../packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.Abstractions.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.Abstractions.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Data.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.Grid.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.Grid.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Themes.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Themes.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.UI.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.UI.dll \
 	-r \
-	../packages/AutoMapper.4.0.4/lib/Xamarin.iOS10/AutoMapper.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/AutoMapper.4.1.1/lib/Xamarin.iOS10/AutoMapper.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -72,6 +74,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Tools.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Tracing.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Dynamic.Runtime.dll \
 	-r \
@@ -125,6 +129,8 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ServiceModel.Primitives.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ServiceModel.Security.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.Extensions.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll \
@@ -135,6 +141,8 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Timer.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.ReaderWriter.dll \
@@ -143,27 +151,27 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XmlSerializer.dll \
 	-r \
-	../packages/MonoTouch.SlideoutNavigation.0.1.1/lib/Xamarin.iOS10/MonoTouch.Slideout.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/MonoTouch.SlideoutNavigation.0.1.1/lib/Xamarin.iOS10/MonoTouch.Slideout.dll \
 	-r \
-	../Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
 	-r \
-	../packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
-	../../wsSeverino.dll \
+	/Users/rodrigoaraujo/Downloads/ModalPickerViewController-master/SharpMobileCode.ModalPicker/obj/Debug/SharpMobileCode.ModalPicker.dll \
 	-r \
-	../../../Downloads/ModalPickerViewController-master/SharpMobileCode.ModalPicker/obj/Debug/SharpMobileCode.ModalPicker.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.dll \
 	-r \
-	../packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.Abstractions.dll \
 	-r \
-	../packages/Xam.Plugin.Geolocator.1.0.3/lib/Xamarin.iOS10/Geolocator.Plugin.Abstractions.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.Grid.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.Grid.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Datatypes.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Themes.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.Themes.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/Components/dsgridview-3.0.2/lib/ios-unified/DSoft.UI.dll \
 	-r \
-	../Components/dsgridview-3.0.2/lib/ios-unified/DSoft.UI.dll \
-	-r \
-	../packages/AutoMapper.4.0.4/lib/Xamarin.iOS10/AutoMapper.dll \
+	/Users/rodrigoaraujo/Documents/SeverinoApp/packages/AutoMapper.4.1.1/lib/Xamarin.iOS10/AutoMapper.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
 	/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhoneSimulator/Debug//SeverinoApp.iOS.exe \

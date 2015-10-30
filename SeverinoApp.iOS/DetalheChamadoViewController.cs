@@ -95,14 +95,15 @@ namespace SeverinoApp.iOS
 				break;
 			}
 
-			if (!Util.VerificaLista(Status.ToString(), "1#3#4#5#6#7")) {
+			alert.AddButton ("Mensagem");
+
+			if (!Util.VerificaLista (Status.ToString (), "1#3#4#5#6#7")) {
 				alert.AddButton ("Cancelar Chamado");
 				alert.AddButton ("Encerrar Chamado");
 
 			}
 
-			if(Util.VerificaLista(Status.ToString(), "4#5") && Solicitante)
-			{
+			if (Util.VerificaLista (Status.ToString (), "4#5") && Solicitante) {
 				alert.AddButton ("Avaliar Atendimento");
 			}
 
@@ -229,6 +230,19 @@ namespace SeverinoApp.iOS
 						} 
 					}
 					break;
+				case "Mensagem":
+					{
+						var msg = Storyboard.InstantiateViewController ("ChatViewController2");
+
+						if (msg != null) {
+
+							ChatViewController2 mensagem = (ChatViewController2)msg;
+							mensagem.NumeroChamado = NumeroChamado;
+							mensagem.View.TranslatesAutoresizingMaskIntoConstraints = false;
+							this.NavigationController.PushViewController (mensagem, true);
+						} 
+					}
+					break;
 				default:
 					return;
 					break;
@@ -261,10 +275,9 @@ namespace SeverinoApp.iOS
 					return;
 				}
 
-				if(Util.VerificaLista(status.ToString(), "4#5#6#7"))
-				{
-					var avaliacao = new ChamadoAvaliacao();
-					sucesso = await avaliacao.CriaAvaliacoes(numero, IDServico); 
+				if (Util.VerificaLista (status.ToString (), "4#5#6#7")) {
+					var avaliacao = new ChamadoAvaliacao ();
+					sucesso = await avaliacao.CriaAvaliacoes (numero, IDServico); 
 				} 
 
 			} catch (Exception ex) {

@@ -35,7 +35,7 @@ namespace SeverinoApp.iOS
 		public static UIViewController Mapa = Storyboard.InstantiateViewController ("MapaViewController");
 		public static UIViewController Endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
 		public static UIViewController Consulta = Storyboard.InstantiateViewController ("ConsultaViewController");
-		public static UIViewController Teste = Storyboard.InstantiateViewController ("AvaliarViewController");
+		public static UIViewController Teste = Storyboard.InstantiateViewController ("ChatViewController2");
 
 		public static Usuario dbUsuario { get; set;}
 
@@ -80,9 +80,32 @@ namespace SeverinoApp.iOS
 			Window.RootViewController = Menu;
 			Window.MakeKeyAndVisible ();
 
-			var teste = Menu.MainViewController;
+			criaNotificacao ();
 
 			return true;
+		}
+
+		protected void criaNotificacao()
+		{
+			var settings = UIUserNotificationSettings.GetSettingsForTypes(
+				UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+				, null);
+			UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
+
+				UILocalNotification notification = new UILocalNotification();
+
+			//notification.AlertTitle = "Alert Title"; // required for Apple Watch notifications
+			notification.AlertBody = "Hey you! Yeah you! Swipe to unlock!";
+			notification.AlertAction = "be awesome!";
+
+			var userInfo = NSDictionary.FromObjectAndKey(new NSString("TaskID"), new NSString("Teste"));
+
+			notification.UserInfo = userInfo;
+			notification.FireDate = NSDate.FromTimeIntervalSinceNow(15);
+			notification.HasAction = true;
+			notification.ApplicationIconBadgeNumber = 1;
+			notification.SoundName = UILocalNotification.DefaultSoundName;
+			UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 		}
 
 		public bool RecriaPrincipal()
@@ -99,6 +122,11 @@ namespace SeverinoApp.iOS
 
 			return true;
 		}	
+
+		public override void ReceivedLocalNotification (UIApplication application, UILocalNotification notification)
+		{
+			UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+		}
 	}
 
 	public class DummyControllerLeft : DialogViewController
