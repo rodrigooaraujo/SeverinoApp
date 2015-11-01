@@ -137,6 +137,18 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
+				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcons" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
 				<string>./LaunchImage-2.launchimage/[iphone][][2x][portrait][][7.0][2d][(null)]</string>
 				<string>./LaunchImage-2.launchimage/[iphone][retina4][2x][portrait][][7.0][2d][(null)]</string>
 			</array>
@@ -144,18 +156,6 @@
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The launch image set "LaunchImage-2" has 2 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
-			<key>message</key>
-			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>

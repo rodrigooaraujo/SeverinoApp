@@ -301,6 +301,10 @@
     </Compile>
     <Compile Include="Render\Chat\ChatSource.cs" />
     <Compile Include="Render\Chat\ChatInputView.cs" />
+    <Compile Include="ChatViewController.cs" />
+    <Compile Include="ChatViewController.designer.cs">
+      <DependentUpon>ChatViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

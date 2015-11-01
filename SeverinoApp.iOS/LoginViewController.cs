@@ -13,6 +13,9 @@ namespace SeverinoApp.iOS
 	{
 		LoadingOverlay loadingOverlay;
 
+		NSObject willShowToken;
+		NSObject willHideToken;
+
 		public LoginViewController (IntPtr handle) : base (handle)
 		{
 			
@@ -29,17 +32,61 @@ namespace SeverinoApp.iOS
 			} else {
 				//this.NavigationController.NavigationBar.BackItem.BackBarButtonItem.Enabled = false;
 			}
-
+			//this.EdgesForExtendedLayout = UIRectEdge.None;
+			scrCampos.SetContentOffset (new CGPoint (0, contentView.Frame.Bottom), true);
 			Helpers.criaReturn (this.View);
+			this.EdgesForExtendedLayout = UIRectEdge.None;
+			//scrCampos.TranslatesAutoresizingMaskIntoConstraints = false;
+			//contentView.TranslatesAutoresizingMaskIntoConstraints = false;
+			var height = View.Bounds.Size.Height > contentView.Bounds.Size.Height ? View.Bounds.Size.Height : contentView.Bounds.Size.Height;
+			scrCampos.ContentSize = new CGSize ((nfloat)1.0, height);
 		}
 
+		public override void ViewDidLayoutSubviews ()
+		{
+			base.ViewDidLayoutSubviews ();
+
+			scrCampos.LayoutIfNeeded ();
+			var height = View.Bounds.Size.Height > contentView.Bounds.Size.Height ? View.Bounds.Size.Height : contentView.Bounds.Size.Height;
+			scrCampos.ContentSize = new CGSize ((nfloat)1.0, height+300);
+		}
 
 
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
 			AppDelegate.dbUsuario = null;
+
+			willShowToken = UIKeyboard.Notifications.ObserveWillShow (KeyboardWillShowHandler);
+			willHideToken = UIKeyboard.Notifications.ObserveWillHide (KeyboardWillHideHandler);
+
 		}
+
+		void KeyboardWillShowHandler (object sender, UIKeyboardEventArgs e)
+		{
+			//UpdateButtomLayoutConstraint (e);
+			var height = e.FrameEnd.Size.Height;
+			var focado = Helpers.pegaFocado (this.View) ?? txtSenha;
+			var pos = this.View.Bounds.Bottom - e.FrameBegin.Height;
+			//scrCampos.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height + height);
+			var tamanhotela = UIScreen.MainScreen.Bounds.Height;
+			//if (focado.Frame.Y < e.FrameBegin.Y && (tamanhotela < contentView.Frame.Height || contentView.Frame.Height + e.FrameBegin.Y > tamanhotela)) {
+			if (focado.Frame.Y+30 > pos) {
+				var descer = focado.Frame.Bottom-pos;//e.FrameBegin.Y-focado.Frame.Bottom;
+				scrCampos.SetContentOffset (new CGPoint (0, descer+20), true);
+			}
+		}
+
+		void KeyboardWillHideHandler (object sender, UIKeyboardEventArgs e)
+		{
+			scrCampos.SetContentOffset (new CGPoint (0, 0), true);
+			//UpdateButtomLayoutConstraint (e);
+			/*var height = e.FrameEnd.GetMidY () + e.FrameBegin.GetMaxY ();
+
+			scrCampos.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height - height);
+			scrCampos.SetContentOffset (new CGPoint (0, contentView.Frame.GetMaxY ()), true);*/
+		}
+
 
 		partial void btnLoga_Click (UIButton sender)
 		{

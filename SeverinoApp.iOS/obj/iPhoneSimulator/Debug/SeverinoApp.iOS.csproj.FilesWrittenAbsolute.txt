@@ -9,8 +9,8 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1220-view-1221.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1257-view-1258.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1354-view-1355.nib
-/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1431-view-1432.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1456-view-1457.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1570-view-1571.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/306-view-307.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/31-view-36.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/387-view-388.nib

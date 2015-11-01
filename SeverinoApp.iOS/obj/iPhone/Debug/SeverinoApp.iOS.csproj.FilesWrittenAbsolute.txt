@@ -9,6 +9,8 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1220-view-1221.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1257-view-1258.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1354-view-1355.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1456-view-1457.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1570-view-1571.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/306-view-307.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/31-view-36.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/387-view-388.nib
@@ -19,6 +21,8 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/771-view-772.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/AvaliarViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChamadoViewController.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChatViewController.nib
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChatViewController2.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ConsultaViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/DetalheChamadoViewController.nib
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/DetalheProfissionalViewController.nib
@@ -47,6 +51,7 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1@2x.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1-568h@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/Assets.car
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/LogoSeverino.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Icons/hammer.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Icons/home.png
@@ -74,6 +79,12 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Icons/strela-amarela.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Icons/strela-vermelha.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Icons/estrela-amarela2.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Images.xcassets/BubbleIncoming.imageset/bubble_regular.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Images.xcassets/BubbleIncoming.imageset/bubble_regular@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Images.xcassets/BubbleIncoming.imageset/bubble_regular@3x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Images.xcassets/BubbleOutgoing.imageset/bubble_regular.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Images.xcassets/BubbleOutgoing.imageset/bubble_regular@2x.png
+/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/Images.xcassets/BubbleOutgoing.imageset/bubble_regular@3x.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/optimized/
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines.png
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/MonoTouch.SlideoutNavigation.bundle/three_lines@2x.png
@@ -94,7 +105,3 @@
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhone/Debug/DSoft.Themes.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhone/Debug/DSoft.UI.dll
 /Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/bin/iPhone/Debug/AutoMapper.dll
-/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1431-view-1432.nib
-/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChatViewController.nib
-/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/1456-view-1457.nib
-/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/ibtool/MainStoryboard_iPhone.storyboardc/ChatViewController2.nib

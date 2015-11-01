@@ -16,6 +16,7 @@
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1.png</string>
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1@2x.png</string>
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1-568h@2x.png</string>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/bundle/Assets.car</string>
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/obj/iPhone/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
@@ -123,6 +124,18 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
+				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcons" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
 				<string>./Brand Assets.launchimage/[iphone][][2x][portrait][][7.0][2d][(null)]</string>
 				<string>./Brand Assets.launchimage/[iphone][retina4][2x][portrait][][7.0][2d][(null)]</string>
 			</array>
@@ -130,18 +143,6 @@
 			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The launch image set "Brand Assets" has 2 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/rodrigoaraujo/Documents/SeverinoApp/SeverinoApp.iOS/Resources/Images.xcassets</string>
-			<key>message</key>
-			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>

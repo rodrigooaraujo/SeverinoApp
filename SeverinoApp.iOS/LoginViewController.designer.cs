@@ -33,6 +33,14 @@ namespace SeverinoApp.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btnFacebook_Click { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIView contentView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrCampos { get; set; }
+
 		[Action ("btnFacebook_Ckick:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btnFacebook_Ckick (UIButton sender);
@@ -46,6 +54,14 @@ namespace SeverinoApp.iOS
 			if (btnFacebook_Click != null) {
 				btnFacebook_Click.Dispose ();
 				btnFacebook_Click = null;
+			}
+			if (contentView != null) {
+				contentView.Dispose ();
+				contentView = null;
+			}
+			if (scrCampos != null) {
+				scrCampos.Dispose ();
+				scrCampos = null;
 			}
 		}
 	}

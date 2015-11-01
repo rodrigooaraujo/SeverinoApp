@@ -7,6 +7,7 @@ using SeverinoApp;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+
 //using wsSeverino;
 using CoreGraphics;
 using SharpMobileCode.ModalPicker;
@@ -31,7 +32,8 @@ namespace SeverinoApp.iOS
 			base.ViewDidLayoutSubviews ();
 
 			scrCampos.LayoutIfNeeded ();
-			scrCampos.ContentSize = new CGSize ((nfloat)1.0,contentView.Bounds.Size.Height);;
+			scrCampos.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height + 100);
+			;
 		}
 
 		public override void ViewDidAppear (bool animated)
@@ -46,19 +48,23 @@ namespace SeverinoApp.iOS
 			lblRaioAtendimento.Hidden = !swtPrestador.On;
 			txtCustoVisita.Hidden = !swtPrestador.On;
 			sldRaioAtendimento.Hidden = !swtPrestador.On;
-			lblHorarioAtendimento.Hidden= !swtPrestador.On;
-			txtHrInicio.Hidden= !swtPrestador.On;
-			txtHrFim.Hidden= !swtPrestador.On;
-			lblAs.Hidden= !swtPrestador.On;
-			swtCobraAtendimento.Hidden= !swtPrestador.On;
-			lblCobra.Hidden= !swtPrestador.On;
-			txtCustoVisita.Hidden= !swtPrestador.On || !swtCobraAtendimento.On;
+			lblHorarioAtendimento.Hidden = !swtPrestador.On;
+			txtHrInicio.Hidden = !swtPrestador.On;
+			txtHrFim.Hidden = !swtPrestador.On;
+			lblAs.Hidden = !swtPrestador.On;
+			swtCobraAtendimento.Hidden = !swtPrestador.On;
+			lblCobra.Hidden = !swtPrestador.On;
+			txtCustoVisita.Hidden = !swtPrestador.On || !swtCobraAtendimento.On;
 			swtCobraAtendimento_Changed (swtCobraAtendimento);
+			if (sender.On) {
+				var descer = txtCPF.Frame.Bottom;//txtCustoVisita.Frame.Bottom - (swtPrestador.Frame.Bottom-txtCustoVisita.Frame.Bottom+30);//e.FrameBegin.Y-focado.Frame.Bottom;
+				scrCampos.SetContentOffset (new CGPoint (0, descer + 20), true);
+			}
 		}
 
 		partial void sldRaioAtendimento_Changed (UISlider sender)
 		{
-			lblRaioAtendimento.Text = string.Format("Raio de Atendimento: {0} KM", (int)sldRaioAtendimento.Value);
+			lblRaioAtendimento.Text = string.Format ("Raio de Atendimento: {0} KM", (int)sldRaioAtendimento.Value);
 		}
 
 		partial void swtCobraAtendimento_Changed (UISwitch sender)
@@ -68,6 +74,7 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
+			this.EdgesForExtendedLayout = UIRectEdge.None;
 			swtPrestador_Changed (swtPrestador);
 			sldRaioAtendimento_Changed (sldRaioAtendimento);
 			swtCobraAtendimento_Changed (swtCobraAtendimento);
@@ -95,31 +102,26 @@ namespace SeverinoApp.iOS
 			UIAlertView aviso;
 			string campos = string.Empty;
 
-			if(string.IsNullOrEmpty(txtNome.Text))
-			{
+			if (string.IsNullOrEmpty (txtNome.Text)) {
 				campos += "Nome \n";	 
 			}
 
-			if(string.IsNullOrEmpty(txtEmail.Text))
-			{
+			if (string.IsNullOrEmpty (txtEmail.Text)) {
 				campos += "Email \n";	 
 			}
 
-			if(string.IsNullOrEmpty(txtSenha.Text))
-			{
+			if (string.IsNullOrEmpty (txtSenha.Text)) {
 				campos += "Senha \n";	 
 			}
 
-			if(txtSenha.Text != txtConfSenha.Text)
-			{
+			if (txtSenha.Text != txtConfSenha.Text) {
 				campos += "Senhas não Conferem \n";	 
 			}
 
-			if(!string.IsNullOrEmpty(campos))
-			{
-				aviso = new UIAlertView("Erro de Validação", campos, null, "OK", null);
+			if (!string.IsNullOrEmpty (campos)) {
+				aviso = new UIAlertView ("Erro de Validação", campos, null, "OK", null);
 				//aviso.Clicked();
-				aviso.Show();
+				aviso.Show ();
 				return;
 			}
 
@@ -150,18 +152,18 @@ namespace SeverinoApp.iOS
 
 				decimal custovisita;
 
-				usu.CPF = txtCPF.Text.Trim();
+				usu.CPF = txtCPF.Text.Trim ();
 
-				usu.Sexo = (txtSexo.Text == "Masculino" ? "M":"F");
+				usu.Sexo = (txtSexo.Text == "Masculino" ? "M" : "F");
 
-				usu.DtNascimento = DateTime.Parse(txtDtNascimento.Text);
+				usu.DtNascimento = DateTime.Parse (txtDtNascimento.Text);
 
-				usu.PrestaServico = swtPrestador.On ? 1:0;
+				usu.PrestaServico = swtPrestador.On ? 1 : 0;
 				usu.RaioAtendimento = (decimal)sldRaioAtendimento.Value;
-				usu.CobraVisita = swtCobraAtendimento.On ? 1:0;
+				usu.CobraVisita = swtCobraAtendimento.On ? 1 : 0;
 				usu.HrInicio = txtHrInicio.Text;
 				usu.HrFim = txtHrFim.Text;
-				decimal.TryParse(txtCustoVisita.Text, out custovisita);
+				decimal.TryParse (txtCustoVisita.Text, out custovisita);
 				usu.CustoVisita = custovisita;
 				usu.Ativo = 1;
 
@@ -173,23 +175,28 @@ namespace SeverinoApp.iOS
 
 			} catch (Exception ex) {
 				erro += "Erro ao Gravar";
-			}
-			finally{
+			} finally {
 				loadingOverlay.Hide ();
 			}
 
-			if(!string.IsNullOrEmpty(erro))
-			{
-				aviso = new UIAlertView("Erro de Validação", erro, null, "OK", null);
+			if (!string.IsNullOrEmpty (erro)) {
+				aviso = new UIAlertView ("Erro de Validação", erro, null, "OK", null);
 				//aviso.Clicked();
-				aviso.Show();
+				aviso.Show ();
 				return;
 			}
 		}
 
-		public void PreparaTela()
+		public void PreparaTela ()
 		{
 			//txtEndereco.TouchUpInside += abreEndereco;
+
+			var frame = btnGravar.Frame;
+			var btnframe = new CGRect (btnGravar.Frame.X, View.Frame.Bottom - btnGravar.Frame.Height - 100, btnGravar.Frame.Width, btnGravar.Frame.Height);
+			btnGravar.Frame = btnframe;
+
+			var scrframe = new CGRect (scrCampos.Frame.X, scrCampos.Frame.Y, scrCampos.Frame.Width, btnframe.Top - 50);
+			scrCampos.Frame = scrframe;
 
 			if (AppDelegate.dbUsuario != null) {
 				Usuario usu = AppDelegate.dbUsuario;
@@ -219,9 +226,11 @@ namespace SeverinoApp.iOS
 
 				txtCPF.Text = string.Empty;
 
-				txtSexo.Text = string.Empty;;
+				txtSexo.Text = string.Empty;
+				;
 
-				txtDtNascimento.Text = string.Empty;;
+				txtDtNascimento.Text = string.Empty;
+				;
 
 				swtPrestador.On = false;
 				sldRaioAtendimento.Value = 10f;
@@ -229,15 +238,16 @@ namespace SeverinoApp.iOS
 				txtHrInicio.Text = string.Empty;
 				txtHrFim.Text = string.Empty;
 
-				txtCustoVisita.Text = string.Empty;;
+				txtCustoVisita.Text = string.Empty;
+				;
 			}
 
 			Helpers.criaReturn (this.View);
 		}
 
-		protected void preparaPicker()
+		protected void preparaPicker ()
 		{
-			List<object> sexo= new List<object> ();
+			List<object> sexo = new List<object> ();
 			sexo.Add ("Masculino");
 			sexo.Add ("Feminino");
 
@@ -245,7 +255,7 @@ namespace SeverinoApp.iOS
 
 			picker_model = new PickerModel (sexo);
 
-			picker =  new UIPickerView ();
+			picker = new UIPickerView ();
 			picker.Model = picker_model;
 			picker.ShowSelectionIndicator = true;
 
@@ -255,17 +265,15 @@ namespace SeverinoApp.iOS
 			toolbar.SizeToFit ();
 			txtSexo.InputView = picker;
 
-			UIBarButtonItem doneButton = new UIBarButtonItem("Selecionar",UIBarButtonItemStyle.Done,(s,e) =>
-				{
-					var ddl = (txtSexo.InputView);
-					if(ddl.GetType() == (new UIPickerView()).GetType())
-					{
-						var teste = (UIPickerView)txtSexo.InputView;
-						nint linha = teste.SelectedRowInComponent(0);
-						txtSexo.Text = picker_model.values[(int)linha].ToString();
-						txtSexo.ResignFirstResponder();
-					}
-					/*foreach (UIPickerView view in txtSexo.InputView) 
+			UIBarButtonItem doneButton = new UIBarButtonItem ("Selecionar", UIBarButtonItemStyle.Done, (s, e) => {
+				var ddl = (txtSexo.InputView);
+				if (ddl.GetType () == (new UIPickerView ()).GetType ()) {
+					var teste = (UIPickerView)txtSexo.InputView;
+					nint linha = teste.SelectedRowInComponent (0);
+					txtSexo.Text = picker_model.values [(int)linha].ToString ();
+					txtSexo.ResignFirstResponder ();
+				}
+				/*foreach (UIPickerView view in txtSexo.InputView) 
 					{
 						
 						if (view.IsFirstResponder)
@@ -276,68 +284,62 @@ namespace SeverinoApp.iOS
 						}
 					}*/
 
-				});
-			toolbar.SetItems (new UIBarButtonItem[]{doneButton},true);
+			});
+			toolbar.SetItems (new UIBarButtonItem[]{ doneButton }, true);
 
 
 			txtSexo.InputAccessoryView = toolbar;
 		}
-			
-		private void SetPicker(object sender, EventArgs e)
+
+		private void SetPicker (object sender, EventArgs e)
 		{
 			UITextField field = (UITextField)sender;
 			picker.Select (picker_model.values.IndexOf (field.Text), 0, true);
 		}
-			
+
 		async void DatePickerButtonTapped (object sender, EventArgs e)
 		{
-			var modalPicker = new ModalPickerViewController(ModalPickerType.Date, "Data Nascimento", this)
-			{
+			var modalPicker = new ModalPickerViewController (ModalPickerType.Date, "Data Nascimento", this) {
 				HeaderBackgroundColor = UIColor.White,
 				HeaderTextColor = UIColor.Black,
-				TransitioningDelegate = new ModalPickerTransitionDelegate(),
+				TransitioningDelegate = new ModalPickerTransitionDelegate (),
 				ModalPresentationStyle = UIModalPresentationStyle.Custom
 			};
 
 			modalPicker.DatePicker.Mode = UIDatePickerMode.Date;
 
-			modalPicker.OnModalPickerDismissed += (s, ea) => 
-			{
-				var dateFormatter = new NSDateFormatter()
-				{
+			modalPicker.OnModalPickerDismissed += (s, ea) => {
+				var dateFormatter = new NSDateFormatter () {
 					DateFormat = "MMMM dd, yyyy"
 				};
 
-				txtDtNascimento.Text = dateFormatter.ToString(modalPicker.DatePicker.Date);
+				txtDtNascimento.Text = dateFormatter.ToString (modalPicker.DatePicker.Date);
 			};
 
 
-			await PresentViewControllerAsync(modalPicker, true);
+			await PresentViewControllerAsync (modalPicker, true);
 		}
 
-		bool OnTextFieldShouldBeginEditing(UITextField textField)
+		bool OnTextFieldShouldBeginEditing (UITextField textField)
 		{
-			var modalPicker = new ModalPickerViewController(ModalPickerType.Date, "Data Nascimento", this)
-			{
+			var modalPicker = new ModalPickerViewController (ModalPickerType.Date, "Data Nascimento", this) {
 				HeaderBackgroundColor = UIColor.White,
 				HeaderTextColor = UIColor.Black,
-				TransitioningDelegate = new ModalPickerTransitionDelegate(),
+				TransitioningDelegate = new ModalPickerTransitionDelegate (),
 				ModalPresentationStyle = UIModalPresentationStyle.Custom
 			};
 
 			modalPicker.DatePicker.Mode = UIDatePickerMode.Date;
 
-			modalPicker.OnModalPickerDismissed += (s, ea) => 
-			{
-				var dateFormatter = new NSDateFormatter()
-				{
+			modalPicker.OnModalPickerDismissed += (s, ea) => {
+				var dateFormatter = new NSDateFormatter () {
 					DateFormat = "MM/dd/yyyy"
 				};
 
-				textField.Text = dateFormatter.ToString(modalPicker.DatePicker.Date);
+				textField.Text = dateFormatter.ToString (modalPicker.DatePicker.Date);
 			};
 
-			PresentViewController(modalPicker, true, null);
+			PresentViewController (modalPicker, true, null);
 
 			return false;
 		}
@@ -351,25 +353,22 @@ namespace SeverinoApp.iOS
 		{
 			var endereco = Storyboard.InstantiateViewController ("EnderecoViewController");
 
-			if (endereco != null)
-			{
+			if (endereco != null) {
 				endereco.View.TranslatesAutoresizingMaskIntoConstraints = false;
-				var modalPicker = new ModalController(endereco.View, "Telefone", this)
-				{
+				var modalPicker = new ModalController (endereco.View, "Telefone", this) {
 					HeaderBackgroundColor = UIColor.White,
 					HeaderTextColor = UIColor.Black,
-					TransitioningDelegate = new ModalPickerTransitionDelegate(),
+					TransitioningDelegate = new ModalPickerTransitionDelegate (),
 					ModalPresentationStyle = UIModalPresentationStyle.Custom
 				};
 
-				modalPicker.OnModalPickerDismissed += (s, ea) => 
-				{
+				modalPicker.OnModalPickerDismissed += (s, ea) => {
 
 				};
 
 				//await PresentViewControllerAsync(modalPicker, true);
 
-				this.NavigationController.PushViewController(endereco, true);
+				this.NavigationController.PushViewController (endereco, true);
 			} 
 		}
 
@@ -382,22 +381,19 @@ namespace SeverinoApp.iOS
 		{
 			var telefone = Storyboard.InstantiateViewController ("TelefoneViewController");
 
-			if (telefone != null)
-			{
-				var modalPicker = new ModalController(telefone.View.Subviews[0], "Telefone", this)
-				{
+			if (telefone != null) {
+				var modalPicker = new ModalController (telefone.View.Subviews [0], "Telefone", this) {
 					HeaderBackgroundColor = UIColor.White,
 					HeaderTextColor = UIColor.Black,
-					TransitioningDelegate = new ModalPickerTransitionDelegate(),
+					TransitioningDelegate = new ModalPickerTransitionDelegate (),
 					ModalPresentationStyle = UIModalPresentationStyle.Custom
 				};
 						
-				modalPicker.OnModalPickerDismissed += (s, ea) => 
-				{
+				modalPicker.OnModalPickerDismissed += (s, ea) => {
 					
 				};
 
-				await PresentViewControllerAsync(modalPicker, true);
+				await PresentViewControllerAsync (modalPicker, true);
 			} 
 		}
 	}

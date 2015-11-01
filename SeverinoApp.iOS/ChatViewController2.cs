@@ -8,13 +8,14 @@ using CoreGraphics;
 using ObjCRuntime;
 using AudioToolbox;
 using System.Threading.Tasks;
-
+using System.Linq;
 
 namespace SeverinoApp.iOS
 {
-	public partial class ChatViewController2 : UIViewController
+	partial class ChatViewController2 : UIViewController
 	{
 		public int NumeroChamado{ get; set; }
+
 		Usuario usuario = AppDelegate.dbUsuario;
 
 		LoadingOverlay loadingOverlay;
@@ -52,20 +53,9 @@ namespace SeverinoApp.iOS
 			}
 		}
 
-		public ChatViewController2 (IntPtr handle)
-			: base (handle)
+		public ChatViewController2 (IntPtr handle) : base (handle)
 		{
-			/*messages = new List<Message> () {
-				new Message { Type = MessageType.Incoming, Text = "Hello!" },
-				new Message { Type = MessageType.Outgoing, Text = "Hi!" },
-				new Message { Type = MessageType.Incoming, Text = "Do you know about Xamarin?" },
-				new Message { Type = MessageType.Outgoing, Text = "Yes! Sure!" },
-				new Message { Type = MessageType.Incoming, Text = "And what do you think?" },
-				new Message { Type = MessageType.Outgoing, Text = "I think it is the best way to develop mobile applications." },
-				new Message { Type = MessageType.Incoming, Text = "Wow :-)" },
-				new Message { Type = MessageType.Outgoing, Text = "Yep. Check it out\nhttp://Xamarin.com" },
-				new Message { Type = MessageType.Incoming, Text = "Will do. Thanks" },
-			};*/
+			
 		}
 
 		#region Life cycle
@@ -73,22 +63,8 @@ namespace SeverinoApp.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			NumeroChamado = 1031;
 
 			if (NumeroChamado > 0) {
-
-				/*messages = new List<Message> () {
-					new Message { Type = MessageType.Incoming, Text = "Hello!" },
-					new Message { Type = MessageType.Outgoing, Text = "Hi!" },
-					new Message { Type = MessageType.Incoming, Text = "Do you know about Xamarin?" },
-					new Message { Type = MessageType.Outgoing, Text = "Yes! Sure!" },
-					new Message { Type = MessageType.Incoming, Text = "And what do you think?" },
-					new Message { Type = MessageType.Outgoing, Text = "I think it is the best way to develop mobile applications." },
-					new Message { Type = MessageType.Incoming, Text = "Wow :-)" },
-					new Message { Type = MessageType.Outgoing, Text = "Yep. Check it out\nhttp://Xamarin.com" },
-					new Message { Type = MessageType.Incoming, Text = "Will do. Thanks" },
-				};*/
-
 
 				SetUpTableView ();
 				SetUpToolbar ();
@@ -98,12 +74,14 @@ namespace SeverinoApp.iOS
 				TextView.Changed += OnTextChanged;
 				this.EdgesForExtendedLayout = UIRectEdge.None;
 				//messages = new List<Message> () ;
+				Helpers.criaReturn (this.View);
 
-
-
+				/*var subviews = (from subs in this.View.Subviews where subs.GetType() != typeof(UIScrollView) select subs).ToArray();
+				foreach (var item in View.Subviews) {
+					View.WillRemoveSubview (item);
+				}
+				scrCampos.AddSubviews (subviews);*/
 			}
-			//TextView.TouchesBegan((NSSet)UITouch.
-			//KeyboardWillShowHandler (TextView, null);
 		}
 
 		public override void ViewWillAppear (bool animated)
@@ -124,6 +102,15 @@ namespace SeverinoApp.iOS
 			AddObservers ();
 		}
 
+
+		public override void ViewDidLayoutSubviews ()
+		{
+			base.ViewDidLayoutSubviews ();
+
+			//scrCampos.LayoutIfNeeded ();
+			//scrCampos.ContentSize = new CGSize ((nfloat)1.0, tableView.Frame.Height);
+		}
+
 		protected async Task<Boolean>  carrega ()
 		{
 			//messages.Clear ();
@@ -132,10 +119,13 @@ namespace SeverinoApp.iOS
 			var mensagem = new Mensagem ();
 			await mensagem.CriaLista (NumeroChamado);
 			var msgs = mensagem.Mensagens;
-
+			var id = usuario.ID;
 			if (msgs != null && msgs.Count > 0) {
 				foreach (var msg in msgs) {
-					messages.Add (new Message { Type = msg.IDSender == 12? MessageType.Incoming:MessageType.Outgoing, Text = msg.Texto });
+					messages.Add (new Message {
+						Type = msg.IDSender != id ? MessageType.Incoming : MessageType.Outgoing,
+						Text = msg.Texto
+					});
 				}
 			}
 
@@ -144,7 +134,8 @@ namespace SeverinoApp.iOS
 
 			//tableView.InsertRows (new NSIndexPath[] { NSIndexPath.FromRowSection (messages.Count - 1, 0) }, UITableViewRowAnimation.None);
 			//tableView.ReloadData ();
-			ScrollToBottom (true);
+			ViewWillAppear (false);
+
 			return true;
 		}
 
@@ -158,16 +149,16 @@ namespace SeverinoApp.iOS
 			}
 
 			this.loadingOverlay = new LoadingOverlay (bounds);
-			this.View.Add (loadingOverlay);
+			//this.View.Add (loadingOverlay);
 
 			try {
 				var mensagem = new Mensagem ();
 				mensagem.Texto = TextView.Text;
 				mensagem.NumeroChamado = NumeroChamado;
-				mensagem.IDSender = 12;
+				mensagem.IDSender = usuario.ID;
 				mensagem.DtCadastro = DateTime.Now;
 
-				bool ok = await mensagem.Grava();
+				bool ok = await mensagem.Grava ();
 
 				if (!string.IsNullOrEmpty (mensagem.Erro)) {
 					erro = mensagem.Erro;
@@ -178,7 +169,7 @@ namespace SeverinoApp.iOS
 				}
 
 				if (!string.IsNullOrEmpty (erro)) {
-					loadingOverlay.Hide ();
+					//loadingOverlay.Hide ();
 					aviso = new UIAlertView ("Erro de Validação", erro, null, "OK", null);
 					aviso.Show ();
 					return string.Empty;
@@ -187,11 +178,11 @@ namespace SeverinoApp.iOS
 			} catch (Exception ex) {
 				aviso = new UIAlertView ("Erro de Validação", ex.Message, null, "OK", null);
 				aviso.Show ();
-			}
-			finally {
-				loadingOverlay.Hide ();
+			} finally {
+				//loadingOverlay.Hide ();
 			}
 
+			ScrollToBottom (true);
 			return string.Empty;
 		}
 
@@ -329,21 +320,39 @@ namespace SeverinoApp.iOS
 
 		void KeyboardWillShowHandler (object sender, UIKeyboardEventArgs e)
 		{
-			UpdateButtomLayoutConstraint (e);
+			UpdateButtomLayoutConstraint (e, false);
+
+			var pos = this.View.Bounds.Bottom - e.FrameBegin.Height;
+			if (toolbar.Frame.GetMaxY () > pos) {
+				var descer = toolbar.Frame.GetMaxY () - pos;//e.FrameBegin.Y-focado.Frame.Bottom;
+				//scrCampos.SetContentOffset (new CGPoint (0, descer + 200), true);
+			}
 		}
 
 		void KeyboardWillHideHandler (object sender, UIKeyboardEventArgs e)
 		{
-			UpdateButtomLayoutConstraint (e);
+			UpdateButtomLayoutConstraint (e, true);
+			//offsetFromBottom = NMath.Max (0, 0);
+			ScrollToBottom (true);
 		}
 
-		void UpdateButtomLayoutConstraint (UIKeyboardEventArgs e)
+		void UpdateButtomLayoutConstraint (UIKeyboardEventArgs e, bool hide)
 		{
+			var pos = this.View.Bounds.Bottom - e.FrameBegin.Height;
+			//if (toolbar.Frame.GetMaxY() > pos) {
+			var descer = toolbar.Frame.GetMaxY () - pos;//e.FrameBegin.Y-focado.Frame.Bottom;
+			//scrCampos.SetContentOffset (new CGPoint (0, descer + 200), true);
+			//}
+
 			UIViewAnimationCurve curve = e.AnimationCurve;
 			UIView.Animate (e.AnimationDuration, 0, ConvertToAnimationOptions (e.AnimationCurve), () => {
 				nfloat offsetFromBottom = tableView.Frame.GetMaxY () - e.FrameEnd.GetMinY ();
-				offsetFromBottom = NMath.Max (0, offsetFromBottom);
+				if (descer == 0 && !hide)
+					descer = 253;
+
+				offsetFromBottom = NMath.Max (0, descer);
 				SetToolbarContstraint (offsetFromBottom);
+
 			}, null);
 		}
 
@@ -382,6 +391,7 @@ namespace SeverinoApp.iOS
 				return;
 
 			Grava ();
+
 			TextView.Text = string.Empty; 
 			ScrollToBottom (true);
 		}

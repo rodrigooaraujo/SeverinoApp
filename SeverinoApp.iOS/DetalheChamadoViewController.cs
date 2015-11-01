@@ -232,13 +232,14 @@ namespace SeverinoApp.iOS
 					break;
 				case "Mensagem":
 					{
-						var msg = Storyboard.InstantiateViewController ("ChatViewController2");
+						var mensagem = (ChatViewController2)Storyboard.InstantiateViewController ("ChatViewController2");
+						//var board = UIStoryboard.FromName("ChatViewController", null);
+						//var vc = (ChatViewController)board.InstantiateViewController("ChatViewController");
+						if (mensagem != null) {
 
-						if (msg != null) {
-
-							ChatViewController2 mensagem = (ChatViewController2)msg;
+							//ChatViewController2 mensagem = msg.;
 							mensagem.NumeroChamado = NumeroChamado;
-							mensagem.View.TranslatesAutoresizingMaskIntoConstraints = false;
+							//mensagem.View.TranslatesAutoresizingMaskIntoConstraints = false;
 							this.NavigationController.PushViewController (mensagem, true);
 						} 
 					}
