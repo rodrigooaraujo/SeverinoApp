@@ -68,10 +68,10 @@ namespace SeverinoApp
 			return true;
 		}
 
-		public async Task<bool> AlteraStatus (int numero, int status)
+		public async Task<bool> AlteraStatus (int numero, int status, bool solicitante)
 		{
 			var api = new Api ();
-			string controller = string.Format ("Chamado?numero={0}&Status={1}", numero, status);
+			string controller = string.Format ("Chamado?numero={0}&Status={1}&Solicitante={2}", numero, status,solicitante);
 
 			await api.Put ("",controller);
 

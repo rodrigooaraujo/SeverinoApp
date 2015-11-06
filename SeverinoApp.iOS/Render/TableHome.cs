@@ -33,7 +33,7 @@ namespace SeverinoApp.iOS
 			cell.TextLabel.Text = item.Nome;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/"+item.Icone);
 			cell.DetailTextLabel.Text = "Qtd: " + item.Total.ToString ().PadLeft(4);
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (82, 188, 255) : UIColor.White;
 			return cell;
 		}
 

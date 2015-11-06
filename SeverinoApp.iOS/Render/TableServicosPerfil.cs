@@ -37,7 +37,7 @@ namespace SeverinoApp.iOS
 
 			cell.TextLabel.Text = item.Nome;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/" + item.Icone);
-			//cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
+			//cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (82, 188, 255) : UIColor.White;
 
 			if(ServicosSelecionados.Contains(item))
 				cell.Accessory = UITableViewCellAccessory.Checkmark;
@@ -85,10 +85,10 @@ namespace SeverinoApp.iOS
 
 				Servico item = TableItems [indexPath.Row];
 
-				cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.FromRGB (9, 121, 168);
+				cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (82, 188, 255) : UIColor.FromRGB (9, 121, 168);
 				var servicousu = (from ususerv in selecionados where ususerv.IDServico == item.ID select ususerv).SingleOrDefault();
 
-				//cell.BackgroundColor = UIColor.FromRGB (193, 255, 61);
+				//cell.BackgroundColor = UIColor.FromRGB (82, 188, 255);
 				if (cell.Accessory == UITableViewCellAccessory.Checkmark)
 					NewRowSelected (tableView, indexPath, servicousu);
 				else

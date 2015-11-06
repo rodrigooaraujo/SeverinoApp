@@ -33,6 +33,10 @@ namespace SeverinoApp.iOS
 		{		
 			//mapUsuario = new CustomMap ();
 			//View.Add (mapUsuario);
+			var scr = new CGRect (direcionadoView.Frame.X, direcionadoView.Frame.Y, direcionadoView.Frame.Width, btnAbreChamado.Frame.Bottom - 50);
+			//scrListaUsuarios.Frame = new CGRect (scrListaUsuarios.Frame.X, scrListaUsuarios.Frame.Y, scrListaUsuarios.Frame.Width, btnAbreChamado.Frame.Top - 50);;
+			//direcionadoView.Frame = scrListaUsuarios.Frame;;
+			//mapUsuario.Frame = direcionadoView.Frame;
 			usu = AppDelegate.dbUsuario;
 			carrega ();
 			Helpers.criaReturn (this.View);

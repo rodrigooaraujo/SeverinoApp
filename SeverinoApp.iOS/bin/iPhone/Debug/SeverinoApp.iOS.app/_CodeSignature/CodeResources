@@ -6,19 +6,19 @@
 	<dict>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		5Q2MqFVZQLzLPaRD4PGXT5tR6yQ=
+		2H5XgxIdVFx9wAlNp90ntxSFmgA=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		Ten3pvN9zBZdSgwPIHw90uTNQ4M=
+		ZcIoUoJxS+Wg3nVs/BP11a7yXgw=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
-		CQoEGPclNArTqq/v1VHwPGXHogI=
+		QinJFLQ6n5BMusy+/b2RCyb9vqM=
 		</data>
 		<key>.monotouch-32/mscorlib.dll.mdb</key>
 		<data>
-		wYZYyJw/V8eX2ej/u6kVsIcNSEo=
+		i+g0zDli3QV8pvzM3HCxmxIY/yQ=
 		</data>
 		<key>.monotouch-64/AutoMapper.dll</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>.monotouch-64/DSoft.UI.dll</key>
 		<data>
-		EL8EJtd0bUOZIVbe2tKWIF+OGcA=
+		4zyatngiNphY9VgvUIzq3fMy9nU=
 		</data>
 		<key>.monotouch-64/Geolocator.Plugin.Abstractions.dll</key>
 		<data>
-		6YBbwGCtxUmT5AK/BmrDUU/8j4M=
+		lujqfrH+oF6bjuYILp263X9izAg=
 		</data>
 		<key>.monotouch-64/Geolocator.Plugin.dll</key>
 		<data>
@@ -58,31 +58,31 @@
 		</data>
 		<key>.monotouch-64/Mono.CSharp.dll</key>
 		<data>
-		0ORe/vfduffSWPX2nuT4HlPOwzY=
+		Xm1fpo/yHQWVGXNxXDHqnWHntqg=
 		</data>
 		<key>.monotouch-64/Mono.CSharp.dll.mdb</key>
 		<data>
-		cYgAXzLs+ThauPOQziOR+ChtD0g=
+		SfhV5Ab/mb+ZTxnA/V6L14BXZPk=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll</key>
 		<data>
-		+jW2pxGoA/eQoTFr8WgyN/uy6qg=
+		m9wtpHKzpWESbke4vpYPCpQNvOE=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll.mdb</key>
 		<data>
-		M2gQUyMK6HaNRj5s+d6HBe/fVhA=
+		4oLu90Y4SbEJ1VufNng+IGTz6Zs=
 		</data>
 		<key>.monotouch-64/MonoTouch.Dialog-1.dll</key>
 		<data>
-		tUJt5f5+IdqOruq0GzgdBF3hq5w=
+		hvmDrg9Gy89/7ZL3oy9oBX3KXFs=
 		</data>
 		<key>.monotouch-64/MonoTouch.Dialog-1.dll.mdb</key>
 		<data>
-		4J+tPC6cUOmYsrl4TcWWM1QCid8=
+		kBqujdBCyqOIwy16P4qM2gybV54=
 		</data>
 		<key>.monotouch-64/MonoTouch.Slideout.dll</key>
 		<data>
-		nZLhJg5xa9MNEMoaAXOXt+77+0w=
+		yiKnaeyNOgQjIp+JIXWih+IkV7c=
 		</data>
 		<key>.monotouch-64/Newtonsoft.Json.dll</key>
 		<data>
@@ -90,11 +90,11 @@
 		</data>
 		<key>.monotouch-64/SeverinoApp.iOS.exe</key>
 		<data>
-		hlSRdIOMWiMnTLTdXq0H4VbYwH8=
+		+aQ0mXpOtutSUEwAQISnZlT+tII=
 		</data>
 		<key>.monotouch-64/SeverinoApp.iOS.exe.mdb</key>
 		<data>
-		A4Tr8+EsQpABrKyX8HoDxZqxWDc=
+		A/5O9R03WFejTD3Dm1HG/rlWDh4=
 		</data>
 		<key>.monotouch-64/SharpMobileCode.ModalPicker.dll</key>
 		<data>
@@ -106,51 +106,51 @@
 		</data>
 		<key>.monotouch-64/System.Core.dll</key>
 		<data>
-		SlBG+1PNwUjINEzrlbAX24JO+LU=
+		WTvBoz8fHLRKfh9AuzdO4aPJelk=
 		</data>
 		<key>.monotouch-64/System.Core.dll.mdb</key>
 		<data>
-		tiJkih8Uw/y0r76/6L9phGi1eGs=
+		BiXb/DS6QgeJWtW+wXiPJggQGWY=
 		</data>
 		<key>.monotouch-64/System.Data.dll</key>
 		<data>
-		TZWwA4vgZgppMSoZZLQkB17XXTM=
+		6vaZYoAWlPKTY7ymesDswtDIRXY=
 		</data>
 		<key>.monotouch-64/System.Data.dll.mdb</key>
 		<data>
-		zSsskI6ZLxz5gzXz0IFi4J3EiYc=
+		cpMuOhkSCDlyqEo2pscZ6Nzv2L8=
 		</data>
 		<key>.monotouch-64/System.Json.dll</key>
 		<data>
-		nljExdxOCYnyYOyXJnHo3ete0lA=
+		D5cekbCUyOKIAHumwo3lR2f2zSU=
 		</data>
 		<key>.monotouch-64/System.Json.dll.mdb</key>
 		<data>
-		TWYOhBC31GS1rbKEv2A3UfL6/b8=
+		MjJ/oAiAP0cvjWdn1mFEzXzsxLI=
 		</data>
 		<key>.monotouch-64/System.Runtime.Serialization.dll</key>
 		<data>
-		4XTG+NXCVlCPoTk2oRlxzmfWLxs=
+		xTNg9DRRxN3ckRLWDT6exuqwT/A=
 		</data>
 		<key>.monotouch-64/System.Runtime.Serialization.dll.mdb</key>
 		<data>
-		RPZBN0CfDIguTu2tzKycUfrNAPw=
+		2eNP7bXsRdO+lBI+Bz4Kh+VzYPM=
 		</data>
 		<key>.monotouch-64/System.Xml.dll</key>
 		<data>
-		Fm+xBwFdeTwzi3th8VW/nvfGdfE=
+		XZwiowGL6VcDOOU4bOHbZraz+sI=
 		</data>
 		<key>.monotouch-64/System.Xml.dll.mdb</key>
 		<data>
-		EgITwpNz7Z/3hHeX0pNL/3BkMxQ=
+		W/M7gYQ4yqymbHygSxk3N2X6f+M=
 		</data>
 		<key>.monotouch-64/System.dll</key>
 		<data>
-		PV3i9ZP3XNO+md/v6CWWGblqGKI=
+		arQJTJhNwv/A6grfEVHxwlJTBH8=
 		</data>
 		<key>.monotouch-64/System.dll.mdb</key>
 		<data>
-		hVO9FvdmZ5ahx+0rbu15IjWkv1o=
+		lHrAwzeiz7qdftJfn4HJeotyrgo=
 		</data>
 		<key>.monotouch-64/Xamarin.Auth.iOS.dll</key>
 		<data>
@@ -158,19 +158,19 @@
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll</key>
 		<data>
-		M/k4jXbKtunxv1ameEuCHhKNKvI=
+		3LIpPhnbiX2sixX3aHtRmoFeI6s=
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll.mdb</key>
 		<data>
-		2cQqpqI1SYKYVSh4enRvcurDFtA=
+		fwgGjm9EWhO+cLXGT4SZWi4PMi4=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
-		SAaYQkwaOQs+c2KCltTCfYQY9Sk=
+		EVPejFGvUNcPVTUt5ZWBx3n9dTg=
 		</data>
 		<key>.monotouch-64/mscorlib.dll.mdb</key>
 		<data>
-		Jbx3gNznLI6BebrZVDGW91gRr/M=
+		jC0JniKjHVgG1TKvlf4YWetPkiM=
 		</data>
 		<key>AppIcons-157x57.png</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		R5pCtw1su/Gk6hELfIJWLWMcdyg=
+		59CNk5pGqyf9BuFFkwYidJV2VRU=
 		</data>
 		<key>Icons/estrela-amarela2.png</key>
 		<data>
@@ -358,7 +358,7 @@
 		</data>
 		<key>LaunchScreen.nib</key>
 		<data>
-		QvlwVkNavWkb3Jc3JrdXhJvkulA=
+		3QG9cpA6JmG4ID8jq+Pbzc7K8o4=
 		</data>
 		<key>LogoSeverino.png</key>
 		<data>
@@ -366,7 +366,7 @@
 		</data>
 		<key>MainStoryboard_iPad.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		k2KlDiPwBWqFW9tuvkc6rdDNzSc=
+		OkaIxEktOXxYsoZIoF5AGXS2PS0=
 		</data>
 		<key>MainStoryboard_iPad.storyboardc/Info.plist</key>
 		<data>
@@ -374,151 +374,151 @@
 		</data>
 		<key>MainStoryboard_iPad.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		HIABEuL16hj+C+tt7/SznVoCQeU=
+		4nakD7nDdP3VDSXAxAi+ds/39MI=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1004-view-1005.nib</key>
 		<data>
-		9cJRO4a85Pzy+YDnl2EUSatURPo=
+		2HsYBhI5UeOn/HjRVZW4Te6uMeQ=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1039-view-1040.nib</key>
 		<data>
-		/GholSBtHAJNBJJhg5l7teAivWU=
+		Cl1yoMuYmGBC7VCNVmQJXJy+lns=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1100-view-1101.nib</key>
 		<data>
-		2tWlxYQEkqh0poH45IPBGSPUd8o=
+		1VfFvGeXNn/ZMvlRXPCtmEN4wDM=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1220-view-1221.nib</key>
 		<data>
-		pGP7XcWX28hVBbX2m/Pm/s4IGgM=
+		DY53etCNWTchjgUXPmAH0TBJr4o=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1257-view-1258.nib</key>
 		<data>
-		h3yUZppc8f/SdlIXEWQDAMjIXaY=
+		BLmzKz1XMSr/ZggALf6tWv30KOE=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1354-view-1355.nib</key>
 		<data>
-		zBlu/E0bAZza4lVn27GF5L78f/Y=
+		7W1o3UC3lyhQz0/9Ao3v6mTqMps=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1456-view-1457.nib</key>
 		<data>
-		jrowJv6CqkCZBjepcJUYaI2tL98=
+		Mq2IO868vLKiOeY/Ctz0tvBCFf8=
 		</data>
-		<key>MainStoryboard_iPhone.storyboardc/1570-view-1571.nib</key>
+		<key>MainStoryboard_iPhone.storyboardc/1479-view-1480.nib</key>
 		<data>
-		P2jN+iEzzmADchr/5E07DRIbDK4=
+		Xzwm6FhCBlsJwVm6u6dm9lQ+LdI=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/306-view-307.nib</key>
 		<data>
-		teye2ZcLRVBMrAltuo0s2RmJYqo=
+		+bn1tzgQJQMf/clYCbHmI0mQQAU=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/31-view-36.nib</key>
 		<data>
-		kyCqr3XNrmrjquSXQ8EXICX1Vss=
+		0VpUJPbzpKiwOTC2BQzvS2izpkU=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/387-view-388.nib</key>
 		<data>
-		wlJHUKNEda1nd8yjAKcTZxVVDmQ=
+		eO+zbH3OfIjDgPNXNfMzfCgjzhc=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/401-view-402.nib</key>
 		<data>
-		Y1lD8rNKV0Fd9w5zCLIbHTXe/+w=
+		AcsjxDc8TOFgXUop4uVsQxlDKiw=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/442-view-443.nib</key>
 		<data>
-		PcX/W5sNJbnNgoqRuMirK+b2DVw=
+		ExrL8ntl7uQWLo1+VS+1taFL3A4=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/465-view-466.nib</key>
 		<data>
-		0YNhUNTyOJJoCdGEpx2Fj802mk0=
+		dv32hMz0KjZU/vhL2rxq6Wlh17Q=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/563-view-564.nib</key>
 		<data>
-		qqQ2KTGayfgNks/Up5n7g4AkYu4=
+		JN8zgKJpeZutP/qw35Fj+xcB9uI=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/771-view-772.nib</key>
 		<data>
-		46Hd3+DddF2rnw7CjWdtQ68EMXM=
+		9REFQwqd7VUOnS2sTZiSv3QDom8=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/AvaliarViewController.nib</key>
 		<data>
-		xqif48bDJ5JKB57x55Uzrat7DCA=
+		JLKCXUHKPFgo9UAxewSEYUUtr4M=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ChamadoViewController.nib</key>
 		<data>
-		Efz3DR4nGP8oZUzoe442paXZqcE=
-		</data>
-		<key>MainStoryboard_iPhone.storyboardc/ChatViewController.nib</key>
-		<data>
-		TG0qLXimWFi6UKF+63xfBRGnq6M=
+		PGmPPSQpIRBYFQDxQMpyJ5GPSlE=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ChatViewController2.nib</key>
 		<data>
-		VRz/3CMgNaXyRr+2uKXR7lRpnFY=
+		RA/MEoHeJ137AOzHzzBZC3M/rok=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ConsultaViewController.nib</key>
 		<data>
-		LPi9P3DIun2T2SQYLfx0bjmCSlo=
+		gQ0UJHHvbMRdB2BIjUf4aa494Lg=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/DetalheChamadoViewController.nib</key>
 		<data>
-		Py0itZYwQia320BRDmZy//4zR5M=
+		nlak/pvyI+mJWxZPEMfKuJ0G2fs=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/DetalheProfissionalViewController.nib</key>
 		<data>
-		nDqgpVjdmiYKs8tJXXWli1sWWns=
+		dPWnGv16lJzhaiwfOG/iUbiz6q8=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/EnderecoViewController.nib</key>
 		<data>
-		k3UuU6Fn4K+KXWxr/Hu+OTJhMrE=
+		5hcH8ZNodwY4CmC3ukEHIb6sLn4=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/FacebookViewController.nib</key>
 		<data>
-		TD4dvLQs3i2CgZoRQoM7Jj4yHKw=
+		5TNIHszgN6IG62c4WgKM/AryAHc=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/FeedbackViewController.nib</key>
 		<data>
-		O0SVs04Qo+i4Mv2FlXm9k7WHymY=
+		+S43d1wJahJYOx1rKTiwwAAOjPE=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/HomeViewController.nib</key>
 		<data>
-		TVj66xIrDFLcEp9UNQ8+lugA77E=
+		K3lgid4DlXx8U5q0BrlDy2eszPk=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/Info.plist</key>
 		<data>
-		z5csUBGAufK4e5ukRlmvKRsgMTI=
+		VobNHar9VKyACxbFA1xc8ltIjaY=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/LoginViewController.nib</key>
 		<data>
-		W3A+ueZfzJB6qMZQpuRD3/CYwd8=
+		24gf9v3luOWaUP62TB+gtkNcon0=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/MapaViewController.nib</key>
 		<data>
-		fwrpf7RAesmkzTb1uUXNRzxp2Lw=
+		yrVJ6/M8cSRJKPmMR928JjYF5es=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/OrcamentoViewController.nib</key>
 		<data>
-		MfYSkXyEV3VJZWlFskXws802ilU=
+		J8hLHHXzuZ3MZZXhfKHiuKa3DtE=
+		</data>
+		<key>MainStoryboard_iPhone.storyboardc/PerfilUsuarioViewController.nib</key>
+		<data>
+		hmE/eASatf06kx+x/Gwy6y9hw40=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/PerfilViewController.nib</key>
 		<data>
-		pqBjx90tCCXvJgdjfRg6ofJp6Zk=
+		hlWy6BLgvHgOX4LFL/wgPKjHABM=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/PrincipalNavigationController.nib</key>
 		<data>
-		bEBXCE5EJ7zyHdrqUhDLfXvFsRY=
+		ih6D+8ZkUaRqN/p8T9XWV2ET3BQ=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ServicosViewController.nib</key>
 		<data>
-		cUyjh6eO2203+SPkayLfc19iMoY=
+		r/TX/AAbebSx2nMRC1U/9PZVN7I=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/TelefoneViewController.nib</key>
 		<data>
-		fQpViVnZa7EFUNpsyLGCTub9GFg=
+		MMfQB/Lf9bzLffW6knAqGLDzFSQ=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/vXZ-lx-hvc-view-kh9-bI-dsS.nib</key>
 		<data>
-		osMz32SEo3PM5IysccOnBflQg+A=
+		s6o0N6CZZZBlLHvEnw4c4mDrWUo=
 		</data>
 		<key>MonoTouch.SlideoutNavigation.bundle/three_lines.png</key>
 		<data>
@@ -747,19 +747,19 @@
 		</dict>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		5Q2MqFVZQLzLPaRD4PGXT5tR6yQ=
+		2H5XgxIdVFx9wAlNp90ntxSFmgA=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		Ten3pvN9zBZdSgwPIHw90uTNQ4M=
+		ZcIoUoJxS+Wg3nVs/BP11a7yXgw=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
-		CQoEGPclNArTqq/v1VHwPGXHogI=
+		QinJFLQ6n5BMusy+/b2RCyb9vqM=
 		</data>
 		<key>.monotouch-32/mscorlib.dll.mdb</key>
 		<data>
-		wYZYyJw/V8eX2ej/u6kVsIcNSEo=
+		i+g0zDli3QV8pvzM3HCxmxIY/yQ=
 		</data>
 		<key>.monotouch-64/AutoMapper.dll</key>
 		<data>
@@ -779,11 +779,11 @@
 		</data>
 		<key>.monotouch-64/DSoft.UI.dll</key>
 		<data>
-		EL8EJtd0bUOZIVbe2tKWIF+OGcA=
+		4zyatngiNphY9VgvUIzq3fMy9nU=
 		</data>
 		<key>.monotouch-64/Geolocator.Plugin.Abstractions.dll</key>
 		<data>
-		6YBbwGCtxUmT5AK/BmrDUU/8j4M=
+		lujqfrH+oF6bjuYILp263X9izAg=
 		</data>
 		<key>.monotouch-64/Geolocator.Plugin.dll</key>
 		<data>
@@ -799,31 +799,31 @@
 		</data>
 		<key>.monotouch-64/Mono.CSharp.dll</key>
 		<data>
-		0ORe/vfduffSWPX2nuT4HlPOwzY=
+		Xm1fpo/yHQWVGXNxXDHqnWHntqg=
 		</data>
 		<key>.monotouch-64/Mono.CSharp.dll.mdb</key>
 		<data>
-		cYgAXzLs+ThauPOQziOR+ChtD0g=
+		SfhV5Ab/mb+ZTxnA/V6L14BXZPk=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll</key>
 		<data>
-		+jW2pxGoA/eQoTFr8WgyN/uy6qg=
+		m9wtpHKzpWESbke4vpYPCpQNvOE=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll.mdb</key>
 		<data>
-		M2gQUyMK6HaNRj5s+d6HBe/fVhA=
+		4oLu90Y4SbEJ1VufNng+IGTz6Zs=
 		</data>
 		<key>.monotouch-64/MonoTouch.Dialog-1.dll</key>
 		<data>
-		tUJt5f5+IdqOruq0GzgdBF3hq5w=
+		hvmDrg9Gy89/7ZL3oy9oBX3KXFs=
 		</data>
 		<key>.monotouch-64/MonoTouch.Dialog-1.dll.mdb</key>
 		<data>
-		4J+tPC6cUOmYsrl4TcWWM1QCid8=
+		kBqujdBCyqOIwy16P4qM2gybV54=
 		</data>
 		<key>.monotouch-64/MonoTouch.Slideout.dll</key>
 		<data>
-		nZLhJg5xa9MNEMoaAXOXt+77+0w=
+		yiKnaeyNOgQjIp+JIXWih+IkV7c=
 		</data>
 		<key>.monotouch-64/Newtonsoft.Json.dll</key>
 		<data>
@@ -831,11 +831,11 @@
 		</data>
 		<key>.monotouch-64/SeverinoApp.iOS.exe</key>
 		<data>
-		hlSRdIOMWiMnTLTdXq0H4VbYwH8=
+		+aQ0mXpOtutSUEwAQISnZlT+tII=
 		</data>
 		<key>.monotouch-64/SeverinoApp.iOS.exe.mdb</key>
 		<data>
-		A4Tr8+EsQpABrKyX8HoDxZqxWDc=
+		A/5O9R03WFejTD3Dm1HG/rlWDh4=
 		</data>
 		<key>.monotouch-64/SharpMobileCode.ModalPicker.dll</key>
 		<data>
@@ -847,51 +847,51 @@
 		</data>
 		<key>.monotouch-64/System.Core.dll</key>
 		<data>
-		SlBG+1PNwUjINEzrlbAX24JO+LU=
+		WTvBoz8fHLRKfh9AuzdO4aPJelk=
 		</data>
 		<key>.monotouch-64/System.Core.dll.mdb</key>
 		<data>
-		tiJkih8Uw/y0r76/6L9phGi1eGs=
+		BiXb/DS6QgeJWtW+wXiPJggQGWY=
 		</data>
 		<key>.monotouch-64/System.Data.dll</key>
 		<data>
-		TZWwA4vgZgppMSoZZLQkB17XXTM=
+		6vaZYoAWlPKTY7ymesDswtDIRXY=
 		</data>
 		<key>.monotouch-64/System.Data.dll.mdb</key>
 		<data>
-		zSsskI6ZLxz5gzXz0IFi4J3EiYc=
+		cpMuOhkSCDlyqEo2pscZ6Nzv2L8=
 		</data>
 		<key>.monotouch-64/System.Json.dll</key>
 		<data>
-		nljExdxOCYnyYOyXJnHo3ete0lA=
+		D5cekbCUyOKIAHumwo3lR2f2zSU=
 		</data>
 		<key>.monotouch-64/System.Json.dll.mdb</key>
 		<data>
-		TWYOhBC31GS1rbKEv2A3UfL6/b8=
+		MjJ/oAiAP0cvjWdn1mFEzXzsxLI=
 		</data>
 		<key>.monotouch-64/System.Runtime.Serialization.dll</key>
 		<data>
-		4XTG+NXCVlCPoTk2oRlxzmfWLxs=
+		xTNg9DRRxN3ckRLWDT6exuqwT/A=
 		</data>
 		<key>.monotouch-64/System.Runtime.Serialization.dll.mdb</key>
 		<data>
-		RPZBN0CfDIguTu2tzKycUfrNAPw=
+		2eNP7bXsRdO+lBI+Bz4Kh+VzYPM=
 		</data>
 		<key>.monotouch-64/System.Xml.dll</key>
 		<data>
-		Fm+xBwFdeTwzi3th8VW/nvfGdfE=
+		XZwiowGL6VcDOOU4bOHbZraz+sI=
 		</data>
 		<key>.monotouch-64/System.Xml.dll.mdb</key>
 		<data>
-		EgITwpNz7Z/3hHeX0pNL/3BkMxQ=
+		W/M7gYQ4yqymbHygSxk3N2X6f+M=
 		</data>
 		<key>.monotouch-64/System.dll</key>
 		<data>
-		PV3i9ZP3XNO+md/v6CWWGblqGKI=
+		arQJTJhNwv/A6grfEVHxwlJTBH8=
 		</data>
 		<key>.monotouch-64/System.dll.mdb</key>
 		<data>
-		hVO9FvdmZ5ahx+0rbu15IjWkv1o=
+		lHrAwzeiz7qdftJfn4HJeotyrgo=
 		</data>
 		<key>.monotouch-64/Xamarin.Auth.iOS.dll</key>
 		<data>
@@ -899,19 +899,19 @@
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll</key>
 		<data>
-		M/k4jXbKtunxv1ameEuCHhKNKvI=
+		3LIpPhnbiX2sixX3aHtRmoFeI6s=
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll.mdb</key>
 		<data>
-		2cQqpqI1SYKYVSh4enRvcurDFtA=
+		fwgGjm9EWhO+cLXGT4SZWi4PMi4=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
-		SAaYQkwaOQs+c2KCltTCfYQY9Sk=
+		EVPejFGvUNcPVTUt5ZWBx3n9dTg=
 		</data>
 		<key>.monotouch-64/mscorlib.dll.mdb</key>
 		<data>
-		Jbx3gNznLI6BebrZVDGW91gRr/M=
+		jC0JniKjHVgG1TKvlf4YWetPkiM=
 		</data>
 		<key>AppIcons-157x57.png</key>
 		<data>
@@ -943,7 +943,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		R5pCtw1su/Gk6hELfIJWLWMcdyg=
+		59CNk5pGqyf9BuFFkwYidJV2VRU=
 		</data>
 		<key>Icons/estrela-amarela2.png</key>
 		<data>
@@ -1095,7 +1095,7 @@
 		</data>
 		<key>LaunchScreen.nib</key>
 		<data>
-		QvlwVkNavWkb3Jc3JrdXhJvkulA=
+		3QG9cpA6JmG4ID8jq+Pbzc7K8o4=
 		</data>
 		<key>LogoSeverino.png</key>
 		<data>
@@ -1103,7 +1103,7 @@
 		</data>
 		<key>MainStoryboard_iPad.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		k2KlDiPwBWqFW9tuvkc6rdDNzSc=
+		OkaIxEktOXxYsoZIoF5AGXS2PS0=
 		</data>
 		<key>MainStoryboard_iPad.storyboardc/Info.plist</key>
 		<data>
@@ -1111,151 +1111,151 @@
 		</data>
 		<key>MainStoryboard_iPad.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		HIABEuL16hj+C+tt7/SznVoCQeU=
+		4nakD7nDdP3VDSXAxAi+ds/39MI=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1004-view-1005.nib</key>
 		<data>
-		9cJRO4a85Pzy+YDnl2EUSatURPo=
+		2HsYBhI5UeOn/HjRVZW4Te6uMeQ=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1039-view-1040.nib</key>
 		<data>
-		/GholSBtHAJNBJJhg5l7teAivWU=
+		Cl1yoMuYmGBC7VCNVmQJXJy+lns=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1100-view-1101.nib</key>
 		<data>
-		2tWlxYQEkqh0poH45IPBGSPUd8o=
+		1VfFvGeXNn/ZMvlRXPCtmEN4wDM=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1220-view-1221.nib</key>
 		<data>
-		pGP7XcWX28hVBbX2m/Pm/s4IGgM=
+		DY53etCNWTchjgUXPmAH0TBJr4o=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1257-view-1258.nib</key>
 		<data>
-		h3yUZppc8f/SdlIXEWQDAMjIXaY=
+		BLmzKz1XMSr/ZggALf6tWv30KOE=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1354-view-1355.nib</key>
 		<data>
-		zBlu/E0bAZza4lVn27GF5L78f/Y=
+		7W1o3UC3lyhQz0/9Ao3v6mTqMps=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/1456-view-1457.nib</key>
 		<data>
-		jrowJv6CqkCZBjepcJUYaI2tL98=
+		Mq2IO868vLKiOeY/Ctz0tvBCFf8=
 		</data>
-		<key>MainStoryboard_iPhone.storyboardc/1570-view-1571.nib</key>
+		<key>MainStoryboard_iPhone.storyboardc/1479-view-1480.nib</key>
 		<data>
-		P2jN+iEzzmADchr/5E07DRIbDK4=
+		Xzwm6FhCBlsJwVm6u6dm9lQ+LdI=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/306-view-307.nib</key>
 		<data>
-		teye2ZcLRVBMrAltuo0s2RmJYqo=
+		+bn1tzgQJQMf/clYCbHmI0mQQAU=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/31-view-36.nib</key>
 		<data>
-		kyCqr3XNrmrjquSXQ8EXICX1Vss=
+		0VpUJPbzpKiwOTC2BQzvS2izpkU=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/387-view-388.nib</key>
 		<data>
-		wlJHUKNEda1nd8yjAKcTZxVVDmQ=
+		eO+zbH3OfIjDgPNXNfMzfCgjzhc=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/401-view-402.nib</key>
 		<data>
-		Y1lD8rNKV0Fd9w5zCLIbHTXe/+w=
+		AcsjxDc8TOFgXUop4uVsQxlDKiw=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/442-view-443.nib</key>
 		<data>
-		PcX/W5sNJbnNgoqRuMirK+b2DVw=
+		ExrL8ntl7uQWLo1+VS+1taFL3A4=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/465-view-466.nib</key>
 		<data>
-		0YNhUNTyOJJoCdGEpx2Fj802mk0=
+		dv32hMz0KjZU/vhL2rxq6Wlh17Q=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/563-view-564.nib</key>
 		<data>
-		qqQ2KTGayfgNks/Up5n7g4AkYu4=
+		JN8zgKJpeZutP/qw35Fj+xcB9uI=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/771-view-772.nib</key>
 		<data>
-		46Hd3+DddF2rnw7CjWdtQ68EMXM=
+		9REFQwqd7VUOnS2sTZiSv3QDom8=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/AvaliarViewController.nib</key>
 		<data>
-		xqif48bDJ5JKB57x55Uzrat7DCA=
+		JLKCXUHKPFgo9UAxewSEYUUtr4M=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ChamadoViewController.nib</key>
 		<data>
-		Efz3DR4nGP8oZUzoe442paXZqcE=
-		</data>
-		<key>MainStoryboard_iPhone.storyboardc/ChatViewController.nib</key>
-		<data>
-		TG0qLXimWFi6UKF+63xfBRGnq6M=
+		PGmPPSQpIRBYFQDxQMpyJ5GPSlE=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ChatViewController2.nib</key>
 		<data>
-		VRz/3CMgNaXyRr+2uKXR7lRpnFY=
+		RA/MEoHeJ137AOzHzzBZC3M/rok=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ConsultaViewController.nib</key>
 		<data>
-		LPi9P3DIun2T2SQYLfx0bjmCSlo=
+		gQ0UJHHvbMRdB2BIjUf4aa494Lg=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/DetalheChamadoViewController.nib</key>
 		<data>
-		Py0itZYwQia320BRDmZy//4zR5M=
+		nlak/pvyI+mJWxZPEMfKuJ0G2fs=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/DetalheProfissionalViewController.nib</key>
 		<data>
-		nDqgpVjdmiYKs8tJXXWli1sWWns=
+		dPWnGv16lJzhaiwfOG/iUbiz6q8=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/EnderecoViewController.nib</key>
 		<data>
-		k3UuU6Fn4K+KXWxr/Hu+OTJhMrE=
+		5hcH8ZNodwY4CmC3ukEHIb6sLn4=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/FacebookViewController.nib</key>
 		<data>
-		TD4dvLQs3i2CgZoRQoM7Jj4yHKw=
+		5TNIHszgN6IG62c4WgKM/AryAHc=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/FeedbackViewController.nib</key>
 		<data>
-		O0SVs04Qo+i4Mv2FlXm9k7WHymY=
+		+S43d1wJahJYOx1rKTiwwAAOjPE=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/HomeViewController.nib</key>
 		<data>
-		TVj66xIrDFLcEp9UNQ8+lugA77E=
+		K3lgid4DlXx8U5q0BrlDy2eszPk=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/Info.plist</key>
 		<data>
-		z5csUBGAufK4e5ukRlmvKRsgMTI=
+		VobNHar9VKyACxbFA1xc8ltIjaY=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/LoginViewController.nib</key>
 		<data>
-		W3A+ueZfzJB6qMZQpuRD3/CYwd8=
+		24gf9v3luOWaUP62TB+gtkNcon0=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/MapaViewController.nib</key>
 		<data>
-		fwrpf7RAesmkzTb1uUXNRzxp2Lw=
+		yrVJ6/M8cSRJKPmMR928JjYF5es=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/OrcamentoViewController.nib</key>
 		<data>
-		MfYSkXyEV3VJZWlFskXws802ilU=
+		J8hLHHXzuZ3MZZXhfKHiuKa3DtE=
+		</data>
+		<key>MainStoryboard_iPhone.storyboardc/PerfilUsuarioViewController.nib</key>
+		<data>
+		hmE/eASatf06kx+x/Gwy6y9hw40=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/PerfilViewController.nib</key>
 		<data>
-		pqBjx90tCCXvJgdjfRg6ofJp6Zk=
+		hlWy6BLgvHgOX4LFL/wgPKjHABM=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/PrincipalNavigationController.nib</key>
 		<data>
-		bEBXCE5EJ7zyHdrqUhDLfXvFsRY=
+		ih6D+8ZkUaRqN/p8T9XWV2ET3BQ=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/ServicosViewController.nib</key>
 		<data>
-		cUyjh6eO2203+SPkayLfc19iMoY=
+		r/TX/AAbebSx2nMRC1U/9PZVN7I=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/TelefoneViewController.nib</key>
 		<data>
-		fQpViVnZa7EFUNpsyLGCTub9GFg=
+		MMfQB/Lf9bzLffW6knAqGLDzFSQ=
 		</data>
 		<key>MainStoryboard_iPhone.storyboardc/vXZ-lx-hvc-view-kh9-bI-dsS.nib</key>
 		<data>
-		osMz32SEo3PM5IysccOnBflQg+A=
+		s6o0N6CZZZBlLHvEnw4c4mDrWUo=
 		</data>
 		<key>MonoTouch.SlideoutNavigation.bundle/three_lines.png</key>
 		<data>

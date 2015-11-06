@@ -1,14 +1,6 @@
 ﻿<Properties StartupItem="SeverinoApp.iOS/SeverinoApp.iOS.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.@Rodrigo..." />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeverinoApp.iOS/ChatViewController2.cs">
-    <Files>
-      <File FileName="SeverinoApp.iOS/ChatViewController2.cs" Line="10" Column="30" />
-      <File FileName="SeverinoApp.iOS/LoginViewController.cs" Line="77" Column="5" />
-      <File FileName="SeverinoApp.iOS/Main.cs" Line="12" Column="32" />
-      <File FileName="SeverinoApp.iOS/DetalheChamadoViewController.cs" Line="235" Column="34" />
-      <File FileName="SeverinoApp.iOS/ChatViewController.cs" Line="330" Column="49" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.1" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

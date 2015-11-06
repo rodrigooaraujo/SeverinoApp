@@ -301,9 +301,9 @@
     </Compile>
     <Compile Include="Render\Chat\ChatSource.cs" />
     <Compile Include="Render\Chat\ChatInputView.cs" />
-    <Compile Include="ChatViewController.cs" />
-    <Compile Include="ChatViewController.designer.cs">
-      <DependentUpon>ChatViewController.cs</DependentUpon>
+    <Compile Include="PerfilUsuarioViewController.cs" />
+    <Compile Include="PerfilUsuarioViewController.designer.cs">
+      <DependentUpon>PerfilUsuarioViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="..\SeverinoApp\SeverinoApp.projitems" Label="Shared" Condition="Exists('..\SeverinoApp\SeverinoApp.projitems')" />

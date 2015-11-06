@@ -42,7 +42,7 @@ namespace SeverinoApp.iOS
 			var foto = item.Sexo == "F" ? "woman.png" : "man.png";
 			cell.TextLabel.Text = item.Nome;
 			cell.ImageView.Image = UIImage.FromFile ("Icons/"+foto);
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (82, 188, 255) : UIColor.White;
 			return cell;
 		}
 

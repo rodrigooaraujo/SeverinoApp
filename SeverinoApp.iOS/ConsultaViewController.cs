@@ -67,15 +67,15 @@ namespace SeverinoApp.iOS
 			carrega ();
 		}
 
-		protected async Task<Boolean>  carrega()
+		protected async Task<Boolean>  carrega ()
 		{
 			var aFrame = new CGRect (new CGPoint (0, pckStatus.Frame.Bottom), 
-					new CGSize (View.Frame.Width, View.Frame.Bottom - pckStatus.Frame.Bottom));
+				             new CGSize (View.Frame.Width, View.Frame.Bottom - pckStatus.Frame.Bottom));
 
 			var aFrame2 = new CGRect (new CGPoint (0, pckStatus.Frame.Bottom + 10), 
-				new CGSize (View.Frame.Width, View.Frame.Bottom - pckStatus.Frame.Bottom));
+				              new CGSize (View.Frame.Width, View.Frame.Bottom - pckStatus.Frame.Bottom));
 
-			var aFrame3 = new CGRect (0, 0, aFrame2.Width, aFrame2.Height-10);
+			var aFrame3 = new CGRect (0, 0, aFrame2.Width, aFrame2.Height - 10);
 			
 			scroll = new UIScrollView (aFrame2);
 
@@ -88,7 +88,7 @@ namespace SeverinoApp.iOS
 
 			//set the data source to be a DataSet with multiple datatables
 
-			await populaGrid((int)aFrame.Width);
+			await populaGrid ((int)aFrame.Width);
 
 			//set the first database as the initial grid source
 			gvChamados.TableName = ((DSDataSet)gvChamados.DataSource).Tables [0].Name;
@@ -107,12 +107,13 @@ namespace SeverinoApp.iOS
 			return true;
 		}
 
-		protected async Task populaGrid(int width)
+
+		protected async Task populaGrid (int width)
 		{
 			var chamado = new Chamado ();
 			await chamado.CriaLista (AppDelegate.dbUsuario.ID, (int)((PickerDataModel)pckStatus.Model).selectedValue, DateTime.MinValue, DateTime.MinValue);
 
-			var lista = chamado.Chamados.ToArray();
+			var lista = chamado.Chamados.ToArray ();
 			var dataset = new ChamadoDataSet (lista, width);
 			//dataset.
 			gvChamados.DataSource = dataset;
@@ -124,11 +125,13 @@ namespace SeverinoApp.iOS
 			//((ChamadoDataSet)gvChamados.DataSource).Name;
 			try {
 				var selecionado = ((ChamadoDataSet)gvChamados.DataSource).GetRow (RowIndex, "ChamadoConsulta");
-				int numero = Util.ConverteInteiro(selecionado ["Numero"].ToString());
-				bool solicitante = Util.ConverteInteiro(selecionado ["IDUsuario"].ToString()) == AppDelegate.dbUsuario.ID;
-				bool orcamento = Util.ConverteBool(selecionado ["ServicoOrcamento"].ToString());
-				int status = Util.ConverteInteiro(selecionado ["IDStatus"].ToString());
-				int idservico = Util.ConverteInteiro(selecionado ["IDServico"].ToString());
+				int numero = Util.ConverteInteiro (selecionado ["Numero"].ToString ());
+				bool solicitante = Util.ConverteInteiro (selecionado ["IDUsuario"].ToString ()) == AppDelegate.dbUsuario.ID;
+				bool orcamento = Util.ConverteBool (selecionado ["ServicoOrcamento"].ToString ());
+				int status = Util.ConverteInteiro (selecionado ["IDStatus"].ToString ());
+				int idservico = Util.ConverteInteiro (selecionado ["IDServico"].ToString ());
+				int idusuario = Util.ConverteInteiro (selecionado ["IDUsuario"].ToString ());
+				int idprofissional = Util.ConverteInteiro (selecionado ["IDProfissional"].ToString ());
 
 				DetalheChamadoViewController detalhes = (DetalheChamadoViewController)Storyboard.InstantiateViewController ("DetalheChamadoViewController");
 				detalhes.NumeroChamado = numero;
@@ -136,14 +139,12 @@ namespace SeverinoApp.iOS
 				detalhes.Status = status;
 				detalhes.Orcamento = orcamento;
 				detalhes.IDServico = idservico;
+				detalhes.IDUsuario =idusuario;
+				detalhes.IDProfissional =idprofissional;
 
-				if (detalhes != null)
-				{
+				if (detalhes != null) {
 					detalhes.View.TranslatesAutoresizingMaskIntoConstraints = false;
-					//var con = new DetalheChamadoViewController (detalhes.Handle);
-					//con.NumeroChamado = numero;
-					//((DetalheChamadoViewController)detalhes).NumeroChamado = (int)numero;
-					this.NavigationController.PushViewController(detalhes, true);
+					this.NavigationController.PushViewController (detalhes, true);
 				} 
 			} catch (Exception ex) {
 				
@@ -154,7 +155,7 @@ namespace SeverinoApp.iOS
 
 	public class ChamadoDataSet : DSDataSet
 	{
-		public ChamadoDataSet(ChamadoConsulta[] items, int width)
+		public ChamadoDataSet (ChamadoConsulta[] items, int width)
 		{
 			this.Tables.Add (new ChamadoDataTable ("ChamadoConsulta", items, width));
 		}
@@ -163,15 +164,12 @@ namespace SeverinoApp.iOS
 		/// Create a dicitionary of the available tables
 		/// </summary>
 		/// <returns>The dictionary.</returns>
-		public List<String> TableDictionary
-		{
-			get
-			{
-				var dict = new List<String>();
+		public List<String> TableDictionary {
+			get {
+				var dict = new List<String> ();
 
-				foreach (var aTable in Tables)
-				{
-					dict.Add(aTable.Name);
+				foreach (var aTable in Tables) {
+					dict.Add (aTable.Name);
 				}
 
 				return dict;
@@ -184,18 +182,18 @@ namespace SeverinoApp.iOS
 	{
 		private ChamadoConsulta[] Items;
 
-		public ChamadoDataTable()
+		public ChamadoDataTable ()
 		{
 		}
 
-		public ChamadoDataTable(String Name, ChamadoConsulta[] items, int weight) : base(Name)
+		public ChamadoDataTable (String Name, ChamadoConsulta[] items, int weight) : base (Name)
 		{			
 			var columnsDefs = new Dictionary<String, float> ();
 			//String nome, float weight
-			columnsDefs.Add ("Numero", 20);
+			columnsDefs.Add ("Numero", 40);
 			columnsDefs.Add ("Data", 50);
 			columnsDefs.Add ("Servico", 70);
-			columnsDefs.Add ("Profissional", 70);
+			columnsDefs.Add ("Profissional", 0);
 			columnsDefs.Add ("Status", 50);
 			columnsDefs.Add ("IDProfissional", 0);
 			columnsDefs.Add ("IDUsuario", 0);
@@ -265,19 +263,19 @@ namespace SeverinoApp.iOS
 				this.Columns.Add (column);
 			}
 
-			for(int i = 0; i < items.Length; i++)
-			{
+
+			for (int i = 0; i < items.Length; i++) {
 				var aRow = new DSDataRow ();
-				aRow ["Numero"] = items[i].Numero;
-				aRow ["Data"] = items[i].Data.ToShortDateString();
-				aRow ["Servico"] = items[i].ServicoNome;
+				aRow ["Numero"] = items [i].Numero;
+				aRow ["Data"] = items [i].Data.ToShortDateString ();
+				aRow ["Servico"] = items [i].ServicoNome;
 				aRow ["Profissional"] = items [i].ProfissionalNome;
-				aRow ["Status"] = items[i].StatusNome;
-				aRow ["IDProfissional"] = items[i].IDProfissional;
-				aRow ["IDUsuario"] = items[i].IDUsuario;
-				aRow ["IDStatus"] = items[i].Status;
-				aRow ["ServicoOrcamento"] = items[i].ServicoOrcamento;
-				aRow ["IDServico"] = items[i].IDServico;
+				aRow ["Status"] = items [i].StatusNome;
+				aRow ["IDProfissional"] = items [i].IDProfissional;
+				aRow ["IDUsuario"] = items [i].IDUsuario;
+				aRow ["IDStatus"] = items [i].Status;
+				aRow ["ServicoOrcamento"] = items [i].ServicoOrcamento;
+				aRow ["IDServico"] = items [i].IDServico;
 
 				Rows.Add (aRow);
 			}
@@ -309,7 +307,7 @@ namespace SeverinoApp.iOS
 		/// <param name="index">Index.</param>
 		public override DSDataRow GetRow (int index)
 		{
-			return Rows[index];
+			return Rows [index];
 		}
 
 		/// <summary>
@@ -318,9 +316,9 @@ namespace SeverinoApp.iOS
 		/// <returns>The row.</returns>
 		/// <param name="Index">Index.</param>
 		/// <param name="RowId">Row identifier.</param>
-		public override DSDataRow GetRow(string RowId)
+		public override DSDataRow GetRow (string RowId)
 		{
-			return base.GetRow(RowId);
+			return base.GetRow (RowId);
 		}
 
 		/// <summary>
@@ -328,10 +326,11 @@ namespace SeverinoApp.iOS
 		/// </summary>
 		/// <returns>The of row.</returns>
 		/// <param name="RowId">Row identifier.</param>
-		public override int IndexOfRow(string RowId)
+		public override int IndexOfRow (string RowId)
 		{
-			return base.IndexOfRow(RowId);
+			return base.IndexOfRow (RowId);
 		}
+
 		/// <summary>
 		/// Gets the value.
 		/// </summary>

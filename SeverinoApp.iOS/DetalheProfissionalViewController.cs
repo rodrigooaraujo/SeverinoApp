@@ -23,7 +23,12 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
+			this.EdgesForExtendedLayout = UIRectEdge.None;
 			base.ViewDidLoad ();
+			var scr = new CGRect (scroll.Frame.X, scroll.Frame.Y, scroll.Frame.Width, btnAdicionaComentario.Frame.Bottom - 50);
+			scroll.Frame = scr;
+
+			ViewWillAppear (false);
 			Carrega (IDUsuario);
 		}
 
@@ -38,7 +43,7 @@ namespace SeverinoApp.iOS
 
 			scroll.LayoutIfNeeded ();
 			var tam2 = contentView.Frame.Bottom;
-			scroll.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height);
+			scroll.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height+100);
 
 			scrollComentarios.LayoutIfNeeded ();
 			var tam3 = (nfloat)(from views in scrollComentarios.Subviews

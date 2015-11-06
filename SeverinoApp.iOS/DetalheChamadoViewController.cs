@@ -10,7 +10,7 @@ namespace SeverinoApp.iOS
 	partial class DetalheChamadoViewController : UIViewController
 	{
 		LoadingOverlay loadingOverlay;
-		public int NumeroChamado, Status, IDServico;
+		public int NumeroChamado, Status, IDServico, IDUsuario, IDProfissional;
 		public bool Solicitante;
 		public bool Orcamento;
 
@@ -29,6 +29,8 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
+			if (!Solicitante)
+				lblProfissional.Text = "Usuário";
 			base.ViewDidLoad ();
 			Carrega (NumeroChamado);
 			/*if (Status == 8)
@@ -253,7 +255,7 @@ namespace SeverinoApp.iOS
 			alert.ShowInView (View);
 		
 		}
-
+			
 		public async Task AlteraStatus (int numero, int status)
 		{
 			UIAlertView aviso;
@@ -267,7 +269,7 @@ namespace SeverinoApp.iOS
 				this.View.Add (loadingOverlay);
 
 				Chamado dbCham = new Chamado ();
-				bool sucesso = await dbCham.AlteraStatus (numero, status);
+				bool sucesso = await dbCham.AlteraStatus (numero, status,Solicitante);
 
 				if (!sucesso) {
 					aviso = new UIAlertView ("Erro ao Atualzar Status", dbCham.Erro, null, "OK", null);
@@ -310,13 +312,32 @@ namespace SeverinoApp.iOS
 				txtNumero.Text = consulta.Numero.ToString ();
 				txtData.Text = consulta.Data.ToShortDateString ();
 				txtServico.Text = consulta.ServicoNome;
-				txtProfissional.Text = consulta.ProfissionalNome;
+				txtProfissional.Text = Solicitante ? consulta.ProfissionalNome : consulta.UsuarioNome;
 				txtRaio.Text = consulta.Raio.ToString ();
 				txtStatus.Text = consulta.StatusNome;
 			} catch (Exception ex) {
 				
 			} finally {
 				loadingOverlay.Hide ();
+			}
+		}
+
+		partial void btnInfo_Click (UIButton sender)
+		{
+			if (!Solicitante) {
+				var perfil = (PerfilUsuarioViewController)Storyboard.InstantiateViewController ("PerfilUsuarioViewController");
+				if (perfil != null) {
+					perfil.IDUsuario = IDProfissional;
+					this.NavigationController.PushViewController (perfil, true);
+				}
+			}
+			else
+			{
+				var perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController");
+				if (perfil != null) {
+					perfil.IDUsuario = IDProfissional;
+					this.NavigationController.PushViewController (perfil, true);
+				}
 			}
 		}
 	}

@@ -254,7 +254,7 @@ namespace SeverinoApp.iOS
 			try {
 
 				Chamado dbCham = new Chamado ();
-				bool sucesso = await dbCham.AlteraStatus (numero, status);
+				bool sucesso = await dbCham.AlteraStatus (numero, status,Solicitante);
 
 				if (!sucesso) {
 					return "Erro ao Atualzar Status " + dbCham.Erro;
@@ -293,7 +293,7 @@ namespace SeverinoApp.iOS
 				}
 
 				Chamado dbCham = new Chamado ();	
-				sucesso = await dbCham.AlteraStatus (NumeroChamado, aceito ? 11 : 10);
+				sucesso = await dbCham.AlteraStatus (NumeroChamado, aceito ? 11 : 10,Solicitante);
 
 				if (!sucesso) {
 					orcamento.Aceito = 0;

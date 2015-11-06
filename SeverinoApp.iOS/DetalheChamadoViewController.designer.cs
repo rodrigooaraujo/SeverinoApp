@@ -20,6 +20,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnInfo { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView contentView { get; set; }
 
 		[Outlet]
@@ -78,11 +82,19 @@ namespace SeverinoApp.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btnAcoes_Click (UIButton sender);
 
+		[Action ("btnInfo_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnInfo_Click (UIButton sender);
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (btnAcoes != null) {
 				btnAcoes.Dispose ();
 				btnAcoes = null;
+			}
+			if (btnInfo != null) {
+				btnInfo.Dispose ();
+				btnInfo = null;
 			}
 			if (contentView != null) {
 				contentView.Dispose ();

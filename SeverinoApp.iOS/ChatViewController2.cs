@@ -72,6 +72,7 @@ namespace SeverinoApp.iOS
 				SendButton.TouchUpInside += OnSendClicked;
 				TextView.Started += OnTextViewStarted;
 				TextView.Changed += OnTextChanged;
+
 				this.EdgesForExtendedLayout = UIRectEdge.None;
 				//messages = new List<Message> () ;
 				Helpers.criaReturn (this.View);
@@ -114,7 +115,6 @@ namespace SeverinoApp.iOS
 		protected async Task<Boolean>  carrega ()
 		{
 			//messages.Clear ();
-
 			messages = new List<Message> ();
 			var mensagem = new Mensagem ();
 			await mensagem.CriaLista (NumeroChamado);
@@ -131,7 +131,7 @@ namespace SeverinoApp.iOS
 
 			chatSource = new ChatSource (messages);
 			tableView.Source = chatSource;
-
+			tableView.ReloadData ();
 			//tableView.InsertRows (new NSIndexPath[] { NSIndexPath.FromRowSection (messages.Count - 1, 0) }, UITableViewRowAnimation.None);
 			//tableView.ReloadData ();
 			ViewWillAppear (false);
@@ -164,9 +164,7 @@ namespace SeverinoApp.iOS
 					erro = mensagem.Erro;
 				}
 
-				if (!await carrega ()) {
-					erro = "Erro ao Carregar Lista de Mensagens";
-				}
+				carrega();
 
 				if (!string.IsNullOrEmpty (erro)) {
 					//loadingOverlay.Hide ();
@@ -265,6 +263,64 @@ namespace SeverinoApp.iOS
 			         );
 			toolbar.AddConstraints (c1);
 			toolbar.AddConstraints (c2);
+		}
+
+
+		void OnSendClicked (object sender, EventArgs e)
+		{
+			var text = TextView.Text;
+			// this will not generate change text event
+			UpdateButtonState ();
+
+			if (string.IsNullOrWhiteSpace (text))
+				return;
+
+			Grava ();
+
+			TextView.Text = string.Empty; 
+			ScrollToBottom (true);
+
+			//carrega ();
+				//erro = "Erro ao Carregar Lista de Mensagens";
+
+		}
+
+		void OnTextViewStarted (object sender, EventArgs e)
+		{
+			ScrollToBottom (true);
+		}
+
+		void OnTextChanged (object sender, EventArgs e)
+		{
+			UpdateButtonState ();
+		}
+
+		void UpdateButtonState ()
+		{
+			SendButton.Enabled = !string.IsNullOrWhiteSpace (TextView.Text);
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+
+			willShowToken.Dispose ();
+			willHideToken.Dispose ();
+		}
+
+		void ScrollToBottom (bool animated)
+		{
+			tableView.ReloadData ();
+			if (tableView.NumberOfSections () == 0)
+				return;
+
+			int items = (int)tableView.NumberOfRowsInSection (0);
+			if (items == 0)
+				return;
+
+			int finalRow = (int)NMath.Max (0, tableView.NumberOfRowsInSection (0) - 1);
+			NSIndexPath finalIndexPath = NSIndexPath.FromRowSection (finalRow, 0);
+			tableView.ScrollToRow (finalIndexPath, UITableViewScrollPosition.Top, animated);
 		}
 
 		#endregion
@@ -381,56 +437,6 @@ namespace SeverinoApp.iOS
 			return (UIViewAnimationOptions)((int)curve << 16);
 		}
 
-		void OnSendClicked (object sender, EventArgs e)
-		{
-			var text = TextView.Text;
-			// this will not generate change text event
-			UpdateButtonState ();
 
-			if (string.IsNullOrWhiteSpace (text))
-				return;
-
-			Grava ();
-
-			TextView.Text = string.Empty; 
-			ScrollToBottom (true);
-		}
-
-		void OnTextViewStarted (object sender, EventArgs e)
-		{
-			ScrollToBottom (true);
-		}
-
-		void OnTextChanged (object sender, EventArgs e)
-		{
-			UpdateButtonState ();
-		}
-
-		void UpdateButtonState ()
-		{
-			SendButton.Enabled = !string.IsNullOrWhiteSpace (TextView.Text);
-		}
-
-		public override void ViewWillDisappear (bool animated)
-		{
-			base.ViewWillDisappear (animated);
-
-			willShowToken.Dispose ();
-			willHideToken.Dispose ();
-		}
-
-		void ScrollToBottom (bool animated)
-		{
-			if (tableView.NumberOfSections () == 0)
-				return;
-
-			int items = (int)tableView.NumberOfRowsInSection (0);
-			if (items == 0)
-				return;
-
-			int finalRow = (int)NMath.Max (0, tableView.NumberOfRowsInSection (0) - 1);
-			NSIndexPath finalIndexPath = NSIndexPath.FromRowSection (finalRow, 0);
-			tableView.ScrollToRow (finalIndexPath, UITableViewScrollPosition.Top, animated);
-		}
 	}
 }
