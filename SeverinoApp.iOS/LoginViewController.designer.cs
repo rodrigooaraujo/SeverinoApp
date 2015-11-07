@@ -31,6 +31,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnCadastrar { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btnFacebook_Click { get; set; }
 
 		[Outlet]
@@ -40,6 +44,10 @@ namespace SeverinoApp.iOS
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIScrollView scrCampos { get; set; }
+
+		[Action ("btnCadastrar_Click:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnCadastrar_Click (UIButton sender);
 
 		[Action ("btnFacebook_Ckick:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -51,6 +59,10 @@ namespace SeverinoApp.iOS
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnCadastrar != null) {
+				btnCadastrar.Dispose ();
+				btnCadastrar = null;
+			}
 			if (btnFacebook_Click != null) {
 				btnFacebook_Click.Dispose ();
 				btnFacebook_Click = null;

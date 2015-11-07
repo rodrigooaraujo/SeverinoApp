@@ -48,7 +48,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8">
-                                                <rect key="frame" x="14" y="368" width="280" height="30"/>
+                                                <rect key="frame" x="13" y="362" width="280" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.079934938220000001" green="0.27017858659999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,7 +58,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnFacebook_Ckick:" destination="vXZ-lx-hvc" eventType="touchDown" id="20"/>
-                                                    <segue destination="306" kind="modal" id="377"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoSeverino.png" id="rfn-7P-DjA">
@@ -66,18 +65,18 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8UN-mN-vmH">
-                                                <rect key="frame" x="13" y="406" width="280" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8UN-mN-vmH">
+                                                <rect key="frame" x="14" y="394" width="280" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <animations/>
-                                                <color key="backgroundColor" red="1" green="0.52197149591457881" blue="0.36710361588175988" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.12549019607843137" green="0.89803921568627454" blue="0.6" alpha="1"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Cadastrar-se">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.50196078431372548" blue="1" alpha="1"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="btnFacebook_Ckick:" destination="vXZ-lx-hvc" eventType="touchDown" id="cmt-4E-K5c"/>
+                                                    <action selector="btnCadastrar_Click:" destination="vXZ-lx-hvc" id="1583" eventType="touchDown"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -95,6 +94,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
                     <connections>
+                        <outlet property="btnCadastrar" destination="8UN-mN-vmH" id="name-outlet-8UN-mN-vmH"/>
                         <outlet property="btnFacebook" destination="8" id="Qzk-Tz-MKQ"/>
                         <outlet property="btnFacebook_Click" destination="8" id="0lh-YM-iUR"/>
                         <outlet property="btnLoga" destination="7" id="x8r-Pp-L0s"/>
@@ -123,14 +123,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="-639"/>
+            <point key="canvasLocation" x="301" y="-805"/>
         </scene>
         <!--Home-->
         <scene sceneID="34">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="31" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeView" id="36" customClass="HomeView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -142,14 +142,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="-650"/>
+            <point key="canvasLocation" x="637" y="-805"/>
         </scene>
         <!--Facebook View Controller-->
         <scene sceneID="305">
             <objects>
                 <viewController storyboardIdentifier="FacebookViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="306" customClass="FacebookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="FacebookView" id="307" customClass="FacebookView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -409,7 +409,7 @@
             <objects>
                 <viewController storyboardIdentifier="ChamadoViewController" title="Chamados" useStoryboardIdentifierAsRestorationIdentifier="YES" id="401" customClass="ChamadoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="ChamadoView" id="402" customClass="ChamadoView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="pckServico" id="405">
@@ -471,7 +471,7 @@
                                                         <rect key="frame" x="0.0" y="22" width="260" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="629" id="Byy-gn-psV">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <animations/>
                                                         </tableViewCellContentView>
@@ -481,7 +481,7 @@
                                                         <rect key="frame" x="0.0" y="66" width="260" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="631" id="l0I-R5-zC5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <animations/>
                                                         </tableViewCellContentView>
@@ -491,7 +491,7 @@
                                                         <rect key="frame" x="0.0" y="110" width="260" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="633" id="FJU-sE-Af5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <animations/>
                                                         </tableViewCellContentView>
@@ -582,29 +582,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="444" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="-737"/>
+            <point key="canvasLocation" x="970" y="-805"/>
         </scene>
         <!--Mapa Serviços-->
         <scene sceneID="464">
             <objects>
                 <viewController storyboardIdentifier="MapaViewController" title="Mapa Serviços" useStoryboardIdentifierAsRestorationIdentifier="YES" id="465" customClass="MapaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="MapaView" id="466">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="mkmMapa" mapType="standard" id="478">
-                                <rect key="frame" x="8" y="129" width="304" height="341"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="mapUsuario" mapType="standard" id="478">
+                                <rect key="frame" x="6" y="152" width="306" height="321"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </mapView>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="pckServico" id="S5f-5H-wO9" fixedFrame="YES">
+                                <rect key="frame" x="-2" y="0.0" width="320" height="92"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" restorationIdentifier="lblServico" text="Serviço" lineBreakMode="tailTruncation" minimumFontSize="10" id="7AH-H8-13L" fixedFrame="YES">
+                                <rect key="frame" x="6" y="36" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" continuous="NO" id="NmW-sW-axF" fixedFrame="YES">
+                                <rect key="frame" x="6" y="113" width="303" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sldRaio_Changed:" destination="401" eventType="valueChanged" id="aTE-an-iQp"/>
+                                    <action selector="sldRaio_Changed:" destination="465" id="1528" eventType="valueChanged"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Raio:" lineBreakMode="tailTruncation" minimumFontSize="10" id="1527" fixedFrame="YES">
+                                <rect key="frame" x="205" y="95" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="MapaView" destination="466" id="name-outlet-466"/>
-                        <outlet property="mkmMapa" destination="478" id="vet-o8-78c"/>
+                        <outlet property="mapUsuario" destination="478" id="name-outlet-478"/>
                         <outlet property="searchDisplayController" destination="482" id="481"/>
+                        <outlet property="lblRaio" destination="1527" id="name-outlet-1527"/>
+                        <outlet property="pckServico" destination="S5f-5H-wO9" id="name-outlet-S5f-5H-wO9"/>
+                        <outlet property="sldRaio" destination="NmW-sW-axF" id="name-outlet-NmW-sW-axF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="467" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,7 +652,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1442" y="1282"/>
+            <point key="canvasLocation" x="1976" y="-805"/>
         </scene>
         <!--Telefone View Controller-->
         <scene sceneID="562">
@@ -629,7 +664,7 @@
                         <subviews>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" id="673">
                                 <rect key="frame" x="2" y="162" width="303" height="381"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" id="677">
                                         <rect key="frame" x="10" y="90" width="282" height="201"/>
@@ -646,7 +681,7 @@
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rF3-Os-1ly">
                                         <rect key="frame" x="203" y="46" width="89" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.35686274509999999" green="0.70980392160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Cancelar">
@@ -660,7 +695,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fDS-fh-6UX">
                                         <rect key="frame" x="8" y="46" width="94" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.65490196079999996" green="1" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Gravar">
@@ -674,7 +709,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wgn-5u-lyr">
                                         <rect key="frame" x="106" y="46" width="94" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Excluir">
@@ -687,14 +722,14 @@
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtNumero" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número" minimumFontSize="17" id="1296">
                                         <rect key="frame" x="67" y="8" width="163" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtDD" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DDD" textAlignment="center" minimumFontSize="17" id="674">
                                         <rect key="frame" x="10" y="8" width="49" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -729,8 +764,8 @@
             <objects>
                 <viewController storyboardIdentifier="EnderecoViewController" title="Endereço" useStoryboardIdentifierAsRestorationIdentifier="YES" id="771" customClass="EnderecoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="772">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" minimumFontSize="17" id="775">
                                 <rect key="frame" x="16" y="91" width="289" height="30"/>
@@ -906,12 +941,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="pckStatus" id="1009">
-                                <rect key="frame" x="0.0" y="-2" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="47" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Status" lineBreakMode="tailTruncation" minimumFontSize="10" id="1008">
-                                <rect key="frame" x="20" y="68" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Status:" lineBreakMode="tailTruncation" minimumFontSize="10" id="1008" textAlignment="center">
+                                <rect key="frame" x="132" y="30" width="58" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -920,46 +955,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" id="1017">
-                                <rect key="frame" x="0.0" y="196" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1018">
-                                        <rect key="frame" x="0.0" y="7" width="314" height="365"/>
+                                        <rect key="frame" x="0.0" y="7" width="314" height="441"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1019">
-                                                <rect key="frame" x="0.0" y="22" width="314" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1019" id="GEK-0g-3bp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
-                                                </tableViewCellContentView>
-                                                <animations/>
-                                            </tableViewCell>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1021">
-                                                <rect key="frame" x="0.0" y="66" width="314" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1021" id="mMf-gY-o7Y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
-                                                </tableViewCellContentView>
-                                                <animations/>
-                                            </tableViewCell>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1023">
-                                                <rect key="frame" x="0.0" y="110" width="314" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1023" id="3wM-cR-hk3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
-                                                </tableViewCellContentView>
-                                                <animations/>
-                                            </tableViewCell>
-                                        </prototypes>
                                     </tableView>
                                 </subviews>
                                 <animations/>
@@ -979,14 +982,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1006" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1366" y="-767"/>
+            <point key="canvasLocation" x="1304" y="-799"/>
         </scene>
         <!--Detalhes Chamado-->
         <scene sceneID="1038">
             <objects>
                 <viewController storyboardIdentifier="DetalheChamadoViewController" title="Detalhes Chamado" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1039" customClass="DetalheChamadoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1040">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btnAcoes" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1069">
@@ -1156,7 +1159,7 @@
             <objects>
                 <viewController storyboardIdentifier="OrcamentoViewController" title="Orçamento" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1100" customClass="OrcamentoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1101">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" id="1104">
@@ -1319,7 +1322,7 @@
             <objects>
                 <viewController storyboardIdentifier="AvaliarViewController" title="Avaliação Chamado" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1220" customClass="AvaliarViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1221">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="scroll" id="1239">
@@ -1337,7 +1340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1222" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750" y="-679"/>
+            <point key="canvasLocation" x="1635" y="-805"/>
         </scene>
         <!--Perfil Profissional-->
         <scene sceneID="1256">
@@ -1799,7 +1802,7 @@
                     <size key="freeformSize" width="320" height="580"/>
                     <connections>
                         <outlet property="lblNome" destination="HRq-1L-rZj" id="name-outlet-HRq-1L-rZj"/>
-                        <outlet property="mkmMapa" destination="bz2-Wg-Kh8" id="name-outlet-bz2-Wg-Kh8"/>
+                        <outlet property="mapUsuario" destination="bz2-Wg-Kh8" id="name-outlet-bz2-Wg-Kh8"/>
                         <outlet property="scrollTelefones" destination="2Ph-Yj-US7" id="name-outlet-2Ph-Yj-US7"/>
                         <outlet property="txtBairro" destination="yDy-ny-gOd" id="name-outlet-yDy-ny-gOd"/>
                         <outlet property="txtCep" destination="V95-Y8-c19" id="name-outlet-V95-Y8-c19"/>
@@ -1817,5 +1820,32 @@
     <resources>
         <image name="LogoSeverino.png" width="526" height="463"/>
         <image name="Profille.png" width="256" height="256"/>
+        <image name="Icons/hammer.png" width="30" height="30"/>
+        <image name="Icons/home.png" width="30" height="30"/>
+        <image name="Icons/id-card.png" width="30" height="30"/>
+        <image name="Icons/key.png" width="30" height="30"/>
+        <image name="Icons/lock.png" width="30" height="30"/>
+        <image name="Icons/man.png" width="30" height="30"/>
+        <image name="Icons/map-pin.png" width="30" height="30"/>
+        <image name="Icons/message.png" width="30" height="30"/>
+        <image name="Icons/no-cash.png" width="30" height="30"/>
+        <image name="Icons/paint-roller.png" width="30" height="30"/>
+        <image name="Icons/paint.png" width="30" height="30"/>
+        <image name="Icons/plier.png" width="30" height="30"/>
+        <image name="Icons/screwdriver.png" width="30" height="30"/>
+        <image name="Icons/spanner.png" width="30" height="30"/>
+        <image name="Icons/star.png" width="30" height="30"/>
+        <image name="Icons/tick.png" width="30" height="30"/>
+        <image name="Icons/wheelbarrow.png" width="30" height="30"/>
+        <image name="Icons/woman.png" width="30" height="30"/>
+        <image name="Icons/water hose.png" width="30" height="30"/>
+        <image name="Icons/search.png" width="30" height="30"/>
+        <image name="PinMap.png" width="170" height="397"/>
+        <image name="Pin50.png" width="21" height="50"/>
+        <image name="Icons/strela-amarela.png" width="256" height="256"/>
+        <image name="Icons/strela-vermelha.png" width="256" height="256"/>
+        <image name="Icons/estrela-amarela2.png" width="256" height="256"/>
+        <image name="BubbleIncoming" width="56" height="35"/>
+        <image name="BubbleOutgoing" width="56" height="35"/>
     </resources>
 </document>

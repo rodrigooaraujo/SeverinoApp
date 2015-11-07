@@ -26,8 +26,44 @@ namespace SeverinoApp.iOS
 		[Outlet]
 		UIKit.UISearchBar srcPesquisa { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblRaio { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		MapKit.MKMapView mapUsuario { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIPickerView pckServico { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UISlider sldRaio { get; set; }
+
+		[Action ("sldRaio_Changed:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void sldRaio_Changed (UISlider sender);
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (lblRaio != null) {
+				lblRaio.Dispose ();
+				lblRaio = null;
+			}
+			if (mapUsuario != null) {
+				mapUsuario.Dispose ();
+				mapUsuario = null;
+			}
+			if (pckServico != null) {
+				pckServico.Dispose ();
+				pckServico = null;
+			}
+			if (sldRaio != null) {
+				sldRaio.Dispose ();
+				sldRaio = null;
+			}
 		}
 	}
 }

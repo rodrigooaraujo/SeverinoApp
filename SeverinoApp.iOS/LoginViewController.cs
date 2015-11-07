@@ -26,6 +26,7 @@ namespace SeverinoApp.iOS
 			base.ViewDidLoad ();
 			//btnLoga.TouchDown+= (object sender, EventArgs e) => txtLogin.Text = "Teste";
 			AppDelegate.dbUsuario = null;
+			AppDelegate.Shared.RecriaPrincipal (false);
 
 			if (AppDelegate.dbUsuario == null || (AppDelegate.dbUsuario != null && AppDelegate.dbUsuario.Logado)) {
 
@@ -56,10 +57,16 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewWillAppear (animated);
 			AppDelegate.dbUsuario = null;
+			//AppDelegate.Shared.RecriaPrincipal ();
 
 			willShowToken = UIKeyboard.Notifications.ObserveWillShow (KeyboardWillShowHandler);
 			willHideToken = UIKeyboard.Notifications.ObserveWillHide (KeyboardWillHideHandler);
 
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
 		}
 
 		void KeyboardWillShowHandler (object sender, UIKeyboardEventArgs e)
@@ -93,19 +100,27 @@ namespace SeverinoApp.iOS
 			UIAlertView aviso;
 			string campos = string.Empty;
 
-			if (string.IsNullOrEmpty (txtLogin.Text)) {
+			/*if (string.IsNullOrEmpty (txtLogin.Text)) {
 				campos += "Login \n";	 
+			}*/
+
+			if(!Util.validarEmail(txtLogin.Text))
+			{
+				campos += "Login inválido \n";	 
 			}
 
 			if (string.IsNullOrEmpty (txtSenha.Text)) {
 				campos += "Senha \n";	 
 			}
 
+
 			if (!string.IsNullOrEmpty (campos)) {
 				aviso = new UIAlertView ("Erro de Validação", campos, null, "OK", null);
 				aviso.Show ();
 				return;
 			}
+
+
 
 			loga ();
 
@@ -141,6 +156,10 @@ namespace SeverinoApp.iOS
 				await usu.loga (txtLogin.Text, txtSenha.Text).ContinueWith ((t) => {
 						
 				});
+
+				//if(usu.Logado)
+				AppDelegate.Shared.RecriaPrincipal (false);
+
 			} catch (Exception ex) {
 				
 			} finally {
@@ -148,7 +167,7 @@ namespace SeverinoApp.iOS
 			}
 
 			if (usu.Logado) {
-				AppDelegate.Shared.RecriaPrincipal ();
+				AppDelegate.Shared.RecriaPrincipal (false);
 				return;
 			} else {
 				aviso = new UIAlertView ("Login ou Senha Inválido", "", null, "OK", null);
@@ -161,5 +180,12 @@ namespace SeverinoApp.iOS
 			
 		}
 
+		partial void btnCadastrar_Click (UIButton sender)
+		{
+			var perfil = (PerfilViewController)Storyboard.InstantiateViewController ("PerfilViewController");
+			if (perfil != null) {
+				this.NavigationController.PushViewController (perfil, true);
+			}
+		}
 	}
 }

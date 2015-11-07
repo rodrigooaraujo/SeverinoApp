@@ -32,12 +32,9 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
-			//var shared = AppDelegate.Shared;
-			//shared.WillChangeStatusBarOrientation (, UIInterfaceOrientation.LandscapeRight, 0);
-			//WillRotate(UIInterfaceOrientation.LandscapeRight,5);
-
+			this.EdgesForExtendedLayout = UIRectEdge.None;
+			this.EdgesForExtendedLayout = UIRectEdge.None;
 			base.ViewDidLoad ();
-			//WillRotate (UIInterfaceOrientation.LandscapeRight, 1);
 			var status = new Status ();
 			status.CriaLista ();
 

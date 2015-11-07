@@ -20,7 +20,7 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		MapKit.MKMapView mkmMapa { get; set; }
+		MapKit.MKMapView mapUsuario { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -56,9 +56,9 @@ namespace SeverinoApp.iOS
 				lblNome.Dispose ();
 				lblNome = null;
 			}
-			if (mkmMapa != null) {
-				mkmMapa.Dispose ();
-				mkmMapa = null;
+			if (mapUsuario != null) {
+				mapUsuario.Dispose ();
+				mapUsuario = null;
 			}
 			if (scrollTelefones != null) {
 				scrollTelefones.Dispose ();

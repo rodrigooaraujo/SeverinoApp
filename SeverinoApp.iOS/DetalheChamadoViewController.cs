@@ -327,7 +327,7 @@ namespace SeverinoApp.iOS
 			if (!Solicitante) {
 				var perfil = (PerfilUsuarioViewController)Storyboard.InstantiateViewController ("PerfilUsuarioViewController");
 				if (perfil != null) {
-					perfil.IDUsuario = IDProfissional;
+					perfil.IDUsuario = IDUsuario;
 					this.NavigationController.PushViewController (perfil, true);
 				}
 			}

@@ -15,6 +15,12 @@ namespace SeverinoApp.iOS
 	{
 		public Servico servico { get; set; }
 
+		CLLocationManager manager = new CLLocationManager ();
+		Usuario usu = AppDelegate.dbUsuario;
+		LoadingOverlay loadingOverlay;
+		Usuario usuarioSelecionado;
+		DetalheProfissionalViewController perfil;
+
 		public MapaViewController (IntPtr handle) : base (handle)
 		{
 			
@@ -22,29 +28,65 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
-			base.ViewDidLoad ();
+			//perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController"); 
+			this.EdgesForExtendedLayout = UIRectEdge.None;
+			usu = AppDelegate.dbUsuario;
+			carrega ();
+			CriaMapa ();
 
-			var frame = mkmMapa.Frame;
+		}
 
-			mkmMapa.ShowsUserLocation = true;
-			mkmMapa.ZoomEnabled = true;
-			mkmMapa.ScrollEnabled = true;
+		protected void pckServico_Changed (Object serv)
+		{
+			sldRaio_Changed (sldRaio);
+		}
 
-			var manager = new CLLocationManager ();
+		partial void sldRaio_Changed (UISlider sender)
+		{
+			lblRaio.Text = string.Format ("Raio: {0} KM", (int)sldRaio.Value);
 
-			//while (manager.Location.Coordinate.Latitude > 0) {
+			PopulaMapa ((double)sldRaio.Value * 1000, (int)((PickerDataModel)pckServico.Model).selectedValue, (double)usu.Latitude, (double)usu.Longitude);
+		}
+
+		public async Task<Boolean>  carrega ()
+		{
+			var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+			if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
+				bounds.Size = new CGSize (bounds.Size.Height, bounds.Size.Width);
+			}
+
+			this.loadingOverlay = new LoadingOverlay (bounds);
+			this.View.Add (loadingOverlay);
+
+			var servico = new Servico ();
+			await servico.CriaLista ();
+			var keyvalue = new List<KeyValuePair<object, string>> ();
+
+			foreach (var item in servico.Servicos) {
+				keyvalue.Add (new KeyValuePair<object, string> (item.ID, item.Nome));
+			}
+
+			var model = new PickerDataModel (keyvalue);
+			pckServico.Model = model;
+			((PickerDataModel)pckServico.Model).NewRowSelected += pckServico_Changed;
+
+			loadingOverlay.Hide ();
+			pckServico_Changed (pckServico);
+			return true;
+		}
+
+		private async Task CriaMapa ()
+		{
+			mapUsuario.ShowsUserLocation = true;
+			mapUsuario.ZoomEnabled = true;
+			mapUsuario.ScrollEnabled = true;
+
 			if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
 				manager.RequestWhenInUseAuthorization ();
-				//manager.RequestAlwaysAuthorization ();
 			}
-			//}
-
-			if (!CLLocationManager.LocationServicesEnabled)
-				new UIAlertView ("Erro", "Favor Ativar Serviço de Localização", null, "OK", null).Show ();
-
-			//CLLocationCoordinate2D mapCenter = new CLLocationCoordinate2D (manager.Location.Altitude, manager.Location.Coordinate);
 
 			try {
+
 				MKCoordinateRegion mapRegion;
 				var locfake = new CLLocationCoordinate2D (-23.653782, -46.575832);
 				MKCoordinateRegion newRegion;
@@ -59,52 +101,57 @@ namespace SeverinoApp.iOS
 					newRegion.Center.Longitude = locfake.Longitude;
 				}
 
-				//mkmMapa.CenterCoordinate = mkmMapa.UserLocation.Coordinate;
+				newRegion.Span.LatitudeDelta = 0.049872;
+				newRegion.Span.LongitudeDelta = 0.049863;
 
-				newRegion.Span.LatitudeDelta = 0.012872;
-				newRegion.Span.LongitudeDelta = 0.009863;
-
-				mkmMapa.SetRegion (newRegion, true);
+				mapUsuario.SetRegion (newRegion, true);
 
 			} catch (Exception ex) {
 				new UIAlertView ("Erro", "Não Foi Possivel detectar sua Localização.", null, "OK", null).Show ();
 			}
-
-			mkmMapa.GetViewForAnnotation = GetViewForAnnotation;
-
-			CarregaPontos ();
-
 		}
 
-		async Task CarregaPontos ()
+		private async Task PopulaMapa (double raio, int idservico, double lat, double lon)
 		{
+			if (usu == null) {
+				new UIAlertView ("Erro", "Usuário não esta Logado!", null, "OK", null).Show ();
+				return;
+			}
+
 			Usuario usuario = new Usuario ();
-			await usuario.CriaLista ().ContinueWith ((t) => {
-				//usuario.CarregaEnderecos ().ContinueWith ((u) => {
-					
-				//});
-			});
+			await usuario.CarregaUsuariosDisponiveis (raio, idservico, lat, lon, usu.ID); 
+			var anot = mapUsuario.Annotations;
+			mapUsuario.RemoveAnnotations (anot);
 
 			var lstmapAnnotaions = new CustomMKPointAnnotation[usuario.Usuarios.Count];
 
-			var usuarios = (from usu in usuario.Usuarios
-				where usu.PrestaServico != 3 && usu.Latitude != null && usu.Longitude != null
-				select usu);
-			try {
-				for (int i = 0; i < usuarios.ToList ().Count (); i++) {
-					var usu = (Usuario)usuarios.ToArray () [i];
-					if (usu.Latitude != null && usu.Longitude != null) {
-						lstmapAnnotaions [i] = new CustomMKPointAnnotation ();
-						lstmapAnnotaions [i].Title = usu.Nome;
-						lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)usu.Latitude, (double)usu.Longitude));
-						lstmapAnnotaions [i].usuario = usu;
-						mkmMapa.AddAnnotation (lstmapAnnotaions [i]);
-					}
-				}
-			} catch (Exception ex) {
+			var usuarios = usuario.Usuarios;
+			mapUsuario.GetViewForAnnotation = GetViewForAnnotation;
+			for (int i = 0; i < usuarios.ToList ().Count (); i++) {
+
+				Usuario profissional = (Usuario)usuarios.ToArray () [i];
+				lstmapAnnotaions [i] = new CustomMKPointAnnotation ();
+				lstmapAnnotaions [i].Title = profissional.Nome + " ";
+				lstmapAnnotaions [i].SetCoordinate (new CLLocationCoordinate2D ((double)profissional.Latitude, (double)profissional.Longitude));
+				lstmapAnnotaions [i].usuario = profissional;
+
+				mapUsuario.AddAnnotations (lstmapAnnotaions [i]);
 
 			}
 
+			var teste = new MKAnnotationView ();
+			var sub = mapUsuario.Subviews;
+		}
+
+		private void infoUsuario (IMKAnnotation annotation)
+		{
+			perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController"); 
+			var usumapa = ((CustomMKPointAnnotation)annotation).usuario;
+
+			if (perfil != null) {
+				perfil.IDUsuario = usumapa.ID;
+				this.NavigationController.PushViewController (perfil, true);
+			} 
 		}
 
 		private MKAnnotationView GetViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
@@ -117,10 +164,8 @@ namespace SeverinoApp.iOS
 			if (annotation is MKUserLocation || annotation.GetType ().ToString () == "MapKit.MKAnnotationWrapper")
 				return null;
 
-			// handle our two custom annotations
-
 			const string SFAnnotationIdentifier = "UsuarioAnnotationIdentifier";
-			MKAnnotationView pinView = (MKAnnotationView)mapView.DequeueReusableAnnotation (SFAnnotationIdentifier);
+			MKAnnotationView pinView = mapView.DequeueReusableAnnotation (SFAnnotationIdentifier);
 			if (pinView == null) {
 				MKAnnotationView annotationView = new MKAnnotationView (annotation, SFAnnotationIdentifier);
 				annotationView.CanShowCallout = true;
@@ -149,28 +194,29 @@ namespace SeverinoApp.iOS
 
 				UIImageView sfIconView = new UIImageView (UIImage.FromFile ("Icons/man.png"));
 				annotationView.LeftCalloutAccessoryView = sfIconView;
-	
-				UIButton rightButton = UIButton.FromType (UIButtonType.DetailDisclosure);
-				//rightButton.Frame = new CGRect (0, 0, 32, 32);
-				//rightButton.AddTarget ((object sender, EventArgs ea) => NavigationController.PushViewController (AppDelegate.Perfil, true), UIControlEvent.TouchUpInside);
 
-				AppDelegate.Perfil.ModalPresentationStyle = UIModalPresentationStyle.Popover;
-				var teste = AppDelegate.Perfil;
-				teste.View.Frame = new CGRect (20, 50, 400, 300);
-				rightButton.AddTarget ((object sender, EventArgs ea) => this.PresentViewController (teste, true, null), UIControlEvent.TouchUpInside);
-				//rightButton.TitleLabel.Text = "OK";
-				//rightButton.BackgroundColor = UIColor.Red;
-				//rightButton.SetTitle("Tste", UIControlState.Normal);
-				annotationView.RightCalloutAccessoryView = rightButton;
+				UIButton rightButton = UIButton.FromType (UIButtonType.ContactAdd);
+				UIButton leftButton = UIButton.FromType (UIButtonType.DetailDisclosure);
 
-				pinViews.Add (annotationView);
+				var newannotation = annotation;
+
+				leftButton.AddTarget ((object sender, EventArgs ea) => infoUsuario (newannotation), UIControlEvent.TouchUpInside);
+				annotationView.LeftCalloutAccessoryView = leftButton;
+
+				annotationView.Annotation = newannotation;
 				return annotationView;
 			} else {
-				pinView.Annotation = annotation;
+				UIButton rightButton = UIButton.FromType (UIButtonType.ContactAdd);
+				UIButton leftButton = UIButton.FromType (UIButtonType.DetailDisclosure);
+				var newannotation = annotation;
+
+				leftButton.AddTarget ((object sender, EventArgs ea) => infoUsuario (newannotation), UIControlEvent.TouchUpInside);
+
+				pinView.LeftCalloutAccessoryView = leftButton;
+
+				pinView.Annotation = newannotation;
 			}
 			return pinView;
-
 		}
-			
 	}
 }

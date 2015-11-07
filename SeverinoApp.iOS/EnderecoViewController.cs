@@ -60,6 +60,8 @@ namespace SeverinoApp.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			this.EdgesForExtendedLayout = UIRectEdge.None;
+
 			swtAtual.On = false;
 			swtPrincipal.On = false;
 
@@ -273,6 +275,7 @@ namespace SeverinoApp.iOS
 			end.Latitude = coordenadas.Coordinate.Latitude;
 			end.Longitude = coordenadas.Coordinate.Longitude;
 			end.Principal = (swtPrincipal.On || primeiroregistro) ? 1 : 0;
+			end.DtCadastro = DateTime.Now;
 			this.loadingOverlay = new LoadingOverlay (bounds);
 			this.View.Add (loadingOverlay);
 			await end.Grava ().ContinueWith ((t) => {

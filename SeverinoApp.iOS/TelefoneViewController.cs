@@ -255,7 +255,7 @@ namespace SeverinoApp.iOS
 			}
 
 			cell.TextLabel.Text = string.Format ("({0}) {1}", item.DD, item.Numero); 
-			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (193, 255, 61) : UIColor.White;
+			cell.BackgroundColor = indexPath.Row % 2 == 0 ? UIColor.FromRGB (82, 188, 255) : UIColor.White;
 			return cell;
 		}
 

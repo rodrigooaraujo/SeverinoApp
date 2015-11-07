@@ -17,7 +17,7 @@ namespace SeverinoApp.iOS
 		Usuario usu = AppDelegate.dbUsuario;
 		LoadingOverlay loadingOverlay;
 		Usuario usuarioSelecionado;
-		//CustomMap mapUsuario;
+		DetalheProfissionalViewController perfil;
 
 		public ChamadoViewController (IntPtr handle) : base (handle)
 		{
@@ -194,18 +194,13 @@ namespace SeverinoApp.iOS
 				mapUsuario.AddAnnotations (lstmapAnnotaions [i]);
 
 			}
-			mapUsuario.DidAddAnnotationViews += alterou;
-			//mapUsuario.AddAnnotations (lstmapAnnotaions);
+
 			var teste = new MKAnnotationView ();
 			var sub = mapUsuario.Subviews;
 
 
 		}
 
-		public void alterou(object sender, MKMapViewAnnotationEventArgs e)
-		{
-					
-		}
 
 		private async Task PopulaGrid (double raio, int idservico, double lat, double lon)
 		{
@@ -314,18 +309,16 @@ namespace SeverinoApp.iOS
 		{
 			var usumapa = ((CustomMKPointAnnotation)annotation).usuario;
 
-			var perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController");
+			perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController");
 
 			if (perfil != null) {
 				perfil.IDUsuario = usumapa.ID;
-				perfil.View.TranslatesAutoresizingMaskIntoConstraints = false;
 				this.NavigationController.PushViewController (perfil, true);
 			} 
 		}
 
 		private MKAnnotationView GetViewForAnnotation (MKMapView mapView, IMKAnnotation annotation)
 		{
-			
 			const float AnnotationPadding = 10;
 			const float CalloutHeight = 40;
 			List<UIView> pinViews = new List<UIView> ();

@@ -23,7 +23,9 @@ namespace SeverinoApp.iOS
 		}
 
 		public static AppDelegate Shared;
+
 		public SlideoutNavigationController Menu { get; private set; }
+
 		public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard_iPhone", null);
 		public static UIViewController initialViewController;
 
@@ -37,9 +39,9 @@ namespace SeverinoApp.iOS
 		public static UIViewController Consulta = Storyboard.InstantiateViewController ("ConsultaViewController");
 		public static UIViewController Teste = Storyboard.InstantiateViewController ("ChatViewController2");
 
-		public static Usuario dbUsuario { get; set;}
+		public static Usuario dbUsuario { get; set; }
 
-		public UINavigationController Navigation{ get; set;}
+		public UINavigationController Navigation{ get; set; }
 		
 		// This method is invoked when the application is about to move from active to inactive state.
 		// OpenGL applications should use this method to pause.
@@ -75,8 +77,8 @@ namespace SeverinoApp.iOS
 
 			Menu = new SlideoutNavigationController ();
 
-			Menu.MainViewController = new MainNavigationController(Home, Menu);
-			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft(false), Menu){ NavigationBarHidden = true};
+			Menu.MainViewController = new MainNavigationController (Login, Menu);
+			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft (false), Menu){ NavigationBarHidden = true };
 			Window.RootViewController = Menu;
 			Window.MakeKeyAndVisible ();
 
@@ -85,43 +87,47 @@ namespace SeverinoApp.iOS
 			return true;
 		}
 
-		protected void criaNotificacao()
+		protected void criaNotificacao ()
 		{
-			var settings = UIUserNotificationSettings.GetSettingsForTypes(
-				UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+			var settings = UIUserNotificationSettings.GetSettingsForTypes (
+				               UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
 				, null);
 			UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 
-				UILocalNotification notification = new UILocalNotification();
+			UILocalNotification notification = new UILocalNotification ();
 
 			//notification.AlertTitle = "Alert Title"; // required for Apple Watch notifications
 			notification.AlertBody = "Hey you! Yeah you! Swipe to unlock!";
 			notification.AlertAction = "be awesome!";
 
-			var userInfo = NSDictionary.FromObjectAndKey(new NSString("TaskID"), new NSString("Teste"));
+			var userInfo = NSDictionary.FromObjectAndKey (new NSString ("TaskID"), new NSString ("Teste"));
 
 			notification.UserInfo = userInfo;
-			notification.FireDate = NSDate.FromTimeIntervalSinceNow(15);
+			notification.FireDate = NSDate.FromTimeIntervalSinceNow (15);
 			notification.HasAction = true;
 			notification.ApplicationIconBadgeNumber = 1;
 			notification.SoundName = UILocalNotification.DefaultSoundName;
-			UIApplication.SharedApplication.ScheduleLocalNotification(notification);
+			UIApplication.SharedApplication.ScheduleLocalNotification (notification);
 		}
 
-		public bool RecriaPrincipal()
+		public bool RecriaPrincipal (bool novo)
 		{
 			Shared = this;
 
 			Menu = new SlideoutNavigationController ();
 
-			Menu.MainViewController = new MainNavigationController(Home, Menu);;
-			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft(), Menu){ NavigationBarHidden = true};
+			Menu.MainViewController = new MainNavigationController (dbUsuario != null ? Home : Login, Menu);
+			Menu.MenuViewController = new MenuNavigationController (new DummyControllerLeft (dbUsuario != null), Menu){ NavigationBarHidden = true };
 
 			Window.RootViewController = Menu;
+
+			if (novo)
+				Home.NavigationController.PushViewController(Perfil, true);
+			
 			Window.MakeKeyAndVisible ();
 
 			return true;
-		}	
+		}
 
 		public override void ReceivedLocalNotification (UIApplication application, UILocalNotification notification)
 		{
@@ -132,7 +138,7 @@ namespace SeverinoApp.iOS
 	public class DummyControllerLeft : DialogViewController
 	{
 		//public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard_iPhone", null);
-		public static UIViewController Home = AppDelegate.Home;
+		public static UIViewController Home{get;set;}
 		public static UIViewController Login = AppDelegate.Login;
 		public static UIViewController Perfil = AppDelegate.Perfil;
 		public static UIViewController Chamado = AppDelegate.Chamados;
@@ -142,37 +148,93 @@ namespace SeverinoApp.iOS
 		public static UIViewController Teste = AppDelegate.Teste;
 		public static bool Ativo;
 
-		public DummyControllerLeft () : base(UITableViewStyle.Plain,new RootElement(""))
+		public DummyControllerLeft () : base (UITableViewStyle.Plain, new RootElement (""))
 		{
-			Ativo = true;
+			Ativo = false;
+			Home = AppDelegate.Home;
 		}
 
-		public DummyControllerLeft (bool ativo) : base(UITableViewStyle.Plain,new RootElement(""))
+		public DummyControllerLeft (bool ativo) : base (UITableViewStyle.Plain, new RootElement (""))
 		{
-			Ativo = ativo;
+			try {
+				
+				Home = AppDelegate.Home;
+				Ativo = ativo;
+
+				if (ativo) {
+			
+					Root.Add (new Section () {
+						new StyledStringElement ("Inicio", () => NavigationController.PushViewController (Home, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "home.png")
+						},
+						new StyledStringElement ("Perfil", () => NavigationController.PushViewController (Perfil, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "id-card.png")
+						},
+						new StyledStringElement ("Mapa", () => NavigationController.PushViewController (Mapa, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "map-pin.png")
+						},
+						new StyledStringElement ("Chamado", () => NavigationController.PushViewController (Chamado, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "message.png")
+						},
+						new StyledStringElement ("Serviços", () => NavigationController.PushViewController (Servicos, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "tick.png")
+						},
+						new StyledStringElement ("Consulta", () => NavigationController.PushViewController (Consulta, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "message.png")
+						},		
+						new StyledStringElement ("Sair", sair) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "lock.png")
+						},
+						//new StyledStringElement("Teste", () => NavigationController.PushViewController(Teste, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"lock.png") }
+					});
+				} else {
+					//Root.Clear ();
+					Root.Add (new Section () {
+						new StyledStringElement ("Cadastrar-se", () => NavigationController.PushViewController (Perfil, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "id-card.png")
+						},
+						new StyledStringElement ("Login", () => NavigationController.PushViewController (Login, true)) {
+							TextColor = UIColor.White,
+							BackgroundColor = UIColor.Clear,
+							Image = UIImage.FromFile ("Icons/" + "lock.png")
+						},
+					});
+				}
+			} catch (Exception ex) {
+
+			}
+		}
+
+		protected void sair()
+		{
+			AppDelegate.dbUsuario = null;
+			NavigationController.PushViewController (Login, true);
+			AppDelegate.Shared.RecriaPrincipal (false);
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
-			//SobreViewController
-			Root.Add (new Section () {
-				new StyledStringElement("Inicio", () => NavigationController.PushViewController(Home, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"home.png")},
-				new StyledStringElement("Perfil", () => NavigationController.PushViewController(Perfil, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"id-card.png") },
-				new StyledStringElement("Mapa", () => NavigationController.PushViewController(Mapa, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"map-pin.png") },
-				new StyledStringElement("Chamado", () => NavigationController.PushViewController(Chamado, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"message.png") },
-				new StyledStringElement("Serviços", () => NavigationController.PushViewController(Servicos, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear , Image =  UIImage.FromFile ("Icons/"+"tick.png")},
-				new StyledStringElement("Consulta", () => NavigationController.PushViewController(Consulta, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"message.png") },
-				new StyledStringElement("Sair", () => NavigationController.PushViewController(Login, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"lock.png") },
-				new StyledStringElement("Teste", () => NavigationController.PushViewController(Teste, true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear, Image =  UIImage.FromFile ("Icons/"+"lock.png") }
-				//new StyledStringElement("Stuff", () => NavigationController.PushViewController(new StuffViewController(), true)) { TextColor = UIColor.White, BackgroundColor = UIColor.Clear },
-			});
-
-			//Root.TableView.Hidden = !Ativo;
 
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-			TableView.BackgroundColor = UIColor.FromRGB (4,188,249);
+			TableView.BackgroundColor = UIColor.FromRGB (4, 188, 249);
 			//var img = new UIImageView(UIImage.FromFile("galaxy.png"));
 			//TableView.BackgroundView = img;
 

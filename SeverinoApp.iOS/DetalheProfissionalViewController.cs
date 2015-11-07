@@ -43,7 +43,7 @@ namespace SeverinoApp.iOS
 
 			scroll.LayoutIfNeeded ();
 			var tam2 = contentView.Frame.Bottom;
-			scroll.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height+100);
+			scroll.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height + 100);
 
 			scrollComentarios.LayoutIfNeeded ();
 			var tam3 = (nfloat)(from views in scrollComentarios.Subviews
@@ -55,8 +55,6 @@ namespace SeverinoApp.iOS
 			                    select views).Sum (x => x.Frame.Height);
 			scrollTelefones.ContentSize = new CGSize ((nfloat)1.0, tam4);
 		}
-
-
 
 		public async Task Carrega (int id)
 		{
@@ -167,54 +165,38 @@ namespace SeverinoApp.iOS
 						if (i > 0) {
 
 							var viultimo = (nfloat)(from subs in scrollComentarios.Subviews
-								where subs.GetType () == (new UITextView ()).GetType ()
+							                        where subs.GetType () == (new UITextView ()).GetType ()
 							                        select subs).Sum (x => x.Bounds.Bottom);
 							y = viultimo;
 						}
 
 						using (var comentario = new UITextView ()) {
 							comentario.Text = feedback.Mensagem;
-							//comentario.SizeToFit();
-							//var boundheight = comentario.Bounds.Height;
 
-							//comentario.LayoutIfNeeded();
-
-							NSString ns = new NSString(comentario.Text);
-							UIStringAttributes atri = new UIStringAttributes{Font = comentario.Font};
-							var boundSize = new SizeF((float)this.View.Frame.Width, float.MaxValue);
+							NSString ns = new NSString (comentario.Text);
+							UIStringAttributes atri = new UIStringAttributes{ Font = comentario.Font };
+							var boundSize = new SizeF ((float)this.View.Frame.Width, float.MaxValue);
 							var options = NSStringDrawingOptions.DisableScreenFontSubstitution | NSStringDrawingOptions.UsesLineFragmentOrigin;
-								//NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin | NSStringDrawingOptions.OneShot;
 
-							var sizeF = ns.GetBoundingRect(boundSize, options, atri, null).Size;
+							var sizeF = ns.GetBoundingRect (boundSize, options, atri, null).Size;
 							comentario.TranslatesAutoresizingMaskIntoConstraints = false;
 
-							//var size = ns.GetSizeUsingAttributes(atri);
+							var heigth = comentario.SizeThatFits (new CGSize (scrollComentarios.Frame.Width - 20, nfloat.MaxValue)).Height;
 
-							var heigth = comentario.SizeThatFits(new CGSize(scrollComentarios.Frame.Width-20, nfloat.MaxValue)).Height;
-
-							//comentario.ContentSize = new CGSize(comentario.Frame.Size.Width, heigth);
 							comentario.Layer.BorderWidth = 1;
 							comentario.Layer.CornerRadius = 8;
-							comentario.Layer.BorderColor = UIColor.FromRGB(234,234,234).CGColor;
-							//comentario.Layer.MasksToBounds = true;
-							comentario.BackgroundColor = UIColor.Blue.ColorWithAlpha((nfloat)0.5);
+							comentario.Layer.BorderColor = UIColor.FromRGB (234, 234, 234).CGColor;
 
+							comentario.BackgroundColor = UIColor.Blue.ColorWithAlpha ((nfloat)0.5);
 
-
-							//var width = comentario.Frame.Width; 
-							//CGSize lbl1Size = ((NSString) comentario.Text).StringSize(comentario.Font,constrainedToSize:new CGSize(comentario.Frame.Width,400.0f),lineBreakMode:UILineBreakMode.WordWrap);
-							comentario.Frame = new CGRect(0,y,scrollComentarios.Frame.Width-20,sizeF.Height+40);
-							//var labelFrame = comentario.Frame;
-							//var sizef = new SizeF((float)width,size.Height);
+							comentario.Frame = new CGRect (0, y, scrollComentarios.Frame.Width - 20, sizeF.Height + 40);
 
 							var inset = comentario.TextContainerInset;
 
-							//CGFloat fixedWidth = comentario.Frame.Size.Width;
-							CGSize newSize = comentario.SizeThatFits(new CGSize(scrollComentarios.Frame.Width-10, nfloat.MaxValue));//[textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+							CGSize newSize = comentario.SizeThatFits (new CGSize (scrollComentarios.Frame.Width - 10, nfloat.MaxValue));
 							CGRect newFrame = comentario.Frame;
 
-
-							scrollComentarios.AddSubview(comentario);
+							scrollComentarios.AddSubview (comentario);
 						}
 					}
 				}
@@ -253,8 +235,6 @@ namespace SeverinoApp.iOS
 				};
 
 				await PresentViewControllerAsync (modalPicker, true);
-
-				//this.NavigationController.PushViewController(comentario, true);
 			} 
 		}
 	}

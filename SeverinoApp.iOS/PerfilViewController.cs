@@ -33,7 +33,6 @@ namespace SeverinoApp.iOS
 
 			scrCampos.LayoutIfNeeded ();
 			scrCampos.ContentSize = new CGSize ((nfloat)1.0, contentView.Bounds.Size.Height + 100);
-			;
 		}
 
 		public override void ViewDidAppear (bool animated)
@@ -106,10 +105,12 @@ namespace SeverinoApp.iOS
 				campos += "Nome \n";	 
 			}
 
-			if (string.IsNullOrEmpty (txtEmail.Text)) {
-				campos += "Email \n";	 
-			}
 
+			if(!Util.validarEmail(txtEmail.Text))
+			{
+				campos += "Email inválido \n";	 
+			}
+				
 			if (string.IsNullOrEmpty (txtSenha.Text)) {
 				campos += "Senha \n";	 
 			}
@@ -118,9 +119,13 @@ namespace SeverinoApp.iOS
 				campos += "Senhas não Conferem \n";	 
 			}
 
+			if(!CPF.Validar(txtCPF.Text))
+			{
+				campos += "CPF Inválido \n";	 
+			}
+
 			if (!string.IsNullOrEmpty (campos)) {
 				aviso = new UIAlertView ("Erro de Validação", campos, null, "OK", null);
-				//aviso.Clicked();
 				aviso.Show ();
 				return;
 			}
@@ -146,7 +151,7 @@ namespace SeverinoApp.iOS
 
 				Usuario usu = AppDelegate.dbUsuario ?? new Usuario ();
 				usu.Nome = txtNome.Text;
-				usu.Login = txtEmail.Text;
+				usu.Login = txtEmail.Text.Trim();
 				usu.Senha = txtSenha.Text;
 
 
@@ -166,11 +171,18 @@ namespace SeverinoApp.iOS
 				decimal.TryParse (txtCustoVisita.Text, out custovisita);
 				usu.CustoVisita = custovisita;
 				usu.Ativo = 1;
-
-				await usu.Cadastra ();
+				usu.DtCadastro = DateTime.Now;
+				bool ok =await usu.Cadastra ();
 
 				if (!string.IsNullOrEmpty (usu.Erro)) {
 					erro = usu.Erro;
+				}
+
+				if(ok)
+				{
+					AppDelegate.Shared.RecriaPrincipal(true);
+					btnEndereco.Enabled = true;
+					btnTelefone.Enabled = true;
 				}
 
 			} catch (Exception ex) {
@@ -219,6 +231,8 @@ namespace SeverinoApp.iOS
 				txtCustoVisita.Text = usu.CustoVisita.ToString ("N2");
 
 				swtPrestador_Changed (swtPrestador);
+				btnEndereco.Enabled = true;
+				btnTelefone.Enabled = true;
 			} else {
 				txtNome.Text = string.Empty;
 				txtEmail.Text = string.Empty;
@@ -239,7 +253,8 @@ namespace SeverinoApp.iOS
 				txtHrFim.Text = string.Empty;
 
 				txtCustoVisita.Text = string.Empty;
-				;
+				btnEndereco.Enabled = false;
+				btnTelefone.Enabled = false;
 			}
 
 			Helpers.criaReturn (this.View);
@@ -273,17 +288,6 @@ namespace SeverinoApp.iOS
 					txtSexo.Text = picker_model.values [(int)linha].ToString ();
 					txtSexo.ResignFirstResponder ();
 				}
-				/*foreach (UIPickerView view in txtSexo.InputView) 
-					{
-						
-						if (view.IsFirstResponder)
-						{
-							UITextField textview = (UITextField)view;
-							textview.Text = picker_model.values[picker.SelectedRowInComponent ((int)0)].ToString ();
-							textview.ResignFirstResponder ();
-						}
-					}*/
-
 			});
 			toolbar.SetItems (new UIBarButtonItem[]{ doneButton }, true);
 
