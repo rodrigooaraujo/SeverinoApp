@@ -32,6 +32,10 @@ namespace SeverinoApp.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblMensagens { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblNumero { get; set; }
 
 		[Outlet]
@@ -103,6 +107,10 @@ namespace SeverinoApp.iOS
 			if (lblData != null) {
 				lblData.Dispose ();
 				lblData = null;
+			}
+			if (lblMensagens != null) {
+				lblMensagens.Dispose ();
+				lblMensagens = null;
 			}
 			if (lblNumero != null) {
 				lblNumero.Dispose ();

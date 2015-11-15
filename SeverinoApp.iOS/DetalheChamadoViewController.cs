@@ -4,6 +4,7 @@ using System.CodeDom.Compiler;
 using UIKit;
 using System.Threading.Tasks;
 using CoreGraphics;
+using System.Linq;
 
 namespace SeverinoApp.iOS
 {
@@ -11,6 +12,7 @@ namespace SeverinoApp.iOS
 	{
 		LoadingOverlay loadingOverlay;
 		public int NumeroChamado, Status, IDServico, IDUsuario, IDProfissional;
+		Usuario usuario = AppDelegate.dbUsuario;
 		public bool Solicitante;
 		public bool Orcamento;
 
@@ -40,7 +42,7 @@ namespace SeverinoApp.iOS
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-
+			CarregaMensagens (NumeroChamado);
 		}
 
 		partial void btnAcoes_Click (UIButton sender)
@@ -241,6 +243,7 @@ namespace SeverinoApp.iOS
 
 							//ChatViewController2 mensagem = msg.;
 							mensagem.NumeroChamado = NumeroChamado;
+							mensagem.Solicitante = Solicitante;
 							//mensagem.View.TranslatesAutoresizingMaskIntoConstraints = false;
 							this.NavigationController.PushViewController (mensagem, true);
 						} 
@@ -255,7 +258,7 @@ namespace SeverinoApp.iOS
 			alert.ShowInView (View);
 		
 		}
-			
+
 		public async Task AlteraStatus (int numero, int status)
 		{
 			UIAlertView aviso;
@@ -269,7 +272,7 @@ namespace SeverinoApp.iOS
 				this.View.Add (loadingOverlay);
 
 				Chamado dbCham = new Chamado ();
-				bool sucesso = await dbCham.AlteraStatus (numero, status,Solicitante);
+				bool sucesso = await dbCham.AlteraStatus (numero, status, Solicitante);
 
 				if (!sucesso) {
 					aviso = new UIAlertView ("Erro ao Atualzar Status", dbCham.Erro, null, "OK", null);
@@ -307,6 +310,7 @@ namespace SeverinoApp.iOS
 				this.View.Add (loadingOverlay);
 
 				Chamado dbCham = new Chamado ();
+
 				var consulta = await dbCham.CarregaChamado (numero);
 
 				txtNumero.Text = consulta.Numero.ToString ();
@@ -315,10 +319,35 @@ namespace SeverinoApp.iOS
 				txtProfissional.Text = Solicitante ? consulta.ProfissionalNome : consulta.UsuarioNome;
 				txtRaio.Text = consulta.Raio.ToString ();
 				txtStatus.Text = consulta.StatusNome;
+
+				//CarregaMensagens(numero);
+
 			} catch (Exception ex) {
 				
 			} finally {
 				loadingOverlay.Hide ();
+			}
+		}
+
+		public async Task CarregaMensagens (int numero)
+		{
+			try {
+				Mensagem dbMsg = new Mensagem ();
+				var mensagens = await dbMsg.CriaLista (numero);
+
+				lblMensagens.Text = "";
+
+				if (dbMsg.Mensagens != null && dbMsg.Mensagens.Count > 0) {
+
+					var naolidas = (from nlidas in dbMsg.Mensagens
+						select nlidas).Count(x=>!(Solicitante ? Util.ConverteBool (x.UsuarioVisualizou) : Util.ConverteBool (x.ProfissionalVisualizou)) && x.IDSender != usuario.ID);
+					if(naolidas==1)
+						lblMensagens.Text = "Você possui 1 mensagem não lida!";
+					else if(naolidas>1)
+						lblMensagens.Text= string.Format("Você possui {0} mensagens não lidas!", naolidas);
+				}
+			} catch (Exception ex) {
+				
 			}
 		}
 
@@ -330,9 +359,7 @@ namespace SeverinoApp.iOS
 					perfil.IDUsuario = IDUsuario;
 					this.NavigationController.PushViewController (perfil, true);
 				}
-			}
-			else
-			{
+			} else {
 				var perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController");
 				if (perfil != null) {
 					perfil.IDUsuario = IDProfissional;

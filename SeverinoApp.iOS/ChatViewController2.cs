@@ -17,6 +17,7 @@ namespace SeverinoApp.iOS
 		public int NumeroChamado{ get; set; }
 
 		Usuario usuario = AppDelegate.dbUsuario;
+		public bool Solicitante;
 
 		LoadingOverlay loadingOverlay;
 		UIAlertView aviso;
@@ -101,8 +102,19 @@ namespace SeverinoApp.iOS
 		{
 			base.ViewDidAppear (animated);
 			AddObservers ();
+			StartTimer ();
 		}
 
+		async void StartTimer ()
+		{
+			while (true) {
+				await Task.Delay (5000);
+				var mensagem = new Mensagem ();
+				await mensagem.CriaLista (NumeroChamado);
+				if (mensagem.Mensagens.ToArray ().Length > ((ChatSource)tableView.Source).Count)
+					carrega ();
+			}
+		}
 
 		public override void ViewDidLayoutSubviews ()
 		{
@@ -132,6 +144,11 @@ namespace SeverinoApp.iOS
 			chatSource = new ChatSource (messages);
 			tableView.Source = chatSource;
 			tableView.ReloadData ();
+			try {
+				mensagem.MarcaComoLida (NumeroChamado, Solicitante);
+			} catch (Exception ex) {
+				
+			}
 			//tableView.InsertRows (new NSIndexPath[] { NSIndexPath.FromRowSection (messages.Count - 1, 0) }, UITableViewRowAnimation.None);
 			//tableView.ReloadData ();
 			ViewWillAppear (false);
@@ -164,7 +181,7 @@ namespace SeverinoApp.iOS
 					erro = mensagem.Erro;
 				}
 
-				carrega();
+				carrega ();
 
 				if (!string.IsNullOrEmpty (erro)) {
 					//loadingOverlay.Hide ();
@@ -281,7 +298,7 @@ namespace SeverinoApp.iOS
 			ScrollToBottom (true);
 
 			//carrega ();
-				//erro = "Erro ao Carregar Lista de Mensagens";
+			//erro = "Erro ao Carregar Lista de Mensagens";
 
 		}
 

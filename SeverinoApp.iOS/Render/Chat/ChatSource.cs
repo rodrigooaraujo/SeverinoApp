@@ -14,6 +14,7 @@ namespace SeverinoApp.iOS
 		static readonly NSString OutgoingCellId = new NSString ("Outgoing");
 
 		IList<Message> messages;
+		public int Count;
 
 		readonly BubbleCell[] sizingCells;
 
@@ -24,6 +25,7 @@ namespace SeverinoApp.iOS
 
 			this.messages = messages;
 			sizingCells = new BubbleCell[2];
+			Count = messages.Count;
 		}
 
 		public override nint RowsInSection (UITableView tableview, nint section)

@@ -65,6 +65,29 @@ namespace SeverinoApp
 
 			return true;
 		}
+
+		public async Task<bool> MarcaComoLida (int numeroChamado, bool solicitante)
+		{
+			try {
+				var api = new Api ();
+				string controller = string.Format ("Mensagem?numeroChamado={0}&solicitante={1}", numeroChamado,solicitante);
+
+				await api.Put ("",controller);
+
+				if (!string.IsNullOrEmpty (api.Erro)) {
+					Erro = api.Erro + " Mensagem";
+					Excecao = api.Excecao;
+					return false;
+				}
+
+			} catch (Exception ex) {
+				Erro = " Alterar Status Mensagens";
+				Excecao = ex.Message;
+				return false;
+			}
+
+			return true;
+		}
 	}
 
 	public class MensagemConsulta : Mensagem

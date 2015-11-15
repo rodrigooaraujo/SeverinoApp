@@ -18,6 +18,7 @@ namespace SeverinoApp.iOS
 		private DSGridView gvChamados;
 		private UIScrollView scroll;
 		LoadingOverlay loadingOverlay;
+		Usuario usu = AppDelegate.dbUsuario;
 
 		public ConsultaViewController (IntPtr handle) : base (handle)
 		{
@@ -32,7 +33,8 @@ namespace SeverinoApp.iOS
 
 		public override void ViewDidLoad ()
 		{
-			this.EdgesForExtendedLayout = UIRectEdge.None;
+			
+
 			this.EdgesForExtendedLayout = UIRectEdge.None;
 			base.ViewDidLoad ();
 			var status = new Status ();
@@ -59,20 +61,35 @@ namespace SeverinoApp.iOS
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			//WillRotate (UIInterfaceOrientation.LandscapeRight, 1);
+			usu = AppDelegate.dbUsuario;
+			if (usu.Latitude == null || usu.Longitude == null) {
+				var aviso = new UIAlertView ("Endereco principal invalido", "Favor Cadastrar um endereco", null, "OK", null);
+				aviso.Show ();
+
+				var perfil = Storyboard.InstantiateViewController ("PerfilViewController");
+
+				if (perfil != null) {
+					perfil.View.TranslatesAutoresizingMaskIntoConstraints = false;
+					this.NavigationController.PushViewController (perfil, true);
+				} 
+
+				return;
+			}
 			tblChamados.Hidden = true;
 			carrega ();
 		}
 
 		protected async Task<Boolean>  carrega ()
 		{
+			var bounds = UIScreen.MainScreen.Bounds;
+
 			var aFrame = new CGRect (new CGPoint (0, pckStatus.Frame.Bottom), 
 				             new CGSize (View.Frame.Width, View.Frame.Bottom - pckStatus.Frame.Bottom));
 
 			var aFrame2 = new CGRect (new CGPoint (0, pckStatus.Frame.Bottom + 10), 
-				              new CGSize (View.Frame.Width, View.Frame.Bottom - pckStatus.Frame.Bottom));
+				              new CGSize (View.Frame.Width, bounds.Bottom - pckStatus.Frame.Bottom - 100));
 
-			var aFrame3 = new CGRect (0, 0, aFrame2.Width, aFrame2.Height - 10);
+			var aFrame3 = new CGRect (0, 0, aFrame2.Width, aFrame2.Height + 10);
 			
 			scroll = new UIScrollView (aFrame2);
 
@@ -136,8 +153,8 @@ namespace SeverinoApp.iOS
 				detalhes.Status = status;
 				detalhes.Orcamento = orcamento;
 				detalhes.IDServico = idservico;
-				detalhes.IDUsuario =idusuario;
-				detalhes.IDProfissional =idprofissional;
+				detalhes.IDUsuario = idusuario;
+				detalhes.IDProfissional = idprofissional;
 
 				if (detalhes != null) {
 					detalhes.View.TranslatesAutoresizingMaskIntoConstraints = false;
@@ -198,7 +215,7 @@ namespace SeverinoApp.iOS
 			columnsDefs.Add ("ServicoOrcamento", 0);
 			columnsDefs.Add ("IDServico", 0);
 
-			var soma = columnsDefs.Sum( x => x.Value);
+			var soma = columnsDefs.Sum (x => x.Value);
 
 			foreach (var item in columnsDefs) {
 				var column = new DSDataColumn (item.Key);

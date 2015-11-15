@@ -75,14 +75,14 @@ namespace SeverinoApp.iOS
 			carrega ();
 		}
 
-		protected bool textFieldShouldEndEditing(UITextField textField)
+		protected bool textFieldShouldEndEditing (UITextField textField)
 		{
 			if (textField == txtCep)
 				carregaEnderecoCompleto (null, txtCep.Text);
 			return true;
 		}
 
-		protected bool textFieldShouldBeginEditing(UITextField textField)
+		protected bool textFieldShouldBeginEditing (UITextField textField)
 		{
 			textField.TextColor = UIColor.Gray;
 			return false;
@@ -128,7 +128,7 @@ namespace SeverinoApp.iOS
 				campos += "Informe o campo CEP \n";
 			}
 
-			if (!string.IsNullOrEmpty (cep) || loc != null) {
+			if (!string.IsNullOrEmpty (cep) && cep.Length == 8 || loc != null) {
 
 				var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
 				if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
@@ -137,29 +137,35 @@ namespace SeverinoApp.iOS
 
 				this.loadingOverlay = new LoadingOverlay (bounds);
 				this.View.Add (loadingOverlay);
+				try {
+					
+				
+					GoogleGeoCodeResponse teste = new GoogleGeoCodeResponse ();
+					Endereco end = new Endereco ();
+					if (!string.IsNullOrEmpty (cep) && !swtAtual.On)
+						end = await teste.CarregaPorCepCompleto (txtCep.Text);
+					else {
+						end.Latitude = coordenadas.Coordinate.Latitude;
+						end.Longitude = coordenadas.Coordinate.Longitude;
+						end = await teste.CarregaGoogle (end);
+					}
 
-				GoogleGeoCodeResponse teste = new GoogleGeoCodeResponse ();
-				Endereco end = new Endereco ();
-				if (!string.IsNullOrEmpty (cep))
-					end = await teste.CarregaPorCepCompleto (txtCep.Text);
-				else {
-					end.Latitude = coordenadas.Coordinate.Latitude;
-					end.Longitude = coordenadas.Coordinate.Longitude;
-					end = await teste.CarregaGoogle (end);
+					if (end != null) {
+						txtBairro.Text = end.Bairro;
+						txtEndereco.Text = end.Logradouro;
+						txtEstado.Text = end.Estado;
+						txtMunicipio.Text = end.Cidade;
+						coordenadas = new CLLocation ((double)end.Latitude, (double)end.Longitude);
+					} else {
+						campos += "CEP Inválido \n";
+					}
+				} catch (Exception ex) {
+					campos += "Erro ao Cadastrar endereco: " + ex.Message + "\n";
+				} finally {
+					loadingOverlay.Hide ();
 				}
-
-				if (end != null) {
-					txtBairro.Text = end.Bairro;
-					txtEndereco.Text = end.Logradouro;
-					txtEstado.Text = end.Estado;
-					txtMunicipio.Text = end.Cidade;
-					coordenadas = new CLLocation ((double)end.Latitude, (double)end.Longitude);
-				} else {
-					campos += "CEP Inválido \n";
-				}
-
-				loadingOverlay.Hide ();
 			}
+
 
 			if (!string.IsNullOrEmpty (campos)) {
 
@@ -224,6 +230,11 @@ namespace SeverinoApp.iOS
 				if (existeprincipal) {
 					campos += "Só é permitido selecionar apenas um endereço principal";
 				}
+			}
+
+			if (!swtPrincipal.On && tblEndereco.Source == null)
+			{
+				swtAtual.On = true;
 			}
 
 			if (!string.IsNullOrEmpty (campos)) {

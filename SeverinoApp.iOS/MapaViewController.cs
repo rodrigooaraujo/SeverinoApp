@@ -26,11 +26,33 @@ namespace SeverinoApp.iOS
 			
 		}
 
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+
+			usu = AppDelegate.dbUsuario;
+			if (usu.Latitude == null || usu.Longitude == null) {
+				var aviso = new UIAlertView ("Endereco principal invalido", "Favor Cadastrar um endereco", null, "OK", null);
+				aviso.Show ();
+
+				var perfil = Storyboard.InstantiateViewController ("PerfilViewController");
+
+				if (perfil != null) {
+					perfil.View.TranslatesAutoresizingMaskIntoConstraints = false;
+					this.NavigationController.PushViewController (perfil, true);
+				} 
+
+				return;
+			}
+		}
+
 		public override void ViewDidLoad ()
 		{
 			//perfil = (DetalheProfissionalViewController)Storyboard.InstantiateViewController ("DetalheProfissionalViewController"); 
 			this.EdgesForExtendedLayout = UIRectEdge.None;
 			usu = AppDelegate.dbUsuario;
+
+
 			carrega ();
 			CriaMapa ();
 

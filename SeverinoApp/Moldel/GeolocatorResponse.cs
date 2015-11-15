@@ -115,8 +115,8 @@ namespace SeverinoApp
 					}
 				}
 
-				endereco.Latitude = double.Parse(result.results[0].geometry.location.lat);
-				endereco.Longitude = double.Parse(result.results[0].geometry.location.lng);
+				endereco.Latitude = Util.ConverteDouble(result.results[0].geometry.location.lat);
+				endereco.Longitude = Util.ConverteDouble(result.results[0].geometry.location.lng);
 
 			} catch (Exception ex) {
 				return null;
